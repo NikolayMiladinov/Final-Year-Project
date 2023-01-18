@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 
-module SPI_Master_TB ();
+module tb_top ();
   
   parameter SPI_MODE = 3; // CPOL = 1, CPHA = 1
   parameter CLKS_PER_HALF_BIT = 4;  // 6.25 MHz
