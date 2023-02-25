@@ -1,0 +1,10 @@
+typedef enum bit[7:0] { 
+    RESET = 'hFF, GET_FEATURE = 'h0F, SET_FEATURE = 'h1F,
+    READ_ID = 'h9F, PAGE_READ = 'h13, CACHE_READ = 'h30,
+    CACHE_LAST = 'h3F, CACHE_1 = 'h03, CACHE_2 = 'h3B,
+    CACHE_4 = 'h6B, CACHE_DUAL = 'hBB, CACHE_QUAD = 'hEB,
+    WRITE_ENABLE = 'h06, WRITE_DISABLE = 'h04, BLOCK_ERASE = 'hD8,
+    PROG_EXEC = 'h10, PROG_LOAD1 = 'h02, PROG_LOAD2 = 'hA2,
+    PROG_LOAD2_RAND = 'h44, PROG_LOAD4 = 'h32, PROG_LOAD1_RAND = 'h84,
+    PROG_LOAD4_RAND = 'h34, PROTECT = 'h2C    
+    } SPI_COMMAND;

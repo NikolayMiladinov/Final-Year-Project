@@ -30,7 +30,9 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-module SPI_Master
+`timescale 1ns / 100ps
+
+module spi_master
   #(parameter SPI_MODE = 0,
     parameter CLKS_PER_HALF_BIT = 2)
   (
