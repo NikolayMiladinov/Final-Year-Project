@@ -1,0 +1,11 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":167:2:167:7|Removing sequential instance o_RX_Count[1:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\clk_div.v":20:19:20:34|Found 4-bit incrementor, 'un3_clk_count_1[3:0]'
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":100:2:100:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2(verilog) instance r_CS_Inactive_Count[2:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":88:2:88:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_SPI_Clk_Edges[4:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":196:2:196:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_RX_Bit_Count[2:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":166:2:166:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_TX_Bit_Count[2:0] 
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":196:2:196:7|Removing sequential instance SPI_CS_Master.SPI_Master_Inst.o_RX_DV (in view: work.top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

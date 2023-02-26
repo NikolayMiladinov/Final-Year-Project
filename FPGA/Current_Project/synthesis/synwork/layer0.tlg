@@ -1,0 +1,41 @@
+Selecting top level module top
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v":1:7:1:13|Synthesizing module clk_div in library work.
+
+	div=32'b00000000000000000000000000001010
+   Generated name = clk_div_10s
+
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v":35:7:35:16|Synthesizing module spi_master in library work.
+
+	SPI_MODE=32'b00000000000000000000000000000011
+	CLKS_PER_HALF_BIT=32'b00000000000000000000000000000010
+   Generated name = spi_master_3s_2s
+
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v":146:2:146:7|Pruning unused register r_TX_DV. Make sure that there are no unused intermediate registers.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v":35:7:35:31|Synthesizing module SPI_Master_With_Single_CS in library work.
+
+	SPI_MODE=32'b00000000000000000000000000000011
+	CLKS_PER_HALF_BIT=32'b00000000000000000000000000000010
+	MAX_BYTES_PER_CS=32'b00000000000000000000000000000010
+	CS_INACTIVE_CLKS=32'b00000000000000000000000000000101
+	IDLE=2'b00
+	TRANSFER=2'b01
+	CS_INACTIVE=2'b10
+   Generated name = SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2
+
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
+
+@W: CS263 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":70:15:70:31|Port-width mismatch for port o_RX_Count. The port definition is 2 bits, but the actual port connection bit width is 1. Adjust either the definition or the instantiation of this port.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[1] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[3] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[5] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[7] is always 0.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Pruning register bit 7 of r_Master_TX_Byte[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Pruning register bit 5 of r_Master_TX_Byte[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Pruning register bit 3 of r_Master_TX_Byte[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Pruning register bit 1 of r_Master_TX_Byte[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v":100:2:100:7|Trying to extract state machine for register r_SM_CS.
+Extracted state machine for register r_SM_CS
+State machine has 3 reachable states with original encodings of:
+   00
+   01
+   10

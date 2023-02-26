@@ -6,7 +6,7 @@ module clk_div #(
     output reg clk_out
 );
 
-reg [$clog2(div/2)-1:0] clk_count;
+reg [$clog2(div)-1:0] clk_count;
 
 always @(posedge clk_in, negedge rst_n) begin
     if(~rst_n) begin

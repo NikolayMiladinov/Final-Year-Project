@@ -1,0 +1,374 @@
+(DELAYFILE
+(SDFVERSION "OVI 2.1")
+(DESIGN "top")
+(DATE "123")
+(VENDOR "ProASIC3")
+(PROGRAM "Synplify")
+(VERSION "mapact, Build 2172R")
+(DIVIDER /)
+(VOLTAGE 2.500000:2.500000:2.500000)
+(PROCESS "TYPICAL")
+(TEMPERATURE 70.000000:70.000000:70.000000)
+(TIMESCALE 1ns)
+(CELL
+  (CELLTYPE "top")
+  (INSTANCE)
+  (TIMINGCHECK
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_RNO/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIC0OD1\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIC0OD1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIC0OD1\[2\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIC0OD1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/C  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNO/A  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNO/A  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/B  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/C  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/B  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/C  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[0\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIC0OD1\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIC0OD1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_SM_CS_RNO\[0\]/C  SPI_CS_Master/r_SM_CS_RNO\[0\]/Y  SPI_CS_Master/r_SM_CS\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[0\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNO\[0\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[0\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[3\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[3\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_CS_n_RNO/A  SPI_CS_Master/r_CS_n_RNO/Y  SPI_CS_Master/r_CS_n/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/r_CS_n_RNIFRR5/A  SPI_CS_Master/r_CS_n_RNIFRR5/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/Y  SPI_CS_Master/r_CS_n_RNO/B  SPI_CS_Master/r_CS_n_RNO/Y  SPI_CS_Master/r_CS_n/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/r_CS_n_RNIFRR5/A  SPI_CS_Master/r_CS_n_RNIFRR5/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/B  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/Y  SPI_CS_Master/r_TX_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[1\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[0\]/CLK  SPI_CS_Master/r_TX_Count\[0\]/Q  SPI_CS_Master/r_TX_Count_RNIFJCK\[0\]/B  SPI_CS_Master/r_TX_Count_RNIFJCK\[0\]/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/A  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/C  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI91GU\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI91GU\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI91GU\[4\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI91GU\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[1\]/CLK  SPI_CS_Master/r_TX_Count\[1\]/Q  SPI_CS_Master/r_TX_Count_RNIFJCK\[0\]/A  SPI_CS_Master/r_TX_Count_RNIFJCK\[0\]/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/A  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/C  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_8/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_8/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNIGB0D2\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/Y  SPI_CS_Master/r_TX_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/Y  SPI_CS_Master/un1_r_TX_Count_1_G_2_i_a2/B  SPI_CS_Master/un1_r_TX_Count_1_G_2_i_a2/Y  SPI_CS_Master/un1_r_TX_Count_1_G_2_i/B  SPI_CS_Master/un1_r_TX_Count_1_G_2_i/Y  SPI_CS_Master/r_TX_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/C  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/G_1_0/B  SPI_CS_Master/SPI_Master_Inst/G_1_0/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/G_1_0/B  SPI_CS_Master/SPI_Master_Inst/G_1_0/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIMVIL2/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIMVIL2/Y  r_Master_TX_Byte\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIR5J01/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIR5J01/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/C  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/B  SPI_CS_Master/r_TX_Count_RNI1D6C1\[0\]/Y  SPI_CS_Master/r_CS_n/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI6QND1\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/A  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/Y  SPI_CS_Master/r_TX_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIHQKC2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNI3RFU\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIR5J01/S  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIR5J01/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/C  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIR5J01/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIR5J01/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/C  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/B  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/Y  SPI_CS_Master/r_TX_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[0\]/CLK  SPI_CS_Master/r_TX_Count\[0\]/Q  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/C  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO_0/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/r_SM_CS_RNO_0\[0\]/A  SPI_CS_Master/r_SM_CS_RNO_0\[0\]/Y  SPI_CS_Master/r_SM_CS_RNO\[0\]/A  SPI_CS_Master/r_SM_CS_RNO\[0\]/Y  SPI_CS_Master/r_SM_CS\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[0\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[0\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/C  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/Y  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/B  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/C  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count_RNIIADD2\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[1\]/CLK  SPI_CS_Master/r_TX_Count\[1\]/Q  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/B  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIJJP72_0/Y  r_Master_TX_DV/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/B  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/Y  SPI_CS_Master/r_CS_n_RNO/B  SPI_CS_Master/r_CS_n_RNO/Y  SPI_CS_Master/r_CS_n/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/Y  SPI_CS_Master/r_CS_n_RNO/B  SPI_CS_Master/r_CS_n_RNO/Y  SPI_CS_Master/r_CS_n/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_n/CLK  SPI_CS_Master/r_CS_n/Q  SPI_CS_Master/r_CS_n_RNIFRR5/B  SPI_CS_Master/r_CS_n_RNIFRR5/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/C  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_a3_0/Y  SPI_CS_Master/r_CS_n_RNO/B  SPI_CS_Master/r_CS_n_RNO/Y  SPI_CS_Master/r_CS_n/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[0\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[0\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/C  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/B  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[0\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[0\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/C  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/Y  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/B  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[1\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_RNO/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_o2_0/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/A  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[1\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[1\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/Y  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/B  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/C  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_out/CLK  clk_div_1M/clk_out/Q  clk_div_1M/clk_out_RNO/C  clk_div_1M/clk_out_RNO/Y  clk_div_1M/clk_out/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[1\]/CLK  clk_div_1M/clk_count\[1\]/Q  clk_div_1M/un3_clk_count_1_G_1/B  clk_div_1M/un3_clk_count_1_G_1/Y  clk_div_1M/clk_count_RNO\[2\]/C  clk_div_1M/clk_count_RNO\[2\]/Y  clk_div_1M/clk_count\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/B  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/B  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/B  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/B  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/B  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/B  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/r_SM_CS_RNO_0\[1\]/C  SPI_CS_Master/r_SM_CS_RNO_0\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/B  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/A  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/C  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[0\]/CLK  SPI_CS_Master/r_TX_Count\[0\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/B  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/Y  SPI_CS_Master/r_TX_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/C  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/C  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[2\]/CLK  clk_div_1M/clk_count\[2\]/Q  clk_div_1M/clk_out_RNO_0/A  clk_div_1M/clk_out_RNO_0/Y  clk_div_1M/clk_out_RNO/B  clk_div_1M/clk_out_RNO/Y  clk_div_1M/clk_out/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[2\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[2\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNICEOE1\[2\]/Y  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/B  SPI_CS_Master/r_SM_CS_RNO_1\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/C  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[3\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[3\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[1\]/CLK  SPI_CS_Master/r_TX_Count\[1\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i_0/Y  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/A  SPI_CS_Master/un1_r_TX_Count_1_G_0_i/Y  SPI_CS_Master/r_TX_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[0\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[0\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[2\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_2/S  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_2/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/B  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[2\]/CLK  clk_div_1M/clk_count\[2\]/Q  clk_div_1M/clk_count_RNI7AC8\[3\]/A  clk_div_1M/clk_count_RNI7AC8\[3\]/Y  clk_div_1M/clk_count_RNO\[0\]/B  clk_div_1M/clk_count_RNO\[0\]/Y  clk_div_1M/clk_count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_1/S  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_1/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[0\]/CLK  clk_div_1M/clk_count\[0\]/Q  clk_div_1M/un3_clk_count_1_G_1/A  clk_div_1M/un3_clk_count_1_G_1/Y  clk_div_1M/clk_count_RNO\[2\]/C  clk_div_1M/clk_count_RNO\[2\]/Y  clk_div_1M/clk_count\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[0\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[0\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[1\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[1\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNO\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/r_SM_CS_RNO_0\[0\]/C  SPI_CS_Master/r_SM_CS_RNO_0\[0\]/Y  SPI_CS_Master/r_SM_CS_RNO\[0\]/A  SPI_CS_Master/r_SM_CS_RNO\[0\]/Y  SPI_CS_Master/r_SM_CS\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[1\]/CLK  SPI_CS_Master/r_TX_Count\[1\]/Q  SPI_CS_Master/r_SM_CS_RNO_0\[1\]/B  SPI_CS_Master/r_SM_CS_RNO_0\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/B  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[1\]/CLK  clk_div_1M/clk_count\[1\]/Q  clk_div_1M/un3_clk_count_1_I_8/B  clk_div_1M/un3_clk_count_1_I_8/Y  clk_div_1M/un3_clk_count_1_I_9/A  clk_div_1M/un3_clk_count_1_I_9/Y  clk_div_1M/clk_count\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO_0\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO_0\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[3\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNO/B  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNO/C  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_1/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_1/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_2/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_2/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/B  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[4\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[4\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_1/B  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_1/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[6\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[6\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_2/B  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_2/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/B  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[0\]/B  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[1\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[1\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[2\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[0\]/CLK  SPI_CS_Master/r_TX_Count\[0\]/Q  SPI_CS_Master/r_SM_CS_RNO_0\[1\]/A  SPI_CS_Master/r_SM_CS_RNO_0\[1\]/Y  SPI_CS_Master/r_SM_CS_RNO\[1\]/B  SPI_CS_Master/r_SM_CS_RNO\[1\]/Y  SPI_CS_Master/r_SM_CS\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[2\]/CLK  clk_div_1M/clk_count\[2\]/Q  clk_div_1M/un3_clk_count_1_I_8/C  clk_div_1M/un3_clk_count_1_I_8/Y  clk_div_1M/un3_clk_count_1_I_9/A  clk_div_1M/un3_clk_count_1_I_9/Y  clk_div_1M/clk_count\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[3\]/CLK  clk_div_1M/clk_count\[3\]/Q  clk_div_1M/clk_count_RNI7AC8\[3\]/B  clk_div_1M/clk_count_RNI7AC8\[3\]/Y  clk_div_1M/clk_count_RNO\[0\]/B  clk_div_1M/clk_count_RNO\[0\]/Y  clk_div_1M/clk_count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/A  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_1/Y  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/B  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/A  SPI_CS_Master/r_SM_CS_RNIM7O33\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO_0/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[1\]/C  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/C  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/C  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[2\]/CLK  clk_div_1M/clk_count\[2\]/Q  clk_div_1M/un3_clk_count_1_G_1/C  clk_div_1M/un3_clk_count_1_G_1/Y  clk_div_1M/clk_count_RNO\[2\]/C  clk_div_1M/clk_count_RNO\[2\]/Y  clk_div_1M/clk_count\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[3\]/CLK  clk_div_1M/clk_count\[3\]/Q  clk_div_1M/clk_out_RNO_0/B  clk_div_1M/clk_out_RNO_0/Y  clk_div_1M/clk_out_RNO/B  clk_div_1M/clk_out_RNO/Y  clk_div_1M/clk_out/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[0\]/CLK  SPI_CS_Master/r_TX_Count\[0\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_2_i_a2/A  SPI_CS_Master/un1_r_TX_Count_1_G_2_i_a2/Y  SPI_CS_Master/un1_r_TX_Count_1_G_2_i/B  SPI_CS_Master/un1_r_TX_Count_1_G_2_i/Y  SPI_CS_Master/r_TX_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO_0\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[4\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[0\]/CLK  clk_div_1M/clk_count\[0\]/Q  clk_div_1M/un3_clk_count_1_I_8/A  clk_div_1M/un3_clk_count_1_I_8/Y  clk_div_1M/un3_clk_count_1_I_9/A  clk_div_1M/un3_clk_count_1_I_9/Y  clk_div_1M/clk_count\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[1\]/CLK  clk_div_1M/clk_count\[1\]/Q  clk_div_1M/clk_out_RNO/A  clk_div_1M/clk_out_RNO/Y  clk_div_1M/clk_out/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[1\]/CLK  clk_div_1M/clk_count\[1\]/Q  clk_div_1M/un3_clk_count_1_I_5/B  clk_div_1M/un3_clk_count_1_I_5/Y  clk_div_1M/clk_count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[1\]/CLK  clk_div_1M/clk_count\[1\]/Q  clk_div_1M/clk_count_RNO\[0\]/A  clk_div_1M/clk_count_RNO\[0\]/Y  clk_div_1M/clk_count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[1\]/CLK  clk_div_1M/clk_count\[1\]/Q  clk_div_1M/clk_count_RNO\[2\]/A  clk_div_1M/clk_count_RNO\[2\]/Y  clk_div_1M/clk_count\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO_0\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO_0\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO_0\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO_0\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/r_SM_CS_RNO\[0\]/B  SPI_CS_Master/r_SM_CS_RNO\[0\]/Y  SPI_CS_Master/r_SM_CS\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[1\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[1\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[1\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[1\]/B  SPI_CS_Master/r_CS_Inactive_Count_RNO\[1\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/S  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO_0/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/A  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[4\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[0\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[6\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_n/CLK  SPI_CS_Master/r_CS_n/Q  SPI_CS_Master/r_SM_CS_RNO_0\[0\]/B  SPI_CS_Master/r_SM_CS_RNO_0\[0\]/Y  SPI_CS_Master/r_SM_CS_RNO\[0\]/A  SPI_CS_Master/r_SM_CS_RNO\[0\]/Y  SPI_CS_Master/r_SM_CS\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO_0\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO_0\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/A  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT r_Master_TX_Byte\[0\]/CLK  r_Master_TX_Byte\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIMVIL2/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNIMVIL2/Y  r_Master_TX_Byte\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_TX_Count\[1\]/CLK  SPI_CS_Master/r_TX_Count\[1\]/Q  SPI_CS_Master/un1_r_TX_Count_1_G_2_i/A  SPI_CS_Master/un1_r_TX_Count_1_G_2_i/Y  SPI_CS_Master/r_TX_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[0\]/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[0\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[0\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNO\[0\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO\[0\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[0\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[3\]/CLK  clk_div_1M/clk_count\[3\]/Q  clk_div_1M/un3_clk_count_1_I_9/B  clk_div_1M/un3_clk_count_1_I_9/Y  clk_div_1M/clk_count\[3\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[0\]/CLK  clk_div_1M/clk_count\[0\]/Q  clk_div_1M/clk_count_RNO\[0\]/C  clk_div_1M/clk_count_RNO\[0\]/Y  clk_div_1M/clk_count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT clk_div_1M/clk_count\[0\]/CLK  clk_div_1M/clk_count\[0\]/Q  clk_div_1M/un3_clk_count_1_I_5/A  clk_div_1M/un3_clk_count_1_I_5/Y  clk_div_1M/clk_count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_CS_Inactive_Count\[2\]/CLK  SPI_CS_Master/r_CS_Inactive_Count\[2\]/Q  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[2\]/C  SPI_CS_Master/r_CS_Inactive_Count_RNO_0\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/A  SPI_CS_Master/r_CS_Inactive_Count_RNO\[2\]/Y  SPI_CS_Master/r_CS_Inactive_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[1\]/B  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Edges\[3\]/Q  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/B  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/B  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI_RNO/Y  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNO/C  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[1\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/CLK  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/Q  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/A  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge_RNIVILN/Y  SPI_CS_Master/SPI_Master_Inst/r_TX_Bit_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNO/B  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge/CLK  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge/Q  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/A  SPI_CS_Master/SPI_Master_Inst/r_Trailing_Edge_RNI5MKJ/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[0\]/A  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[0\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[0\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_8/A  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_8/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/A  SPI_CS_Master/SPI_Master_Inst/un1_r_SPI_Clk_Count_1_I_10/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_Count\[1\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/B  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[2\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[2\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/CLK  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/Q  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[1\]/A  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count_RNO\[1\]/Y  SPI_CS_Master/SPI_Master_Inst/r_RX_Bit_Count\[1\]/D  	(8.9:8.9:8.9) )
+
+    (PATHCONSTRAINT r_Master_TX_Byte\[0\]/CLK  r_Master_TX_Byte\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[4\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_Byte\[0\]/CLK  r_Master_TX_Byte\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[2\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_Byte\[0\]/CLK  r_Master_TX_Byte\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[0\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT r_Master_TX_Byte\[0\]/CLK  r_Master_TX_Byte\[0\]/Q  SPI_CS_Master/SPI_Master_Inst/r_TX_Byte\[6\]/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/Q  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_RNO/C  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk_RNO/Y  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/CLK  SPI_CS_Master/SPI_Master_Inst/r_Leading_Edge/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI/E  	(9.0:9.0:9.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/CLK  SPI_CS_Master/SPI_Master_Inst/r_SPI_Clk/Q  SPI_CS_Master/SPI_Master_Inst/o_SPI_Clk/D  	(8.7:8.7:8.7) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/A  SPI_CS_Master/r_TX_Count_RNINU5T\[0\]/Y  SPI_CS_Master/r_SM_CS_RNIRVA72\[0\]/A  SPI_CS_Master/r_SM_CS_RNIRVA72\[0\]/Y  	(10.0:10.0:10.0) )
+
+    (PATHCONSTRAINT r_Master_TX_DV/CLK  r_Master_TX_DV/Q  SPI_CS_Master/r_SM_CS_RNII7BI\[1\]/C  SPI_CS_Master/r_SM_CS_RNII7BI\[1\]/Y  	(10.0:10.0:10.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/CLK  SPI_CS_Master/SPI_Master_Inst/o_TX_Ready/Q  SPI_CS_Master/r_SM_CS_RNIIPPN\[0\]/B  SPI_CS_Master/r_SM_CS_RNIIPPN\[0\]/Y  	(10.0:10.0:10.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/r_SM_CS_RNIIPPN\[0\]/A  SPI_CS_Master/r_SM_CS_RNIIPPN\[0\]/Y  	(10.0:10.0:10.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[0\]/CLK  SPI_CS_Master/r_SM_CS\[0\]/Q  SPI_CS_Master/r_SM_CS_RNII7BI\[1\]/A  SPI_CS_Master/r_SM_CS_RNII7BI\[1\]/Y  	(10.0:10.0:10.0) )
+
+    (PATHCONSTRAINT SPI_CS_Master/r_SM_CS\[1\]/CLK  SPI_CS_Master/r_SM_CS\[1\]/Q  SPI_CS_Master/r_SM_CS_RNII7BI\[1\]/B  SPI_CS_Master/r_SM_CS_RNII7BI\[1\]/Y  	(10.0:10.0:10.0) )
+
+  )
+)
+)

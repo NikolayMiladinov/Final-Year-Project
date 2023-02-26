@@ -1,0 +1,4 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":196:2:196:7|Removing sequential instance o_RX_Byte[7:0] (in view: work.spi_master_3s_2s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN225 |Writing default property annotation file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap.

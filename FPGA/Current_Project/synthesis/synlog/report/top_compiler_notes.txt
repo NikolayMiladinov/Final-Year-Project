@@ -1,0 +1,13 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v":1:7:1:13|Synthesizing module clk_div in library work.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v":35:7:35:16|Synthesizing module spi_master in library work.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v":35:7:35:31|Synthesizing module SPI_Master_With_Single_CS in library work.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":3:7:3:9|Synthesizing module top in library work.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[1] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[3] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[5] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":82:0:82:5|Register bit r_Master_TX_Byte[7] is always 0.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v":100:2:100:7|Trying to extract state machine for register r_SM_CS.
+@N|Running in 64-bit mode
+

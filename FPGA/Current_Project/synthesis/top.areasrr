@@ -1,0 +1,94 @@
+----------------------------------------------------------------------
+Report for cell top.verilog
+                                          Cell usage:
+                               cell       count     area    count*area
+                               BUFF         1       1.0        1.0
+                               DFN1         2       1.0        2.0
+                                GND         1       0.0        0.0
+                              INBUF         3       0.0        0.0
+                             OUTBUF         4       0.0        0.0
+          SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2         1     101.0      101.0
+                                VCC         1       0.0        0.0
+                        clk_div_10s         1      14.0       14.0
+                            
+                         TOTAL             14                118.0
+----------------------------------------------------------------------
+Report for cell SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2.netlist
+     Instance path:  SPI_CS_Master
+                                          Cell usage:
+                               cell       count     area    count*area
+                                AO1         1       1.0        1.0
+                               AO1A         2       1.0        2.0
+                               AOI1         1       1.0        1.0
+                               AX1B         1       1.0        1.0
+                              AXOI7         1       1.0        1.0
+                             DFN1C0         4       1.0        4.0
+                           DFN1E1C0         1       1.0        1.0
+                           DFN1E1P0         3       1.0        3.0
+                                GND         1       0.0        0.0
+                               NOR2         3       1.0        3.0
+                              NOR2A         2       1.0        2.0
+                               NOR3         4       1.0        4.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         1       1.0        1.0
+                                OR2         3       1.0        3.0
+                               OR2A         1       1.0        1.0
+                               OR2B         2       1.0        2.0
+                                OR3         1       1.0        1.0
+                               OR3C         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XOR2         1       1.0        1.0
+                   spi_master_3s_2s         1      66.0       66.0
+                            
+                         TOTAL             38                101.0
+----------------------------------------------------------------------
+Report for cell spi_master_3s_2s.netlist
+     Instance path:  SPI_CS_Master.SPI_Master_Inst
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         1       1.0        1.0
+                               AOI1         1       1.0        1.0
+                                AX1         1       1.0        1.0
+                               AX1D         1       1.0        1.0
+                             DFN1C0         5       1.0        5.0
+                           DFN1E0C0         5       1.0        5.0
+                           DFN1E1C0         5       1.0        5.0
+                           DFN1E1P0         6       1.0        6.0
+                             DFN1P0         2       1.0        2.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                                MX2         3       1.0        3.0
+                               MX2B         1       1.0        1.0
+                               NOR2         3       1.0        3.0
+                              NOR2A         1       1.0        1.0
+                               NOR3         2       1.0        2.0
+                              NOR3A         5       1.0        5.0
+                              NOR3B         1       1.0        1.0
+                               OA1A         1       1.0        1.0
+                                OR2         7       1.0        7.0
+                               OR2A         3       1.0        3.0
+                                OR3         1       1.0        1.0
+                               OR3B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1A         1       1.0        1.0
+                               XO1A         4       1.0        4.0
+                               XOR2         4       1.0        4.0
+                            
+                         TOTAL             68                 66.0
+----------------------------------------------------------------------
+Report for cell clk_div_10s.netlist
+     Instance path:  clk_div_1M
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND3         1       1.0        1.0
+                                AX1         1       1.0        1.0
+                               AX1E         1       1.0        1.0
+                             DFN1C0         5       1.0        5.0
+                                GND         1       0.0        0.0
+                              NOR2A         1       1.0        1.0
+                               OA1B         2       1.0        2.0
+                               OR2A         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XOR2         2       1.0        2.0
+                            
+                         TOTAL             16                 14.0

@@ -1,0 +1,62 @@
+Target Part: AGL250V2_VQFP100_STD
+Report for cell top.verilog
+  Core Cell usage:
+              cell count     area count*area
+              AND2     1      1.0        1.0
+              AND3     1      1.0        1.0
+               AO1     1      1.0        1.0
+              AO1A     2      1.0        2.0
+              AOI1     2      1.0        2.0
+               AX1     2      1.0        2.0
+              AX1B     1      1.0        1.0
+              AX1D     1      1.0        1.0
+              AX1E     1      1.0        1.0
+             AXOI7     1      1.0        1.0
+              BUFF     1      1.0        1.0
+               GND     4      0.0        0.0
+               INV     1      1.0        1.0
+               MX2     3      1.0        3.0
+              MX2B     1      1.0        1.0
+              NOR2     6      1.0        6.0
+             NOR2A     4      1.0        4.0
+              NOR3     6      1.0        6.0
+             NOR3A     7      1.0        7.0
+             NOR3B     2      1.0        2.0
+              OA1A     1      1.0        1.0
+              OA1B     2      1.0        2.0
+               OR2    10      1.0       10.0
+              OR2A     5      1.0        5.0
+              OR2B     2      1.0        2.0
+               OR3     2      1.0        2.0
+              OR3B     1      1.0        1.0
+              OR3C     1      1.0        1.0
+               VCC     4      0.0        0.0
+              XA1A     1      1.0        1.0
+              XO1A     4      1.0        4.0
+              XOR2     7      1.0        7.0
+
+
+              DFN1     2      1.0        2.0
+            DFN1C0    14      1.0       14.0
+          DFN1E0C0     5      1.0        5.0
+          DFN1E1C0     6      1.0        6.0
+          DFN1E1P0     9      1.0        9.0
+            DFN1P0     2      1.0        2.0
+                   -----          ----------
+             TOTAL   126               118.0
+
+
+  IO Cell usage:
+              cell count
+             INBUF     3
+            OUTBUF     4
+                   -----
+             TOTAL     7
+
+
+Core Cells         : 118 of 6144 (2%)
+IO Cells           : 7
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 8 (0%)
+

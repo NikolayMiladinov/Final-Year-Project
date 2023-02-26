@@ -1,0 +1,16 @@
+Project Name: Current_Project
+Location: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : AGL250V2-VQ100I
+Family         : IGLOO
+Die            : AGL250V2
+Package        : 100 VQFP
+Speed          : STD
+Core Voltage   : 1.2~1.5
+Range          : IND
