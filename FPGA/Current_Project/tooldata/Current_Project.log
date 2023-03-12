@@ -7,10 +7,10 @@ Preferred HDL Type: Verilog
                   Device Details
 #-----------------------------------------------------
 
-Part Number    : AGL250V2-VQ100I
+Part Number    : AGLN250V2-VQ100
 Family         : IGLOO
-Die            : AGL250V2
+Die            : AGLN250V2
 Package        : 100 VQFP
 Speed          : STD
-Core Voltage   : 1.2~1.5
-Range          : IND
+Core Voltage   : 1.2
+Range          : COM

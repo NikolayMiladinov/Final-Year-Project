@@ -1,4 +1,4 @@
-# Sat Feb 25 15:38:30 2023
+# Fri Mar 10 19:35:40 2023
 
 Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -12,14 +12,33 @@ Printing clock  summary report in "C:\Users\nikol\Documents\FinalYearProject\Fin
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
 
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":196:2:196:7|Removing sequential instance o_RX_Byte[7:0] (in view: work.spi_master_3s_2s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":415:11:415:26|Removing sequential instance \\DFN1C0_RDCNT\[0\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":311:11:311:26|Removing sequential instance \\DFN1C0_RDCNT\[1\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":92:11:92:26|Removing sequential instance \\DFN1C0_RDCNT\[2\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":482:11:482:26|Removing sequential instance \\DFN1C0_RDCNT\[3\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":463:11:463:26|Removing sequential instance \\DFN1C0_RDCNT\[4\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":99:11:99:26|Removing sequential instance \\DFN1C0_RDCNT\[5\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":550:11:550:26|Removing sequential instance \\DFN1C0_RDCNT\[6\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":265:11:265:26|Removing sequential instance \\DFN1C0_RDCNT\[7\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":338:11:338:26|Removing sequential instance \\DFN1C0_RDCNT\[8\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":308:13:308:26|Removing sequential instance \\DFN1E1C0_Q\[0\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":115:13:115:26|Removing sequential instance \\DFN1E1C0_Q\[1\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":488:13:488:26|Removing sequential instance \\DFN1E1C0_Q\[2\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":437:13:437:26|Removing sequential instance \\DFN1E1C0_Q\[3\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":117:13:117:26|Removing sequential instance \\DFN1E1C0_Q\[4\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":380:13:380:26|Removing sequential instance \\DFN1E1C0_Q\[5\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":225:13:225:26|Removing sequential instance \\DFN1E1C0_Q\[6\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":120:13:120:26|Removing sequential instance \\DFN1E1C0_Q\[7\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":268:11:268:24|Removing sequential instance \\RAM4K9_QXI\[7\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.RAM4K9(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":399:11:399:22|Removing sequential instance DFN1C0_DVLDI (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":197:2:197:7|Removing sequential instance o_RX_Byte[7:0] (in view: work.spi_master_3s_2s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
 
 
 
@@ -29,33 +48,45 @@ Clock Summary
 Start                                  Requested     Requested     Clock        Clock                   Clock
 Clock                                  Frequency     Period        Type         Group                   Load 
 -------------------------------------------------------------------------------------------------------------
-clk_div_10s|clk_out_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     44   
+System                                 100.0 MHz     10.000        system       system_clkgroup         2    
+clk_div_10s|clk_out_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     213  
 top|CLKA                               100.0 MHz     10.000        inferred     Inferred_clkgroup_1     5    
 =============================================================================================================
 
-@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":88:2:88:7|Found inferred clock clk_div_10s|clk_out_inferred_clock which controls 44 sequential elements including SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[4:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT532 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":146:8:146:11|Found signal identified as System clock which controls 2 sequential elements including MEM_COMMAND_CONTROLLER.current_command\.miso_byte_num[2].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":968:11:968:31|Found inferred clock clk_div_10s|clk_out_inferred_clock which controls 213 sequential elements including MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[11\]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\clk_div.v":11:0:11:5|Found inferred clock top|CLKA which controls 5 sequential elements including clk_div_1M.clk_count[3:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
 
-Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2(verilog))
+Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
+Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+original code -> new code
+   00 -> 0
+   01 -> 1
+@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":196:4:196:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)); safe FSM implementation is not required.
+Encoding state machine fifo_SM_PROG[2:0] (in view: work.top(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
 None
 None
 
-Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 25MB peak: 110MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 27MB peak: 112MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Feb 25 15:38:30 2023
+# Fri Mar 10 19:35:41 2023
 
 ###########################################################]

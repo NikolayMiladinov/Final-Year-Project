@@ -32,11 +32,13 @@
 //              time when CS is high between trasnfers.
 ///////////////////////////////////////////////////////////////////////////////
 
+`timescale 1ns / 100ps
+
 module SPI_Master_With_Single_CS
-  #(parameter SPI_MODE = 0,
+  #(parameter SPI_MODE = 3,
     parameter CLKS_PER_HALF_BIT = 2,
-    parameter MAX_BYTES_PER_CS = 2,
-    parameter CS_INACTIVE_CLKS = 1)
+    parameter MAX_BYTES_PER_CS = 5000,
+    parameter MAX_CS_INACTIVE_CLKS = 1000)
   (
    // Control/Data Signals,
    input        i_Rst_L,     // FPGA Reset
@@ -46,6 +48,7 @@ module SPI_Master_With_Single_CS
    input [$clog2(MAX_BYTES_PER_CS+1)-1:0] i_TX_Count,  // # bytes per CS low
    input [7:0]  i_TX_Byte,       // Byte to transmit on MOSI
    input        i_TX_DV,         // Data Valid Pulse with i_TX_Byte
+   input [$clog2(MAX_CS_INACTIVE_CLKS+1)-1:0] i_CS_INACTIVE_CLKS, // # of inactive clocks between commands
    output       o_TX_Ready,      // Transmit Ready for next byte
    
    // RX (MISO) Signals
@@ -66,7 +69,7 @@ module SPI_Master_With_Single_CS
 
   reg [1:0] r_SM_CS;
   reg r_CS_n;
-  reg [$clog2(CS_INACTIVE_CLKS)-1:0] r_CS_Inactive_Count;
+  reg [$clog2(MAX_CS_INACTIVE_CLKS)-1:0] r_CS_Inactive_Count;
   reg [$clog2(MAX_BYTES_PER_CS+1)-1:0] r_TX_Count;
   wire w_Master_Ready;
 
@@ -101,10 +104,10 @@ module SPI_Master_With_Single_CS
   begin
     if (~i_Rst_L)
     begin
-      r_SM_CS <= IDLE;
-      r_CS_n  <= 1'b1;   // Resets to high
-      r_TX_Count <= 0;
-      r_CS_Inactive_Count <= CS_INACTIVE_CLKS;
+      r_SM_CS             <= IDLE;
+      r_CS_n              <= 1'b1;   // Resets to high
+      r_TX_Count          <= 0;
+      r_CS_Inactive_Count <= 'b1;
     end
     else
     begin
@@ -114,9 +117,10 @@ module SPI_Master_With_Single_CS
         begin
           if (r_CS_n & i_TX_DV) // Start of transmission
           begin
-            r_TX_Count <= i_TX_Count - 1'b1; // Register TX Count
-            r_CS_n     <= 1'b0;       // Drive CS low
-            r_SM_CS    <= TRANSFER;   // Transfer bytes
+            r_TX_Count          <= i_TX_Count - 1'b1;   // Register TX Count
+            r_CS_Inactive_Count <= i_CS_INACTIVE_CLKS;  // Register # of inactive clk cycles when CS goes high
+            r_CS_n              <= 1'b0;                // Drive CS low
+            r_SM_CS             <= TRANSFER;            // Transfer bytes
           end
         end
 
@@ -135,11 +139,10 @@ module SPI_Master_With_Single_CS
             else
             begin
               r_CS_n  <= 1'b1; // we done, so set CS high
-              r_CS_Inactive_Count <= CS_INACTIVE_CLKS;
-              r_SM_CS             <= CS_INACTIVE;
-            end // else: !if(r_TX_Count > 0)
-          end // if (w_Master_Ready)
-        end // case: TRANSFER
+              r_SM_CS <= CS_INACTIVE;
+            end
+          end
+        end
 
       CS_INACTIVE:
         begin
@@ -155,12 +158,12 @@ module SPI_Master_With_Single_CS
 
       default:
         begin
-          r_CS_n  <= 1'b1; // we done, so set CS high
+          r_CS_n  <= 1'b1;
           r_SM_CS <= IDLE;
         end
-      endcase // case (r_SM_CS)
+      endcase
     end
-  end // always @ (posedge i_Clk or negedge i_Rst_L)
+  end
 
 
   // Purpose: Keep track of RX_Count
@@ -182,4 +185,4 @@ module SPI_Master_With_Single_CS
 
   assign o_TX_Ready  = ((r_SM_CS == IDLE) | (r_SM_CS == TRANSFER && w_Master_Ready == 1'b1 && r_TX_Count > 0)) & ~i_TX_DV;
 
-endmodule // SPI_Master_With_Single_CS
+endmodule

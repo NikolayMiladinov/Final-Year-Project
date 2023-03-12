@@ -1,0 +1,1015 @@
+#Build: Synplify Pro L-2016.09M-SP1-5, Build 264R, Oct 26 2017
+#install: C:\Microsemi\Libero_SoC_v11.9\SynplifyPro
+#OS: Windows 8 6.2
+#Hostname: XPS-NICK
+
+# Mon Mar 06 00:55:02 2023
+
+#Implementation: synthesis
+
+Synopsys HDL Compiler, version comp2016q4p1, Build 512R, built Oct 26 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2016q4p1, Build 517R, built Oct 30 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v" (library work)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v" (library work)
+Verilog syntax check successful!
+Options changed - recompiling
+Selecting top level module FIFO_INPUT_SAVE
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1953:7:1953:10|Synthesizing module BUFF in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1386:7:1386:12|Synthesizing module NAND3C in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1929:7:1929:10|Synthesizing module XOR2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":2:7:2:10|Synthesizing module AND2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1996:7:1996:12|Synthesizing module RAM4K9 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":86:7:86:9|Synthesizing module AO1 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1905:7:1905:11|Synthesizing module XNOR2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1325:7:1325:9|Synthesizing module MX2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":929:7:929:12|Synthesizing module DFN1C0 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":977:7:977:14|Synthesizing module DFN1E1C0 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1283:7:1283:9|Synthesizing module INV in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1464:7:1464:9|Synthesizing module OR2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":20:7:20:10|Synthesizing module AND3 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1380:7:1380:12|Synthesizing module NAND3B in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1482:7:1482:9|Synthesizing module OR3 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1001:7:1001:12|Synthesizing module DFN1P0 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1368:7:1368:11|Synthesizing module NAND3 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1374:7:1374:12|Synthesizing module NAND3A in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":8:7:8:11|Synthesizing module AND2A in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1349:7:1349:11|Synthesizing module NAND2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1398:7:1398:11|Synthesizing module NOR2A in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1163:7:1163:9|Synthesizing module GND in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1864:7:1864:9|Synthesizing module VCC in library work.
+
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":5:7:5:21|Synthesizing module FIFO_INPUT_SAVE in library work.
+
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1326:9:1326:15|Removing instance AND2_97 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1324:8:1324:13|Removing instance MX2_82 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1322:8:1322:12|Removing instance MX2_9 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1319:8:1319:12|Removing instance MX2_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1313:13:1313:22|Removing instance DFN1E1C0_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1308:11:1308:25|Removing instance DFN1C0_RGRY[9] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1306:9:1306:15|Removing instance XOR2_69 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1300:8:1300:12|Removing instance INV_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1299:8:1299:13|Removing instance INV_27 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1298:9:1298:15|Removing instance AND2_25 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1294:8:1294:13|Removing instance MX2_36 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1292:9:1292:15|Removing instance XOR2_91 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1245:9:1245:15|Removing instance AND2_41 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1241:9:1241:15|Removing instance XOR2_73 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1212:11:1212:25|Removing instance DFN1C0_WGRY[4] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1207:9:1207:14|Removing instance AND2_8 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1202:9:1202:15|Removing instance AND2_67 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1192:8:1192:13|Removing instance MX2_30 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1188:11:1188:25|Removing instance DFN1C0_WGRY[7] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1186:8:1186:13|Removing instance MX2_79 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1184:11:1184:25|Removing instance DFN1C0_WGRY[6] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1179:8:1179:13|Removing instance MX2_95 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1175:9:1175:15|Removing instance XOR2_60 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1170:8:1170:13|Removing instance MX2_55 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1168:8:1168:13|Removing instance MX2_48 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1166:8:1166:13|Removing instance MX2_26 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1160:8:1160:13|Removing instance MX2_41 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1158:9:1158:14|Removing instance XOR2_1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1147:9:1147:15|Removing instance XOR2_38 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1144:9:1144:14|Removing instance AND2_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1138:8:1138:13|Removing instance AO1_16 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1132:11:1132:25|Removing instance DFN1C0_WGRY[0] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1128:9:1128:15|Removing instance AND2_68 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1126:9:1126:15|Removing instance XOR2_97 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1124:8:1124:13|Removing instance MX2_20 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1122:11:1122:25|Removing instance DFN1C0_RGRY[2] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1114:9:1114:15|Removing instance AND2_48 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1113:9:1113:15|Removing instance AND2_24 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1112:9:1112:15|Removing instance XOR2_99 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1104:8:1104:13|Removing instance MX2_19 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1098:8:1098:13|Removing instance MX2_34 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1096:11:1096:26|Removing instance DFN1C0_WGRY[10] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1093:9:1093:15|Removing instance XOR2_82 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1090:9:1090:15|Removing instance XOR2_64 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1084:8:1084:13|Removing instance INV_26 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1078:9:1078:15|Removing instance AND2_62 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1068:8:1068:13|Removing instance MX2_12 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1062:9:1062:15|Removing instance AND2_42 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1055:8:1055:13|Removing instance MX2_99 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1050:8:1050:12|Removing instance MX2_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1043:11:1043:25|Removing instance DFN1C0_RGRY[4] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1038:9:1038:15|Removing instance XOR2_90 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1036:8:1036:13|Removing instance MX2_47 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1026:8:1026:14|Removing instance MX2_103 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1017:11:1017:25|Removing instance DFN1C0_RGRY[7] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1011:11:1011:25|Removing instance DFN1C0_RGRY[6] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1009:9:1009:14|Removing instance XOR2_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1007:11:1007:25|Removing instance DFN1C0_WGRY[3] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":1001:8:1001:12|Removing instance INV_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":999:9:999:15|Removing instance AND2_35 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":959:9:959:15|Removing instance XOR2_95 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":951:9:951:15|Removing instance AND2_86 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":948:9:948:15|Removing instance AND2_13 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":946:8:946:12|Removing instance MX2_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":935:11:935:25|Removing instance DFN1C0_RGRY[0] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":921:8:921:13|Removing instance MX2_46 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":904:9:904:14|Removing instance BUFF_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":898:8:898:12|Removing instance INV_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":887:9:887:15|Removing instance AND2_29 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":886:9:886:14|Removing instance BUFF_1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":884:8:884:13|Removing instance AO1_32 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":882:9:882:15|Removing instance XOR2_87 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":880:8:880:13|Removing instance AO1_10 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":874:9:874:15|Removing instance XOR2_17 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":872:8:872:13|Removing instance MX2_25 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":870:8:870:13|Removing instance MX2_68 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":860:9:860:15|Removing instance XOR2_68 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":857:9:857:15|Removing instance XOR2_83 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":851:9:851:15|Removing instance AND2_34 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":850:8:850:13|Removing instance MX2_71 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":845:9:845:14|Removing instance XOR2_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":841:11:841:26|Removing instance DFN1C0_WGRY[12] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":839:9:839:15|Removing instance XOR2_13 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":838:8:838:13|Removing instance INV_18 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":827:9:827:15|Removing instance AND2_88 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":825:11:825:26|Removing instance DFN1C0_RGRY[10] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":823:9:823:15|Removing instance AND2_26 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":817:11:817:25|Removing instance DFN1C0_RGRY[3] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":809:9:809:14|Removing instance AND2_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":780:8:780:14|Removing instance MX2_101 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":766:8:766:13|Removing instance MX2_73 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":764:11:764:26|Removing instance DFN1C0_RGRY[11] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":753:8:753:13|Removing instance MX2_18 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":747:9:747:15|Removing instance AND2_74 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":745:9:745:15|Removing instance AND2_14 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":743:9:743:15|Removing instance AND2_27 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":731:8:731:13|Removing instance MX2_32 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":714:8:714:12|Removing instance MX2_4 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":713:9:713:15|Removing instance XOR2_85 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":711:8:711:13|Removing instance MX2_29 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":705:9:705:14|Removing instance AND2_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":704:8:704:13|Removing instance MX2_67 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":700:8:700:13|Removing instance INV_25 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":695:8:695:13|Removing instance MX2_80 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":693:8:693:13|Removing instance AO1_52 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":690:9:690:15|Removing instance AND2_52 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":686:8:686:13|Removing instance INV_20 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":683:8:683:13|Removing instance MX2_58 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":662:13:662:22|Removing instance DFN1E1C0_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":659:9:659:15|Removing instance XOR2_84 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":654:8:654:13|Removing instance MX2_22 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":650:9:650:14|Removing instance BUFF_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":648:9:648:15|Removing instance AND2_65 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":645:9:645:15|Removing instance XOR2_31 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":608:13:608:22|Removing instance DFN1E1C0_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":607:11:607:22|Removing instance DFN1C0_DVLDX because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":576:8:576:13|Removing instance MX2_93 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":570:8:570:13|Removing instance MX2_66 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":566:8:566:13|Removing instance MX2_53 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":563:8:563:13|Removing instance MX2_76 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":548:8:548:13|Removing instance INV_22 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":543:9:543:15|Removing instance AND2_70 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":541:9:541:15|Removing instance AND2_10 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":535:8:535:13|Removing instance MX2_60 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":534:8:534:13|Removing instance INV_24 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":527:9:527:14|Removing instance AND2_9 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":522:11:522:25|Removing instance DFN1C0_WGRY[5] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":514:8:514:12|Removing instance MX2_8 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":512:9:512:15|Removing instance XOR2_27 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":483:8:483:13|Removing instance MX2_57 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":479:9:479:15|Removing instance AND2_19 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":477:11:477:25|Removing instance DFN1C0_WGRY[1] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":474:11:474:26|Removing instance DFN1C0_RGRY[12] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":467:9:467:15|Removing instance AND2_31 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":454:9:454:15|Removing instance XOR2_54 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":453:8:453:13|Removing instance INV_15 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":452:9:452:14|Removing instance BUFF_6 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":449:11:449:25|Removing instance DFN1C0_WGRY[8] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":447:9:447:14|Removing instance XOR2_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":437:8:437:13|Removing instance INV_10 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":434:9:434:15|Removing instance AND2_37 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":432:8:432:13|Removing instance AO1_42 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":422:9:422:14|Removing instance AND2_6 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":414:9:414:15|Removing instance AND2_16 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":402:8:402:13|Removing instance MX2_96 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":400:9:400:15|Removing instance XOR2_62 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":396:8:396:13|Removing instance MX2_38 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":395:8:395:13|Removing instance MX2_56 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":390:9:390:15|Removing instance XOR2_30 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":387:8:387:13|Removing instance MX2_31 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":383:9:383:15|Removing instance XOR2_18 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":382:9:382:15|Removing instance AND2_11 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":381:8:381:13|Removing instance MX2_42 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":372:8:372:12|Removing instance MX2_6 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":367:11:367:25|Removing instance DFN1C0_WGRY[9] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":365:11:365:26|Removing instance DFN1C0_WGRY[11] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":363:8:363:13|Removing instance MX2_90 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":351:8:351:12|Removing instance MX2_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":350:8:350:13|Removing instance MX2_50 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":338:9:338:15|Removing instance XOR2_25 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":325:8:325:13|Removing instance MX2_14 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":320:9:320:15|Removing instance AND2_53 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":319:8:319:13|Removing instance INV_14 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":318:8:318:13|Removing instance MX2_21 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":312:11:312:25|Removing instance DFN1C0_RGRY[5] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":311:9:311:15|Removing instance AND2_85 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":306:9:306:15|Removing instance XOR2_61 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":295:9:295:15|Removing instance XOR2_34 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":293:11:293:25|Removing instance DFN1C0_RGRY[1] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":287:9:287:15|Removing instance AND2_40 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":280:9:280:15|Removing instance XOR2_96 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":273:11:273:25|Removing instance DFN1C0_RGRY[8] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":269:8:269:12|Removing instance MX2_1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":267:8:267:13|Removing instance MX2_65 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":262:8:262:13|Removing instance MX2_23 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":259:9:259:15|Removing instance AND2_55 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":253:9:253:15|Removing instance AND2_69 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":251:8:251:13|Removing instance MX2_89 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":228:11:228:25|Removing instance DFN1C0_WGRY[2] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":223:9:223:15|Removing instance AND2_72 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":187:9:187:14|Removing instance BUFF_8 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 73MB peak: 74MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Mon Mar 06 00:55:02 2023
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Mon Mar 06 00:55:02 2023
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Mon Mar 06 00:55:02 2023
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Mon Mar 06 00:55:04 2023
+
+###########################################################]
+Pre-mapping Report
+
+# Mon Mar 06 00:55:04 2023
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 100MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\FIFO_INPUT_SAVE_scck.rpt 
+Printing clock  summary report in "C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\FIFO_INPUT_SAVE_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 111MB)
+
+
+
+Clock Summary
+*****************
+
+Start                   Requested     Requested     Clock        Clock                   Clock
+Clock                   Frequency     Period        Type         Group                   Load 
+----------------------------------------------------------------------------------------------
+FIFO_INPUT_SAVE|CLK     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     69   
+==============================================================================================
+
+@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":1263:11:1263:18|Found inferred clock FIFO_INPUT_SAVE|CLK which controls 69 sequential elements including RAM4K9_2. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\FIFO_INPUT_SAVE.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 111MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 111MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 25MB peak: 111MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Mar 06 00:55:04 2023
+
+###########################################################]
+Map & Optimize Report
+
+# Mon Mar 06 00:55:04 2023
+
+Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name     Fanout, notes                 
+-------------------------------------------------------------
+RESET_pad / Y                  61 : 61 asynchronous set/reset
+=============================================================
+
+@N: FP130 |Promoting Net RESET_c on CLKBUF  RESET_pad 
+@N: FP130 |Promoting Net CLK_c on CLKBUF  CLK_pad 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 112MB)
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 69 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@K:CKID0001       CLK                 port                   69         DFN1E1C0_0     
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+Writing Analyst data base C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\FIFO_INPUT_SAVE_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+Writing EDIF Netlist and constraint files
+L-2016.09M-SP1-5
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+@W: MT420 |Found inferred clock FIFO_INPUT_SAVE|CLK with period 10.00ns. Please declare a user-defined clock on object "p:CLK"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Mon Mar 06 00:55:05 2023
+#
+
+
+Top view:               FIFO_INPUT_SAVE
+Library name:           IGLOO_V2
+Operating conditions:   COMWCSTD ( T = 70.0, V = 1.14, P = 3.70, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        igloo
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -39.668
+
+                        Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock          Frequency     Frequency     Period        Period        Slack       Type         Group              
+----------------------------------------------------------------------------------------------------------------------------
+FIFO_INPUT_SAVE|CLK     100.0 MHz     20.1 MHz      10.000        49.668        -39.668     inferred     Inferred_clkgroup_0
+============================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                    |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------
+Starting             Ending               |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------
+FIFO_INPUT_SAVE|CLK  FIFO_INPUT_SAVE|CLK  |  10.000      -39.668  |  No paths    -      |  No paths    -      |  No paths    -    
+==================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: FIFO_INPUT_SAVE|CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                          Starting                                                      Arrival            
+Instance                  Reference               Type       Pin     Net                Time        Slack  
+                          Clock                                                                            
+-----------------------------------------------------------------------------------------------------------
+DFN1P0_EMPTY              FIFO_INPUT_SAVE|CLK     DFN1P0     Q       EMPTY_c            1.395       -39.668
+DFN1C0_MEM_RADDR\[1\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[1\]     1.771       -37.434
+DFN1C0_MEM_RADDR\[0\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[0\]     1.771       -36.983
+DFN1C0_MEM_RADDR\[2\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[2\]     1.771       -36.423
+DFN1C0_MEM_RADDR\[3\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[3\]     1.771       -36.352
+DFN1C0_MEM_RADDR\[4\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[4\]     1.771       -34.461
+DFN1C0_MEM_RADDR\[5\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[5\]     1.771       -34.389
+DFN1C0_MEM_RADDR\[6\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[6\]     1.771       -34.389
+DFN1C0_MEM_RADDR\[7\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       MEM_RADDR\[7\]     1.771       -34.318
+DFN1C0_FULL               FIFO_INPUT_SAVE|CLK     DFN1C0     Q       FULL_c             1.395       -30.213
+===========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                       Starting                                                   Required            
+Instance               Reference               Type       Pin     Net             Time         Slack  
+                       Clock                                                                          
+------------------------------------------------------------------------------------------------------
+DFN1C0_RDCNT\[12\]     FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[12\]     8.705        -39.668
+DFN1C0_RDCNT\[11\]     FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[11\]     8.705        -37.534
+DFN1C0_RDCNT\[10\]     FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[10\]     8.705        -37.380
+DFN1C0_RDCNT\[9\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[9\]      8.705        -35.246
+DFN1C0_RDCNT\[8\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[8\]      8.705        -33.901
+DFN1C0_RDCNT\[7\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[7\]      8.705        -31.767
+DFN1C0_RDCNT\[6\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[6\]      8.705        -31.612
+DFN1P0_EMPTY           FIFO_INPUT_SAVE|CLK     DFN1P0     D       EMPTYINT        8.622        -31.320
+DFN1C0_FULL            FIFO_INPUT_SAVE|CLK     DFN1C0     D       FULLINT         8.705        -30.213
+DFN1C0_RDCNT\[5\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       RDIFF\[5\]      8.705        -29.478
+======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      48.374
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -39.668
+
+    Number of logic level(s):                16
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            DFN1C0_RDCNT\[12\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+DFN1P0_EMPTY               DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                    Net        -        -       1.938     -           3         
+NAND2_1                    NAND2      A        In      -         3.333       -         
+NAND2_1                    NAND2      Y        Out     1.174     4.506       -         
+NAND2_1_Y                  Net        -        -       0.773     -           1         
+AND2_MEMORYRE              AND2       A        In      -         5.279       -         
+AND2_MEMORYRE              AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                   Net        -        -       1.938     -           3         
+AND2_21                    AND2       B        In      -         8.453       -         
+AND2_21                    AND2       Y        Out     1.508     9.960       -         
+AND2_21_Y                  Net        -        -       0.927     -           2         
+AO1_41                     AO1        B        In      -         10.888      -         
+AO1_41                     AO1        Y        Out     1.437     12.324      -         
+AO1_41_Y                   Net        -        -       1.938     -           3         
+AO1_36                     AO1        B        In      -         14.262      -         
+AO1_36                     AO1        Y        Out     1.437     15.699      -         
+AO1_36_Y                   Net        -        -       2.844     -           4         
+AO1_11                     AO1        B        In      -         18.543      -         
+AO1_11                     AO1        Y        Out     1.437     19.979      -         
+AO1_11_Y                   Net        -        -       0.927     -           2         
+AO1_23                     AO1        B        In      -         20.907      -         
+AO1_23                     AO1        Y        Out     1.437     22.343      -         
+AO1_23_Y                   Net        -        -       0.773     -           1         
+XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_17                     INV        A        In      -         27.305      -         
+INV_17                     INV        Y        Out     0.873     28.177      -         
+INV_17_Y                   Net        -        -       1.938     -           3         
+XOR2_32                    XOR2       B        In      -         30.115      -         
+XOR2_32                    XOR2       Y        Out     2.251     32.366      -         
+XOR2_32_Y                  Net        -        -       0.927     -           2         
+AND2_1                     AND2       A        In      -         33.293      -         
+AND2_1                     AND2       Y        Out     1.174     34.467      -         
+AND2_1_Y                   Net        -        -       0.927     -           2         
+AO1_20                     AO1        A        In      -         35.394      -         
+AO1_20                     AO1        Y        Out     1.249     36.643      -         
+AO1_20_Y                   Net        -        -       0.773     -           1         
+AO1_18                     AO1        C        In      -         37.415      -         
+AO1_18                     AO1        Y        Out     1.574     38.990      -         
+AO1_18_Y                   Net        -        -       1.938     -           3         
+AO1_26                     AO1        B        In      -         40.928      -         
+AO1_26                     AO1        Y        Out     1.361     42.289      -         
+AO1_26_Y                   Net        -        -       0.927     -           2         
+AO1_47                     AO1        B        In      -         43.216      -         
+AO1_47                     AO1        Y        Out     1.361     44.578      -         
+AO1_47_Y                   Net        -        -       0.773     -           1         
+XOR2_RDIFF\[12\]           XOR2       B        In      -         45.350      -         
+XOR2_RDIFF\[12\]           XOR2       Y        Out     2.251     47.601      -         
+RDIFF\[12\]                Net        -        -       0.773     -           1         
+DFN1C0_RDCNT\[12\]         DFN1C0     D        In      -         48.374      -         
+=======================================================================================
+Total path delay (propagation time + setup) of 49.668 is 26.698(53.8%) logic and 22.970(46.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      48.328
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -39.622
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            DFN1C0_RDCNT\[12\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+DFN1P0_EMPTY               DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                    Net        -        -       1.938     -           3         
+NAND2_1                    NAND2      A        In      -         3.333       -         
+NAND2_1                    NAND2      Y        Out     1.174     4.506       -         
+NAND2_1_Y                  Net        -        -       0.773     -           1         
+AND2_MEMORYRE              AND2       A        In      -         5.279       -         
+AND2_MEMORYRE              AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                   Net        -        -       1.938     -           3         
+AND2_21                    AND2       B        In      -         8.453       -         
+AND2_21                    AND2       Y        Out     1.508     9.960       -         
+AND2_21_Y                  Net        -        -       0.927     -           2         
+AO1_41                     AO1        B        In      -         10.888      -         
+AO1_41                     AO1        Y        Out     1.437     12.324      -         
+AO1_41_Y                   Net        -        -       1.938     -           3         
+AO1_36                     AO1        B        In      -         14.262      -         
+AO1_36                     AO1        Y        Out     1.437     15.699      -         
+AO1_36_Y                   Net        -        -       2.844     -           4         
+AO1_17                     AO1        B        In      -         18.543      -         
+AO1_17                     AO1        Y        Out     1.437     19.979      -         
+AO1_17_Y                   Net        -        -       2.844     -           4         
+XOR2_RBINNXTSHIFT\[8\]     XOR2       B        In      -         22.823      -         
+XOR2_RBINNXTSHIFT\[8\]     XOR2       Y        Out     2.251     25.074      -         
+RBINNXTSHIFT\[8\]          Net        -        -       1.938     -           3         
+INV_12                     INV        A        In      -         27.012      -         
+INV_12                     INV        Y        Out     0.873     27.885      -         
+INV_12_Y                   Net        -        -       1.938     -           3         
+XOR2_92                    XOR2       B        In      -         29.823      -         
+XOR2_92                    XOR2       Y        Out     2.251     32.074      -         
+XOR2_92_Y                  Net        -        -       0.927     -           2         
+AO1_31                     AO1        A        In      -         33.001      -         
+AO1_31                     AO1        Y        Out     1.249     34.250      -         
+AO1_31_Y                   Net        -        -       0.773     -           1         
+AO1_20                     AO1        C        In      -         35.022      -         
+AO1_20                     AO1        Y        Out     1.574     36.597      -         
+AO1_20_Y                   Net        -        -       0.773     -           1         
+AO1_18                     AO1        C        In      -         37.369      -         
+AO1_18                     AO1        Y        Out     1.574     38.944      -         
+AO1_18_Y                   Net        -        -       1.938     -           3         
+AO1_26                     AO1        B        In      -         40.882      -         
+AO1_26                     AO1        Y        Out     1.361     42.243      -         
+AO1_26_Y                   Net        -        -       0.927     -           2         
+AO1_47                     AO1        B        In      -         43.170      -         
+AO1_47                     AO1        Y        Out     1.361     44.532      -         
+AO1_47_Y                   Net        -        -       0.773     -           1         
+XOR2_RDIFF\[12\]           XOR2       B        In      -         45.304      -         
+XOR2_RDIFF\[12\]           XOR2       Y        Out     2.251     47.555      -         
+RDIFF\[12\]                Net        -        -       0.773     -           1         
+DFN1C0_RDCNT\[12\]         DFN1C0     D        In      -         48.328      -         
+=======================================================================================
+Total path delay (propagation time + setup) of 49.622 is 25.663(51.7%) logic and 23.960(48.3%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      48.148
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -39.443
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            DFN1C0_RDCNT\[12\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+DFN1P0_EMPTY               DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                    Net        -        -       1.938     -           3         
+NAND2_1                    NAND2      A        In      -         3.333       -         
+NAND2_1                    NAND2      Y        Out     1.174     4.506       -         
+NAND2_1_Y                  Net        -        -       0.773     -           1         
+AND2_MEMORYRE              AND2       A        In      -         5.279       -         
+AND2_MEMORYRE              AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                   Net        -        -       1.938     -           3         
+AND2_21                    AND2       B        In      -         8.453       -         
+AND2_21                    AND2       Y        Out     1.508     9.960       -         
+AND2_21_Y                  Net        -        -       0.927     -           2         
+AO1_41                     AO1        B        In      -         10.888      -         
+AO1_41                     AO1        Y        Out     1.437     12.324      -         
+AO1_41_Y                   Net        -        -       1.938     -           3         
+AO1_36                     AO1        B        In      -         14.262      -         
+AO1_36                     AO1        Y        Out     1.437     15.699      -         
+AO1_36_Y                   Net        -        -       2.844     -           4         
+AO1_17                     AO1        B        In      -         18.543      -         
+AO1_17                     AO1        Y        Out     1.437     19.979      -         
+AO1_17_Y                   Net        -        -       2.844     -           4         
+XOR2_RBINNXTSHIFT\[8\]     XOR2       B        In      -         22.823      -         
+XOR2_RBINNXTSHIFT\[8\]     XOR2       Y        Out     2.251     25.074      -         
+RBINNXTSHIFT\[8\]          Net        -        -       1.938     -           3         
+INV_12                     INV        A        In      -         27.012      -         
+INV_12                     INV        Y        Out     0.873     27.885      -         
+INV_12_Y                   Net        -        -       1.938     -           3         
+XOR2_92                    XOR2       B        In      -         29.823      -         
+XOR2_92                    XOR2       Y        Out     2.251     32.074      -         
+XOR2_92_Y                  Net        -        -       0.927     -           2         
+AND2_1                     AND2       B        In      -         33.001      -         
+AND2_1                     AND2       Y        Out     1.240     34.241      -         
+AND2_1_Y                   Net        -        -       0.927     -           2         
+AO1_20                     AO1        A        In      -         35.169      -         
+AO1_20                     AO1        Y        Out     1.249     36.417      -         
+AO1_20_Y                   Net        -        -       0.773     -           1         
+AO1_18                     AO1        C        In      -         37.190      -         
+AO1_18                     AO1        Y        Out     1.574     38.764      -         
+AO1_18_Y                   Net        -        -       1.938     -           3         
+AO1_26                     AO1        B        In      -         40.702      -         
+AO1_26                     AO1        Y        Out     1.361     42.063      -         
+AO1_26_Y                   Net        -        -       0.927     -           2         
+AO1_47                     AO1        B        In      -         42.991      -         
+AO1_47                     AO1        Y        Out     1.361     44.352      -         
+AO1_47_Y                   Net        -        -       0.773     -           1         
+XOR2_RDIFF\[12\]           XOR2       B        In      -         45.125      -         
+XOR2_RDIFF\[12\]           XOR2       Y        Out     2.251     47.376      -         
+RDIFF\[12\]                Net        -        -       0.773     -           1         
+DFN1C0_RDCNT\[12\]         DFN1C0     D        In      -         48.148      -         
+=======================================================================================
+Total path delay (propagation time + setup) of 49.443 is 25.329(51.2%) logic and 24.114(48.8%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      48.106
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -39.401
+
+    Number of logic level(s):                16
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            DFN1C0_RDCNT\[12\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+DFN1P0_EMPTY               DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                    Net        -        -       1.938     -           3         
+NAND2_1                    NAND2      A        In      -         3.333       -         
+NAND2_1                    NAND2      Y        Out     1.174     4.506       -         
+NAND2_1_Y                  Net        -        -       0.773     -           1         
+AND2_MEMORYRE              AND2       A        In      -         5.279       -         
+AND2_MEMORYRE              AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                   Net        -        -       1.938     -           3         
+AND2_21                    AND2       B        In      -         8.453       -         
+AND2_21                    AND2       Y        Out     1.508     9.960       -         
+AND2_21_Y                  Net        -        -       0.927     -           2         
+AO1_41                     AO1        B        In      -         10.888      -         
+AO1_41                     AO1        Y        Out     1.437     12.324      -         
+AO1_41_Y                   Net        -        -       1.938     -           3         
+AO1_36                     AO1        B        In      -         14.262      -         
+AO1_36                     AO1        Y        Out     1.437     15.699      -         
+AO1_36_Y                   Net        -        -       2.844     -           4         
+AO1_11                     AO1        B        In      -         18.543      -         
+AO1_11                     AO1        Y        Out     1.437     19.979      -         
+AO1_11_Y                   Net        -        -       0.927     -           2         
+AO1_23                     AO1        B        In      -         20.907      -         
+AO1_23                     AO1        Y        Out     1.437     22.343      -         
+AO1_23_Y                   Net        -        -       0.773     -           1         
+XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_17                     INV        A        In      -         27.305      -         
+INV_17                     INV        Y        Out     0.873     28.177      -         
+INV_17_Y                   Net        -        -       1.938     -           3         
+AND2_0                     AND2       B        In      -         30.115      -         
+AND2_0                     AND2       Y        Out     1.508     31.623      -         
+AND2_0_Y                   Net        -        -       0.927     -           2         
+AO1_31                     AO1        B        In      -         32.550      -         
+AO1_31                     AO1        Y        Out     1.437     33.986      -         
+AO1_31_Y                   Net        -        -       0.773     -           1         
+AO1_20                     AO1        C        In      -         34.759      -         
+AO1_20                     AO1        Y        Out     1.520     36.279      -         
+AO1_20_Y                   Net        -        -       0.773     -           1         
+AO1_18                     AO1        C        In      -         37.052      -         
+AO1_18                     AO1        Y        Out     1.520     38.572      -         
+AO1_18_Y                   Net        -        -       1.938     -           3         
+AO1_26                     AO1        B        In      -         40.510      -         
+AO1_26                     AO1        Y        Out     1.437     41.946      -         
+AO1_26_Y                   Net        -        -       0.927     -           2         
+AO1_47                     AO1        B        In      -         42.874      -         
+AO1_47                     AO1        Y        Out     1.437     44.310      -         
+AO1_47_Y                   Net        -        -       0.773     -           1         
+XOR2_RDIFF\[12\]           XOR2       B        In      -         45.083      -         
+XOR2_RDIFF\[12\]           XOR2       Y        Out     2.251     47.334      -         
+RDIFF\[12\]                Net        -        -       0.773     -           1         
+DFN1C0_RDCNT\[12\]         DFN1C0     D        In      -         48.106      -         
+=======================================================================================
+Total path delay (propagation time + setup) of 49.401 is 26.586(53.8%) logic and 22.815(46.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      48.040
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -39.334
+
+    Number of logic level(s):                16
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            DFN1C0_RDCNT\[12\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+DFN1P0_EMPTY               DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                    Net        -        -       1.938     -           3         
+NAND2_1                    NAND2      A        In      -         3.333       -         
+NAND2_1                    NAND2      Y        Out     1.174     4.506       -         
+NAND2_1_Y                  Net        -        -       0.773     -           1         
+AND2_MEMORYRE              AND2       A        In      -         5.279       -         
+AND2_MEMORYRE              AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                   Net        -        -       1.938     -           3         
+AND2_21                    AND2       B        In      -         8.453       -         
+AND2_21                    AND2       Y        Out     1.508     9.960       -         
+AND2_21_Y                  Net        -        -       0.927     -           2         
+AO1_41                     AO1        B        In      -         10.888      -         
+AO1_41                     AO1        Y        Out     1.437     12.324      -         
+AO1_41_Y                   Net        -        -       1.938     -           3         
+AO1_36                     AO1        B        In      -         14.262      -         
+AO1_36                     AO1        Y        Out     1.437     15.699      -         
+AO1_36_Y                   Net        -        -       2.844     -           4         
+AO1_11                     AO1        B        In      -         18.543      -         
+AO1_11                     AO1        Y        Out     1.437     19.979      -         
+AO1_11_Y                   Net        -        -       0.927     -           2         
+AO1_23                     AO1        B        In      -         20.907      -         
+AO1_23                     AO1        Y        Out     1.437     22.343      -         
+AO1_23_Y                   Net        -        -       0.773     -           1         
+XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_17                     INV        A        In      -         27.305      -         
+INV_17                     INV        Y        Out     0.873     28.177      -         
+INV_17_Y                   Net        -        -       1.938     -           3         
+XOR2_32                    XOR2       B        In      -         30.115      -         
+XOR2_32                    XOR2       Y        Out     2.251     32.366      -         
+XOR2_32_Y                  Net        -        -       0.927     -           2         
+AND2_1                     AND2       A        In      -         33.293      -         
+AND2_1                     AND2       Y        Out     1.174     34.467      -         
+AND2_1_Y                   Net        -        -       0.927     -           2         
+AND2_23                    AND2       B        In      -         35.394      -         
+AND2_23                    AND2       Y        Out     1.240     36.634      -         
+AND2_23_Y                  Net        -        -       0.773     -           1         
+AO1_18                     AO1        A        In      -         37.407      -         
+AO1_18                     AO1        Y        Out     1.249     38.656      -         
+AO1_18_Y                   Net        -        -       1.938     -           3         
+AO1_26                     AO1        B        In      -         40.593      -         
+AO1_26                     AO1        Y        Out     1.361     41.955      -         
+AO1_26_Y                   Net        -        -       0.927     -           2         
+AO1_47                     AO1        B        In      -         42.882      -         
+AO1_47                     AO1        Y        Out     1.361     44.243      -         
+AO1_47_Y                   Net        -        -       0.773     -           1         
+XOR2_RDIFF\[12\]           XOR2       B        In      -         45.016      -         
+XOR2_RDIFF\[12\]           XOR2       Y        Out     2.251     47.267      -         
+RDIFF\[12\]                Net        -        -       0.773     -           1         
+DFN1C0_RDCNT\[12\]         DFN1C0     D        In      -         48.040      -         
+=======================================================================================
+Total path delay (propagation time + setup) of 49.334 is 26.364(53.4%) logic and 22.970(46.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+--------------------------------------------------------------------------------
+Target Part: AGL250V2_VQFP100_STD
+Report for cell FIFO_INPUT_SAVE.verilog
+  Core Cell usage:
+              cell count     area count*area
+              AND2    62      1.0       62.0
+             AND2A     1      1.0        1.0
+              AND3    10      1.0       10.0
+               AO1    51      1.0       51.0
+              BUFF     5      1.0        5.0
+               GND     1      0.0        0.0
+               INV    20      1.0       20.0
+               MX2    56      1.0       56.0
+             NAND2     2      1.0        2.0
+             NAND3     2      1.0        2.0
+            NAND3A     6      1.0        6.0
+            NAND3B     6      1.0        6.0
+            NAND3C     2      1.0        2.0
+             NOR2A     1      1.0        1.0
+               OR2    16      1.0       16.0
+               OR3     1      1.0        1.0
+               VCC     1      0.0        0.0
+             XNOR2    26      1.0       26.0
+              XOR2   107      1.0      107.0
+
+
+            DFN1C0    41      1.0       41.0
+          DFN1E1C0    11      1.0       11.0
+            DFN1P0     1      1.0        1.0
+            RAM4K9     8      0.0        0.0
+                   -----          ----------
+             TOTAL   437               427.0
+
+
+  IO Cell usage:
+              cell count
+            CLKBUF     2
+             INBUF    10
+            OUTBUF    23
+                   -----
+             TOTAL    35
+
+
+Core Cells         : 427 of 6144 (7%)
+IO Cells           : 35
+
+  RAM/ROM Usage Summary
+Block Rams : 8 of 8 (100%)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 26MB peak: 112MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Mar 06 00:55:05 2023
+
+###########################################################]

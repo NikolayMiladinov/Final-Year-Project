@@ -1,0 +1,30 @@
+----------------------------------------------------------------------
+Report for cell FIFO_INPUT_SAVE.verilog
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        53       1.0       53.0
+                              AND2A         1       1.0        1.0
+                               AND3        10       1.0       10.0
+                                AO1        44       1.0       44.0
+                               BUFF         2       1.0        2.0
+                             CLKBUF         1       0.0        0.0
+                             CLKINT         1       0.0        0.0
+                             DFN1C0        38       1.0       38.0
+                           DFN1E1C0        10       1.0       10.0
+                             DFN1P0         1       1.0        1.0
+                                GND         1       0.0        0.0
+                              INBUF        11       0.0        0.0
+                                INV        16       1.0       16.0
+                                MX2        24       1.0       24.0
+                              NAND2         4       1.0        4.0
+                              NOR2A         1       1.0        1.0
+                                OR2        10       1.0       10.0
+                               OR2A         4       1.0        4.0
+                                OR3         1       1.0        1.0
+                             OUTBUF        22       0.0        0.0
+                             RAM4K9         4       0.0        0.0
+                                VCC         1       0.0        0.0
+                              XNOR2        24       1.0       24.0
+                               XOR2        98       1.0       98.0
+                            
+                         TOTAL            382                341.0

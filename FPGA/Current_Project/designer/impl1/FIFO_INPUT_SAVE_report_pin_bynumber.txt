@@ -1,0 +1,119 @@
+*****************************************************************
+Pin Report - Date: Fri Mar 10 13:30:40 2023 UNCOMPLETED LAYOUT
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Design Name: FIFO_INPUT_SAVE
+Family: IGLOO
+Die: AGL250V2
+Package: 100 VQFP
+*****************************************************************
+
+-----------------------------------------------------------------
+Flash*Freeze information
+        Pin name  : 27
+        Pin usage : Available as a regular pin
+-----------------------------------------------------------------
+
+Number |Port |Function         |State       |
+-------|-----|-----------------|------------|
+1             GND               Reserved
+2             GAA2/IO118UDB3    Special
+3             IO118VDB3         Unassigned
+4             GAB2/IO117UDB3    Special
+5             IO117VDB3         Unassigned
+6             GAC2/IO116UDB3    Special
+7             IO116VDB3         Unassigned
+8             IO112PSB3         Unassigned
+9             GND               Reserved
+10            GFB1/IO109PDB3    Special
+11            GFB0/IO109NDB3    Special
+12            VCOMPLF           Reserved
+13            GFA0/IO108NPB3    Special
+14            VCCPLF            Reserved
+15            GFA1/IO108PPB3    Special
+16            GFA2/IO107PSB3    Special
+17            VCC               Reserved
+18            VCCIB3            Reserved
+19            GFC2/IO105PSB3    Special
+20            GEC1/IO100PDB3    Special
+21            GEC0/IO100NDB3    Special
+22            GEA1/IO98PDB3     Special
+23            GEA0/IO98NDB3     Special
+24            VMV3              Reserved
+25            GNDQ              Reserved
+26            GEA2/IO97RSB2     Special
+27            FF/GEB2/IO96RSB2  Special
+28            GEC2/IO95RSB2     Special
+29            IO93RSB2          Unassigned
+30            IO92RSB2          Unassigned
+31            IO91RSB2          Unassigned
+32            IO90RSB2          Unassigned
+33            IO88RSB2          Unassigned
+34            IO86RSB2          Unassigned
+35            IO85RSB2          Unassigned
+36            IO84RSB2          Unassigned
+37            VCC               Reserved
+38            GND               Reserved
+39            VCCIB2            Reserved
+40            IO77RSB2          Unassigned
+41            IO74RSB2          Unassigned
+42            IO71RSB2          Unassigned
+43            GDC2/IO63RSB2     Special
+44            GDB2/IO62RSB2     Special
+45            GDA2/IO61RSB2     Special
+46            GNDQ              Reserved
+47            TCK               Reserved
+48            TDI               Reserved
+49            TMS               Reserved
+50            VMV2              Reserved
+51            GND               Reserved
+52            VPUMP             Reserved
+53            Not Bonded        Unconnected
+54            TDO               Reserved
+55            TRST              Reserved
+56            VJTAG             Reserved
+57            GDA1/IO60USB1     Special
+58            GDC0/IO58VDB1     Special
+59            GDC1/IO58UDB1     Special
+60            IO52NDB1          Unassigned
+61            GCB2/IO52PDB1     Special
+62            GCA1/IO50PDB1     Special
+63            GCA0/IO50NDB1     Special
+64            GCC0/IO48NDB1     Special
+65            GCC1/IO48PDB1     Special
+66            VCCIB1            Reserved
+67            GND               Reserved
+68            VCC               Reserved
+69            IO43NDB1          Unassigned
+70            GBC2/IO43PDB1     Special
+71            GBB2/IO42PSB1     Special
+72            IO41NDB1          Unassigned
+73            GBA2/IO41PDB1     Special
+74            VMV1              Reserved
+75            GNDQ              Reserved
+76            GBA1/IO40RSB0     Special
+77            GBA0/IO39RSB0     Special
+78            GBB1/IO38RSB0     Special
+79            GBB0/IO37RSB0     Special
+80            GBC1/IO36RSB0     Special
+81            GBC0/IO35RSB0     Special
+82            IO29RSB0          Unassigned
+83            IO27RSB0          Unassigned
+84            IO25RSB0          Unassigned
+85            IO23RSB0          Unassigned
+86            IO21RSB0          Unassigned
+87            VCCIB0            Reserved
+88            GND               Reserved
+89            VCC               Reserved
+90            IO15RSB0          Unassigned
+91            IO13RSB0          Unassigned
+92            IO11RSB0          Unassigned
+93            GAC1/IO05RSB0     Special
+94            GAC0/IO04RSB0     Special
+95            GAB1/IO03RSB0     Special
+96            GAB0/IO02RSB0     Special
+97            GAA1/IO01RSB0     Special
+98            GAA0/IO00RSB0     Special
+99            GNDQ              Reserved
+100           VMV0              Reserved

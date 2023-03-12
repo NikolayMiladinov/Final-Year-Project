@@ -1,0 +1,651 @@
+# Fri Mar 10 13:28:13 2023
+
+Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name     Fanout, notes                 
+-------------------------------------------------------------
+RESET_pad / Y                  53 : 53 asynchronous set/reset
+=============================================================
+
+@N: FP130 |Promoting Net CLK_c on CLKBUF  CLK_pad 
+@N: FP130 |Promoting Net RESET_c on CLKINT  I_1 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 57 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@K:CKID0001       CLK                 port                   57         DFN1E1C0_0     
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+Writing Analyst data base C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\FIFO_INPUT_SAVE_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+Writing EDIF Netlist and constraint files
+L-2016.09M-SP1-5
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+@W: MT420 |Found inferred clock FIFO_INPUT_SAVE|CLK with period 10.00ns. Please declare a user-defined clock on object "p:CLK"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Mar 10 13:28:13 2023
+#
+
+
+Top view:               FIFO_INPUT_SAVE
+Library name:           IGLOO_V2
+Operating conditions:   COMWCSTD ( T = 70.0, V = 1.14, P = 3.70, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        igloo
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -37.380
+
+                        Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock          Frequency     Frequency     Period        Period        Slack       Type         Group              
+----------------------------------------------------------------------------------------------------------------------------
+FIFO_INPUT_SAVE|CLK     100.0 MHz     21.1 MHz      10.000        47.380        -37.380     inferred     Inferred_clkgroup_0
+============================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                    |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------
+Starting             Ending               |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------
+FIFO_INPUT_SAVE|CLK  FIFO_INPUT_SAVE|CLK  |  10.000      -37.380  |  No paths    -      |  No paths    -      |  No paths    -    
+==================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: FIFO_INPUT_SAVE|CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                            Starting                                                        Arrival            
+Instance                    Reference               Type       Pin     Net                  Time        Slack  
+                            Clock                                                                              
+---------------------------------------------------------------------------------------------------------------
+DFN1P0_EMPTY                FIFO_INPUT_SAVE|CLK     DFN1P0     Q       EMPTY_c              1.395       -37.380
+\\DFN1C0_MEM_RADDR\[1\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[1\]     1.771       -34.293
+\\DFN1C0_MEM_RADDR\[0\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[0\]     1.771       -34.093
+\\DFN1C0_MEM_RADDR\[2\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[2\]     1.771       -33.283
+\\DFN1C0_MEM_RADDR\[3\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[3\]     1.771       -33.212
+\\DFN1C0_MEM_RADDR\[4\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[4\]     1.771       -30.414
+\\DFN1C0_MEM_RADDR\[5\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[5\]     1.771       -30.343
+\\DFN1C0_MEM_RADDR\[6\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[6\]     1.771       -30.343
+\\DFN1C0_MEM_RADDR\[7\]     FIFO_INPUT_SAVE|CLK     DFN1C0     Q       \\MEM_RADDR\[7\]     1.771       -30.271
+DFN1C0_FULL                 FIFO_INPUT_SAVE|CLK     DFN1C0     Q       FULL_c               1.395       -27.887
+===============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                         Starting                                                     Required            
+Instance                 Reference               Type       Pin     Net               Time         Slack  
+                         Clock                                                                            
+----------------------------------------------------------------------------------------------------------
+\\DFN1C0_RDCNT\[10\]     FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[10\]     8.705        -37.380
+\\DFN1C0_RDCNT\[11\]     FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[11\]     8.705        -37.380
+\\DFN1C0_RDCNT\[9\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[9\]      8.705        -35.246
+\\DFN1C0_RDCNT\[8\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[8\]      8.705        -33.901
+\\DFN1C0_RDCNT\[7\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[7\]      8.705        -31.767
+\\DFN1C0_RDCNT\[6\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[6\]      8.705        -31.612
+\\DFN1C0_RDCNT\[5\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[5\]      8.705        -29.478
+DFN1P0_EMPTY             FIFO_INPUT_SAVE|CLK     DFN1P0     D       EMPTYINT          8.705        -28.831
+DFN1C0_FULL              FIFO_INPUT_SAVE|CLK     DFN1C0     D       FULLINT           8.705        -27.887
+\\DFN1C0_RDCNT\[4\]      FIFO_INPUT_SAVE|CLK     DFN1C0     D       \\RDIFF\[4\]      8.705        -23.957
+==========================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      46.085
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -37.380
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            \\DFN1C0_RDCNT\[11\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                         Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                      Net        -        -       1.938     -           3         
+NAND2_3                      NAND2      A        In      -         3.333       -         
+NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                    Net        -        -       0.773     -           1         
+AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                     Net        -        -       1.938     -           3         
+AND2_83                      AND2       B        In      -         8.453       -         
+AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                    Net        -        -       0.927     -           2         
+AO1_22                       AO1        B        In      -         10.888      -         
+AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                     Net        -        -       1.938     -           3         
+AO1_11                       AO1        B        In      -         14.262      -         
+AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                     Net        -        -       2.844     -           4         
+AO1_5                        AO1        B        In      -         18.543      -         
+AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                      Net        -        -       0.927     -           2         
+AO1_30                       AO1        B        In      -         20.907      -         
+AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+\\RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_9                        INV        A        In      -         27.305      -         
+INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                      Net        -        -       1.938     -           3         
+XOR2_36                      XOR2       B        In      -         30.115      -         
+XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                    Net        -        -       0.927     -           2         
+AND2_8                       AND2       A        In      -         33.293      -         
+AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                     Net        -        -       0.927     -           2         
+AO1_2                        AO1        A        In      -         35.394      -         
+AO1_2                        AO1        Y        Out     1.249     36.643      -         
+AO1_2_Y                      Net        -        -       0.773     -           1         
+AO1_17                       AO1        C        In      -         37.415      -         
+AO1_17                       AO1        Y        Out     1.574     38.990      -         
+AO1_17_Y                     Net        -        -       1.938     -           3         
+AO1_4                        AO1        B        In      -         40.928      -         
+AO1_4                        AO1        Y        Out     1.361     42.289      -         
+AO1_4_Y                      Net        -        -       0.773     -           1         
+\\XOR2_RDIFF\[11\]           XOR2       B        In      -         43.062      -         
+\\XOR2_RDIFF\[11\]           XOR2       Y        Out     2.251     45.313      -         
+\\RDIFF\[11\]                Net        -        -       0.773     -           1         
+\\DFN1C0_RDCNT\[11\]         DFN1C0     D        In      -         46.085      -         
+=========================================================================================
+Total path delay (propagation time + setup) of 47.380 is 25.337(53.5%) logic and 22.043(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      46.085
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -37.380
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            \\DFN1C0_RDCNT\[10\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                         Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                      Net        -        -       1.938     -           3         
+NAND2_3                      NAND2      A        In      -         3.333       -         
+NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                    Net        -        -       0.773     -           1         
+AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                     Net        -        -       1.938     -           3         
+AND2_83                      AND2       B        In      -         8.453       -         
+AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                    Net        -        -       0.927     -           2         
+AO1_22                       AO1        B        In      -         10.888      -         
+AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                     Net        -        -       1.938     -           3         
+AO1_11                       AO1        B        In      -         14.262      -         
+AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                     Net        -        -       2.844     -           4         
+AO1_5                        AO1        B        In      -         18.543      -         
+AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                      Net        -        -       0.927     -           2         
+AO1_30                       AO1        B        In      -         20.907      -         
+AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+\\RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_9                        INV        A        In      -         27.305      -         
+INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                      Net        -        -       1.938     -           3         
+XOR2_36                      XOR2       B        In      -         30.115      -         
+XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                    Net        -        -       0.927     -           2         
+AND2_8                       AND2       A        In      -         33.293      -         
+AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                     Net        -        -       0.927     -           2         
+AO1_2                        AO1        A        In      -         35.394      -         
+AO1_2                        AO1        Y        Out     1.249     36.643      -         
+AO1_2_Y                      Net        -        -       0.773     -           1         
+AO1_17                       AO1        C        In      -         37.415      -         
+AO1_17                       AO1        Y        Out     1.574     38.990      -         
+AO1_17_Y                     Net        -        -       1.938     -           3         
+AO1_48                       AO1        B        In      -         40.928      -         
+AO1_48                       AO1        Y        Out     1.361     42.289      -         
+AO1_48_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RDIFF\[10\]           XOR2       B        In      -         43.062      -         
+\\XOR2_RDIFF\[10\]           XOR2       Y        Out     2.251     45.313      -         
+\\RDIFF\[10\]                Net        -        -       0.773     -           1         
+\\DFN1C0_RDCNT\[10\]         DFN1C0     D        In      -         46.085      -         
+=========================================================================================
+Total path delay (propagation time + setup) of 47.380 is 25.337(53.5%) logic and 22.043(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      45.751
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -37.046
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            \\DFN1C0_RDCNT\[11\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                         Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                      Net        -        -       1.938     -           3         
+NAND2_3                      NAND2      A        In      -         3.333       -         
+NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                    Net        -        -       0.773     -           1         
+AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                     Net        -        -       1.938     -           3         
+AND2_83                      AND2       B        In      -         8.453       -         
+AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                    Net        -        -       0.927     -           2         
+AO1_22                       AO1        B        In      -         10.888      -         
+AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                     Net        -        -       1.938     -           3         
+AO1_11                       AO1        B        In      -         14.262      -         
+AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                     Net        -        -       2.844     -           4         
+AO1_5                        AO1        B        In      -         18.543      -         
+AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                      Net        -        -       0.927     -           2         
+AO1_30                       AO1        B        In      -         20.907      -         
+AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+\\RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_9                        INV        A        In      -         27.305      -         
+INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                      Net        -        -       1.938     -           3         
+XOR2_36                      XOR2       B        In      -         30.115      -         
+XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                    Net        -        -       0.927     -           2         
+AND2_8                       AND2       A        In      -         33.293      -         
+AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                     Net        -        -       0.927     -           2         
+AND2_40                      AND2       B        In      -         35.394      -         
+AND2_40                      AND2       Y        Out     1.240     36.634      -         
+AND2_40_Y                    Net        -        -       0.773     -           1         
+AO1_17                       AO1        A        In      -         37.407      -         
+AO1_17                       AO1        Y        Out     1.249     38.656      -         
+AO1_17_Y                     Net        -        -       1.938     -           3         
+AO1_4                        AO1        B        In      -         40.593      -         
+AO1_4                        AO1        Y        Out     1.361     41.955      -         
+AO1_4_Y                      Net        -        -       0.773     -           1         
+\\XOR2_RDIFF\[11\]           XOR2       B        In      -         42.727      -         
+\\XOR2_RDIFF\[11\]           XOR2       Y        Out     2.251     44.978      -         
+\\RDIFF\[11\]                Net        -        -       0.773     -           1         
+\\DFN1C0_RDCNT\[11\]         DFN1C0     D        In      -         45.751      -         
+=========================================================================================
+Total path delay (propagation time + setup) of 47.046 is 25.003(53.1%) logic and 22.043(46.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      45.751
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -37.046
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            \\DFN1C0_RDCNT\[10\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                         Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                      Net        -        -       1.938     -           3         
+NAND2_3                      NAND2      A        In      -         3.333       -         
+NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                    Net        -        -       0.773     -           1         
+AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                     Net        -        -       1.938     -           3         
+AND2_83                      AND2       B        In      -         8.453       -         
+AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                    Net        -        -       0.927     -           2         
+AO1_22                       AO1        B        In      -         10.888      -         
+AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                     Net        -        -       1.938     -           3         
+AO1_11                       AO1        B        In      -         14.262      -         
+AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                     Net        -        -       2.844     -           4         
+AO1_5                        AO1        B        In      -         18.543      -         
+AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                      Net        -        -       0.927     -           2         
+AO1_30                       AO1        B        In      -         20.907      -         
+AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+\\RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_9                        INV        A        In      -         27.305      -         
+INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                      Net        -        -       1.938     -           3         
+XOR2_36                      XOR2       B        In      -         30.115      -         
+XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                    Net        -        -       0.927     -           2         
+AND2_8                       AND2       A        In      -         33.293      -         
+AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                     Net        -        -       0.927     -           2         
+AND2_40                      AND2       B        In      -         35.394      -         
+AND2_40                      AND2       Y        Out     1.240     36.634      -         
+AND2_40_Y                    Net        -        -       0.773     -           1         
+AO1_17                       AO1        A        In      -         37.407      -         
+AO1_17                       AO1        Y        Out     1.249     38.656      -         
+AO1_17_Y                     Net        -        -       1.938     -           3         
+AO1_48                       AO1        B        In      -         40.593      -         
+AO1_48                       AO1        Y        Out     1.361     41.955      -         
+AO1_48_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RDIFF\[10\]           XOR2       B        In      -         42.727      -         
+\\XOR2_RDIFF\[10\]           XOR2       Y        Out     2.251     44.978      -         
+\\RDIFF\[10\]                Net        -        -       0.773     -           1         
+\\DFN1C0_RDCNT\[10\]         DFN1C0     D        In      -         45.751      -         
+=========================================================================================
+Total path delay (propagation time + setup) of 47.046 is 25.003(53.1%) logic and 22.043(46.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      45.743
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -37.037
+
+    Number of logic level(s):                15
+    Starting point:                          DFN1P0_EMPTY / Q
+    Ending point:                            \\DFN1C0_RDCNT\[11\] / D
+    The start point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+    The end   point is clocked by            FIFO_INPUT_SAVE|CLK [rising] on pin CLK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                         Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+EMPTY_c                      Net        -        -       1.938     -           3         
+NAND2_3                      NAND2      A        In      -         3.333       -         
+NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                    Net        -        -       0.773     -           1         
+AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                     Net        -        -       1.938     -           3         
+AND2_83                      AND2       B        In      -         8.453       -         
+AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                    Net        -        -       0.927     -           2         
+AO1_22                       AO1        B        In      -         10.888      -         
+AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                     Net        -        -       1.938     -           3         
+AO1_11                       AO1        B        In      -         14.262      -         
+AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                     Net        -        -       2.844     -           4         
+AO1_5                        AO1        B        In      -         18.543      -         
+AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                      Net        -        -       0.927     -           2         
+AO1_30                       AO1        B        In      -         20.907      -         
+AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                     Net        -        -       0.773     -           1         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+\\RBINNXTSHIFT\[7\]          Net        -        -       1.938     -           3         
+INV_9                        INV        A        In      -         27.305      -         
+INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                      Net        -        -       1.938     -           3         
+AND2_68                      AND2       B        In      -         30.115      -         
+AND2_68                      AND2       Y        Out     1.508     31.623      -         
+AND2_68_Y                    Net        -        -       0.927     -           2         
+AO1_12                       AO1        B        In      -         32.550      -         
+AO1_12                       AO1        Y        Out     1.437     33.986      -         
+AO1_12_Y                     Net        -        -       0.773     -           1         
+AO1_2                        AO1        C        In      -         34.759      -         
+AO1_2                        AO1        Y        Out     1.520     36.279      -         
+AO1_2_Y                      Net        -        -       0.773     -           1         
+AO1_17                       AO1        C        In      -         37.052      -         
+AO1_17                       AO1        Y        Out     1.520     38.572      -         
+AO1_17_Y                     Net        -        -       1.938     -           3         
+AO1_4                        AO1        B        In      -         40.510      -         
+AO1_4                        AO1        Y        Out     1.437     41.946      -         
+AO1_4_Y                      Net        -        -       0.773     -           1         
+\\XOR2_RDIFF\[11\]           XOR2       B        In      -         42.719      -         
+\\XOR2_RDIFF\[11\]           XOR2       Y        Out     2.251     44.970      -         
+\\RDIFF\[11\]                Net        -        -       0.773     -           1         
+\\DFN1C0_RDCNT\[11\]         DFN1C0     D        In      -         45.743      -         
+=========================================================================================
+Total path delay (propagation time + setup) of 47.037 is 25.149(53.5%) logic and 21.888(46.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+--------------------------------------------------------------------------------
+Target Part: AGL250V2_VQFP100_STD
+Report for cell FIFO_INPUT_SAVE.verilog
+  Core Cell usage:
+              cell count     area count*area
+              AND2    53      1.0       53.0
+             AND2A     1      1.0        1.0
+              AND3    10      1.0       10.0
+               AO1    44      1.0       44.0
+              BUFF     2      1.0        2.0
+            CLKINT     1      0.0        0.0
+               GND     1      0.0        0.0
+               INV    16      1.0       16.0
+               MX2    24      1.0       24.0
+             NAND2     4      1.0        4.0
+             NOR2A     1      1.0        1.0
+               OR2    10      1.0       10.0
+              OR2A     4      1.0        4.0
+               OR3     1      1.0        1.0
+               VCC     1      0.0        0.0
+             XNOR2    24      1.0       24.0
+              XOR2    98      1.0       98.0
+
+
+            DFN1C0    38      1.0       38.0
+          DFN1E1C0    10      1.0       10.0
+            DFN1P0     1      1.0        1.0
+            RAM4K9     4      0.0        0.0
+                   -----          ----------
+             TOTAL   348               341.0
+
+
+  IO Cell usage:
+              cell count
+            CLKBUF     1
+             INBUF    11
+            OUTBUF    22
+                   -----
+             TOTAL    34
+
+
+Core Cells         : 341 of 6144 (6%)
+IO Cells           : 34
+
+  RAM/ROM Usage Summary
+Block Rams : 4 of 8 (50%)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 26MB peak: 113MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Fri Mar 10 13:28:14 2023
+
+###########################################################]

@@ -17,13 +17,13 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>clk_div_10s|clk_out_inferred_clock</data>
 <data>100.0 MHz</data>
-<data>52.8 MHz</data>
-<data>-8.948</data>
+<data>21.1 MHz</data>
+<data>-37.380</data>
 </row>
 <row>
 <data>top|CLKA</data>
 <data>100.0 MHz</data>
-<data>85.6 MHz</data>
-<data>-1.685</data>
+<data>82.2 MHz</data>
+<data>-2.170</data>
 </row>
 </report_table>

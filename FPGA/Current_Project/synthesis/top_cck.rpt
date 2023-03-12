@@ -1,7 +1,7 @@
 # Synopsys Constraint Checker, version mapact, Build 2172R, built Oct 30 2017
 # Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Sat Feb 25 15:38:30 2023
+# Written on Fri Mar 10 19:35:41 2023
 
 
 ##### DESIGN INFO #######################################################
@@ -26,6 +26,8 @@ Clock Relationships
 
 Starting                               Ending                                 |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                 clk_div_10s|clk_out_inferred_clock     |     No paths         |     No paths         |     No paths         |     10.000                           
+clk_div_10s|clk_out_inferred_clock     System                                 |     10.000           |     No paths         |     No paths         |     No paths                         
 clk_div_10s|clk_out_inferred_clock     clk_div_10s|clk_out_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
 top|CLKA                               top|CLKA                               |     10.000           |     No paths         |     No paths         |     No paths                         
 =========================================================================================================================================================================================
@@ -36,9 +38,15 @@ top|CLKA                               top|CLKA                               | 
 Unconstrained Start/End Points
 ******************************
 
-p:MOSI_PIN2
-p:SPI_CLK_PIN3
-p:SPI_READY_PIN5
+p:MEM_CM_READY
+p:SPI_CLK
+p:SPI_CS_n
+p:SPI_MISO
+p:SPI_MOSI
+p:TEST_CLK
+p:TEST_CS_n
+p:TEST_MISO
+p:TEST_MOSI
 p:pb_sw1
 p:rst_n
 

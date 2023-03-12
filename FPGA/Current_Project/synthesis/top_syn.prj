@@ -1,13 +1,17 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09M-SP1-5
 #--  Project file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top_syn.prj
-#--  Written on Sat Feb 25 15:38:31 2023
+#--  Written on Fri Mar 10 19:35:43 2023
 
 
 #project files
+add_file -include "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v"
+add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/clk_div.v"
+add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/smartgen/FIFO_INPUT_SAVE/FIFO_INPUT_SAVE.v"
+add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/smartgen/FIFO_OUTPUT_SEND/FIFO_OUTPUT_SEND.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/spi_master.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/SPI_Master_With_Single_CS.v"
-add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/clk_div.v"
+add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v"
 
 
@@ -18,11 +22,11 @@ impl -add synthesis -type fpga
 #
 #implementation attributes
 
-set_option -vlog_std v2001
+set_option -vlog_std sysv
 
 #device options
 set_option -technology IGLOO
-set_option -part AGL250V2
+set_option -part AGLN250V2
 set_option -package VQFP100
 set_option -speed_grade STD
 set_option -part_companion ""

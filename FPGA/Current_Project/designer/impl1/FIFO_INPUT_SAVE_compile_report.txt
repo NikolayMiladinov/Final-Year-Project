@@ -1,0 +1,259 @@
+***************************************************************************
+                               Status Report
+                          Fri Mar 10 13:28:50 2023 ***************************************************************************
+
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+File Name: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl1\FIFO_INPUT_SAVE.adb
+Design Name: FIFO_INPUT_SAVE  Design State: compile
+Last Saved: Fri Mar 10 13:28:49 2023
+
+***** Device Data **************************************************
+
+Family: IGLOO  Die: AGL250V2  Package: 100 VQFP
+Speed: STD  Voltage: 1.2~1.5
+
+Restrict JTAG Pins: YES
+Restrict Probe Pins: YES
+
+Junction Temperature Range:   IND
+Voltage Range:   IND
+
+***** Import Variables *********************************************
+
+Source File(s) Imported on Fri Mar 10 13:28:48 2023:
+        C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\FIFO_INPUT_SAVE.edn
+
+
+***** CAE Variables ************************************************
+
+Back Annotation File: N/A
+
+
+***** Bitstream Variables ******************************************
+
+Bitstream File: N/A
+     Lock Mode: OFF
+
+
+***** Compile Variables ********************************************
+
+Netlist PIN properties overwrite existing properties: 0
+
+Compile Output:
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : IGLOO
+Device      : AGL250V2
+Package     : 100 VQFP
+Source      :
+C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\FIF\
+O_INPUT_SAVE.edn
+Format      : EDIF
+Topcell     : FIFO_INPUT_SAVE
+Speed grade : STD
+Temp        : -40:25:85
+Voltage     : 1.58:1.20:1.14
+
+Keep Existing Physical Constraints : No
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Warning: CMP201: Net RAM4K9_0_DOUTA8 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTB8 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA8 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTB8 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA8 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTB8 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA8 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTB8 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA0 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA1 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA2 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA3 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA4 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA5 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA6 drives no load.
+Warning: CMP201: Net RAM4K9_0_DOUTA7 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA0 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA1 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA2 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA3 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA4 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA5 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA6 drives no load.
+Warning: CMP201: Net RAM4K9_2_DOUTA7 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA0 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA1 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA2 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA3 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA4 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA5 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA6 drives no load.
+Warning: CMP201: Net RAM4K9_3_DOUTA7 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA0 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA1 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA2 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA3 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA4 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA5 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA6 drives no load.
+Warning: CMP201: Net RAM4K9_1_DOUTA7 drives no load.
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 30
+  - Logic combining:        74
+
+    Total macros optimized  104
+
+There were 0 error(s) and 40 warning(s) in this design.
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:    237  Total:   6144   (3.86%)
+    IO (W/ clocks)             Used:     34  Total:     68   (50.00%)
+    Differential IO            Used:      0  Total:     13   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      2  Total:     18   (11.11%)
+    PLL                        Used:      0  Total:      1   (0.00%)
+    RAM/FIFO                   Used:      4  Total:      8   (50.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 2      | 6  (33.33%)*
+    Quadrant global | 0      | 12 (0.00%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 188          | 188
+    SEQ     | 49           | 49
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 12            | 0            | 0
+    Output I/O                            | 22            | 0            | 0
+    Bidirectional I/O                     | 0             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVCMOS33                        | 3.30v | N/A   | 12    | 22     | 0
+
+I/O Placement:
+
+    Locked  :   0
+    Placed  :   0
+    UnPlaced:  34 ( 100.00% )
+
+Net information report:
+=======================
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    57      CLK_NET       Net   : CLK_c
+                          Driver: CLK_pad
+                          Source: NETLIST
+    53      SET/RESET_NET Net   : RESET_c
+                          Driver: RESET_pad_RNIN4HC
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    10      INT_NET       Net   : \\MEM_WADDR[5]
+                          Driver: \\DFN1C0_MEM_WADDR[5]
+    10      INT_NET       Net   : \\MEM_WADDR[6]
+                          Driver: \\DFN1C0_MEM_WADDR[6]
+    10      INT_NET       Net   : \\MEM_WADDR[4]
+                          Driver: \\DFN1C0_MEM_WADDR[4]
+    10      INT_NET       Net   : \\MEM_WADDR[3]
+                          Driver: \\DFN1C0_MEM_WADDR[3]
+    10      INT_NET       Net   : \\MEM_WADDR[10]
+                          Driver: \\DFN1C0_MEM_WADDR[10]
+    10      INT_NET       Net   : \\MEM_WADDR[1]
+                          Driver: \\DFN1C0_MEM_WADDR[1]
+    10      INT_NET       Net   : \\MEM_WADDR[2]
+                          Driver: \\DFN1C0_MEM_WADDR[2]
+    10      INT_NET       Net   : \\MEM_WADDR[7]
+                          Driver: \\DFN1C0_MEM_WADDR[7]
+    10      INT_NET       Net   : \\MEM_WADDR[8]
+                          Driver: \\DFN1C0_MEM_WADDR[8]
+    10      INT_NET       Net   : \\MEM_WADDR[9]
+                          Driver: \\DFN1C0_MEM_WADDR[9]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    16      INT_NET       Net   : DFN1E1C0_0_Q
+                          Driver: DFN1E1C0_0
+    11      INT_NET       Net   : \\MEM_WADDR[6]
+                          Driver: \\DFN1C0_MEM_WADDR[6]
+    11      INT_NET       Net   : \\MEM_WADDR[4]
+                          Driver: \\DFN1C0_MEM_WADDR[4]
+    11      INT_NET       Net   : \\MEM_WADDR[2]
+                          Driver: \\DFN1C0_MEM_WADDR[2]
+    11      INT_NET       Net   : \\MEM_WADDR[8]
+                          Driver: \\DFN1C0_MEM_WADDR[8]
+    10      INT_NET       Net   : \\MEM_WADDR[5]
+                          Driver: \\DFN1C0_MEM_WADDR[5]
+    10      INT_NET       Net   : \\MEM_WADDR[3]
+                          Driver: \\DFN1C0_MEM_WADDR[3]
+    10      INT_NET       Net   : \\MEM_WADDR[10]
+                          Driver: \\DFN1C0_MEM_WADDR[10]
+    10      INT_NET       Net   : \\MEM_WADDR[1]
+                          Driver: \\DFN1C0_MEM_WADDR[1]
+    10      INT_NET       Net   : \\MEM_WADDR[7]
+                          Driver: \\DFN1C0_MEM_WADDR[7]
+====================
+Flash*Freeze report:
+====================
+
+The design does not use the Flash*Freeze feature.
+
+====================
+
+

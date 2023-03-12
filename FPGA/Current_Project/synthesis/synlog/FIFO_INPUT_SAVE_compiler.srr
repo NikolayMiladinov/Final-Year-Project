@@ -1,0 +1,225 @@
+Synopsys HDL Compiler, version comp2016q4p1, Build 512R, built Oct 26 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2016q4p1, Build 517R, built Oct 30 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@N:: Running Verilog Compiler in System Verilog mode
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v" (library work)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v" (library work)
+Verilog syntax check successful!
+File C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v changed - recompiling
+Selecting top level module FIFO_INPUT_SAVE
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":929:7:929:12|Synthesizing module DFN1C0 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1283:7:1283:9|Synthesizing module INV in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":2:7:2:10|Synthesizing module AND2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":20:7:20:10|Synthesizing module AND3 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1929:7:1929:10|Synthesizing module XOR2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1905:7:1905:11|Synthesizing module XNOR2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":86:7:86:9|Synthesizing module AO1 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1325:7:1325:9|Synthesizing module MX2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":977:7:977:14|Synthesizing module DFN1E1C0 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1349:7:1349:11|Synthesizing module NAND2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1464:7:1464:9|Synthesizing module OR2 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1996:7:1996:12|Synthesizing module RAM4K9 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1953:7:1953:10|Synthesizing module BUFF in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1470:7:1470:10|Synthesizing module OR2A in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1482:7:1482:9|Synthesizing module OR3 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":8:7:8:11|Synthesizing module AND2A in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1001:7:1001:12|Synthesizing module DFN1P0 in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1398:7:1398:11|Synthesizing module NOR2A in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1163:7:1163:9|Synthesizing module GND in library work.
+
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1864:7:1864:9|Synthesizing module VCC in library work.
+
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":5:7:5:21|Synthesizing module FIFO_INPUT_SAVE in library work.
+
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":960:9:960:15|Removing instance AND2_28 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":957:8:957:12|Removing instance MX2_1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":933:11:933:25|Removing instance \DFN1C0_WGRY[4] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":931:8:931:13|Removing instance AO1_37 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":926:11:926:25|Removing instance \DFN1C0_RGRY[0] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":910:8:910:13|Removing instance MX2_34 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":907:13:907:22|Removing instance DFN1E1C0_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":903:9:903:15|Removing instance XOR2_28 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":900:9:900:15|Removing instance AND2_53 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":897:9:897:15|Removing instance XOR2_17 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":886:8:886:13|Removing instance MX2_39 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":884:9:884:15|Removing instance XOR2_66 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":847:8:847:13|Removing instance MX2_12 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":845:9:845:15|Removing instance XOR2_54 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":837:11:837:25|Removing instance \DFN1C0_RGRY[3] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":831:8:831:12|Removing instance MX2_4 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":827:11:827:25|Removing instance \DFN1C0_WGRY[8] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":822:9:822:15|Removing instance XOR2_50 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":821:9:821:15|Removing instance AND2_85 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":813:9:813:14|Removing instance AND2_4 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":810:11:810:26|Removing instance \DFN1C0_RGRY[10] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":809:9:809:15|Removing instance AND2_59 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":804:9:804:15|Removing instance AND2_45 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":789:9:789:15|Removing instance AND2_81 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":783:9:783:15|Removing instance XOR2_81 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":771:9:771:15|Removing instance AND2_54 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":764:9:764:14|Removing instance BUFF_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":763:9:763:15|Removing instance AND2_17 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":760:9:760:15|Removing instance XOR2_69 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":759:9:759:14|Removing instance AND2_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":747:11:747:25|Removing instance \DFN1C0_WGRY[1] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":742:8:742:13|Removing instance MX2_37 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":738:8:738:13|Removing instance MX2_29 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":730:9:730:15|Removing instance AND2_33 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":727:8:727:13|Removing instance AO1_23 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":719:11:719:25|Removing instance \DFN1C0_RGRY[7] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":717:11:717:26|Removing instance \DFN1C0_WGRY[10] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":708:11:708:25|Removing instance \DFN1C0_RGRY[5] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":705:9:705:14|Removing instance XOR2_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":701:9:701:15|Removing instance XOR2_40 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":700:8:700:13|Removing instance AO1_45 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":698:8:698:12|Removing instance AO1_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":696:11:696:25|Removing instance \DFN1C0_WGRY[2] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":695:8:695:13|Removing instance INV_13 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":694:8:694:13|Removing instance AO1_20 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":690:8:690:13|Removing instance MX2_33 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":688:8:688:12|Removing instance MX2_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":682:9:682:15|Removing instance AND2_27 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":679:11:679:25|Removing instance \DFN1C0_RGRY[6] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":677:8:677:13|Removing instance MX2_15 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":673:11:673:22|Removing instance DFN1C0_DVLDX because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":669:8:669:12|Removing instance MX2_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":660:9:660:15|Removing instance XOR2_58 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":658:9:658:15|Removing instance XOR2_65 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":648:9:648:15|Removing instance XOR2_32 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":640:8:640:13|Removing instance MX2_38 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":634:8:634:13|Removing instance MX2_11 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":630:9:630:15|Removing instance AND2_34 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":624:9:624:14|Removing instance BUFF_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":619:9:619:15|Removing instance XOR2_25 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":614:8:614:13|Removing instance MX2_32 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":607:9:607:15|Removing instance XOR2_56 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":600:9:600:15|Removing instance XOR2_27 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":596:9:596:15|Removing instance AND2_69 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":592:11:592:25|Removing instance \DFN1C0_RGRY[4] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":583:9:583:15|Removing instance AND2_58 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":580:9:580:15|Removing instance XOR2_10 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":579:9:579:15|Removing instance AND2_73 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":577:13:577:22|Removing instance DFN1E1C0_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":576:9:576:15|Removing instance AND2_87 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":572:11:572:25|Removing instance \DFN1C0_WGRY[9] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":569:9:569:15|Removing instance AND2_76 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":567:9:567:15|Removing instance AND2_16 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":561:8:561:13|Removing instance MX2_26 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":559:8:559:13|Removing instance AO1_47 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":557:9:557:15|Removing instance XOR2_48 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":551:9:551:15|Removing instance AND2_51 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":544:8:544:13|Removing instance MX2_28 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":538:9:538:15|Removing instance XOR2_22 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":532:9:532:15|Removing instance AND2_79 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":523:8:523:12|Removing instance MX2_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":520:9:520:14|Removing instance XOR2_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":518:11:518:25|Removing instance \DFN1C0_RGRY[8] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":511:9:511:15|Removing instance XOR2_59 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":510:8:510:13|Removing instance INV_12 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":501:11:501:25|Removing instance \DFN1C0_WGRY[0] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":496:8:496:13|Removing instance MX2_22 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":478:9:478:15|Removing instance XOR2_77 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":476:8:476:12|Removing instance INV_4 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":463:9:463:15|Removing instance XOR2_31 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":459:9:459:15|Removing instance AND2_29 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":457:11:457:26|Removing instance \DFN1C0_WGRY[11] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":448:9:448:15|Removing instance AND2_38 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":444:8:444:13|Removing instance MX2_35 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":435:9:435:14|Removing instance XOR2_8 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":433:11:433:25|Removing instance \DFN1C0_WGRY[3] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":431:11:431:25|Removing instance \DFN1C0_RGRY[1] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":427:8:427:13|Removing instance AO1_46 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":425:9:425:15|Removing instance XOR2_89 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":421:11:421:26|Removing instance \DFN1C0_RGRY[11] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":414:9:414:15|Removing instance AND2_31 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":380:9:380:15|Removing instance AND2_24 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":378:9:378:15|Removing instance XOR2_55 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":366:8:366:13|Removing instance MX2_31 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":334:8:334:12|Removing instance INV_3 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":330:11:330:25|Removing instance \DFN1C0_RGRY[2] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":326:9:326:15|Removing instance AND2_60 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":320:9:320:15|Removing instance XOR2_64 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":319:9:319:14|Removing instance AND2_6 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":315:9:315:15|Removing instance AND2_86 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":312:8:312:13|Removing instance MX2_20 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":311:8:311:13|Removing instance INV_19 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":304:9:304:15|Removing instance AND2_43 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":303:9:303:15|Removing instance AND2_65 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":283:9:283:15|Removing instance AND2_57 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":276:11:276:25|Removing instance \DFN1C0_WGRY[7] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":274:8:274:12|Removing instance MX2_5 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":259:11:259:25|Removing instance \DFN1C0_WGRY[5] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":257:9:257:15|Removing instance AND2_70 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":253:9:253:15|Removing instance XOR2_20 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":252:9:252:14|Removing instance AND2_7 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":223:9:223:15|Removing instance AND2_10 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":219:9:219:15|Removing instance AND2_49 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":209:9:209:15|Removing instance XOR2_45 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":201:9:201:15|Removing instance AND2_15 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":200:9:200:15|Removing instance AND2_18 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":198:11:198:25|Removing instance \DFN1C0_WGRY[6] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":194:8:194:13|Removing instance MX2_21 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":188:9:188:15|Removing instance XOR2_38 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":172:8:172:13|Removing instance MX2_17 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":170:9:170:15|Removing instance XOR2_23 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":160:11:160:25|Removing instance \DFN1C0_RGRY[9] because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":156:9:156:15|Removing instance AND2_11 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":145:9:145:14|Removing instance AND2_2 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":144:8:144:12|Removing instance INV_0 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 74MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 10 13:28:11 2023
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 10 13:28:11 2023
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Mar 10 13:28:11 2023
+
+###########################################################]

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>FIFO_INPUT_SAVE</design>
+	<target_edif>C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\FIFO_INPUT_SAVE.edn</target_edif>
+</SynplifyOutput>

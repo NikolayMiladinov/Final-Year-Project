@@ -1,0 +1,53 @@
+*****************************************************************
+Pin Report - Date: Fri Mar 10 13:30:39 2023 UNCOMPLETED LAYOUT
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Design Name: FIFO_INPUT_SAVE
+Family: IGLOO
+Die: AGL250V2
+Package: 100 VQFP
+*****************************************************************
+
+-----------------------------------------------------------------
+Flash*Freeze information
+        Pin name  : 27
+        Pin usage : Available as a regular pin
+-----------------------------------------------------------------
+
+Port      |Pin        |Fixed      |Function |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Skew |Output Load (pF) |Use I/O Reg |Hot Swappable |
+----------|-----------|-----------|---------|---------|------------------|-----|--------------|-----|-----------------|------------|--------------|
+CLK        Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[0]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[1]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[2]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[3]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[4]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[5]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[6]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+DATA[7]    Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+EMPTY      Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+FULL       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[0]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[1]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[2]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[3]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[4]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[5]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[6]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+Q[7]       Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[0]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[1]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[2]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[3]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[4]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[5]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[6]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[7]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[8]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[9]   Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[10]  Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RDCNT[11]  Unassigned  Unassigned            LVCMOS33  12                 High  None           No    5                 No           No
+RE         Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+RESET      Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No
+WE         Unassigned  Unassigned            LVCMOS33  ---                ---   None           ---   ---               No           No

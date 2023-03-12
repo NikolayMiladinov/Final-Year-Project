@@ -1,32 +1,54 @@
-#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\synwork\\top_comp.srs|-top|top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\igloo.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\synwork\\top_comp.srs|-top|top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\igloo.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\bin64\\c_ver.exe":1509343936
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\igloo.v":1509013088
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1509015128
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\umr_capim.v":1509015128
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_objects.v":1509015128
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\scemi_pipes.svh":1509015128
-#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\spi_master.v":1677335719
-#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\SPI_Master_With_Single_CS.v":1677336420
 #CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\clk_div.v":1677253909
-#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\top.v":1677339186
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\smartgen\\FIFO_INPUT_SAVE\\FIFO_INPUT_SAVE.v":1678366256
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\smartgen\\FIFO_OUTPUT_SEND\\FIFO_OUTPUT_SEND.v":1678367206
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\spi_master.v":1677951166
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\SPI_Master_With_Single_CS.v":1678059331
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\mem_command.v":1678455554
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\command_vars.v":1678187920
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\top.v":1678454869
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\command_vars.v":1678187920
 #numinternalfiles:5
 #defaultlanguage:verilog
-0			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v" verilog
-1			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v" verilog
-2			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v" verilog
-3			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v" verilog
+0			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v" verilog
+1			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v" verilog
+2			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v" verilog
+3			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v" verilog
+4			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v" verilog
+5			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v" verilog
+6		*	"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v" verilog
+7			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v" verilog
 #Dependency Lists(Uses List)
 0 -1
-1 0
+1 -1
 2 -1
-3 2 1
-#Dependency Lists(Users Of)
-0 1
-1 3
-2 3
 3 -1
+4 3
+5 6 1 2 4
+6 -1
+7 6 0 5
+#Dependency Lists(Users Of)
+0 7
+1 5
+2 5
+3 4
+4 5
+5 7
+6 5 7
+7 -1
 #Design Unit to File Association
-module work spi_master 0
-module work SPI_Master_With_Single_CS 1
-module work clk_div 2
-module work top 3
+module work clk_div 0
+module work FIFO_INPUT_SAVE 1
+module work FIFO_OUTPUT_SEND 2
+module work spi_master 3
+module work SPI_Master_With_Single_CS 4
+package work work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v_unit 6
+module work mem_command 5
+package work work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v_unit 6
+module work top 7

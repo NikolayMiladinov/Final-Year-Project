@@ -3,13 +3,13 @@
   Synopsys, Inc.
   Version L-2016.09M-SP1-5
   Project file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\syntmp\run_option.xml
-  Written on Sat Feb 25 15:38:28 2023
+  Written on Fri Mar 10 19:35:38 2023
 
 
 --> 
 <project_attribute_list name="Project Settings"> 
      <option name="project_name" display_name="Project Name">top_syn</option>
-     <option name="device_name" display_name="Device Name">synthesis: Microsemi IGLOO : AGL250V2</option>
+     <option name="device_name" display_name="Device Name">synthesis: Microsemi IGLOO : AGLN250V2</option>
      <option name="impl_name" display_name="Implementation Name">synthesis</option>
      <option name="top_module" display_name="Top Module">top</option>
      <option name="retiming" display_name="Retiming">0</option>

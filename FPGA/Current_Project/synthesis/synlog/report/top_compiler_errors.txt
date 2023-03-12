@@ -1,0 +1,2 @@
+@E: CL123 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":197:8:197:9|Logic for r_Master_TX_Byte[0] does not match a standard flip-flop
+

@@ -1,0 +1,31 @@
+*****************************************************************
+Pin Report - Date: Fri Mar 10 19:37:54 2023 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+Design Name: top
+Family: IGLOO
+Die: AGLN250V2
+Package: 100 VQFP
+*****************************************************************
+
+-----------------------------------------------------------------
+Flash*Freeze information
+        Pin name  : 27
+        Pin usage : Available as a regular pin
+-----------------------------------------------------------------
+
+Port         |Pin |Fixed |Function      |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Use I/O Reg |Hot Swappable |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |
+-------------|----|------|--------------|---------|------------------|-----|--------------|-----------------|------------|--------------|----------------|---------------------------------------------|
+CLKA          15   Yes    GFA1/IO58RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
+FPGA_CLK      2    Yes    GAA2/IO67RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+MEM_CM_READY  3    Yes    IO66RSB3       LVCMOS33  8                  High  None           5                 No           No             ---              No
+rst_n         10   Yes    GFB1/IO60RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
+SPI_CLK       20   Yes    GEC1/IO54RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+SPI_CS_n      21   Yes    GEC0/IO53RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+SPI_MISO      22   Yes    GEA1/IO52RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
+SPI_MOSI      23   Yes    GEA0/IO51RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+TEST_CLK      4    Yes    GAB2/IO65RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+TEST_CS_n     5    Yes    IO64RSB3       LVCMOS33  8                  High  None           5                 No           No             ---              No
+TEST_MISO     6    Yes    GAC2/IO63RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+TEST_MOSI     7    Yes    IO62RSB3       LVCMOS33  8                  High  None           5                 No           No             ---              No

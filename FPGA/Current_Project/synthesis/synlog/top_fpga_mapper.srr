@@ -1,4 +1,4 @@
-# Sat Feb 25 15:38:30 2023
+# Fri Mar 10 19:35:41 2023
 
 Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -16,84 +16,142 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
 
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":146:8:146:11|Removing sequential instance current_command\.miso_byte_num[2] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:PrimLib.latrs(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":146:8:146:11|Removing sequential instance current_command\.miso_byte_num[1] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:PrimLib.latrs(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":519:11:519:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[0\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":515:11:515:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[5\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":508:11:508:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[1\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":456:11:456:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[6\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":435:11:435:22|Removing sequential instance FIFO_SEND.DFN1P0_EMPTY (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1P0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":367:11:367:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[3\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":342:11:342:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[2\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":326:11:326:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[7\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":306:11:306:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[6\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":261:11:261:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[8\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":255:11:255:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[5\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":240:11:240:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[4\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":237:11:237:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[7\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":218:11:218:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[8\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":188:11:188:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[2\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":159:11:159:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[4\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":144:11:144:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[1\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":142:11:142:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[3\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":139:11:139:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[0\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":107:11:107:21|Removing sequential instance FIFO_SEND.DFN1C0_FULL (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
 
 Available hyper_sources - for debug and ip models
 	None Found
 
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":167:2:167:7|Removing sequential instance o_RX_Count[1:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
-@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":82:0:82:5|Removing sequential instance r_Master_TX_Byte[6] because it is equivalent to instance r_Master_TX_Byte[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":82:0:82:5|Removing sequential instance r_Master_TX_Byte[4] because it is equivalent to instance r_Master_TX_Byte[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":82:0:82:5|Removing sequential instance r_Master_TX_Byte[2] because it is equivalent to instance r_Master_TX_Byte[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":124:2:124:7|Removing sequential instance r_Command[2] because it is equivalent to instance r_Command[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":124:2:124:7|Removing sequential instance r_Addr_Data[4] because it is equivalent to instance r_Addr_Data[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
+Encoding state machine fifo_SM_PROG[2:0] (in view: work.top(verilog))
+original code -> new code
+   000 -> 00
+   001 -> 01
+   010 -> 10
 @N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\clk_div.v":20:19:20:34|Found 4-bit incrementor, 'un3_clk_count_1[3:0]'
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":100:2:100:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2(verilog) instance r_CS_Inactive_Count[2:0] 
-Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2(verilog))
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":196:4:196:9|Found counter in view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog) instance r_TX_Count[3:0] 
+Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+original code -> new code
+   00 -> 0
+   01 -> 1
+@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":196:4:196:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)); safe FSM implementation is not required.
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:28:213:66|Found 4 by 4 bit less-than operator ('<') r_Master_TX_Byte60 (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":255:32:255:79|Found 4 by 4 bit less-than operator ('<') r_SM_COM_1_sqmuxa_0 (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":255:32:255:79|Found 4 by 4 bit less-than operator ('<') r_SM_COM_1_sqmuxa_1 (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[7] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[6] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[5] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[4] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[23] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[22] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[21] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[20] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[19] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[18] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[17] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[16] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[13] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[12] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[11] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[10] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[9] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[8] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[7] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[6] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[3] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[1] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[0] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":170:2:170:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog) instance o_RX_Count[12:0] 
+Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":88:2:88:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_SPI_Clk_Edges[4:0] 
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":196:2:196:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_RX_Bit_Count[2:0] 
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":166:2:166:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_TX_Bit_Count[2:0] 
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":146:2:146:7|Register bit r_TX_Byte[7] (in view view:work.spi_master_3s_2s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":146:2:146:7|Register bit r_TX_Byte[5] (in view view:work.spi_master_3s_2s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":146:2:146:7|Register bit r_TX_Byte[3] (in view view:work.spi_master_3s_2s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":146:2:146:7|Register bit r_TX_Byte[1] (in view view:work.spi_master_3s_2s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":197:2:197:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_RX_Bit_Count[2:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":167:2:167:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_TX_Bit_Count[2:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 110MB)
-
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":196:2:196:7|Removing sequential instance SPI_CS_Master.SPI_Master_Inst.o_RX_DV (in view: work.top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-
-Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 113MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 109MB peak: 110MB)
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 110MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
 
 
 High Fanout Net Report
 **********************
 
-Driver Instance / Pin Name     Fanout, notes                 
--------------------------------------------------------------
-rst_n_pad / Y                  36 : 36 asynchronous set/reset
-=============================================================
+Driver Instance / Pin Name                                                      Fanout, notes                   
+----------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m7 / Y                                 36                              
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_CS_Inactive_Count_0_sqmuxa_1_i_0 / Y     27                              
+rst_n_pad / Y                                                                   136 : 129 asynchronous set/reset
+================================================================================================================
 
+@N: FP130 |Promoting Net rst_n_c on CLKBUF  rst_n_pad 
+@N: FP130 |Promoting Net FPGA_CLK_c on CLKINT  clk_div_1M.clk_out_inferred_clock 
+@N: FP130 |Promoting Net CLKA_c on CLKBUF  CLKA_pad 
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
 
-Buffering rst_n_c, fanout 36 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_CS_Inactive_Count_0_sqmuxa_1_i_0, fanout 27 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m7, fanout 36 segments 2
 
-Added 1 Buffers
-Added 0 Cells via replication
+Added 0 Buffers
+Added 2 Cells via replication
 	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
+	Added 2 Combinational Cells via replication
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
 
 
 
@@ -104,8 +162,8 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:
 
 Clock optimization not enabled
 1 non-gated/non-generated clock tree(s) driving 5 clock pin(s) of sequential element(s)
-1 gated/generated clock tree(s) driving 33 clock pin(s) of sequential element(s)
-0 instances converted, 33 sequential instances remain driven by gated/generated clocks
+1 gated/generated clock tree(s) driving 165 clock pin(s) of sequential element(s)
+0 instances converted, 165 sequential instances remain driven by gated/generated clocks
 
 =============================== Non-Gated/Non-Generated Clocks ================================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
@@ -115,33 +173,33 @@ Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample I
 ======================================================================= Gated/Generated Clocks ========================================================================
 Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance     Explanation                                                             
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 33         r_Master_TX_DV      No generated or derived clock directive on output of sequential instance
+@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 165        fifo_SM_PROG[0]     No generated or derived clock directive on output of sequential instance
 =======================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
 
 Writing Analyst data base C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
 
 Writing EDIF Netlist and constraint files
 L-2016.09M-SP1-5
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
 
 @W: MT420 |Found inferred clock top|CLKA with period 10.00ns. Please declare a user-defined clock on object "p:CLKA"
 @W: MT420 |Found inferred clock clk_div_10s|clk_out_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:clk_div_1M.clk_out"
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Sat Feb 25 15:38:31 2023
+# Timing Report written on Fri Mar 10 19:35:42 2023
 #
 
 
@@ -163,14 +221,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -8.948
+Worst slack in design: -37.380
 
-                                       Requested     Estimated     Requested     Estimated                Clock        Clock              
-Starting Clock                         Frequency     Frequency     Period        Period        Slack      Type         Group              
-------------------------------------------------------------------------------------------------------------------------------------------
-clk_div_10s|clk_out_inferred_clock     100.0 MHz     52.8 MHz      10.000        18.948        -8.948     inferred     Inferred_clkgroup_0
-top|CLKA                               100.0 MHz     85.6 MHz      10.000        11.685        -1.685     inferred     Inferred_clkgroup_1
-==========================================================================================================================================
+                                       Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                         Frequency     Frequency     Period        Period        Slack       Type         Group              
+-------------------------------------------------------------------------------------------------------------------------------------------
+clk_div_10s|clk_out_inferred_clock     100.0 MHz     21.1 MHz      10.000        47.380        -37.380     inferred     Inferred_clkgroup_0
+top|CLKA                               100.0 MHz     82.2 MHz      10.000        12.169        -2.170      inferred     Inferred_clkgroup_1
+===========================================================================================================================================
 
 
 
@@ -179,13 +237,13 @@ top|CLKA                               100.0 MHz     85.6 MHz      10.000       
 Clock Relationships
 *******************
 
-Clocks                                                                  |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                            Ending                              |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-clk_div_10s|clk_out_inferred_clock  clk_div_10s|clk_out_inferred_clock  |  10.000      -8.948  |  No paths    -      |  No paths    -      |  No paths    -    
-top|CLKA                            top|CLKA                            |  10.000      -1.685  |  No paths    -      |  No paths    -      |  No paths    -    
-===============================================================================================================================================================
+Clocks                                                                  |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                            Ending                              |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+clk_div_10s|clk_out_inferred_clock  clk_div_10s|clk_out_inferred_clock  |  10.000      -37.380  |  No paths    -      |  No paths    -      |  No paths    -    
+top|CLKA                            top|CLKA                            |  10.000      -2.170   |  No paths    -      |  No paths    -      |  No paths    -    
+================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -207,41 +265,41 @@ Detailed Report for Clock: clk_div_10s|clk_out_inferred_clock
 Starting Points with Worst Slack
 ********************************
 
-                                                     Starting                                                                           Arrival           
-Instance                                             Reference                              Type         Pin     Net                    Time        Slack 
-                                                     Clock                                                                                                
-----------------------------------------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     Q       r_SPI_Clk_Edges[0]     1.771       -8.948
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[3]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     Q       r_SPI_Clk_Edges[3]     1.395       -8.372
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[2]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     Q       r_SPI_Clk_Edges[2]     1.395       -8.242
-SPI_CS_Master.SPI_Master_Inst.o_TX_Ready             clk_div_10s|clk_out_inferred_clock     DFN1C0       Q       w_Master_Ready         1.771       -8.238
-SPI_CS_Master.r_SM_CS[0]                             clk_div_10s|clk_out_inferred_clock     DFN1C0       Q       r_SM_CS[0]             1.771       -7.728
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[1]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     Q       r_SPI_Clk_Edges[1]     1.771       -7.707
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[4]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     Q       r_SPI_Clk_Edges[4]     1.395       -7.465
-r_Master_TX_DV                                       clk_div_10s|clk_out_inferred_clock     DFN1         Q       r_Master_TX_DV         1.771       -6.847
-SPI_CS_Master.r_TX_Count[0]                          clk_div_10s|clk_out_inferred_clock     DFN1C0       Q       r_TX_Count[0]          1.771       -6.634
-SPI_CS_Master.r_TX_Count[1]                          clk_div_10s|clk_out_inferred_clock     DFN1C0       Q       r_TX_Count[1]          1.771       -6.300
-==========================================================================================================================================================
+                                                             Starting                                                                        Arrival            
+Instance                                                     Reference                              Type       Pin     Net                   Time        Slack  
+                                                             Clock                                                                                              
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY                clk_div_10s|clk_out_inferred_clock     DFN1P0     Q       fifo_save_empty       1.395       -37.380
+MEM_COMMAND_CONTROLLER.fifo_save_re                          clk_div_10s|clk_out_inferred_clock     DFN1       Q       fifo_save_re          1.771       -36.987
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[1\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       Z\\MEM_RADDR\[1\]     1.771       -34.293
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[0\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       Z\\MEM_RADDR\[0\]     1.771       -34.093
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[2\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       Z\\MEM_RADDR\[2\]     1.771       -33.283
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[3\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       Z\\MEM_RADDR\[3\]     1.771       -33.212
+MEM_COMMAND_CONTROLLER.r_Master_TX_DV                        clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       r_Master_TX_DV        1.395       -31.496
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_SM_CS[0]              clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       r_SM_CS[0]            1.771       -30.497
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[4\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       Z\\MEM_RADDR\[4\]     1.771       -30.414
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[5\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     Q       Z\\MEM_RADDR\[5\]     1.771       -30.343
+================================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                     Starting                                                                             Required           
-Instance                                             Reference                              Type         Pin     Net                      Time         Slack 
-                                                     Clock                                                                                                   
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     E       N_33                     8.956        -8.948
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[1]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     E       N_33                     8.956        -8.948
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[2]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     E       N_33                     8.956        -8.948
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[3]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     E       N_33                     8.956        -8.948
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[4]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     E       N_33                     8.956        -8.948
-SPI_CS_Master.r_CS_Inactive_Count[0]                 clk_div_10s|clk_out_inferred_clock     DFN1E1P0     E       r_CS_Inactive_Counte     8.538        -8.238
-SPI_CS_Master.r_CS_Inactive_Count[1]                 clk_div_10s|clk_out_inferred_clock     DFN1E1C0     E       r_CS_Inactive_Counte     8.538        -8.238
-SPI_CS_Master.r_CS_Inactive_Count[2]                 clk_div_10s|clk_out_inferred_clock     DFN1E1P0     E       r_CS_Inactive_Counte     8.538        -8.238
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk              clk_div_10s|clk_out_inferred_clock     DFN1P0       D       r_SPI_Clk_RNO            8.705        -8.008
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[4]     clk_div_10s|clk_out_inferred_clock     DFN1E0C0     D       N_4                      8.705        -7.945
-=============================================================================================================================================================
+                                                          Starting                                                                             Required            
+Instance                                                  Reference                              Type       Pin     Net                        Time         Slack  
+                                                          Clock                                                                                                    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[10\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[10\]             8.705        -37.380
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\]     clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[11\]             8.705        -37.380
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[9\]      clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[9\]              8.705        -35.246
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[8\]      clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[8\]              8.705        -33.901
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[7\]      clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[7\]              8.705        -31.767
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[6\]      clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[6\]              8.705        -31.612
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_TX_Count[11]       clk_div_10s|clk_out_inferred_clock     DFN1P0     D       un1_r_TX_Count_1_i[11]     8.705        -31.496
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[5\]      clk_div_10s|clk_out_inferred_clock     DFN1C0     D       Z\\RDIFF\[5\]              8.705        -29.478
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_TX_Count[10]       clk_div_10s|clk_out_inferred_clock     DFN1P0     D       un1_r_TX_Count_1_i[10]     8.705        -29.286
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_TX_Count[9]        clk_div_10s|clk_out_inferred_clock     DFN1P0     D       un1_r_TX_Count_1_i[9]      8.705        -29.132
+===================================================================================================================================================================
 
 
 
@@ -251,181 +309,361 @@ Worst Path Information
 
 Path information for path number 1: 
       Requested Period:                      10.000
-    - Setup time:                            1.044
+    - Setup time:                            1.295
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.956
+    = Required time:                         8.705
 
-    - Propagation time:                      17.904
+    - Propagation time:                      46.085
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -8.948
+    = Slack (critical) :                     -37.380
 
-    Number of logic level(s):                3
-    Starting point:                          SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0] / Q
-    Ending point:                            SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0] / E
+    Number of logic level(s):                15
+    Starting point:                          MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\] / D
     The start point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                             Pin      Pin               Arrival     No. of    
-Name                                                          Type         Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]              DFN1E0C0     Q        Out     1.771     1.771       -         
-r_SPI_Clk_Edges[0]                                            Net          -        -       2.844     -           4         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          B        In      -         4.615       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          Y        Out     1.554     6.168       -         
-N_23                                                          Net          -        -       1.938     -           3         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         B        In      -         8.106       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         Y        Out     1.566     9.672       -         
-r_N_5_mux_0                                                   Net          -        -       3.938     -           8         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         A        In      -         13.611      -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         Y        Out     1.219     14.830      -         
-N_33                                                          Net          -        -       3.074     -           5         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]              DFN1E0C0     E        In      -         17.904      -         
-============================================================================================================================
-Total path delay (propagation time + setup) of 18.948 is 7.154(37.8%) logic and 11.794(62.2%) route.
+Instance / Net                                                           Pin      Pin               Arrival     No. of    
+Name                                                          Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+fifo_save_empty                                               Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      A        In      -         3.333       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       B        In      -         8.453       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        B        In      -         10.888      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        B        In      -         14.262      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                                                      Net        -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        B        In      -         18.543      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                                                       Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        B        In      -         20.907      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+Z\\RBINNXTSHIFT\[7\]                                          Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        A        In      -         27.305      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                                                       Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       B        In      -         30.115      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       A        In      -         33.293      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                                                      Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_2                        AO1        A        In      -         35.394      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_2                        AO1        Y        Out     1.249     36.643      -         
+AO1_2_Y                                                       Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        C        In      -         37.415      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        Y        Out     1.574     38.990      -         
+AO1_17_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_4                        AO1        B        In      -         40.928      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_4                        AO1        Y        Out     1.361     42.289      -         
+AO1_4_Y                                                       Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[11\]           XOR2       B        In      -         43.062      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[11\]           XOR2       Y        Out     2.251     45.313      -         
+Z\\RDIFF\[11\]                                                Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\]         DFN1C0     D        In      -         46.085      -         
+==========================================================================================================================
+Total path delay (propagation time + setup) of 47.380 is 25.337(53.5%) logic and 22.043(46.5%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 2: 
       Requested Period:                      10.000
-    - Setup time:                            1.044
+    - Setup time:                            1.295
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.956
+    = Required time:                         8.705
 
-    - Propagation time:                      17.904
+    - Propagation time:                      46.085
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -8.948
+    = Slack (critical) :                     -37.380
 
-    Number of logic level(s):                3
-    Starting point:                          SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0] / Q
-    Ending point:                            SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[4] / E
+    Number of logic level(s):                15
+    Starting point:                          MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[10\] / D
     The start point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                             Pin      Pin               Arrival     No. of    
-Name                                                          Type         Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]              DFN1E0C0     Q        Out     1.771     1.771       -         
-r_SPI_Clk_Edges[0]                                            Net          -        -       2.844     -           4         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          B        In      -         4.615       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          Y        Out     1.554     6.168       -         
-N_23                                                          Net          -        -       1.938     -           3         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         B        In      -         8.106       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         Y        Out     1.566     9.672       -         
-r_N_5_mux_0                                                   Net          -        -       3.938     -           8         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         A        In      -         13.611      -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         Y        Out     1.219     14.830      -         
-N_33                                                          Net          -        -       3.074     -           5         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[4]              DFN1E0C0     E        In      -         17.904      -         
-============================================================================================================================
-Total path delay (propagation time + setup) of 18.948 is 7.154(37.8%) logic and 11.794(62.2%) route.
+Instance / Net                                                           Pin      Pin               Arrival     No. of    
+Name                                                          Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+fifo_save_empty                                               Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      A        In      -         3.333       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       B        In      -         8.453       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        B        In      -         10.888      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        B        In      -         14.262      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                                                      Net        -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        B        In      -         18.543      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                                                       Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        B        In      -         20.907      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+Z\\RBINNXTSHIFT\[7\]                                          Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        A        In      -         27.305      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                                                       Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       B        In      -         30.115      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       A        In      -         33.293      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                                                      Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_2                        AO1        A        In      -         35.394      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_2                        AO1        Y        Out     1.249     36.643      -         
+AO1_2_Y                                                       Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        C        In      -         37.415      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        Y        Out     1.574     38.990      -         
+AO1_17_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_48                       AO1        B        In      -         40.928      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_48                       AO1        Y        Out     1.361     42.289      -         
+AO1_48_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[10\]           XOR2       B        In      -         43.062      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[10\]           XOR2       Y        Out     2.251     45.313      -         
+Z\\RDIFF\[10\]                                                Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[10\]         DFN1C0     D        In      -         46.085      -         
+==========================================================================================================================
+Total path delay (propagation time + setup) of 47.380 is 25.337(53.5%) logic and 22.043(46.5%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 3: 
       Requested Period:                      10.000
-    - Setup time:                            1.044
+    - Setup time:                            1.295
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.956
+    = Required time:                         8.705
 
-    - Propagation time:                      17.904
+    - Propagation time:                      45.751
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -8.948
+    = Slack (non-critical) :                 -37.046
 
-    Number of logic level(s):                3
-    Starting point:                          SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0] / Q
-    Ending point:                            SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[3] / E
+    Number of logic level(s):                15
+    Starting point:                          MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\] / D
     The start point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                             Pin      Pin               Arrival     No. of    
-Name                                                          Type         Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]              DFN1E0C0     Q        Out     1.771     1.771       -         
-r_SPI_Clk_Edges[0]                                            Net          -        -       2.844     -           4         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          B        In      -         4.615       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          Y        Out     1.554     6.168       -         
-N_23                                                          Net          -        -       1.938     -           3         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         B        In      -         8.106       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         Y        Out     1.566     9.672       -         
-r_N_5_mux_0                                                   Net          -        -       3.938     -           8         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         A        In      -         13.611      -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         Y        Out     1.219     14.830      -         
-N_33                                                          Net          -        -       3.074     -           5         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[3]              DFN1E0C0     E        In      -         17.904      -         
-============================================================================================================================
-Total path delay (propagation time + setup) of 18.948 is 7.154(37.8%) logic and 11.794(62.2%) route.
+Instance / Net                                                           Pin      Pin               Arrival     No. of    
+Name                                                          Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+fifo_save_empty                                               Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      A        In      -         3.333       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       B        In      -         8.453       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        B        In      -         10.888      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        B        In      -         14.262      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                                                      Net        -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        B        In      -         18.543      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                                                       Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        B        In      -         20.907      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+Z\\RBINNXTSHIFT\[7\]                                          Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        A        In      -         27.305      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                                                       Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       B        In      -         30.115      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       A        In      -         33.293      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                                                      Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_40                      AND2       B        In      -         35.394      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_40                      AND2       Y        Out     1.240     36.634      -         
+AND2_40_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        A        In      -         37.407      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        Y        Out     1.249     38.656      -         
+AO1_17_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_4                        AO1        B        In      -         40.593      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_4                        AO1        Y        Out     1.361     41.955      -         
+AO1_4_Y                                                       Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[11\]           XOR2       B        In      -         42.727      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[11\]           XOR2       Y        Out     2.251     44.978      -         
+Z\\RDIFF\[11\]                                                Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\]         DFN1C0     D        In      -         45.751      -         
+==========================================================================================================================
+Total path delay (propagation time + setup) of 47.046 is 25.003(53.1%) logic and 22.043(46.9%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 4: 
       Requested Period:                      10.000
-    - Setup time:                            1.044
+    - Setup time:                            1.295
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.956
+    = Required time:                         8.705
 
-    - Propagation time:                      17.904
+    - Propagation time:                      45.751
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -8.948
+    = Slack (non-critical) :                 -37.046
 
-    Number of logic level(s):                3
-    Starting point:                          SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0] / Q
-    Ending point:                            SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[2] / E
+    Number of logic level(s):                15
+    Starting point:                          MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[10\] / D
     The start point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                             Pin      Pin               Arrival     No. of    
-Name                                                          Type         Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]              DFN1E0C0     Q        Out     1.771     1.771       -         
-r_SPI_Clk_Edges[0]                                            Net          -        -       2.844     -           4         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          B        In      -         4.615       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          Y        Out     1.554     6.168       -         
-N_23                                                          Net          -        -       1.938     -           3         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         B        In      -         8.106       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         Y        Out     1.566     9.672       -         
-r_N_5_mux_0                                                   Net          -        -       3.938     -           8         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         A        In      -         13.611      -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         Y        Out     1.219     14.830      -         
-N_33                                                          Net          -        -       3.074     -           5         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[2]              DFN1E0C0     E        In      -         17.904      -         
-============================================================================================================================
-Total path delay (propagation time + setup) of 18.948 is 7.154(37.8%) logic and 11.794(62.2%) route.
+Instance / Net                                                           Pin      Pin               Arrival     No. of    
+Name                                                          Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+fifo_save_empty                                               Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      A        In      -         3.333       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       B        In      -         8.453       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        B        In      -         10.888      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        B        In      -         14.262      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                                                      Net        -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        B        In      -         18.543      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                                                       Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        B        In      -         20.907      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+Z\\RBINNXTSHIFT\[7\]                                          Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        A        In      -         27.305      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                                                       Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       B        In      -         30.115      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.XOR2_36                      XOR2       Y        Out     2.251     32.366      -         
+XOR2_36_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       A        In      -         33.293      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_8                       AND2       Y        Out     1.174     34.467      -         
+AND2_8_Y                                                      Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_40                      AND2       B        In      -         35.394      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_40                      AND2       Y        Out     1.240     36.634      -         
+AND2_40_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        A        In      -         37.407      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        Y        Out     1.249     38.656      -         
+AO1_17_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_48                       AO1        B        In      -         40.593      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_48                       AO1        Y        Out     1.361     41.955      -         
+AO1_48_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[10\]           XOR2       B        In      -         42.727      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[10\]           XOR2       Y        Out     2.251     44.978      -         
+Z\\RDIFF\[10\]                                                Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[10\]         DFN1C0     D        In      -         45.751      -         
+==========================================================================================================================
+Total path delay (propagation time + setup) of 47.046 is 25.003(53.1%) logic and 22.043(46.9%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 5: 
       Requested Period:                      10.000
-    - Setup time:                            1.044
+    - Setup time:                            1.295
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.956
+    = Required time:                         8.705
 
-    - Propagation time:                      17.904
+    - Propagation time:                      45.743
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -8.948
+    = Slack (non-critical) :                 -37.037
 
-    Number of logic level(s):                3
-    Starting point:                          SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0] / Q
-    Ending point:                            SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[1] / E
+    Number of logic level(s):                15
+    Starting point:                          MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\] / D
     The start point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
     The end   point is clocked by            clk_div_10s|clk_out_inferred_clock [rising] on pin CLK
 
-Instance / Net                                                             Pin      Pin               Arrival     No. of    
-Name                                                          Type         Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------------------
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[0]              DFN1E0C0     Q        Out     1.771     1.771       -         
-r_SPI_Clk_Edges[0]                                            Net          -        -       2.844     -           4         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          B        In      -         4.615       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges_RNI3RFU[1]      OR2          Y        Out     1.554     6.168       -         
-N_23                                                          Net          -        -       1.938     -           3         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         B        In      -         8.106       -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIHQKC2[0]     OA1A         Y        Out     1.566     9.672       -         
-r_N_5_mux_0                                                   Net          -        -       3.938     -           8         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         A        In      -         13.611      -         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Count_RNIIADD2[0]     NOR2         Y        Out     1.219     14.830      -         
-N_33                                                          Net          -        -       3.074     -           5         
-SPI_CS_Master.SPI_Master_Inst.r_SPI_Clk_Edges[1]              DFN1E0C0     E        In      -         17.904      -         
-============================================================================================================================
-Total path delay (propagation time + setup) of 18.948 is 7.154(37.8%) logic and 11.794(62.2%) route.
+Instance / Net                                                           Pin      Pin               Arrival     No. of    
+Name                                                          Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.DFN1P0_EMPTY                 DFN1P0     Q        Out     1.395     1.395       -         
+fifo_save_empty                                               Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      A        In      -         3.333       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.NAND2_3                      NAND2      Y        Out     1.174     4.506       -         
+NAND2_3_Y                                                     Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       A        In      -         5.279       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_MEMORYRE                AND2       Y        Out     1.236     6.515       -         
+MEMORYRE                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       B        In      -         8.453       -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_83                      AND2       Y        Out     1.508     9.960       -         
+AND2_83_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        B        In      -         10.888      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_22                       AO1        Y        Out     1.437     12.324      -         
+AO1_22_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        B        In      -         14.262      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_11                       AO1        Y        Out     1.437     15.699      -         
+AO1_11_Y                                                      Net        -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        B        In      -         18.543      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_5                        AO1        Y        Out     1.437     19.979      -         
+AO1_5_Y                                                       Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        B        In      -         20.907      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_30                       AO1        Y        Out     1.437     22.343      -         
+AO1_30_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       B        In      -         23.116      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RBINNXTSHIFT\[7\]     XOR2       Y        Out     2.251     25.367      -         
+Z\\RBINNXTSHIFT\[7\]                                          Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        A        In      -         27.305      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.INV_9                        INV        Y        Out     0.873     28.177      -         
+INV_9_Y                                                       Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_68                      AND2       B        In      -         30.115      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AND2_68                      AND2       Y        Out     1.508     31.623      -         
+AND2_68_Y                                                     Net        -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_12                       AO1        B        In      -         32.550      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_12                       AO1        Y        Out     1.437     33.986      -         
+AO1_12_Y                                                      Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_2                        AO1        C        In      -         34.759      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_2                        AO1        Y        Out     1.520     36.279      -         
+AO1_2_Y                                                       Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        C        In      -         37.052      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_17                       AO1        Y        Out     1.520     38.572      -         
+AO1_17_Y                                                      Net        -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_4                        AO1        B        In      -         40.510      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.AO1_4                        AO1        Y        Out     1.437     41.946      -         
+AO1_4_Y                                                       Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[11\]           XOR2       B        In      -         42.719      -         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\XOR2_RDIFF\[11\]           XOR2       Y        Out     2.251     44.970      -         
+Z\\RDIFF\[11\]                                                Net        -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_RDCNT\[11\]         DFN1C0     D        In      -         45.743      -         
+==========================================================================================================================
+Total path delay (propagation time + setup) of 47.037 is 25.149(53.5%) logic and 21.888(46.5%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -444,11 +682,11 @@ Starting Points with Worst Slack
 Instance                    Reference     Type       Pin     Net              Time        Slack 
                             Clock                                                               
 ------------------------------------------------------------------------------------------------
-clk_div_1M.clk_out          top|CLKA      DFN1C0     Q       clk_out_i        1.771       -1.685
-clk_div_1M.clk_count[1]     top|CLKA      DFN1C0     Q       clk_count[1]     1.771       -1.551
-clk_div_1M.clk_count[2]     top|CLKA      DFN1C0     Q       clk_count[2]     1.771       -1.293
-clk_div_1M.clk_count[0]     top|CLKA      DFN1C0     Q       clk_count[0]     1.771       -1.038
-clk_div_1M.clk_count[3]     top|CLKA      DFN1C0     Q       clk_count[3]     1.771       -0.098
+clk_div_1M.clk_count[1]     top|CLKA      DFN1C0     Q       clk_count[1]     1.771       -2.170
+clk_div_1M.clk_count[0]     top|CLKA      DFN1C0     Q       clk_count[0]     1.771       -1.865
+clk_div_1M.clk_count[2]     top|CLKA      DFN1C0     Q       clk_count[2]     1.771       -1.552
+clk_div_1M.clk_count[3]     top|CLKA      DFN1C0     Q       clk_count[3]     1.771       -0.011
+clk_div_1M.clk_out          top|CLKA      DFN1C0     Q       clk_out_i        1.771       4.061 
 ================================================================================================
 
 
@@ -459,9 +697,9 @@ Ending Points with Worst Slack
 Instance                    Reference     Type       Pin     Net                Time         Slack 
                             Clock                                                                  
 ---------------------------------------------------------------------------------------------------
-clk_div_1M.clk_out          top|CLKA      DFN1C0     D       clk_out_RNO        8.705        -1.685
-clk_div_1M.clk_count[2]     top|CLKA      DFN1C0     D       clk_count_3[2]     8.622        -1.551
-clk_div_1M.clk_count[0]     top|CLKA      DFN1C0     D       clk_count_3[0]     8.705        -1.092
+clk_div_1M.clk_count[2]     top|CLKA      DFN1C0     D       clk_count_3[2]     8.705        -2.170
+clk_div_1M.clk_out          top|CLKA      DFN1C0     D       clk_out_RNO        8.705        -1.552
+clk_div_1M.clk_count[0]     top|CLKA      DFN1C0     D       clk_count_3[0]     8.705        -1.460
 clk_div_1M.clk_count[3]     top|CLKA      DFN1C0     D       I_9                8.705        -0.662
 clk_div_1M.clk_count[1]     top|CLKA      DFN1C0     D       I_5                8.705        0.491 
 ===================================================================================================
@@ -478,41 +716,11 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.705
 
-    - Propagation time:                      10.391
+    - Propagation time:                      10.875
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.685
+    = Slack (non-critical) :                 -2.170
 
-    Number of logic level(s):                1
-    Starting point:                          clk_div_1M.clk_out / Q
-    Ending point:                            clk_div_1M.clk_out / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
-
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-clk_div_1M.clk_out         DFN1C0     Q        Out     1.771     1.771       -         
-clk_out_i                  Net        -        -       6.674     -           35        
-clk_div_1M.clk_out_RNO     AX1        C        In      -         8.444       -         
-clk_div_1M.clk_out_RNO     AX1        Y        Out     1.174     9.618       -         
-clk_out_RNO                Net        -        -       0.773     -           1         
-clk_div_1M.clk_out         DFN1C0     D        In      -         10.391      -         
-=======================================================================================
-Total path delay (propagation time + setup) of 11.685 is 4.239(36.3%) logic and 7.446(63.7%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 2: 
-      Requested Period:                      10.000
-    - Setup time:                            1.378
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.622
-
-    - Propagation time:                      10.173
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.551
-
-    Number of logic level(s):                2
+    Number of logic level(s):                3
     Starting point:                          clk_div_1M.clk_count[1] / Q
     Ending point:                            clk_div_1M.clk_count[2] / D
     The start point is clocked by            top|CLKA [rising] on pin CLK
@@ -523,15 +731,54 @@ Name                               Type       Name     Dir     Delay     Time   
 -----------------------------------------------------------------------------------------------
 clk_div_1M.clk_count[1]            DFN1C0     Q        Out     1.771     1.771       -         
 clk_count[1]                       Net        -        -       3.420     -           6         
-clk_div_1M.un3_clk_count_1.G_1     AX1E       B        In      -         5.191       -         
-clk_div_1M.un3_clk_count_1.G_1     AX1E       Y        Out     2.268     7.459       -         
+clk_div_1M.un3_clk_count_1.I_6     NOR2B      A        In      -         5.191       -         
+clk_div_1M.un3_clk_count_1.I_6     NOR2B      Y        Out     1.236     6.427       -         
 N_3                                Net        -        -       0.773     -           1         
-clk_div_1M.clk_count_RNO[2]        OA1B       C        In      -         8.231       -         
-clk_div_1M.clk_count_RNO[2]        OA1B       Y        Out     1.169     9.401       -         
+clk_div_1M.un3_clk_count_1.I_7     XOR2       A        In      -         7.200       -         
+clk_div_1M.un3_clk_count_1.I_7     XOR2       Y        Out     1.174     8.373       -         
+I_7                                Net        -        -       0.773     -           1         
+clk_div_1M.clk_count_RNO[2]        OA1A       C        In      -         9.146       -         
+clk_div_1M.clk_count_RNO[2]        OA1A       Y        Out     0.956     10.102      -         
 clk_count_3[2]                     Net        -        -       0.773     -           1         
-clk_div_1M.clk_count[2]            DFN1C0     D        In      -         10.173      -         
+clk_div_1M.clk_count[2]            DFN1C0     D        In      -         10.875      -         
 ===============================================================================================
-Total path delay (propagation time + setup) of 11.551 is 6.586(57.0%) logic and 4.966(43.0%) route.
+Total path delay (propagation time + setup) of 12.170 is 6.431(52.8%) logic and 5.738(47.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      10.570
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.865
+
+    Number of logic level(s):                3
+    Starting point:                          clk_div_1M.clk_count[0] / Q
+    Ending point:                            clk_div_1M.clk_count[2] / D
+    The start point is clocked by            top|CLKA [rising] on pin CLK
+    The end   point is clocked by            top|CLKA [rising] on pin CLK
+
+Instance / Net                                Pin      Pin               Arrival     No. of    
+Name                               Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------
+clk_div_1M.clk_count[0]            DFN1C0     Q        Out     1.771     1.771       -         
+clk_count[0]                       Net        -        -       2.844     -           4         
+clk_div_1M.un3_clk_count_1.I_6     NOR2B      B        In      -         4.615       -         
+clk_div_1M.un3_clk_count_1.I_6     NOR2B      Y        Out     1.508     6.122       -         
+N_3                                Net        -        -       0.773     -           1         
+clk_div_1M.un3_clk_count_1.I_7     XOR2       A        In      -         6.895       -         
+clk_div_1M.un3_clk_count_1.I_7     XOR2       Y        Out     1.174     8.069       -         
+I_7                                Net        -        -       0.773     -           1         
+clk_div_1M.clk_count_RNO[2]        OA1A       C        In      -         8.841       -         
+clk_div_1M.clk_count_RNO[2]        OA1A       Y        Out     0.956     9.797       -         
+clk_count_3[2]                     Net        -        -       0.773     -           1         
+clk_div_1M.clk_count[2]            DFN1C0     D        In      -         10.570      -         
+===============================================================================================
+Total path delay (propagation time + setup) of 11.865 is 6.703(56.5%) logic and 5.162(43.5%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -541,9 +788,9 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.705
 
-    - Propagation time:                      9.998
+    - Propagation time:                      10.257
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.293
+    = Slack (non-critical) :                 -1.552
 
     Number of logic level(s):                2
     Starting point:                          clk_div_1M.clk_count[2] / Q
@@ -551,20 +798,20 @@ Path information for path number 3:
     The start point is clocked by            top|CLKA [rising] on pin CLK
     The end   point is clocked by            top|CLKA [rising] on pin CLK
 
-Instance / Net                          Pin      Pin               Arrival     No. of    
-Name                         Type       Name     Dir     Delay     Time        Fan Out(s)
------------------------------------------------------------------------------------------
-clk_div_1M.clk_count[2]      DFN1C0     Q        Out     1.771     1.771       -         
-clk_count[2]                 Net        -        -       2.844     -           4         
-clk_div_1M.clk_out_RNO_0     NOR2A      A        In      -         4.615       -         
-clk_div_1M.clk_out_RNO_0     NOR2A      Y        Out     1.508     6.122       -         
-clk_count11_0                Net        -        -       0.773     -           1         
-clk_div_1M.clk_out_RNO       AX1        B        In      -         6.895       -         
-clk_div_1M.clk_out_RNO       AX1        Y        Out     2.330     9.225       -         
-clk_out_RNO                  Net        -        -       0.773     -           1         
-clk_div_1M.clk_out           DFN1C0     D        In      -         9.998       -         
-=========================================================================================
-Total path delay (propagation time + setup) of 11.293 is 6.903(61.1%) logic and 4.389(38.9%) route.
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+clk_div_1M.clk_count[2]             DFN1C0     Q        Out     1.771     1.771       -         
+clk_count[2]                        Net        -        -       1.938     -           3         
+clk_div_1M.clk_count_RNI7AC8[3]     NOR2A      A        In      -         3.708       -         
+clk_div_1M.clk_count_RNI7AC8[3]     NOR2A      Y        Out     1.508     5.216       -         
+clk_count11_0                       Net        -        -       1.938     -           3         
+clk_div_1M.clk_out_RNO              AX1        B        In      -         7.154       -         
+clk_div_1M.clk_out_RNO              AX1        Y        Out     2.330     9.484       -         
+clk_out_RNO                         Net        -        -       0.773     -           1         
+clk_div_1M.clk_out                  DFN1C0     D        In      -         10.257      -         
+================================================================================================
+Total path delay (propagation time + setup) of 11.552 is 6.903(59.8%) logic and 4.648(40.2%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -574,9 +821,42 @@ Path information for path number 4:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.705
 
-    - Propagation time:                      9.798
+    - Propagation time:                      10.169
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.092
+    = Slack (non-critical) :                 -1.464
+
+    Number of logic level(s):                2
+    Starting point:                          clk_div_1M.clk_count[2] / Q
+    Ending point:                            clk_div_1M.clk_count[2] / D
+    The start point is clocked by            top|CLKA [rising] on pin CLK
+    The end   point is clocked by            top|CLKA [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+clk_div_1M.clk_count[2]             DFN1C0     Q        Out     1.771     1.771       -         
+clk_count[2]                        Net        -        -       1.938     -           3         
+clk_div_1M.clk_count_RNI7AC8[3]     NOR2A      A        In      -         3.708       -         
+clk_div_1M.clk_count_RNI7AC8[3]     NOR2A      Y        Out     1.508     5.216       -         
+clk_count11_0                       Net        -        -       1.938     -           3         
+clk_div_1M.clk_count_RNO[2]         OA1A       A        In      -         7.154       -         
+clk_div_1M.clk_count_RNO[2]         OA1A       Y        Out     2.243     9.397       -         
+clk_count_3[2]                      Net        -        -       0.773     -           1         
+clk_div_1M.clk_count[2]             DFN1C0     D        In      -         10.169      -         
+================================================================================================
+Total path delay (propagation time + setup) of 11.464 is 6.816(59.5%) logic and 4.648(40.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      10.165
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.460
 
     Number of logic level(s):                2
     Starting point:                          clk_div_1M.clk_count[2] / Q
@@ -588,49 +868,16 @@ Instance / Net                                 Pin      Pin               Arriva
 Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
 ------------------------------------------------------------------------------------------------
 clk_div_1M.clk_count[2]             DFN1C0     Q        Out     1.771     1.771       -         
-clk_count[2]                        Net        -        -       2.844     -           4         
-clk_div_1M.clk_count_RNI7AC8[3]     OR2A       A        In      -         4.615       -         
-clk_div_1M.clk_count_RNI7AC8[3]     OR2A       Y        Out     1.119     5.734       -         
-G_0                                 Net        -        -       0.927     -           2         
-clk_div_1M.clk_count_RNO[0]         OA1B       B        In      -         6.661       -         
-clk_div_1M.clk_count_RNO[0]         OA1B       Y        Out     2.364     9.025       -         
+clk_count[2]                        Net        -        -       1.938     -           3         
+clk_div_1M.clk_count_RNI7AC8[3]     NOR2A      A        In      -         3.708       -         
+clk_div_1M.clk_count_RNI7AC8[3]     NOR2A      Y        Out     1.508     5.216       -         
+clk_count11_0                       Net        -        -       1.938     -           3         
+clk_div_1M.clk_count_RNO[0]         OA1C       A        In      -         7.154       -         
+clk_div_1M.clk_count_RNO[0]         OA1C       Y        Out     2.239     9.392       -         
 clk_count_3[0]                      Net        -        -       0.773     -           1         
-clk_div_1M.clk_count[0]             DFN1C0     D        In      -         9.798       -         
+clk_div_1M.clk_count[0]             DFN1C0     D        In      -         10.165      -         
 ================================================================================================
-Total path delay (propagation time + setup) of 11.092 is 6.548(59.0%) logic and 4.544(41.0%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 5: 
-      Requested Period:                      10.000
-    - Setup time:                            1.295
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.705
-
-    - Propagation time:                      9.798
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.092
-
-    Number of logic level(s):                2
-    Starting point:                          clk_div_1M.clk_count[2] / Q
-    Ending point:                            clk_div_1M.clk_count[2] / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
-
-Instance / Net                                 Pin      Pin               Arrival     No. of    
-Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------
-clk_div_1M.clk_count[2]             DFN1C0     Q        Out     1.771     1.771       -         
-clk_count[2]                        Net        -        -       2.844     -           4         
-clk_div_1M.clk_count_RNI7AC8[3]     OR2A       A        In      -         4.615       -         
-clk_div_1M.clk_count_RNI7AC8[3]     OR2A       Y        Out     1.119     5.734       -         
-G_0                                 Net        -        -       0.927     -           2         
-clk_div_1M.clk_count_RNO[2]         OA1B       B        In      -         6.661       -         
-clk_div_1M.clk_count_RNO[2]         OA1B       Y        Out     2.364     9.025       -         
-clk_count_3[2]                      Net        -        -       0.773     -           1         
-clk_div_1M.clk_count[2]             DFN1C0     D        In      -         9.798       -         
-================================================================================================
-Total path delay (propagation time + setup) of 11.092 is 6.548(59.0%) logic and 4.544(41.0%) route.
+Total path delay (propagation time + setup) of 11.460 is 6.811(59.4%) logic and 4.648(40.6%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -640,79 +887,96 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
 
 --------------------------------------------------------------------------------
-Target Part: AGL250V2_VQFP100_STD
+Target Part: AGLN250V2_VQFP100_STD
 Report for cell top.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2     1      1.0        1.0
-              AND3     1      1.0        1.0
-               AO1     1      1.0        1.0
-              AO1A     2      1.0        2.0
-              AOI1     2      1.0        2.0
-               AX1     2      1.0        2.0
+              AND2    86      1.0       86.0
+             AND2A     2      1.0        2.0
+              AND3    11      1.0       11.0
+               AO1    82      1.0       82.0
+              AO1A     6      1.0        6.0
+              AO1B     1      1.0        1.0
+              AOI1     1      1.0        1.0
+             AOI1A     4      1.0        4.0
+             AOI1B     1      1.0        1.0
+               AX1     1      1.0        1.0
+              AX1A     1      1.0        1.0
               AX1B     1      1.0        1.0
-              AX1D     1      1.0        1.0
-              AX1E     1      1.0        1.0
-             AXOI7     1      1.0        1.0
-              BUFF     1      1.0        1.0
-               GND     4      0.0        0.0
-               INV     1      1.0        1.0
-               MX2     3      1.0        3.0
+              AX1C     1      1.0        1.0
+              AXO2     1      1.0        1.0
+             AXOI5     1      1.0        1.0
+              BUFF     2      1.0        2.0
+            CLKINT     1      0.0        0.0
+               GND     6      0.0        0.0
+               INV    16      1.0       16.0
+               MX2    35      1.0       35.0
+              MX2A     2      1.0        2.0
               MX2B     1      1.0        1.0
-              NOR2     6      1.0        6.0
-             NOR2A     4      1.0        4.0
-              NOR3     6      1.0        6.0
-             NOR3A     7      1.0        7.0
-             NOR3B     2      1.0        2.0
+             NAND2     4      1.0        4.0
+              NOR2    10      1.0       10.0
+             NOR2A    37      1.0       37.0
+             NOR2B    38      1.0       38.0
+              NOR3     5      1.0        5.0
+             NOR3A    10      1.0       10.0
+             NOR3B     7      1.0        7.0
+             NOR3C    14      1.0       14.0
+               OA1     3      1.0        3.0
               OA1A     1      1.0        1.0
-              OA1B     2      1.0        2.0
-               OR2    10      1.0       10.0
-              OR2A     5      1.0        5.0
-              OR2B     2      1.0        2.0
-               OR3     2      1.0        2.0
-              OR3B     1      1.0        1.0
-              OR3C     1      1.0        1.0
-               VCC     4      0.0        0.0
-              XA1A     1      1.0        1.0
+              OA1B     4      1.0        4.0
+              OA1C     3      1.0        3.0
+               OR2    24      1.0       24.0
+              OR2A    13      1.0       13.0
+              OR2B     7      1.0        7.0
+               OR3     6      1.0        6.0
+              OR3A     3      1.0        3.0
+               VCC     6      0.0        0.0
+              XA1B    11      1.0       11.0
+             XNOR2    36      1.0       36.0
+               XO1     2      1.0        2.0
               XO1A     4      1.0        4.0
-              XOR2     7      1.0        7.0
+              XOR2   161      1.0      161.0
 
 
-              DFN1     2      1.0        2.0
-            DFN1C0    14      1.0       14.0
-          DFN1E0C0     5      1.0        5.0
-          DFN1E1C0     6      1.0        6.0
-          DFN1E1P0     9      1.0        9.0
-            DFN1P0     2      1.0        2.0
+              DFN1     5      1.0        5.0
+            DFN1C0    67      1.0       67.0
+            DFN1E0     1      1.0        1.0
+          DFN1E0C0     6      1.0        6.0
+            DFN1E1    31      1.0       31.0
+          DFN1E1C0    31      1.0       31.0
+          DFN1E1P0     7      1.0        7.0
+            DFN1P0    14      1.0       14.0
+            RAM4K9     4      0.0        0.0
                    -----          ----------
-             TOTAL   126               118.0
+             TOTAL   838               821.0
 
 
   IO Cell usage:
               cell count
-             INBUF     3
-            OUTBUF     4
+            CLKBUF     2
+             INBUF     1
+            OUTBUF     9
                    -----
-             TOTAL     7
+             TOTAL    12
 
 
-Core Cells         : 118 of 6144 (2%)
-IO Cells           : 7
+Core Cells         : 821 of 6144 (13%)
+IO Cells           : 12
 
   RAM/ROM Usage Summary
-Block Rams : 0 of 8 (0%)
+Block Rams : 4 of 8 (50%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 26MB peak: 111MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 115MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Feb 25 15:38:31 2023
+# Fri Mar 10 19:35:42 2023
 
 ###########################################################]

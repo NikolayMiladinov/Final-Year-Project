@@ -2,79 +2,156 @@
 Report for cell top.verilog
                                           Cell usage:
                                cell       count     area    count*area
-                               BUFF         1       1.0        1.0
+                             CLKBUF         2       0.0        0.0
                                DFN1         2       1.0        2.0
+                             DFN1C0         2       1.0        2.0
+                             DFN1E0         1       1.0        1.0
+                             DFN1E1         2       1.0        2.0
                                 GND         1       0.0        0.0
-                              INBUF         3       0.0        0.0
-                             OUTBUF         4       0.0        0.0
-          SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2         1     101.0      101.0
+                              INBUF         1       0.0        0.0
+                             OUTBUF         9       0.0        0.0
                                 VCC         1       0.0        0.0
                         clk_div_10s         1      14.0       14.0
+          mem_command_3s_2s_5000s_1000s_0_1         1     800.0      800.0
                             
-                         TOTAL             14                118.0
+                         TOTAL             23                821.0
 ----------------------------------------------------------------------
-Report for cell SPI_Master_With_Single_CS_3s_2s_2s_5s_0_1_2.netlist
-     Instance path:  SPI_CS_Master
+Report for cell mem_command_3s_2s_5000s_1000s_0_1.netlist
+     Instance path:  MEM_COMMAND_CONTROLLER
                                           Cell usage:
                                cell       count     area    count*area
-                                AO1         1       1.0        1.0
-                               AO1A         2       1.0        2.0
-                               AOI1         1       1.0        1.0
-                               AX1B         1       1.0        1.0
-                              AXOI7         1       1.0        1.0
-                             DFN1C0         4       1.0        4.0
-                           DFN1E1C0         1       1.0        1.0
-                           DFN1E1P0         3       1.0        3.0
+                              AND2A         1       1.0        1.0
+                                AO1         8       1.0        8.0
+                               AO1A         1       1.0        1.0
+                               AO1B         1       1.0        1.0
+                              AOI1A         4       1.0        4.0
+                              AOI1B         1       1.0        1.0
+                               AX1A         1       1.0        1.0
+                               AXO2         1       1.0        1.0
+                               DFN1         3       1.0        3.0
+                             DFN1C0         2       1.0        2.0
+                           DFN1E0C0         1       1.0        1.0
+                             DFN1E1        16       1.0       16.0
+                           DFN1E1C0        12       1.0       12.0
+                    FIFO_INPUT_SAVE         1     341.0      341.0
                                 GND         1       0.0        0.0
-                               NOR2         3       1.0        3.0
-                              NOR2A         2       1.0        2.0
-                               NOR3         4       1.0        4.0
-                              NOR3A         2       1.0        2.0
-                              NOR3B         1       1.0        1.0
+                                MX2         1       1.0        1.0
+                               NOR2         5       1.0        5.0
+                              NOR2A        10       1.0       10.0
+                              NOR2B         7       1.0        7.0
+                               NOR3         1       1.0        1.0
+                              NOR3A         4       1.0        4.0
+                              NOR3B         5       1.0        5.0
+                              NOR3C         9       1.0        9.0
+                               OA1B         4       1.0        4.0
+                               OA1C         1       1.0        1.0
                                 OR2         3       1.0        3.0
-                               OR2A         1       1.0        1.0
-                               OR2B         2       1.0        2.0
-                                OR3         1       1.0        1.0
-                               OR3C         1       1.0        1.0
+                               OR2A         3       1.0        3.0
+                               OR2B         5       1.0        5.0
+                                OR3         2       1.0        2.0
+                               OR3A         2       1.0        2.0
+          SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2         1     340.0      340.0
                                 VCC         1       0.0        0.0
-                               XOR2         1       1.0        1.0
-                   spi_master_3s_2s         1      66.0       66.0
+                              XNOR2         1       1.0        1.0
+                                XO1         1       1.0        1.0
+                               XOR2         3       1.0        3.0
                             
-                         TOTAL             38                101.0
+                         TOTAL            123                800.0
+----------------------------------------------------------------------
+Report for cell SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2.netlist
+     Instance path:  MEM_COMMAND_CONTROLLER.SPI_CS_Master
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        32       1.0       32.0
+                                AO1        30       1.0       30.0
+                               AO1A         5       1.0        5.0
+                               AOI1         1       1.0        1.0
+                               AX1C         1       1.0        1.0
+                              AXOI5         1       1.0        1.0
+                             DFN1C0        14       1.0       14.0
+                             DFN1E1        13       1.0       13.0
+                           DFN1E1P0         1       1.0        1.0
+                             DFN1P0        11       1.0       11.0
+                                GND         1       0.0        0.0
+                                MX2         3       1.0        3.0
+                               MX2A         1       1.0        1.0
+                               NOR2         5       1.0        5.0
+                              NOR2A        20       1.0       20.0
+                              NOR2B        26       1.0       26.0
+                               NOR3         1       1.0        1.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         2       1.0        2.0
+                              NOR3C         5       1.0        5.0
+                                OA1         3       1.0        3.0
+                                OR2         6       1.0        6.0
+                               OR2A         4       1.0        4.0
+                               OR2B         2       1.0        2.0
+                                OR3         3       1.0        3.0
+                               OR3A         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XA1B        11       1.0       11.0
+                              XNOR2        10       1.0       10.0
+                               XOR2        53       1.0       53.0
+                   spi_master_3s_2s         1      74.0       74.0
+                            
+                         TOTAL            269                340.0
 ----------------------------------------------------------------------
 Report for cell spi_master_3s_2s.netlist
-     Instance path:  SPI_CS_Master.SPI_Master_Inst
+     Instance path:  MEM_COMMAND_CONTROLLER.SPI_CS_Master.SPI_Master_Inst
                                           Cell usage:
                                cell       count     area    count*area
                                AND2         1       1.0        1.0
-                               AOI1         1       1.0        1.0
-                                AX1         1       1.0        1.0
-                               AX1D         1       1.0        1.0
-                             DFN1C0         5       1.0        5.0
+                               AX1B         1       1.0        1.0
+                             DFN1C0         6       1.0        6.0
                            DFN1E0C0         5       1.0        5.0
-                           DFN1E1C0         5       1.0        5.0
+                           DFN1E1C0         9       1.0        9.0
                            DFN1E1P0         6       1.0        6.0
                              DFN1P0         2       1.0        2.0
                                 GND         1       0.0        0.0
-                                INV         1       1.0        1.0
-                                MX2         3       1.0        3.0
+                                MX2         7       1.0        7.0
+                               MX2A         1       1.0        1.0
                                MX2B         1       1.0        1.0
-                               NOR2         3       1.0        3.0
-                              NOR2A         1       1.0        1.0
-                               NOR3         2       1.0        2.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B         4       1.0        4.0
+                               NOR3         3       1.0        3.0
                               NOR3A         5       1.0        5.0
-                              NOR3B         1       1.0        1.0
-                               OA1A         1       1.0        1.0
-                                OR2         7       1.0        7.0
-                               OR2A         3       1.0        3.0
-                                OR3         1       1.0        1.0
-                               OR3B         1       1.0        1.0
+                               OA1C         1       1.0        1.0
+                                OR2         5       1.0        5.0
+                               OR2A         2       1.0        2.0
                                 VCC         1       0.0        0.0
-                               XA1A         1       1.0        1.0
+                              XNOR2         1       1.0        1.0
+                                XO1         1       1.0        1.0
                                XO1A         4       1.0        4.0
                                XOR2         4       1.0        4.0
                             
-                         TOTAL             68                 66.0
+                         TOTAL             76                 74.0
+----------------------------------------------------------------------
+Report for cell FIFO_INPUT_SAVE.netlist
+     Instance path:  MEM_COMMAND_CONTROLLER.FIFO_SAVE
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        53       1.0       53.0
+                              AND2A         1       1.0        1.0
+                               AND3        10       1.0       10.0
+                                AO1        44       1.0       44.0
+                               BUFF         2       1.0        2.0
+                             DFN1C0        38       1.0       38.0
+                           DFN1E1C0        10       1.0       10.0
+                             DFN1P0         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                INV        16       1.0       16.0
+                                MX2        24       1.0       24.0
+                              NAND2         4       1.0        4.0
+                              NOR2A         1       1.0        1.0
+                                OR2        10       1.0       10.0
+                               OR2A         4       1.0        4.0
+                                OR3         1       1.0        1.0
+                             RAM4K9         4       0.0        0.0
+                                VCC         1       0.0        0.0
+                              XNOR2        24       1.0       24.0
+                               XOR2        98       1.0       98.0
+                            
+                         TOTAL            347                341.0
 ----------------------------------------------------------------------
 Report for cell clk_div_10s.netlist
      Instance path:  clk_div_1M
@@ -82,13 +159,14 @@ Report for cell clk_div_10s.netlist
                                cell       count     area    count*area
                                AND3         1       1.0        1.0
                                 AX1         1       1.0        1.0
-                               AX1E         1       1.0        1.0
+                             CLKINT         1       0.0        0.0
                              DFN1C0         5       1.0        5.0
                                 GND         1       0.0        0.0
                               NOR2A         1       1.0        1.0
-                               OA1B         2       1.0        2.0
-                               OR2A         1       1.0        1.0
+                              NOR2B         1       1.0        1.0
+                               OA1A         1       1.0        1.0
+                               OA1C         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XOR2         2       1.0        2.0
+                               XOR2         3       1.0        3.0
                             
-                         TOTAL             16                 14.0
+                         TOTAL             17                 14.0

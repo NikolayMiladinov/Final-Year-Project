@@ -1,0 +1,1 @@
+@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":968:11:968:31|Found inferred clock FIFO_INPUT_SAVE|CLK which controls 57 sequential elements including \\DFN1C0_MEM_RADDR\[11\]. This clock has no specified timing constraint which may adversely impact design performance. 

@@ -4,49 +4,394 @@ KEY DEFAULT_IMPORT_LOC ""
 KEY DEFAULT_OPEN_LOC ""
 KEY ProjectID "0"
 KEY HDLTechnology "VERILOG"
-KEY VERILOGMODE "VERILOG2001"
+KEY VERILOGMODE "SYSTEMVERILOG"
 KEY VHDLMODE "VHDL2008"
 KEY UseConstraintFlowTechnology "FALSE"
 KEY VendorTechnology_Family "IGLOO"
-KEY VendorTechnology_Die "IS4X4M1LPLV"
+KEY VendorTechnology_Die "UM4X4M1NLPLV"
 KEY VendorTechnology_Package "vq100"
 KEY VendorTechnology_Speed "STD"
-KEY VendorTechnology_DieVoltage "1.2~1.5"
-KEY VendorTechnology_PART_RANGE "IND"
+KEY VendorTechnology_DieVoltage "1.2"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
 KEY VendorTechnology_IO_DEFT_STD "LVCMOS33"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
 KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
 KEY VendorTechnology_RESTRICTPROBEPINS "1"
 KEY VendorTechnology_RESTRICTSPIPINS "0"
-KEY VendorTechnology_TARGETDEVICESFORMIGRATION "IS4X4M1LPLV"
-KEY VendorTechnology_TEMPR "IND"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE ""
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "UM4X4M1NLPLV"
+KEY VendorTechnology_TEMPR "COM"
 KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
 KEY VendorTechnology_VCCI_1.2_VOLTR "COM"
 KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
-KEY VendorTechnology_VOLTR "IND"
+KEY VendorTechnology_VOLTR "COM"
 KEY ProjectLocation "C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project"
 KEY ProjectDescription ""
 KEY Pa4PeripheralNewSeq "GOOD"
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
+KEY ActiveRoot "top::work"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
 CURREV=1
 ENDLIST
 LIST FileManager
+VALUE "<project>\component\Actel\DirectCore\COREUART\5.7.100\COREUART.cxf,actgen_cxf"
+STATE="utd"
+TIME="1678476920"
+SIZE="573"
+PARENT="<project>\component\work\UART_CORE\UART_CORE.cxf"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1678476921"
+SIZE="4844"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE.v,hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="4707"
+PARENT="<project>\component\work\UART_CORE\UART_CORE.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="466"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,do"
+STATE="utd"
+TIME="1678476920"
+SIZE="1458"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v,hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="13246"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v,hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="14272"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v,hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="3361"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v,hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="21155"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v,hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="8860"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+STATE="utd"
+TIME="1678476920"
+SIZE="39118"
+PARENT="<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf"
+MODULE_UNDER_TEST="testbnch"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\UART_CORE_UART_CORE_0_COREUART.cxf,actgen_cxf"
+STATE="utd"
+TIME="1678476920"
+SIZE="1890"
+PARENT="<project>\component\work\UART_CORE\UART_CORE.cxf"
+ENDFILE
+VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE.adb,adb"
+STATE="ood"
+TIME="1678455038"
+SIZE="186368"
+ENDFILE
+VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE.ide_des,ide_des"
+STATE="utd"
+TIME="1678455038"
+SIZE="1087"
+ENDFILE
+VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_compile_log.rpt,log"
+STATE="utd"
+TIME="1678454932"
+SIZE="10850"
+ENDFILE
+VALUE "<project>\designer\impl1\top.adb,adb"
+STATE="utd"
+TIME="1678477073"
+SIZE="616960"
+ENDFILE
+VALUE "<project>\designer\impl1\top.ide_des,ide_des"
+STATE="utd"
+TIME="1678477073"
+SIZE="1044"
+ENDFILE
+VALUE "<project>\designer\impl1\top.pdb,pdb"
+STATE="utd"
+TIME="1678477070"
+SIZE="57205"
+ENDFILE
+VALUE "<project>\designer\impl1\top.stp,stp"
+STATE="ood"
+TIME="1678476589"
+SIZE="91324"
+ENDFILE
+VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
+STATE="utd"
+TIME="1678476969"
+SIZE="13022"
+ENDFILE
+VALUE "<project>\designer\impl1\top_fp\projectData\top.pdb,pdb"
+STATE="utd"
+TIME="1678534787"
+SIZE="57205"
+ENDFILE
+VALUE "<project>\designer\impl1\top_fp\top.pro,pro"
+STATE="utd"
+TIME="1678534787"
+SIZE="2482"
+ENDFILE
+VALUE "<project>\hdl\clk_div.v,hdl"
+STATE="utd"
+TIME="1677253909"
+SIZE="456"
+ENDFILE
+VALUE "<project>\hdl\mem_command.v,hdl"
+STATE="utd"
+TIME="1678455554"
+SIZE="13009"
+ENDFILE
+VALUE "<project>\hdl\spi_master.v,hdl"
+STATE="utd"
+TIME="1677951166"
+SIZE="7713"
+ENDFILE
+VALUE "<project>\hdl\SPI_Master_With_Single_CS.v,hdl"
+STATE="utd"
+TIME="1678059331"
+SIZE="6102"
+ENDFILE
+VALUE "<project>\hdl\top.v,hdl"
+STATE="utd"
+TIME="1678454869"
+SIZE="5650"
+ENDFILE
+VALUE "<project>\simulation\run.do,do"
+STATE="utd"
+TIME="1678389758"
+SIZE="1366"
+ENDFILE
+VALUE "<project>\simulation\setup.do,do"
+STATE="utd"
+TIME="1678418542"
+SIZE="1557"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1678366257"
+SIZE="2348"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.gen,gen"
+STATE="utd"
+TIME="1678366255"
+SIZE="985"
+PARENT="<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.log,log"
+STATE="utd"
+TIME="1678366255"
+SIZE="3614"
+PARENT="<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v,hdl"
+STATE="utd"
+TIME="1678366256"
+SIZE="54292"
+PARENT="<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.cxf,actgen_cxf"
+STATE="utd"
+TIME="1678367208"
+SIZE="2351"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.gen,gen"
+STATE="utd"
+TIME="1678367205"
+SIZE="984"
+PARENT="<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.log,log"
+STATE="utd"
+TIME="1678367206"
+SIZE="3614"
+PARENT="<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v,hdl"
+STATE="utd"
+TIME="1678367206"
+SIZE="31070"
+PARENT="<project>\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\stimulus\tb_top.v,tb_hdl"
+STATE="utd"
+TIME="1678418802"
+SIZE="922"
+ENDFILE
+VALUE "<project>\synthesis\FIFO_INPUT_SAVE.edn,syn_edn"
+STATE="utd"
+TIME="1678454893"
+SIZE="174974"
+ENDFILE
+VALUE "<project>\synthesis\FIFO_INPUT_SAVE.so,so"
+STATE="utd"
+TIME="1678454893"
+SIZE="281"
+ENDFILE
+VALUE "<project>\synthesis\FIFO_INPUT_SAVE_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1678454893"
+SIZE="404"
+ENDFILE
+VALUE "<project>\synthesis\FIFO_INPUT_SAVE_syn.prj,prj"
+STATE="utd"
+TIME="1678476857"
+SIZE="1839"
+ENDFILE
+VALUE "<project>\synthesis\top.edn,syn_edn"
+STATE="utd"
+TIME="1678476942"
+SIZE="418884"
+ENDFILE
+VALUE "<project>\synthesis\top.so,so"
+STATE="utd"
+TIME="1678476942"
+SIZE="257"
+ENDFILE
+VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1678476942"
+SIZE="394"
+ENDFILE
+VALUE "<project>\synthesis\top_syn.prj,prj"
+STATE="utd"
+TIME="1678476943"
+SIZE="2685"
+ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "FIFO_INPUT_SAVE::work"
+FILE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Synthesis
+ideSYNTHESIS(<project>\synthesis\FIFO_INPUT_SAVE.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+LIST "top::work"
+FILE "<project>\hdl\top.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
+ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\top_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\top_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_COREUART::work"
+FILE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v,hdl"
+LIST Other_Association
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,do"
 ENDLIST
 LIST AssociatedStimulus
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST UART_CORE_UART_CORE_0_COREUART
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+ENDLIST
 ENDLIST
 LIST Other_Association
+LIST UART_CORE_UART_CORE_0_COREUART
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,do"
+ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=true
+UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
@@ -54,7 +399,7 @@ Resolution=1ps
 VsimOpt=
 EntityName=testbench
 TopInstanceName=<top>_0
-DoFileName=
+DoFileName=C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/simulation/setup.do
 DoFileName2=wave.do
 DoFileParams=
 DisplayDUTWave=false
@@ -91,7 +436,7 @@ EnableSETMitigationOn=FALSE
 DisplayFanoutLimit=10
 AbortFlowOnPDCErrorsOn=TRUE
 AbortFlowOnSDCErrorsOn=TRUE
-InstantiateInSmartDesign=TRUE
+InstantiateInSmartDesign=FALSE
 FlashProInputFile=pdb
 SmartGenCompileReport=T
 ENDLIST
@@ -111,8 +456,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -120,7 +465,7 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM=" -l top_test_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -145,6 +490,45 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "FIFO_INPUT_SAVE::work"
+LIST Impl1
+LiberoState=Post_Synthesis
+ideSYNTHESIS(<project>\synthesis\FIFO_INPUT_SAVE.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "top::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
+ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_COREUART::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -162,6 +546,52 @@ StartPage;StartPage;0
 ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
+LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"
+ENDLIST
+LIST "FIFO_INPUT_SAVE::work","smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v","TRUE","FALSE"
+ENDLIST
+LIST "FIFO_OUTPUT_SEND::work","smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v","TRUE","FALSE"
+ENDLIST
+LIST "mem_command::work","hdl\mem_command.v","FALSE","FALSE"
+SUBBLOCK "FIFO_INPUT_SAVE::work","smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v","TRUE","FALSE"
+SUBBLOCK "FIFO_OUTPUT_SEND::work","smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v","TRUE","FALSE"
+SUBBLOCK "SPI_Master_With_Single_CS::work","hdl\SPI_Master_With_Single_CS.v","FALSE","FALSE"
+ENDLIST
+LIST "spi_master::work","hdl\spi_master.v","FALSE","FALSE"
+ENDLIST
+LIST "SPI_Master_With_Single_CS::work","hdl\SPI_Master_With_Single_CS.v","FALSE","FALSE"
+SUBBLOCK "spi_master::work","hdl\spi_master.v","FALSE","FALSE"
+ENDLIST
+LIST "top::work","hdl\top.v","FALSE","FALSE"
+SUBBLOCK "clk_div::work","hdl\clk_div.v","FALSE","FALSE"
+SUBBLOCK "mem_command::work","hdl\mem_command.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE::work","component\work\UART_CORE\UART_CORE.v","TRUE","FALSE"
+SUBBLOCK "UART_CORE_UART_CORE_0_COREUART::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_Clock_gen::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_COREUART::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
+SUBBLOCK "UART_CORE_UART_CORE_0_Clock_gen::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v","FALSE","FALSE"
+SUBBLOCK "UART_CORE_UART_CORE_0_Rx_async::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v","FALSE","FALSE"
+SUBBLOCK "UART_CORE_UART_CORE_0_Tx_async::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
+SUBBLOCK "UART_CORE_UART_CORE_0_fifo_256x8::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_fifo_256x8::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v","FALSE","FALSE"
+SUBBLOCK "UART_CORE_UART_CORE_0_fifo_256x8_pa3::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_fifo_256x8_pa3::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_Rx_async::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v","FALSE","FALSE"
+ENDLIST
+LIST "UART_CORE_UART_CORE_0_Tx_async::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
+ENDLIST
+LIST "tb_top::work","stimulus\tb_top.v","FALSE","TRUE"
+SUBBLOCK "top::work","hdl\top.v","FALSE","FALSE"
+ENDLIST
+LIST "testbnch::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v","FALSE","TRUE"
+SUBBLOCK "UART_CORE_UART_CORE_0_COREUART::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
+ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
 ENDLIST
