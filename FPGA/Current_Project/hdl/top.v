@@ -4,13 +4,19 @@
 module top(
     input CLKA,
     input pb_sw1,
+    input pb_sw2,
     input rst_n,
 
     // SPI PINS
+    output MEM_VCC,
     output SPI_CLK,
     output SPI_MOSI,
     input  SPI_MISO,
     output SPI_CS_n,
+
+    // UART PINS
+    input  UART_RX,
+    output UART_TX,
 
     // SPI Test pins
     output TEST_MOSI,
@@ -28,9 +34,22 @@ module top(
   parameter CLK_DIV_PARAM = 10;
   parameter MAX_BYTES_PER_CS = 5000;
   parameter MAX_WAIT_CYCLES = 1000;
+  parameter BAUD_VAL = 10;
+  parameter BAUD_VAL_FRACTION = 0;
 
   // Control signals
   logic CLK1;
+  logic r_Mem_Power;
+
+  // SPI pins
+  logic int_SPI_CLK;
+  logic int_SPI_CS_n;
+  logic int_SPI_MOSI;
+
+  assign MEM_VCC = r_Mem_Power;
+  assign SPI_CLK = MEM_VCC & int_SPI_CLK;
+  assign SPI_CS_n = MEM_VCC & int_SPI_CS_n;
+  assign SPI_MOSI = MEM_VCC & int_SPI_MOSI;
 
   // Memory controller inputs/outputs
   SPI_Command  r_Command;
@@ -49,6 +68,7 @@ module top(
   logic        w_fifo_send_empty;
   logic        r_fifo_send_re = 1'b0;
 
+  // State machine
   logic [2:0]  fifo_SM_PROG;
   localparam WRITING = 3'b0;
   localparam LOAD = 3'b1;
@@ -76,7 +96,8 @@ module top(
 
   // Instantiate UUT
   mem_command #(.SPI_MODE(SPI_MODE),.CLKS_PER_HALF_BIT(CLKS_PER_HALF_BIT),
-    .MAX_BYTES_PER_CS(MAX_BYTES_PER_CS),.MAX_WAIT_CYCLES(MAX_WAIT_CYCLES)) 
+    .MAX_BYTES_PER_CS(MAX_BYTES_PER_CS),.MAX_WAIT_CYCLES(MAX_WAIT_CYCLES),
+    .BAUD_VAL(BAUD_VAL),.BAUD_VAL_FRACTION(BAUD_VAL_FRACTION)) 
   MEM_COMMAND_CONTROLLER (
     // Control/Data Signals,
     .i_Rst_L(rst_n),            // FPGA Reset
@@ -89,14 +110,18 @@ module top(
     .o_CM_Ready(w_Master_CM_Ready),         // high when ready to receive next command
 
     // SPI Interface
-    .o_SPI_Clk(SPI_CLK),
+    .o_SPI_Clk(int_SPI_CLK),
     .i_SPI_MISO(SPI_MISO),
-    .o_SPI_MOSI(SPI_MOSI),
-    .o_SPI_CS_n(SPI_CS_n),
+    .o_SPI_MOSI(int_SPI_MOSI),
+    .o_SPI_CS_n(int_SPI_CS_n),
 
     // Pins for returning feature data
     .o_RX_Feature_Byte(w_RX_Feature_Byte),
     .o_RX_Feature_DV(w_RX_Feature_DV),
+
+    // UART Interface
+    .i_UART_RX(UART_RX),
+    .o_UART_TX(UART_TX),
 
     // FIFO pins for testing
     .i_fifo_save_data_in(w_fifo_save_data_in),
@@ -118,6 +143,15 @@ module top(
   //     r_Master_CM_DV    <= 1'b0;
   //   end
   // end
+
+  always @(posedge CLK1 or negedge rst_n) begin
+    if (~rst_n) begin
+      r_Mem_Power <= 1'b0;
+    end
+    else if(pb_sw1==1'b0) begin
+      r_Mem_Power <= 1'b1;
+    end
+  end
 
   assign w_fifo_save_data_in = w_fifo_save_count[7:0];
 

@@ -4,10 +4,12 @@
 
 
 module mem_command #(
-    parameter SPI_MODE = 3,
+    parameter SPI_MODE          = 3,
     parameter CLKS_PER_HALF_BIT = 2,
-    parameter MAX_BYTES_PER_CS = 5000,
-    parameter MAX_WAIT_CYCLES = 1000
+    parameter MAX_BYTES_PER_CS  = 5000,
+    parameter MAX_WAIT_CYCLES   = 1000,
+    parameter BAUD_VAL          = 1,
+    parameter BAUD_VAL_FRACTION = 0
 ) (
     // Control/Data Signals,
     input           i_Rst_L,            // FPGA Reset
@@ -29,6 +31,10 @@ module mem_command #(
     // Pins for returning feature data
     output [7:0]    o_RX_Feature_Byte,
     output          o_RX_Feature_DV,
+
+    // UART Interface
+    input  i_UART_RX,
+    output o_UART_TX,
 
     // FIFO pins for testing, to be deleted
     input [7:0]     i_fifo_save_data_in,
@@ -65,11 +71,23 @@ module mem_command #(
     assign o_fifo_save_count = fifo_save_count;
 
     //FIFO for saving incoming UART data
-    logic [7:0]  fifo_send_data_in;
-    logic [7:0]  fifo_send_data_out;
-    logic        fifo_send_we, fifo_send_re;
-    logic        fifo_send_full, fifo_send_empty;
-    logic [8:0]  fifo_send_count;
+    logic [7:0] fifo_send_data_in;
+    logic [7:0] fifo_send_data_out;
+    logic       fifo_send_we, fifo_send_re;
+    logic       fifo_send_full, fifo_send_empty;
+    logic [8:0] fifo_send_count;
+
+    // UART Inputs
+    logic [7:0] r_UART_Data_In;
+    logic       r_UART_OEN;
+    logic       r_UART_WEN;
+
+    // UART Outputs
+    logic [7:0] w_UART_Data_Out;
+    logic       w_UART_Framing_Err;
+    logic       w_UART_Overflow;
+    logic       w_UART_RX_Ready;
+    logic       w_UART_TX_Ready;
 
     // For testing, to be deleted
     assign o_fifo_send_data_out = fifo_send_data_out;
@@ -298,7 +316,7 @@ module mem_command #(
     );
 
 
-    // Instantiate UUT
+    // Instantiate SPI
     SPI_Master_With_Single_CS 
     #(.SPI_MODE(SPI_MODE),
     .CLKS_PER_HALF_BIT(CLKS_PER_HALF_BIT),
@@ -327,5 +345,31 @@ module mem_command #(
     .o_SPI_MOSI(o_SPI_MOSI),
     .o_SPI_CS_n(o_SPI_CS_n)
     );
+
+
+    // Instantiate UART
+    UART_CORE UART_Master(
+    // Inputs
+        .BAUD_VAL(BAUD_VAL),    // Determines baud rate
+        .BAUD_VAL_FRACTION(BAUD_VAL_FRACTION), // Additional precision for baud rate, increments of 0.125 for baud val
+        .BIT8(1'b1),            // Always transmit 8 data bits
+        .CLK(i_Clk),
+        .CSN(1'b0),             // Chip select can be zero
+        .DATA_IN(r_UART_Data_In), // Data to be transmitted
+        .ODD_N_EVEN(1'b0),      // No parity bit
+        .OEN(r_UART_OEN),       // Notify UART Data_Out has been read
+        .PARITY_EN(1'b0),       // No parity bit
+        .RESET_N(i_Rst_L),      
+        .RX(i_UART_RX),         // Receive line
+        .WEN(r_UART_WEN),       // Enable writing to internal TX register 
+        // Outputs
+        .DATA_OUT(w_UART_Data_Out), // Data to be transmitted
+        .FRAMING_ERR(w_UART_Framing_Err), // Error if no stop bit is detected
+        .OVERFLOW(w_UART_Overflow), // Error if too many bits are detected
+        .PARITY_ERR(),              
+        .RXRDY(w_UART_RX_Ready),    // High when data is available to be read
+        .TX(o_UART_TX),             // Transmit line
+        .TXRDY(w_UART_TX_Ready)     // Low when transmit buffer is full
+    ); 
     
 endmodule

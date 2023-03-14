@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/simulation
 vclk_div
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1678420072
+Z2 !s110 1678709300
 !i10b 1
 !s100 3<DJK1fgC<83aHeYS^FlB2
 I`zBd5_m>C74VN]OmPjW<l2
@@ -26,7 +26,7 @@ Z4 OW;L;10.5c;63
 r1
 !s85 0
 31
-Z5 !s108 1678420072.000000
+Z5 !s108 1678709300.000000
 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/clk_div.v|
 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/clk_div.v|
 !s101 -O0
@@ -90,25 +90,25 @@ R8
 n@f@i@f@o_@o@u@t@p@u@t_@s@e@n@d
 vmem_command
 R1
-DXx4 work 18 mem_command_v_unit 0 22 @lNcVY[fWX:`P`=]zNY0f2
+DXx4 work 18 mem_command_v_unit 0 22 H@YHin2Y<nfjR2MTNXoSV2
 R3
 r1
 !s85 0
 31
 !i10b 1
-!s100 LVo25RZ?[>UoJ`?NI@gi<0
-I>haa_DzfBn23UO3CPBh;o0
+!s100 :Ne1J>R34b3:U6GVTLHgA0
+IBhfdECgeSb5A]ARR1EbCg0
 !s105 mem_command_v_unit
 S1
 R0
-Z9 w1678420062
+Z9 w1678455554
 Z10 8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v
 Z11 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v
 L0 6
 R4
-R5
-Z12 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v|
-Z13 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v|
+Z12 !s108 1678709301.000000
+Z13 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v|
+Z14 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/mem_command.v|
 !s101 -O0
 !i113 1
 R6
@@ -116,25 +116,25 @@ R7
 R8
 Xmem_command_v_unit
 R1
-V@lNcVY[fWX:`P`=]zNY0f2
+VH@YHin2Y<nfjR2MTNXoSV2
 r1
 !s85 0
 31
 !i10b 1
-!s100 kJU^7NLK@>_DkVNRE[oX=3
-I@lNcVY[fWX:`P`=]zNY0f2
+!s100 SM^a[z7A<6doYnQg`dXnE1
+IH@YHin2Y<nfjR2MTNXoSV2
 !i103 1
 S1
 R0
 R9
 R10
 R11
-Z14 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v
+Z15 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v
 L0 1
 R4
-R5
 R12
 R13
+R14
 !s101 -O0
 !i113 1
 R6
@@ -142,7 +142,7 @@ R7
 R8
 vspi_master
 R1
-R2
+Z16 !s110 1678709301
 !i10b 1
 !s100 knzG5b3BNeTNB`8U01JXR1
 IK@K8SzmLL86oVWb;M;Xn73
@@ -168,7 +168,7 @@ R7
 R8
 vSPI_Master_With_Single_CS
 R1
-R2
+R16
 !i10b 1
 !s100 RX[HN5Dik[H2dnT@cCMg21
 IZJ:[zn^kUb^5:5Yh^?fIT1
@@ -184,7 +184,7 @@ R4
 r1
 !s85 0
 31
-R5
+R12
 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/SPI_Master_With_Single_CS.v|
 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/SPI_Master_With_Single_CS.v|
 !s101 -O0
@@ -195,29 +195,56 @@ R8
 n@s@p@i_@master_@with_@single_@c@s
 vtb_top
 R1
-R2
+R16
 !i10b 1
 !s100 2Z=BZhG0FPzYmH=Vn^h<J0
 IN:8jl0ZzfbJU<A1j>K[;;3
 R3
-Z15 !s105 tb_top_v_unit
+Z17 !s105 tb_top_v_unit
 S1
 R0
 w1678418802
-Z16 8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v
-Z17 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v
+Z18 8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v
+Z19 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v
 L0 3
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v|
-Z18 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v|
+R12
+Z20 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v|
+Z21 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v|
 !s101 -O0
 !i113 1
 R6
-Z19 !s92 +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus -sv -work presynth -O0
+Z22 !s92 +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus -sv -work presynth -O0
+R8
+vtestbnch
+R1
+!s110 1678709347
+!i10b 1
+!s100 bLWQSh<gFm3gDN;C;GG952
+I<>FAfj9=NLUTkjNUol:7c0
+R3
+!s105 testbnch_v_unit
+S1
+R0
+Z23 w1678476920
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user/testbnch.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user/testbnch.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user/../../../../coreparameters.v
+Z24 L0 24
+R4
+r1
+!s85 0
+31
+!s108 1678709347.000000
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user/../../../../coreparameters.v|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user/testbnch.v|
+!s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user/testbnch.v|
+!s101 -O0
+!i113 1
+R6
+!s92 +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0 +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/test/user -sv -work presynth -O0
 R8
 vtop
 R1
@@ -227,19 +254,19 @@ r1
 !s85 0
 31
 !i10b 1
-!s100 1bUmULdZa@Xz]Rd8X80R22
-I;hL4ooNd=d?MP<mSMSVDF0
+!s100 =zl]]Q^A:1Mc[>2dH?MkW2
+I830jGi><h<:lE`7J@ZQKF2
 !s105 top_v_unit
 S1
 R0
-Z20 w1678419042
-Z21 8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v
-Z22 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v
+Z25 w1678454869
+Z26 8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v
+Z27 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v
 L0 4
 R4
-R5
-Z23 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v|
-Z24 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v|
+R12
+Z28 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v|
+Z29 !s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/top.v|
 !s101 -O0
 !i113 1
 R6
@@ -252,24 +279,24 @@ R1
 !s100 Sa`NnC2@L`ZeElj3OFcIo2
 I@4KbM6iUc>@:lZ@U`jBcd2
 R3
-R15
+R17
 S1
 R0
 w1678183878
-R16
-R17
+R18
+R19
 L0 3
 R4
 r1
 !s85 0
 31
 !s108 1678215704.000000
-!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/tb_top.v|
-R18
+R20
+R21
 !s101 -O0
 !i113 1
 R6
-R19
+R22
 R8
 Xtop_v_unit
 R1
@@ -283,17 +310,225 @@ I=HS86[B>=Tk57M<^I9b520
 !i103 1
 S1
 R0
-R20
-R21
-R22
-R14
+R25
+R26
+R27
+R15
 L0 1
 R4
-R5
-R23
-R24
+R12
+R28
+R29
 !s101 -O0
 !i113 1
 R6
 R7
+R8
+vUART_CORE
+R1
+Z30 !s110 1678730327
+!i10b 1
+!s100 Qa1_`WRYZ:9>IanJ`cPb;2
+IGo9CQl:AUIbViF`@?jEkS2
+R3
+!s105 UART_CORE_v_unit
+S1
+R0
+R23
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE.v
+L0 9
+R4
+r1
+!s85 0
+31
+Z31 !s108 1678730327.000000
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE.v|
+!s90 -reportprogress|300|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE.v|
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e
+vUART_CORE_UART_CORE_0_Clock_gen
+R1
+R30
+!i10b 1
+!s100 X@b16YAR_Q61[7kQ5Jmk73
+I`619OdO_[29G1aC43cLMk0
+R3
+!s105 Clock_gen_v_unit
+S1
+R0
+R23
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Clock_gen.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Clock_gen.v
+L0 38
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Clock_gen.v|
+!s90 -reportprogress|300|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Clock_gen.v|
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e_@u@a@r@t_@c@o@r@e_0_@clock_gen
+vUART_CORE_UART_CORE_0_COREUART
+R1
+R30
+!i10b 1
+!s100 :W3@XGL7BkM23Nn?H^@]21
+I6TdLUYDH:g:J;c4COMoTn3
+R3
+!s105 CoreUART_v_unit
+S1
+R0
+R23
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/CoreUART.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/CoreUART.v
+Z32 L0 31
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/CoreUART.v|
+!s90 -reportprogress|300|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/CoreUART.v|
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e_@u@a@r@t_@c@o@r@e_0_@c@o@r@e@u@a@r@t
+vUART_CORE_UART_CORE_0_fifo_256x8
+R1
+R30
+!i10b 1
+!s100 jl2c[bd1zc71ZfN^M[8=^1
+IXgo@oFLO>he3eaV<QUOm60
+R3
+Z33 !s105 fifo_256x8_igloo_v_unit
+S1
+R0
+R23
+Z34 8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/fifo_256x8_igloo.v
+Z35 FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/fifo_256x8_igloo.v
+L0 32
+R4
+r1
+!s85 0
+31
+R31
+Z36 !s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/fifo_256x8_igloo.v|
+Z37 !s90 -reportprogress|300|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/fifo_256x8_igloo.v|
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e_@u@a@r@t_@c@o@r@e_0_fifo_256x8
+vUART_CORE_UART_CORE_0_fifo_256x8_pa3
+R1
+R30
+!i10b 1
+!s100 k3SSP6hW0agRi0RKIzB7O0
+IS4DQohJ]1YME]@3DU1<Ca1
+R3
+R33
+S1
+R0
+R23
+R34
+R35
+L0 61
+R4
+r1
+!s85 0
+31
+R31
+R36
+R37
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e_@u@a@r@t_@c@o@r@e_0_fifo_256x8_pa3
+vUART_CORE_UART_CORE_0_Rx_async
+R1
+R30
+!i10b 1
+!s100 ]J`bCCA8k4g=b7UB;eE510
+I34jMioeBkO>Y[d:3iaM4Z0
+R3
+!s105 Rx_async_v_unit
+S1
+R0
+R23
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Rx_async.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Rx_async.v
+L0 30
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Rx_async.v|
+!s90 -reportprogress|300|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Rx_async.v|
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e_@u@a@r@t_@c@o@r@e_0_@rx_async
+vUART_CORE_UART_CORE_0_Tx_async
+R1
+R30
+!i10b 1
+!s100 oROa`@TiYI`z>lLO02l@g2
+IULY21j`L<FhY<3^TERfXf1
+R3
+!s105 Tx_async_v_unit
+S1
+R0
+R23
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Tx_async.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Tx_async.v
+R32
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Tx_async.v|
+!s90 -reportprogress|300|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Tx_async.v|
+!s101 -O0
+!i113 1
+R6
+R8
+n@u@a@r@t_@c@o@r@e_@u@a@r@t_@c@o@r@e_0_@tx_async
+vuart_tb
+R1
+R30
+!i10b 1
+!s100 TNGICEiCchcS0AG:o0YTV0
+IMAdlKRYL?hh0jF5@ed=`f2
+R3
+!s105 uart_tb_v_unit
+S1
+R0
+w1678730312
+8C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/uart_tb.v
+FC:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/uart_tb.v
+R24
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/uart_tb.v|
+!s90 -reportprogress|300|+incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus|-sv|-work|presynth|C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus/uart_tb.v|
+!s101 -O0
+!i113 1
+R6
+!s92 +incdir+C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/stimulus -sv -work presynth -O0
 R8

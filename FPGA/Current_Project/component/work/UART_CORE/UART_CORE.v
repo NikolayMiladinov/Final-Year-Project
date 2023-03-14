@@ -9,6 +9,7 @@
 module UART_CORE(
     // Inputs
     BAUD_VAL,
+    BAUD_VAL_FRACTION,
     BIT8,
     CLK,
     CSN,
@@ -33,6 +34,7 @@ module UART_CORE(
 // Input
 //--------------------------------------------------------------------
 input  [12:0] BAUD_VAL;
+input  [2:0]  BAUD_VAL_FRACTION;
 input         BIT8;
 input         CLK;
 input         CSN;
@@ -84,11 +86,11 @@ wire   [7:0]  DATA_OUT_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire   [2:0]  BAUD_VAL_FRACTION_const_net_0;
+// wire   [2:0]  BAUD_VAL_FRACTION_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign BAUD_VAL_FRACTION_const_net_0 = 3'h0;
+// assign BAUD_VAL_FRACTION_const_net_0 = 3'h0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -129,7 +131,7 @@ UART_CORE_0(
         .WEN               ( WEN ),
         .BAUD_VAL          ( BAUD_VAL ),
         .DATA_IN           ( DATA_IN ),
-        .BAUD_VAL_FRACTION ( BAUD_VAL_FRACTION_const_net_0 ), // tied to 3'h0 from definition
+        .BAUD_VAL_FRACTION ( BAUD_VAL_FRACTION ), // tied to 3'h0 from definition
         // Outputs
         .OVERFLOW          ( OVERFLOW_net_0 ),
         .PARITY_ERR        ( PARITY_ERR_net_0 ),

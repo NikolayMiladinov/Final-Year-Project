@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Fri Mar 10 19:37:55 2023 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Sun Mar 12 21:11:47 2023 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
@@ -36,16 +36,16 @@ Number |Port         |Function         |State       |I/O Std  |Output Drive (mA)
 17                    VCC               Reserved
 18                    VCCIB3            Reserved
 19                    GFC2/IO55RSB3     Special
-20      SPI_CLK       GEC1/IO54RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-21      SPI_CS_n      GEC0/IO53RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-22      SPI_MISO      GEA1/IO52RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
-23      SPI_MOSI      GEA0/IO51RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+20                    GEC1/IO54RSB3     Special
+21                    GEC0/IO53RSB3     Special
+22                    GEA1/IO52RSB3     Special
+23                    GEA0/IO51RSB3     Special
 24                    VMV3              Reserved
 25                    GNDQ              Reserved
-26                    GEA2/IO50RSB2     Special
-27                    FF/GEB2/IO49RSB2  Special
-28                    GEC2/IO48RSB2     Special
-29                    IO47RSB2          Unassigned
+26      SPI_CLK       GEA2/IO50RSB2     Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
+27      SPI_CS_n      FF/GEB2/IO49RSB2  Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
+28      SPI_MISO      GEC2/IO48RSB2     Special      LVCMOS18  ---                ---   None           ---               No           No             No               No
+29      SPI_MOSI      IO47RSB2          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
 30                    IO46RSB2          Unassigned
 31                    IO45RSB2          Unassigned
 32                    IO44RSB2          Unassigned

@@ -3,45 +3,19 @@ Version: 11.9.6.7
 Release: v11.9 SP6
 
 Software Version: 11.9.6.7
+PDB file
+'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
+l1\top.pdb' has been loaded successfully.
+DESIGN : top;  CHECKSUM : C2A7;  PDB_VERSION : 1.9
 Driver : 3.0.0 build 1
 programmer '84415' : FlashPro3
 Opened
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
 l1\top_fp\top.pro'
-STAPL file
-'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
-l1\top.stp' has been loaded successfully.
-DESIGN : top;  CHECKSUM : 234B;  ALG_VERSION : 20
-programmer '84415' : Scan Chain...
-Warning: programmer '84415' : Vpump has been selected on programmer AND an externally provided
-         Vpump has also been detected. Using externally provided Vpump voltage source.
-programmer '84415' : Scan Chain PASSED.
-programmer '84415' : Executing action PROGRAM
-programmer '84415' : Failed to verify IDCODE
-programmer '84415' : EXPORT ERROR_CODE[16] = 801d
-programmer '84415' : Finished: Fri Mar 10 19:30:15 2023 (Elapsed time 00:00:00)
-Error: programmer '84415' : Executing action PROGRAM FAILED, EXIT 6, refer to FlashPro online
-       help for details.
-
-                        o - o - o - o - o - o
-
-programmer '84415' : Scan Chain...
-Warning: programmer '84415' : Vpump has been selected on programmer AND an externally provided
-         Vpump has also been detected. Using externally provided Vpump voltage source.
-programmer '84415' : Scan Chain PASSED.
-programmer '84415' : Executing action PROGRAM
-programmer '84415' : Failed to verify IDCODE
-programmer '84415' : EXPORT ERROR_CODE[16] = 801d
-programmer '84415' : Finished: Fri Mar 10 19:31:45 2023 (Elapsed time 00:00:01)
-Error: programmer '84415' : Executing action PROGRAM FAILED, EXIT 6, refer to FlashPro online
-       help for details.
-
-                        o - o - o - o - o - o
-
 PDB file
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
 l1\top.pdb' has been loaded successfully.
-DESIGN : top;  CHECKSUM : E521;  PDB_VERSION : 1.9
+DESIGN : top;  CHECKSUM : C2A7;  PDB_VERSION : 1.9
 programmer '84415' : Scan Chain...
 Warning: programmer '84415' : Vpump has been selected on programmer AND an externally provided
          Vpump has also been detected. Using externally provided Vpump voltage source.
@@ -50,18 +24,15 @@ programmer '84415' : Executing action PROGRAM
 programmer '84415' : EXPORT FSN[48] = 01377840c859
 programmer '84415' : Erase ...
 programmer '84415' : Completed erase
-programmer '84415' : EXPORT CHECKSUM[16] = e521
+programmer '84415' : EXPORT CHECKSUM[16] = c2a7
 programmer '84415' : Programming FPGA Array
 programmer '84415' : Verifying FPGA Array
 programmer '84415' :         Verifying FPGA Array -- pass
-programmer '84415' : Finished: Fri Mar 10 19:38:49 2023 (Elapsed time 00:00:28)
+programmer '84415' : Finished: Sun Mar 12 21:10:41 2023 (Elapsed time 00:00:28)
 programmer '84415' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o
 
 Warning: Project 'top' has been modified. Do you want to save it? [YES]
-creating folder:
-C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
-1\top_fp\projectData
 Project saved.
 Project closed.
