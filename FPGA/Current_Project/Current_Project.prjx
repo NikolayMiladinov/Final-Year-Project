@@ -55,8 +55,8 @@ SIZE="4844"
 ENDFILE
 VALUE "<project>\component\work\UART_CORE\UART_CORE.v,hdl"
 STATE="utd"
-TIME="1678476920"
-SIZE="4707"
+TIME="1678793517"
+SIZE="4759"
 PARENT="<project>\component\work\UART_CORE\UART_CORE.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -141,7 +141,7 @@ TIME="1678454932"
 SIZE="10850"
 ENDFILE
 VALUE "<project>\designer\impl1\top.adb,adb"
-STATE="utd"
+STATE="ood"
 TIME="1678655505"
 SIZE="616960"
 ENDFILE
@@ -151,7 +151,7 @@ TIME="1678655506"
 SIZE="1044"
 ENDFILE
 VALUE "<project>\designer\impl1\top.pdb,pdb"
-STATE="utd"
+STATE="ood"
 TIME="1678655344"
 SIZE="56889"
 ENDFILE
@@ -175,6 +175,11 @@ STATE="utd"
 TIME="1678655485"
 SIZE="2482"
 ENDFILE
+VALUE "<project>\designer\impl1\UART_CORE.ide_des,ide_des"
+STATE="utd"
+TIME="1678709224"
+SIZE="242"
+ENDFILE
 VALUE "<project>\hdl\clk_div.v,hdl"
 STATE="utd"
 TIME="1677253909"
@@ -182,8 +187,8 @@ SIZE="456"
 ENDFILE
 VALUE "<project>\hdl\mem_command.v,hdl"
 STATE="utd"
-TIME="1678455554"
-SIZE="13009"
+TIME="1678810424"
+SIZE="15959"
 ENDFILE
 VALUE "<project>\hdl\spi_master.v,hdl"
 STATE="utd"
@@ -197,8 +202,13 @@ SIZE="6102"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1678454869"
-SIZE="5650"
+TIME="1678810605"
+SIZE="6479"
+ENDFILE
+VALUE "<project>\simulation\presynth_simulation.log,log"
+STATE="utd"
+TIME="1678709298"
+SIZE="68"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
@@ -209,6 +219,21 @@ VALUE "<project>\simulation\setup.do,do"
 STATE="utd"
 TIME="1678418542"
 SIZE="1557"
+ENDFILE
+VALUE "<project>\simulation\tb_top_presynth_simulation.log,log"
+STATE="utd"
+TIME="1678811287"
+SIZE="11601"
+ENDFILE
+VALUE "<project>\simulation\testbnch_presynth_simulation.log,log"
+STATE="utd"
+TIME="1678709348"
+SIZE="4806"
+ENDFILE
+VALUE "<project>\simulation\uart_tb_presynth_simulation.log,log"
+STATE="utd"
+TIME="1678729679"
+SIZE="68"
 ENDFILE
 VALUE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.cxf,actgen_cxf"
 STATE="utd"
@@ -264,8 +289,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\stimulus\tb_top.v,tb_hdl"
 STATE="utd"
-TIME="1678418802"
-SIZE="922"
+TIME="1678811243"
+SIZE="1076"
+ENDFILE
+VALUE "<project>\stimulus\uart_tb.v,tb_hdl"
+STATE="utd"
+TIME="1678730312"
+SIZE="39347"
 ENDFILE
 VALUE "<project>\synthesis\FIFO_INPUT_SAVE.edn,syn_edn"
 STATE="utd"
@@ -288,7 +318,7 @@ TIME="1678476857"
 SIZE="1839"
 ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
-STATE="utd"
+STATE="ood"
 TIME="1678476942"
 SIZE="418884"
 ENDFILE
@@ -298,7 +328,7 @@ TIME="1678476942"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
-STATE="utd"
+STATE="ood"
 TIME="1678476942"
 SIZE="394"
 ENDFILE
@@ -331,37 +361,10 @@ VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_report_pin_byname.txt,log"
 VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_report_pin_bynumber.txt,log"
 ENDLIST
 ENDLIST
-LIST "top::work"
-FILE "<project>\hdl\top.v,hdl"
-LIST ProjectState5.1
-LIST Impl1
-LiberoState=Post_Layout
-ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
-ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST PinReports
-VALUE "<project>\designer\impl1\top_report_pin_byname.txt,log"
-VALUE "<project>\designer\impl1\top_report_pin_bynumber.txt,log"
-ENDLIST
-ENDLIST
-LIST "UART_CORE_UART_CORE_0_COREUART::work"
-FILE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v,hdl"
-LIST Other_Association
-VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
-VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,do"
-ENDLIST
+LIST "UART_CORE::work"
+FILE "<project>\component\work\UART_CORE\UART_CORE.v,hdl"
 LIST AssociatedStimulus
-VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+VALUE "<project>\stimulus\uart_tb.v,tb_hdl"
 ENDLIST
 LIST ProjectState5.1
 LIST Impl1
@@ -376,11 +379,18 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
-ENDLIST
-LIST AssociatedStimulus
-LIST UART_CORE_UART_CORE_0_COREUART
+LIST "UART_CORE_UART_CORE_0_COREUART::work"
+FILE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v,hdl"
+LIST Other_Association
 VALUE "<project>\component\work\UART_CORE\UART_CORE_0\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,do"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST UART_CORE
+VALUE "<project>\stimulus\uart_tb.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
@@ -391,7 +401,7 @@ VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,d
 ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=false
+UseAutomaticDoFile=true
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
@@ -465,8 +475,8 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM=""
-BATCH=0
+PARAM="-l tb_top_presynth_simulation.log -c"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -503,21 +513,7 @@ Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
-LIST "top::work"
-LIST Impl1
-LiberoState=Post_Layout
-ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
-ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST "UART_CORE_UART_CORE_0_COREUART::work"
+LIST "UART_CORE::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
 LIST FlowOptions
@@ -542,8 +538,10 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+Reports;Reports;0
+ReportsCurrentItem;Pre-Synthesis Simulate:tb_top_presynth_simulation.log
+HDL;stimulus\tb_top.v;0
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"
@@ -556,6 +554,7 @@ LIST "mem_command::work","hdl\mem_command.v","FALSE","FALSE"
 SUBBLOCK "FIFO_INPUT_SAVE::work","smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v","TRUE","FALSE"
 SUBBLOCK "FIFO_OUTPUT_SEND::work","smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v","TRUE","FALSE"
 SUBBLOCK "SPI_Master_With_Single_CS::work","hdl\SPI_Master_With_Single_CS.v","FALSE","FALSE"
+SUBBLOCK "UART_CORE::work","component\work\UART_CORE\UART_CORE.v","TRUE","FALSE"
 ENDLIST
 LIST "spi_master::work","hdl\spi_master.v","FALSE","FALSE"
 ENDLIST
@@ -592,8 +591,14 @@ ENDLIST
 LIST "testbnch::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\test\user\testbnch.v","FALSE","TRUE"
 SUBBLOCK "UART_CORE_UART_CORE_0_COREUART::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
 ENDLIST
+LIST "uart_tb::work","stimulus\uart_tb.v","FALSE","TRUE"
+SUBBLOCK "UART_CORE_UART_CORE_0_COREUART::work","component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v","FALSE","FALSE"
+ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
+LIST "UART_CORE::work"
+ACTIVETESTBENCH "uart_tb::work","stimulus\uart_tb.v","FALSE"
+ENDLIST
 ENDLIST
 LIST IOTabList
 ENDLIST

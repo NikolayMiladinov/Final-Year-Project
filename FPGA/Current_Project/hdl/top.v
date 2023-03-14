@@ -31,10 +31,10 @@ module top(
 
   parameter SPI_MODE = 3; // CPOL = 1, CPHA = 1
   parameter CLKS_PER_HALF_BIT = 2;  // divide by 4
-  parameter CLK_DIV_PARAM = 10;
+  parameter CLK_DIV_PARAM = 2;
   parameter MAX_BYTES_PER_CS = 5000;
   parameter MAX_WAIT_CYCLES = 1000;
-  parameter BAUD_VAL = 10;
+  parameter BAUD_VAL = 1;
   parameter BAUD_VAL_FRACTION = 0;
 
   // Control signals
@@ -174,14 +174,14 @@ module top(
           end
         end
         LOAD: begin
-          if (w_Master_CM_Ready) begin
-            r_Command         <= PROG_LOAD1;
-            r_Addr_Data[12:0] <= 'h034;
-            r_Master_CM_DV    <= 1'b1;
-            fifo_SM_PROG      <= WAIT;
-          end else begin
-            r_Master_CM_DV    <= 1'b0;
-          end
+          // r_Master_CM_DV  <= 1'b0;
+          r_fifo_save_we  <= 1'b0;
+          // if (w_Master_CM_Ready) begin
+          //   r_Command         <= PROG_LOAD1;
+          //   r_Addr_Data[12:0] <= 'h034;
+          //   r_Master_CM_DV    <= 1'b1;
+          //   fifo_SM_PROG      <= WAIT;
+          // end
         end
         WAIT: begin
           if (w_Master_CM_Ready) begin

@@ -112,27 +112,62 @@ module mem_command #(
     my_command_t current_command;   // Stores current command
 
 
-    // Register data into FIFO_SAVE
+    logic [1:0] r_SM_UART_TEST = 2'b00;
+    localparam GET_DATA = 2'b00;
+    localparam WRITE_DATA = 2'b01;
+    localparam TRANSFER = 2'b10;
 
+    // Register data into FIFO_SAVE
+    always @(posedge i_Clk or negedge i_Rst_L) begin
+        if (~i_Rst_L) begin
+            r_SM_UART_TEST  <= GET_DATA;
+            r_UART_Data_In  <= 'b0;
+            r_UART_WEN      <= 1'b1;
+            fifo_save_re    <= 1'b0;
+        end
+        case (r_SM_UART_TEST)
+            GET_DATA: begin
+                
+                if(fifo_save_count>'d120 & w_UART_TX_Ready) begin
+                    fifo_save_re <= 1'b1;
+                    r_SM_UART_TEST <= WRITE_DATA;
+                end else begin
+                    fifo_save_re <= 1'b0;
+                end
+            end
+            WRITE_DATA: begin
+                fifo_save_re <= 1'b0;
+                if(fifo_save_re_delayed[1] & w_UART_TX_Ready) begin
+                    r_UART_Data_In <= fifo_save_data_out;
+                    r_UART_WEN <= 1'b0;
+                    r_SM_UART_TEST <= TRANSFER;
+                end
+            end
+            TRANSFER: begin
+                r_UART_WEN <= 1'b1;
+                if(w_UART_TX_Ready) r_SM_UART_TEST <= GET_DATA;
+            end
+        endcase
+    end
 
 
     // Get data out of FIFO_SAVE
     always @(posedge i_Clk) begin
-        if (r_TX_Count >= 'd2 & r_TX_Count < (current_command.num_bytes -'d1) & 
-            current_command.command == PROG_LOAD1 & ~fifo_save_empty & 
-            r_SM_COM == BUSY & w_Master_TX_Ready & ~fifo_save_re) begin 
-            // Enable reading during PROG_LOAD for 1 cycle after TX_DV
-            // On the last TX_DV pulse, SM_COM becomes IDLE so reading will not happen
-            fifo_save_re <= 1'b1;
-        end else begin
-            fifo_save_re <= 1'b0;
-        end
+        // if (r_TX_Count >= 'd2 & r_TX_Count < (current_command.num_bytes -'d1) & 
+        //     current_command.command == PROG_LOAD1 & ~fifo_save_empty & 
+        //     r_SM_COM == BUSY & w_Master_TX_Ready & ~fifo_save_re) begin 
+        //     // Enable reading during PROG_LOAD for 1 cycle after TX_DV
+        //     // On the last TX_DV pulse, SM_COM becomes IDLE so reading will not happen
+        //     fifo_save_re <= 1'b1;
+        // end else begin
+        //     fifo_save_re <= 1'b0;
+        // end
         fifo_save_re_delayed[0] <= fifo_save_re;
         fifo_save_re_delayed[1] <= fifo_save_re_delayed[0];
-        if (fifo_save_re_delayed[1]) begin
-            // Use upper bits of addr_data to store data from fifo
-            current_command.prog_data <= fifo_save_data_out;
-        end
+        // if (fifo_save_re_delayed[1]) begin
+        //     // Use upper bits of addr_data to store data from fifo
+        //     current_command.prog_data <= fifo_save_data_out;
+        // end
     end
 
 
