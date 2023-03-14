@@ -141,7 +141,7 @@ TIME="1678454932"
 SIZE="10850"
 ENDFILE
 VALUE "<project>\designer\impl1\top.adb,adb"
-STATE="ood"
+STATE="utd"
 TIME="1678655505"
 SIZE="616960"
 ENDFILE
@@ -151,7 +151,7 @@ TIME="1678655506"
 SIZE="1044"
 ENDFILE
 VALUE "<project>\designer\impl1\top.pdb,pdb"
-STATE="ood"
+STATE="utd"
 TIME="1678655344"
 SIZE="56889"
 ENDFILE
@@ -162,8 +162,8 @@ SIZE="91324"
 ENDFILE
 VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
 STATE="utd"
-TIME="1678476969"
-SIZE="13022"
+TIME="1678829169"
+SIZE="13195"
 ENDFILE
 VALUE "<project>\designer\impl1\top_fp\projectData\top.pdb,pdb"
 STATE="utd"
@@ -187,8 +187,8 @@ SIZE="456"
 ENDFILE
 VALUE "<project>\hdl\mem_command.v,hdl"
 STATE="utd"
-TIME="1678810424"
-SIZE="15959"
+TIME="1678828376"
+SIZE="16099"
 ENDFILE
 VALUE "<project>\hdl\spi_master.v,hdl"
 STATE="utd"
@@ -202,13 +202,8 @@ SIZE="6102"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1678810605"
-SIZE="6479"
-ENDFILE
-VALUE "<project>\simulation\presynth_simulation.log,log"
-STATE="utd"
-TIME="1678709298"
-SIZE="68"
+TIME="1678829147"
+SIZE="6600"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
@@ -219,11 +214,6 @@ VALUE "<project>\simulation\setup.do,do"
 STATE="utd"
 TIME="1678418542"
 SIZE="1557"
-ENDFILE
-VALUE "<project>\simulation\tb_top_presynth_simulation.log,log"
-STATE="utd"
-TIME="1678811287"
-SIZE="11601"
 ENDFILE
 VALUE "<project>\simulation\testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -289,8 +279,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\stimulus\tb_top.v,tb_hdl"
 STATE="utd"
-TIME="1678811243"
-SIZE="1076"
+TIME="1678828216"
+SIZE="1151"
 ENDFILE
 VALUE "<project>\stimulus\uart_tb.v,tb_hdl"
 STATE="utd"
@@ -317,8 +307,13 @@ STATE="utd"
 TIME="1678476857"
 SIZE="1839"
 ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1678828563"
+SIZE="159"
+ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
-STATE="ood"
+STATE="utd"
 TIME="1678476942"
 SIZE="418884"
 ENDFILE
@@ -328,7 +323,7 @@ TIME="1678476942"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
-STATE="ood"
+STATE="utd"
 TIME="1678476942"
 SIZE="394"
 ENDFILE
@@ -359,6 +354,27 @@ ENDLIST
 LIST PinReports
 VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_report_pin_byname.txt,log"
 VALUE "<project>\designer\impl1\FIFO_INPUT_SAVE_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+LIST "top::work"
+FILE "<project>\hdl\top.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\top_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\top_report_pin_bynumber.txt,log"
 ENDLIST
 ENDLIST
 LIST "UART_CORE::work"
@@ -401,7 +417,7 @@ VALUE "<project>\component\work\UART_CORE\UART_CORE_0\mti\scripts\wave_vlog.do,d
 ENDLIST
 ENDLIST
 LIST SimulationOptions
-UseAutomaticDoFile=true
+UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
 RunTime=1000ns
@@ -466,8 +482,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -475,8 +491,8 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM="-l tb_top_presynth_simulation.log -c"
-BATCH=1
+PARAM=" -l presynth_simulation.log "
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -513,6 +529,20 @@ Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
+LIST "top::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 LIST "UART_CORE::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -539,7 +569,7 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
-ReportsCurrentItem;Pre-Synthesis Simulate:tb_top_presynth_simulation.log
+ReportsCurrentItem;Compile:top_compile_log.rpt
 HDL;stimulus\tb_top.v;0
 ACTIVEVIEW;Reports
 ENDLIST

@@ -1,15 +1,15 @@
 C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe  -mp  4  -prjfile  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\scratchproject.prs  -implementation  synthesis  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis   -part AGLN250V2  -package VQFP100  -grade STD    -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\report\top_premap.xml  -top_level_module  top  -oedif  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.edn  -conchk_prepass  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top_cck.rpt   -freq 100.000   C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_mult.srs  -flow prepass  -gcc_prepass  -osrd  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_prem.srd  -qsap  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap  -devicelib  C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v  -ologparam  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\syntmp\top.plg  -osyn  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_prem.srd  -prjdir  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\  -prjname  top_syn  -log  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\top_premap.srr 
 relcom:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe -mp 4 -prjfile ..\scratchproject.prs -implementation synthesis -prodtype synplify_pro -encrypt -pro -rundir ..\..\synthesis -part AGLN250V2 -package VQFP100 -grade STD -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile ..\synlog\report\top_premap.xml -top_level_module top -oedif ..\top.edn -conchk_prepass ..\top_cck.rpt -freq 100.000 ..\synwork\top_mult.srs -flow prepass -gcc_prepass -osrd ..\synwork\top_prem.srd -qsap ..\top.sap -devicelib ..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v -ologparam top.plg -osyn ..\synwork\top_prem.srd -prjdir ..\ -prjname top_syn -log ..\synlog\top_premap.srr
-rc:1 success:1 runtime:1
-file:..\scratchproject.prs|io:o|time:1678476938|size:2820|exec:0|csum:
-file:..\top.edn|io:o|time:0|size:0|exec:0|csum:
-file:..\top_cck.rpt|io:o|time:1678476941|size:21822|exec:0|csum:
-file:..\synwork\top_mult.srs|io:i|time:1678476940|size:5876|exec:0|csum:A18C6120B1089318C8F2DFFB7965CA1C
-file:..\synwork\top_prem.srd|io:o|time:1678476941|size:54955|exec:0|csum:
-file:..\top.sap|io:o|time:1678476941|size:2437|exec:0|csum:
+rc:1 success:1 runtime:0
+file:..\scratchproject.prs|io:o|time:1678828563|size:3794|exec:0|csum:
+file:..\top.edn|io:o|time:1678828668|size:469680|exec:0|csum:
+file:..\top_cck.rpt|io:o|time:1678829158|size:21877|exec:0|csum:
+file:..\synwork\top_mult.srs|io:i|time:1678829158|size:6551|exec:0|csum:43B870BEA2A04777EE2F65A47EAFBB0E
+file:..\synwork\top_prem.srd|io:o|time:1678829158|size:67506|exec:0|csum:
+file:..\top.sap|io:o|time:1678829158|size:2777|exec:0|csum:
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v|io:i|time:1509013088|size:50704|exec:0|csum:30991078F83C3293651DECB436D35B5C
-file:top.plg|io:o|time:1678476940|size:0|exec:0|csum:
-file:..\synwork\top_prem.srd|io:o|time:1678476941|size:54955|exec:0|csum:
-file:..\synlog\top_premap.srr|io:o|time:1678476941|size:11393|exec:0|csum:
+file:top.plg|io:o|time:1678829158|size:0|exec:0|csum:
+file:..\synwork\top_prem.srd|io:o|time:1678829158|size:67506|exec:0|csum:
+file:..\synlog\top_premap.srr|io:o|time:1678829158|size:14653|exec:0|csum:
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\m_proasic.exe|io:i|time:1509359472|size:11119104|exec:1|csum:6BD6E9876645BB1B346C655471A0D71C
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe|io:i|time:1509360886|size:14301696|exec:1|csum:CA7B630F1194A591FA1E520688EE75E2

@@ -36,16 +36,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Sun Mar 12 21:08:47 2023
+Timing-driven Placer Started: Tue Mar 14 21:26:48 2023
 
-Placer Finished: Sun Mar 12 21:08:52 2023
-Total Placer CPU Time:     00:00:05
+Placer Finished: Tue Mar 14 21:26:54 2023
+Total Placer CPU Time:     00:00:06
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: top                             Started: Sun Mar 12 21:08:53 2023
+Design: top                             Started: Tue Mar 14 21:26:55 2023
 
  
 Iterative improvement...
@@ -53,15 +53,15 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: top                             
-Finished: Sun Mar 12 21:08:57 2023
-Total CPU Time:     00:00:02            Total Elapsed Time: 00:00:04
-Total Memory Usage: 171.3 Mbytes
+Finished: Tue Mar 14 21:26:59 2023
+Total CPU Time:     00:00:03            Total Elapsed Time: 00:00:04
+Total Memory Usage: 173.3 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
 Finished loading the Timing data.
 
-The Layout command succeeded ( 00:00:13 )
+The Layout command succeeded ( 00:00:14 )
 
 The Export-map command succeeded ( 00:00:04 )
 Warning: Overwriting the existing file:
@@ -70,9 +70,9 @@ Warning: Overwriting the existing file:
 Wrote to the file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.pdb
-CHECKSUM: C2A7
+CHECKSUM: 760B
 
-The Generate programming file command succeeded ( 00:00:18 )
+The Generate programming file command succeeded ( 00:00:19 )
 Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.
@@ -80,13 +80,13 @@ Wrote pin report to file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top_report_pin_byname.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Wrote pin report to file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top_report_pin_bynumber.txt
 
 The Report command succeeded ( 00:00:01 )
 
-The Execute Script command succeeded ( 00:00:01 )
+The Execute Script command succeeded ( 00:00:02 )
 Design closed.
 

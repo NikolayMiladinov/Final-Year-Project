@@ -23,6 +23,7 @@ module top(
     output TEST_CLK,
     output TEST_MISO,
     output TEST_CS_n,
+    output TEST_VCC,
 
     // Other test pins
     output FPGA_CLK,
@@ -31,7 +32,7 @@ module top(
 
   parameter SPI_MODE = 3; // CPOL = 1, CPHA = 1
   parameter CLKS_PER_HALF_BIT = 2;  // divide by 4
-  parameter CLK_DIV_PARAM = 2;
+  parameter CLK_DIV_PARAM = 10;
   parameter MAX_BYTES_PER_CS = 5000;
   parameter MAX_WAIT_CYCLES = 1000;
   parameter BAUD_VAL = 1;
@@ -79,6 +80,7 @@ module top(
   localparam EVAL = 3'b110;
 
   // Assign output pins
+  assign TEST_VCC     = MEM_VCC;
   assign TEST_MOSI    = SPI_MOSI;
   assign TEST_CLK     = SPI_CLK;
   assign TEST_CS_n    = SPI_CS_n;
@@ -148,7 +150,7 @@ module top(
     if (~rst_n) begin
       r_Mem_Power <= 1'b0;
     end
-    else if(pb_sw1==1'b0) begin
+    else if(~pb_sw1) begin
       r_Mem_Power <= 1'b1;
     end
   end
@@ -162,7 +164,10 @@ module top(
       case (fifo_SM_PROG)
         WRITING: begin
           if(w_fifo_save_count >= 'd128) begin
-            fifo_SM_PROG    <= LOAD;
+            // fifo_SM_PROG    <= LOAD;
+            if (~pb_sw2) begin
+              fifo_SM_PROG    <= WAIT;
+            end
             r_fifo_save_we  <= 1'b0;
           end else begin
             if (~r_fifo_save_we) begin
@@ -174,14 +179,14 @@ module top(
           end
         end
         LOAD: begin
-          // r_Master_CM_DV  <= 1'b0;
+          r_Master_CM_DV  <= 1'b0;
           r_fifo_save_we  <= 1'b0;
-          // if (w_Master_CM_Ready) begin
-          //   r_Command         <= PROG_LOAD1;
-          //   r_Addr_Data[12:0] <= 'h034;
-          //   r_Master_CM_DV    <= 1'b1;
-          //   fifo_SM_PROG      <= WAIT;
-          // end
+          if (w_Master_CM_Ready) begin
+            r_Command         <= PROG_LOAD1;
+            r_Addr_Data[12:0] <= 'h034;
+            r_Master_CM_DV    <= 1'b1;
+            fifo_SM_PROG      <= WAIT;
+          end
         end
         WAIT: begin
           if (w_Master_CM_Ready) begin

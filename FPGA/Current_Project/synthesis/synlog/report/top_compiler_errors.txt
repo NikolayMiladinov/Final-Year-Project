@@ -1,2 +1,2 @@
-@E: CL123 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":197:8:197:9|Logic for r_Master_TX_Byte[0] does not match a standard flip-flop
+@E: CL172 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":73:15:73:26|Only one always block can assign a given variable fifo_SM_PROG[2:0]
 

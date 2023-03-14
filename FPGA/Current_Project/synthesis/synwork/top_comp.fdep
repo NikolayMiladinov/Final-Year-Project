@@ -1,4 +1,4 @@
-#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\synwork\\top_comp.srs|-top|top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\igloo.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\synwork\\top_comp.srs|-top|top|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\synthesis\\|-I|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib|-sysv|-devicelib|C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\igloo.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\bin64\\c_ver.exe":1509343936
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\proasic\\igloo.v":1509013088
 #CUR:"C:\\Microsemi\\Libero_SoC_v11.9\\SynplifyPro\\lib\\vlog\\hypermods.v":1509015128
@@ -10,39 +10,70 @@
 #CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\smartgen\\FIFO_OUTPUT_SEND\\FIFO_OUTPUT_SEND.v":1678367206
 #CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\spi_master.v":1677951166
 #CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\SPI_Master_With_Single_CS.v":1678059331
-#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\mem_command.v":1678455554
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\component\\work\\UART_CORE\\UART_CORE_0\\rtl\\vlog\\core\\Clock_gen.v":1678476920
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\component\\work\\UART_CORE\\UART_CORE_0\\rtl\\vlog\\core\\Rx_async.v":1678476920
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\component\\work\\UART_CORE\\UART_CORE_0\\rtl\\vlog\\core\\Tx_async.v":1678476920
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\component\\work\\UART_CORE\\UART_CORE_0\\rtl\\vlog\\core\\fifo_256x8_igloo.v":1678476920
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\component\\work\\UART_CORE\\UART_CORE_0\\rtl\\vlog\\core\\CoreUART.v":1678476920
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\component\\work\\UART_CORE\\UART_CORE.v":1678793517
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\mem_command.v":1678828376
 #CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\command_vars.v":1678187920
-#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\top.v":1678454869
+#CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\top.v":1678829147
 #CUR:"C:\\Users\\nikol\\Documents\\FinalYearProject\\Final-Year-Project\\FPGA\\Current_Project\\hdl\\command_vars.v":1678187920
 0			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v" verilog
 1			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v" verilog
 2			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v" verilog
 3			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v" verilog
 4			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v" verilog
-5			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v" verilog
-6		*	"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v" verilog
-7			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v" verilog
+5			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v" verilog
+6			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v" verilog
+7			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v" verilog
+8			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v" verilog
+9			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v" verilog
+10			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE.v" verilog
+11			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v" verilog
+12		*	"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v" verilog
+13			"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 1 -1
 2 -1
 3 -1
 4 3
-5 4 2 1 6
+5 -1
 6 -1
-7 5 0 6
-#Dependency Lists(Users Of)
-0 7
-1 5
-2 5
-3 4
-4 5
-5 7
-6 7 5
 7 -1
+8 -1
+9 8 6 7 5
+10 9
+11 10 4 2 1 12
+12 -1
+13 11 0 12
+#Dependency Lists(Users Of)
+0 13
+1 11
+2 11
+3 4
+4 11
+5 9
+6 9
+7 9
+8 9
+9 10
+10 11
+11 13
+12 13 11
+13 -1
 #Design Unit to File Association
-module work top 7
-module work mem_command 5
+module work top 13
+module work mem_command 11
+module work UART_CORE 10
+module work UART_CORE_UART_CORE_0_COREUART 9
+module work UART_CORE_UART_CORE_0_fifo_256x8 8
+module work UART_CORE_UART_CORE_0_fifo_256x8_pa3 8
+module work UART_CORE_UART_CORE_0_Tx_async 7
+module work UART_CORE_UART_CORE_0_Rx_async 6
+module work UART_CORE_UART_CORE_0_Clock_gen 5
 module work SPI_Master_With_Single_CS 4
 module work spi_master 3
 module work FIFO_OUTPUT_SEND 2

@@ -1,5 +1,5 @@
 # Created by Microsemi Libero Software 11.9.6.7
-# Fri Mar 10 19:35:50 2023
+# Tue Mar 14 21:26:05 2023
 
 # (OPEN DESIGN)
 
@@ -13,9 +13,6 @@ set_defvar "IDE_DESIGNERVIEW_REV0" {Impl1}
 set_defvar "IDE_DESIGNERVIEW_REVNUM0" "1"
 set_defvar "IDE_DESIGNERVIEW_ROOTDIR" {C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer}
 set_defvar "IDE_DESIGNERVIEW_LASTREV" "1"
-set_design  -name "top" -family "IGLOO"
-set_device -die {AGLN250V2} -package {100 VQFP} -speed {STD} -voltage {1.2} -IO_DEFT_STD {LVCMOS 3.3V} -RESERVEMIGRATIONPINS {1} -RESTRICTPROBEPINS {1} -RESTRICTSPIPINS {0} -TARGETDEVICESFORMIGRATION {UM4X4M1NLPLV} -TEMPR {COM} -UNUSED_MSS_IO_RESISTOR_PULL {None} -VCCI_1.2_VOLTR {COM} -VCCI_1.5_VOLTR {COM} -VCCI_1.8_VOLTR {COM} -VCCI_2.5_VOLTR {COM} -VCCI_3.3_VOLTR {COM} -VOLTR {COM}
-
 
 
 # import of input files

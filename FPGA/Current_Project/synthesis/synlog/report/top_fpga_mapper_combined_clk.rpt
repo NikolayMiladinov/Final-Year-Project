@@ -7,8 +7,8 @@
 
 Clock optimization not enabled
 1 non-gated/non-generated clock tree(s) driving 5 clock pin(s) of sequential element(s)
-1 gated/generated clock tree(s) driving 165 clock pin(s) of sequential element(s)
-0 instances converted, 165 sequential instances remain driven by gated/generated clocks
+1 gated/generated clock tree(s) driving 196 clock pin(s) of sequential element(s)
+0 instances converted, 196 sequential instances remain driven by gated/generated clocks
 
 =============================== Non-Gated/Non-Generated Clocks ================================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
@@ -18,7 +18,7 @@ Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample I
 ======================================================================= Gated/Generated Clocks ========================================================================
 Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance     Explanation                                                             
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 165        fifo_SM_PROG[0]     No generated or derived clock directive on output of sequential instance
+@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 196        r_Mem_Power         No generated or derived clock directive on output of sequential instance
 =======================================================================================================================================================================
 
 

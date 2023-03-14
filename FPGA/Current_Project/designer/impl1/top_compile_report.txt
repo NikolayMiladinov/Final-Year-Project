@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Fri Mar 10 19:36:07 2023 ***************************************************************************
+                          Tue Mar 14 21:26:08 2023 ***************************************************************************
 
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
 File Name: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl1\top.adb
 Design Name: top  Design State: compile
-Last Saved: Fri Mar 10 19:26:16 2023
+Last Saved: Tue Mar 14 21:24:44 2023
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Fri Mar 10 19:36:05 2023:
+Source File(s) Imported on Tue Mar 14 21:26:05 2023:
         C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.edn
 
 
@@ -118,7 +118,7 @@ Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA6 drives no 
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA7 drives no load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA8 drives no load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTB8 drives no load.
-Warning: Top level port pb_sw1 is not connected to any IO pad
+Warning: Top level port UART_RX is not connected to any IO pad
 
 Netlist Optimization Report
 ===========================
@@ -128,9 +128,9 @@ Optimized macros:
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 30
-  - Logic combining:        105
+  - Logic combining:        114
 
-    Total macros optimized  186
+    Total macros optimized  195
 
 There were 0 error(s) and 41 warning(s) in this design.
 =====================================================================
@@ -144,8 +144,8 @@ There were 0 error(s) and 0 warning(s).
 Compile report:
 ===============
 
-    CORE                       Used:    635  Total:   6144   (10.34%)
-    IO (W/ clocks)             Used:     12  Total:     68   (17.65%)
+    CORE                       Used:    726  Total:   6144   (11.82%)
+    IO (W/ clocks)             Used:     17  Total:     68   (25.00%)
     GLOBAL (Chip+Quadrant)     Used:      3  Total:     18   (16.67%)
     PLL                        Used:      0  Total:      1   (0.00%)
     RAM/FIFO                   Used:      4  Total:      8   (50.00%)
@@ -168,15 +168,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 491          | 491
-    SEQ     | 144          | 144
+    COMB    | 551          | 551
+    SEQ     | 175          | 175
 
 I/O Function:
 
     Type                                  | w/o register  | w/ register  | w/ DDR register
     --------------------------------------|---------------|--------------|----------------
-    Input I/O                             | 3             | 0            | 0
-    Output I/O                            | 9             | 0            | 0
+    Input I/O                             | 5             | 0            | 0
+    Output I/O                            | 12            | 0            | 0
     Bidirectional I/O                     | 0             | 0            | 0
     Differential Input I/O Pairs          | 0             | 0            | 0
     Differential Output I/O Pairs         | 0             | 0            | 0
@@ -187,11 +187,12 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVCMOS33                        | 3.30v | N/A   | 3     | 9      | 0
+    LVCMOS33                        | 3.30v | N/A   | 4     | 8      | 0
+    LVCMOS18                        | 1.80v | N/A   | 1     | 4      | 0
 
 I/O Placement:
 
-    Locked  :  12 ( 100.00% )
+    Locked  :  17 ( 100.00% )
     Placed  :   0
     UnPlaced:   0
 
@@ -201,10 +202,10 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    148     CLK_NET       Net   : FPGA_CLK_c
+    179     CLK_NET       Net   : FPGA_CLK_c
                           Driver: clk_div_1M/clk_out_RNIOLD3
                           Source: NETLIST
-    131     SET/RESET_NET Net   : rst_n_c
+    158     SET/RESET_NET Net   : rst_n_c
                           Driver: rst_n_pad
                           Source: NETLIST
     5       CLK_NET       Net   : CLKA_c
@@ -223,17 +224,19 @@ High fanout nets in the post compile netlist:
     18      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_38
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNI9F6C4_0[0]
     15      INT_NET       Net   : MEM_COMMAND_CONTROLLER/num_bytes[0]
-                          Driver: MEM_COMMAND_CONTROLLER/current_command.command_RNIIDSC[2]
+                          Driver: MEM_COMMAND_CONTROLLER/current_command.command_RNIIDSC[1]
     14      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_44_0
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2_0[1]
+    14      INT_NET       Net   :
+MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/baud_cntr8
+                          Driver:
+MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_cntr_RNI352C4[1]
+    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[0]
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count[0]
+    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[3]
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count[3]
     13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_44
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2[1]
-    12      INT_NET       Net   : r_Master_CM_DV
-                          Driver: r_Master_CM_DV
-    12      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[0]
-                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count[0]
-    10      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[3]
-                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count[3]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
@@ -249,15 +252,17 @@ Nets that are candidates for clock assignment and the resulting fanout:
     16      INT_NET       Net   : MEM_COMMAND_CONTROLLER/FIFO_SAVE/DFN1E1C0_0_Q
                           Driver: MEM_COMMAND_CONTROLLER/FIFO_SAVE/DFN1E1C0_0
     15      INT_NET       Net   : MEM_COMMAND_CONTROLLER/num_bytes[0]
-                          Driver: MEM_COMMAND_CONTROLLER/current_command.command_RNIIDSC[2]
+                          Driver: MEM_COMMAND_CONTROLLER/current_command.command_RNIIDSC[1]
     14      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_44_0
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2_0[1]
-    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_44
-                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2[1]
-    12      INT_NET       Net   : r_Master_CM_DV
-                          Driver: r_Master_CM_DV
-    12      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[0]
+    14      INT_NET       Net   :
+MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/baud_cntr8
+                          Driver:
+MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_cntr_RNI352C4[1]
+    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[0]
                           Driver: MEM_COMMAND_CONTROLLER/r_TX_Count[0]
+    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_TX_Count[3]
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count[3]
 ====================
 Flash*Freeze report:
 ====================

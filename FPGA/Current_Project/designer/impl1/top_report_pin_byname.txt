@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Sun Mar 12 21:11:46 2023 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Tue Mar 14 21:27:08 2023 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
@@ -20,6 +20,9 @@ Port         |Pin |Fixed |Function         |I/O Std  |Output Drive (mA) |Slew |R
 CLKA          15   Yes    GFA1/IO58RSB3     LVCMOS33  ---                ---   None           ---               No           No             No               No
 FPGA_CLK      2    Yes    GAA2/IO67RSB3     LVCMOS33  8                  High  None           5                 No           No             ---              No
 MEM_CM_READY  3    Yes    IO66RSB3          LVCMOS33  8                  High  None           5                 No           No             ---              No
+MEM_VCC       30   Yes    IO46RSB2          LVCMOS18  4                  High  None           5                 No           No             ---              No
+pb_sw1        20   Yes    GEC1/IO54RSB3     LVCMOS33  ---                ---   None           ---               No           No             No               No
+pb_sw2        21   Yes    GEC0/IO53RSB3     LVCMOS33  ---                ---   None           ---               No           No             No               No
 rst_n         10   Yes    GFB1/IO60RSB3     LVCMOS33  ---                ---   None           ---               No           No             No               No
 SPI_CLK       26   Yes    GEA2/IO50RSB2     LVCMOS18  4                  High  None           5                 No           No             ---              No
 SPI_CS_n      27   Yes    FF/GEB2/IO49RSB2  LVCMOS18  4                  High  None           5                 No           No             ---              No
@@ -29,3 +32,5 @@ TEST_CLK      4    Yes    GAB2/IO65RSB3     LVCMOS33  8                  High  N
 TEST_CS_n     5    Yes    IO64RSB3          LVCMOS33  8                  High  None           5                 No           No             ---              No
 TEST_MISO     6    Yes    GAC2/IO63RSB3     LVCMOS33  8                  High  None           5                 No           No             ---              No
 TEST_MOSI     7    Yes    IO62RSB3          LVCMOS33  8                  High  None           5                 No           No             ---              No
+TEST_VCC      8    Yes    IO61RSB3          LVCMOS33  8                  High  None           5                 No           No             ---              No
+UART_TX       19   Yes    GFC2/IO55RSB3     LVCMOS33  8                  High  None           5                 No           No             ---              No

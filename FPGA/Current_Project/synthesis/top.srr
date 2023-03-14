@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: XPS-NICK
 
-# Fri Mar 10 19:35:38 2023
+# Tue Mar 14 21:25:56 2023
 
 #Implementation: synthesis
 
@@ -26,10 +26,17 @@ Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys softwa
 @I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v" (library work)
 @I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v" (library work)
 @I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v" (library work)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v" (library work)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v" (library work)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v" (library work)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\fifo_256x8_igloo.v" (library work)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v" (library work)
+@I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE.v" (library work)
 @I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v" (library work)
 @I:"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v" (library work)
 @I::"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v" (library work)
 Verilog syntax check successful!
+File C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v changed - recompiling
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:6|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v_unit in library work.
 
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:6|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v_unit in library work.
@@ -313,77 +320,168 @@ Selecting top level module top
 	CS_INACTIVE=2'b10
    Generated name = SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2
 
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v":38:7:38:37|Synthesizing module UART_CORE_UART_CORE_0_Clock_gen in library work.
+
+	BAUD_VAL_FRCTN_EN=32'b00000000000000000000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+   Generated name = UART_CORE_UART_CORE_0_Clock_gen_0s_0s
+
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":31:7:31:36|Synthesizing module UART_CORE_UART_CORE_0_Tx_async in library work.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	TX_FIFO=32'b00000000000000000000000000000000
+	tx_idle=32'b00000000000000000000000000000000
+	tx_load=32'b00000000000000000000000000000001
+	start_bit=32'b00000000000000000000000000000010
+	tx_data_bits=32'b00000000000000000000000000000011
+	parity_bit=32'b00000000000000000000000000000100
+	tx_stop_bit=32'b00000000000000000000000000000101
+	delay_state=32'b00000000000000000000000000000110
+   Generated name = UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s
+
+@W:"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":268:0:268:5|Index into variable tx_byte could be out of range - a simulation mismatch is possible
+@W:"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":268:0:268:5|Index into variable tx_byte could be out of range - a simulation mismatch is possible
+@N: CG179 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":356:21:356:29|Removing redundant assignment.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Optimizing register bit fifo_read_en0 to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Pruning unused register fifo_read_en0. Make sure that there are no unused intermediate registers.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":30:7:30:36|Synthesizing module UART_CORE_UART_CORE_0_Rx_async in library work.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	RX_FIFO=32'b00000000000000000000000000000000
+	receive_states_rx_idle=32'b00000000000000000000000000000000
+	receive_states_rx_data_bits=32'b00000000000000000000000000000001
+	receive_states_rx_stop_bit=32'b00000000000000000000000000000010
+	receive_states_rx_wait_state=32'b00000000000000000000000000000011
+   Generated name = UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s
+
+@N: CG179 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":254:23:254:35|Removing redundant assignment.
+@N: CG179 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":280:18:280:25|Removing redundant assignment.
+@W: CL177 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":501:0:501:5|Sharing sequential element clear_framing_error_en. Add a syn_preserve attribute to the element to prevent sharing.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":31:7:31:36|Synthesizing module UART_CORE_UART_CORE_0_COREUART in library work.
+
+	TX_FIFO=32'b00000000000000000000000000000000
+	RX_FIFO=32'b00000000000000000000000000000000
+	RX_LEGACY_MODE=32'b00000000000000000000000000000000
+	FAMILY=32'b00000000000000000000000000010100
+	BAUD_VAL_FRCTN_EN=32'b00000000000000000000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+   Generated name = UART_CORE_UART_CORE_0_COREUART_0s_0s_0s_20s_0s_0s
+
+@N: CG179 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":390:22:390:33|Removing redundant assignment.
+@W: CG133 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":136:8:136:17|Object data_ready is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":376:0:376:5|Pruning unused register overflow_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":341:0:341:5|Pruning unused register rx_dout_reg_empty. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":341:0:341:5|Pruning unused register rx_dout_reg_empty_q. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":326:0:326:5|Pruning unused register rx_dout_reg[7:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":293:0:293:5|Pruning unused register rx_state[1:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":278:0:278:5|Pruning unused register clear_framing_error_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":278:0:278:5|Pruning unused register clear_framing_error_reg0. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":263:0:263:5|Pruning unused register clear_parity_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":263:0:263:5|Pruning unused register clear_parity_reg0. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":159:0:159:5|Pruning unused register fifo_write_tx. Make sure that there are no unused intermediate registers.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE.v":9:7:9:15|Synthesizing module UART_CORE in library work.
+
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":6:7:6:17|Synthesizing module mem_command in library work.
 
 	SPI_MODE=32'b00000000000000000000000000000011
 	CLKS_PER_HALF_BIT=32'b00000000000000000000000000000010
 	MAX_BYTES_PER_CS=32'b00000000000000000001001110001000
 	MAX_WAIT_CYCLES=32'b00000000000000000000001111101000
+	BAUD_VAL=32'b00000000000000000000000000000001
+	BAUD_VAL_FRACTION=32'b00000000000000000000000000000000
 	IDLE=2'b00
 	BUSY=2'b01
-   Generated name = mem_command_3s_2s_5000s_1000s_0_1
+   Generated name = mem_command_3s_2s_5000s_1000s_1s_0s_0_1
 
-@W: CG471 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":145:13:145:27|Ignoring enum current_command.command in sensitivity list.
-@A: CL110 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":146:8:146:11|Too many clocks (> 8) for set/reset analysis of current_command.miso_byte_num, try moving enabling expressions outside always block
-@W: CL208 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":146:8:146:11|All reachable assignments to bit 0 of current_command.miso_byte_num[2:0] assign 1, register removed by optimization.
-@W: CL118 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":146:8:146:11|Latch generated from always block for signal current_command.miso_byte_num[2:0]; possible missing assignment in an if or case statement.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Feedback mux created for signal r_Master_TX_Byte[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@W: CG471 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":198:13:198:27|Ignoring enum current_command.command in sensitivity list.
+@W: CS263 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":388:18:388:25|Port-width mismatch for port BAUD_VAL. The port definition is 13 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CS263 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":389:27:389:43|Port-width mismatch for port BAUD_VAL_FRACTION. The port definition is 3 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
+@W: CG133 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":81:16:81:29|Object r_UART_Data_In is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":82:16:82:25|Object r_UART_OEN is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":83:16:83:25|Object r_UART_WEN is declared but not assigned. Either assign a value or remove the declaration.
+@A: CL110 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":199:8:199:11|Too many clocks (> 8) for set/reset analysis of current_command.miso_byte_num, try moving enabling expressions outside always block
+@W: CL208 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":199:8:199:11|All reachable assignments to bit 0 of current_command.miso_byte_num[2:0] assign 1, register removed by optimization.
+@W: CL118 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":199:8:199:11|Latch generated from always block for signal current_command.miso_byte_num[2:0]; possible missing assignment in an if or case statement.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Feedback mux created for signal r_Master_TX_Byte[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":4:7:4:9|Synthesizing module top in library work.
 
-@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning unused register r_RX_Feature_Byte[7:0]. Make sure that there are no unused intermediate registers.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Feedback mux created for signal r_Addr_Data[15:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Feedback mux created for signal r_fifo_send_re. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Feedback mux created for signal r_fifo_save_we. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Feedback mux created for signal r_Master_CM_DV. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Feedback mux created for signal r_Command[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Command[1] is always 1.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Command[4] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Command[5] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Command[6] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Command[7] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[0] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[1] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[3] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[6] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[7] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[8] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[9] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[10] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[12] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[13] is always 0.
-@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bits 7 to 4 of r_Command[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bit 1 of r_Command[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bits 13 to 12 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bits 10 to 6 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bit 3 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bits 1 to 0 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Trying to extract state machine for register fifo_SM_PROG.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning unused register r_RX_Feature_Byte[7:0]. Make sure that there are no unused intermediate registers.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Feedback mux created for signal r_Addr_Data[15:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Feedback mux created for signal r_fifo_send_re. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Feedback mux created for signal r_fifo_save_we. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Feedback mux created for signal r_Master_CM_DV. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Feedback mux created for signal r_Command[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[1] is always 1.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[4] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[5] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[6] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[7] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[0] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[1] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[3] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[6] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[7] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[8] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[9] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[10] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[12] is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[13] is always 0.
+@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bits 7 to 4 of r_Command[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bit 1 of r_Command[7:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bits 13 to 12 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bits 10 to 6 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bit 3 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bits 1 to 0 of r_Addr_Data[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Trying to extract state machine for register fifo_SM_PROG.
 Extracted state machine for register fifo_SM_PROG
-State machine has 3 reachable states with original encodings of:
+State machine has 2 reachable states with original encodings of:
    000
-   001
    010
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_fifo_send_re is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Register bit r_Addr_Data[11] is always 0.
-@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bit 3 of r_Command[3:2]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bit 15 of r_Addr_Data[15:14]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":124:2:124:7|Pruning register bit 5 of r_Addr_Data[5:4]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":6:10:6:15|Input pb_sw1 is unused.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Optimizing register bit r_TX_Count[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Pruning register bits 12 to 4 of r_TX_Count[12:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":196:4:196:9|Trying to extract state machine for register r_SM_COM.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_fifo_send_re is always 0.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[0] is always 1.
+@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[11] is always 0.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bit 3 of r_Command[3:2]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning register bit 15 of r_Addr_Data[15:14]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL258 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit 0 always 1, optimizing ...
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Pruning unused register r_Command[2]. Make sure that there are no unused intermediate registers.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[11] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Optimizing register bit r_TX_Count[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Pruning register bits 12 to 4 of r_TX_Count[12:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Trying to extract state machine for register r_SM_COM.
 Extracted state machine for register r_SM_COM
 State machine has 2 reachable states with original encodings of:
    00
    01
+@A: CL153 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":81:16:81:29|*Unassigned bits of r_UART_Data_In[7:0] are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":82:16:82:25|*Unassigned bits of r_UART_OEN are referenced and tied to 0 -- simulation mismatch possible.
+@A: CL153 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":83:16:83:25|*Unassigned bits of r_UART_WEN are referenced and tied to 0 -- simulation mismatch possible.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state.
+Extracted state machine for register rx_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Trying to extract state machine for register xmit_state.
+Extracted state machine for register xmit_state
+State machine has 6 reachable states with original encodings of:
+   00000000000000000000000000000000
+   00000000000000000000000000000001
+   00000000000000000000000000000010
+   00000000000000000000000000000011
+   00000000000000000000000000000100
+   00000000000000000000000000000101
+@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":44:11:44:21|Input tx_dout_reg is unused.
+@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":45:6:45:15|Input fifo_empty is unused.
+@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":46:6:46:14|Input fifo_full is unused.
+@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v":51:15:51:31|Input BAUD_VAL_FRACTION is unused.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v":103:2:103:7|Trying to extract state machine for register r_SM_CS.
 Extracted state machine for register r_SM_CS
 State machine has 3 reachable states with original encodings of:
@@ -391,12 +489,12 @@ State machine has 3 reachable states with original encodings of:
    01
    10
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 77MB peak: 79MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 79MB peak: 81MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Mar 10 19:35:39 2023
+# Tue Mar 14 21:25:56 2023
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
@@ -407,7 +505,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Mar 10 19:35:39 2023
+# Tue Mar 14 21:25:57 2023
 
 ###########################################################]
 @END
@@ -417,23 +515,22 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Mar 10 19:35:39 2023
+# Tue Mar 14 21:25:57 2023
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2016q4p1, Build 512R, built Oct 26 2017
 @N|Running in 64-bit mode
+File C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_comp.srs changed - recompiling
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Fri Mar 10 19:35:40 2023
+# Tue Mar 14 21:25:58 2023
 
 ###########################################################]
-Pre-mapping Report
-
-# Fri Mar 10 19:35:40 2023
+# Tue Mar 14 21:25:58 2023
 
 Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -447,11 +544,14 @@ Printing clock  summary report in "C:\Users\nikol\Documents\FinalYearProject\Fin
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 106MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 105MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 103MB peak: 106MB)
 
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":501:0:501:5|Removing sequential instance fifo_write (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":501:0:501:5|Removing sequential instance clear_parity_en_1 (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":286:0:286:5|Removing sequential instance stop_strobe (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":415:11:415:26|Removing sequential instance \\DFN1C0_RDCNT\[0\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":311:11:311:26|Removing sequential instance \\DFN1C0_RDCNT\[1\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":92:11:92:26|Removing sequential instance \\DFN1C0_RDCNT\[2\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
@@ -461,6 +561,7 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":550:11:550:26|Removing sequential instance \\DFN1C0_RDCNT\[6\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":265:11:265:26|Removing sequential instance \\DFN1C0_RDCNT\[7\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":338:11:338:26|Removing sequential instance \\DFN1C0_RDCNT\[8\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN115 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\coreuart.v":443:24:443:30|Removing instance make_RX (in view: work.UART_CORE_UART_CORE_0_COREUART_0s_0s_0s_20s_0s_0s(verilog)) of type view:work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":308:13:308:26|Removing sequential instance \\DFN1E1C0_Q\[0\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":115:13:115:26|Removing sequential instance \\DFN1E1C0_Q\[1\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":488:13:488:26|Removing sequential instance \\DFN1E1C0_Q\[2\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
@@ -469,11 +570,14 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":380:13:380:26|Removing sequential instance \\DFN1E1C0_Q\[5\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":225:13:225:26|Removing sequential instance \\DFN1E1C0_Q\[6\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":120:13:120:26|Removing sequential instance \\DFN1E1C0_Q\[7\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1E1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":286:0:286:5|Removing sequential instance rx_byte[7:0] (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":231:0:231:5|Removing sequential instance framing_error (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":268:11:268:24|Removing sequential instance \\RAM4K9_QXI\[7\] (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.RAM4K9(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":399:11:399:22|Removing sequential instance DFN1C0_DVLDI (in view: work.FIFO_OUTPUT_SEND(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":286:0:286:5|Removing sequential instance framing_error_int (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":197:2:197:7|Removing sequential instance o_RX_Byte[7:0] (in view: work.spi_master_3s_2s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
 
 
@@ -484,34 +588,42 @@ Start                                  Requested     Requested     Clock        
 Clock                                  Frequency     Period        Type         Group                   Load 
 -------------------------------------------------------------------------------------------------------------
 System                                 100.0 MHz     10.000        system       system_clkgroup         2    
-clk_div_10s|clk_out_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     213  
+clk_div_10s|clk_out_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     244  
 top|CLKA                               100.0 MHz     10.000        inferred     Inferred_clkgroup_1     5    
 =============================================================================================================
 
-@W: MT532 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":146:8:146:11|Found signal identified as System clock which controls 2 sequential elements including MEM_COMMAND_CONTROLLER.current_command\.miso_byte_num[2].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
-@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":968:11:968:31|Found inferred clock clk_div_10s|clk_out_inferred_clock which controls 213 sequential elements including MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[11\]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT532 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":199:8:199:11|Found signal identified as System clock which controls 2 sequential elements including MEM_COMMAND_CONTROLLER.current_command\.miso_byte_num[2].  Using this clock, which has no specified timing constraint, can adversely impact design performance. 
+@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":968:11:968:31|Found inferred clock clk_div_10s|clk_out_inferred_clock which controls 244 sequential elements including MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[11\]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\clk_div.v":11:0:11:5|Found inferred clock top|CLKA which controls 5 sequential elements including clk_div_1M.clk_count[3:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
 Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+Encoding state machine xmit_state[5:0] (in view: work.UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s(verilog))
+original code -> new code
+   00000000000000000000000000000000 -> 000001
+   00000000000000000000000000000001 -> 000010
+   00000000000000000000000000000010 -> 000100
+   00000000000000000000000000000011 -> 001000
+   00000000000000000000000000000100 -> 010000
+   00000000000000000000000000000101 -> 100000
+Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog))
 original code -> new code
    00 -> 0
    01 -> 1
-@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":196:4:196:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)); safe FSM implementation is not required.
-Encoding state machine fifo_SM_PROG[2:0] (in view: work.top(verilog))
+@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":249:4:249:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)); safe FSM implementation is not required.
+Encoding state machine fifo_SM_PROG[1:0] (in view: work.top(verilog))
 original code -> new code
-   000 -> 00
-   001 -> 01
-   010 -> 10
+   000 -> 0
+   010 -> 1
+@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":160:2:160:7|There are no possible illegal states for state machine fifo_SM_PROG[1:0] (in view: work.top(verilog)); safe FSM implementation is not required.
 None
 None
 
@@ -522,12 +634,10 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 27MB peak: 112MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Fri Mar 10 19:35:41 2023
+# Tue Mar 14 21:25:58 2023
 
 ###########################################################]
-Map & Optimize Report
-
-# Fri Mar 10 19:35:41 2023
+# Tue Mar 14 21:25:58 2023
 
 Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -547,75 +657,74 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 
 Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
 
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":146:8:146:11|Removing sequential instance current_command\.miso_byte_num[2] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:PrimLib.latrs(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":146:8:146:11|Removing sequential instance current_command\.miso_byte_num[1] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:PrimLib.latrs(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":519:11:519:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[0\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":515:11:515:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[5\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":508:11:508:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[1\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":456:11:456:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[6\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":435:11:435:22|Removing sequential instance FIFO_SEND.DFN1P0_EMPTY (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1P0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":367:11:367:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[3\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":342:11:342:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[2\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":326:11:326:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[7\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":306:11:306:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[6\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":261:11:261:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[8\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":255:11:255:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[5\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":240:11:240:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[4\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":237:11:237:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[7\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":218:11:218:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[8\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":188:11:188:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[2\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":159:11:159:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[4\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":144:11:144:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[1\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":142:11:142:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[3\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":139:11:139:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[0\] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":107:11:107:21|Removing sequential instance FIFO_SEND.DFN1C0_FULL (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\tx_async.v":339:0:339:5|Register bit tx_parity (in view view:work.UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":199:8:199:11|Removing sequential instance current_command\.miso_byte_num[2] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:PrimLib.latrs(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":199:8:199:11|Removing sequential instance current_command\.miso_byte_num[1] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:PrimLib.latrs(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":519:11:519:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[0\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":515:11:515:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[5\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":508:11:508:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[1\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":456:11:456:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[6\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":435:11:435:22|Removing sequential instance FIFO_SEND.DFN1P0_EMPTY (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1P0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":367:11:367:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[3\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":342:11:342:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[2\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":326:11:326:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[7\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":306:11:306:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[6\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":261:11:261:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[8\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":255:11:255:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[5\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":240:11:240:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[4\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":237:11:237:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[7\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":218:11:218:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[8\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":188:11:188:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[2\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":159:11:159:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[4\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":144:11:144:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_RADDR\[1\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":142:11:142:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[3\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":139:11:139:30|Removing sequential instance FIFO_SEND.\\DFN1C0_MEM_WADDR\[0\] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
+@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_output_send\fifo_output_send.v":107:11:107:21|Removing sequential instance FIFO_SEND.DFN1C0_FULL (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) of type view:IGLOO_V2.DFN1C0(prim) because it does not drive other instances.
 
 Available hyper_sources - for debug and ip models
 	None Found
 
-@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":124:2:124:7|Removing sequential instance r_Command[2] because it is equivalent to instance r_Command[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":124:2:124:7|Removing sequential instance r_Addr_Data[4] because it is equivalent to instance r_Addr_Data[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
 
-Encoding state machine fifo_SM_PROG[2:0] (in view: work.top(verilog))
+Encoding state machine fifo_SM_PROG[1:0] (in view: work.top(verilog))
 original code -> new code
-   000 -> 00
-   001 -> 01
-   010 -> 10
+   000 -> 0
+   010 -> 1
+@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":160:2:160:7|There are no possible illegal states for state machine fifo_SM_PROG[1:0] (in view: work.top(verilog)); safe FSM implementation is not required.
 @N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\clk_div.v":20:19:20:34|Found 4-bit incrementor, 'un3_clk_count_1[3:0]'
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":196:4:196:9|Found counter in view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog) instance r_TX_Count[3:0] 
-Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":249:4:249:9|Found counter in view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog) instance r_TX_Count[3:0] 
+Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog))
 original code -> new code
    00 -> 0
    01 -> 1
-@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":196:4:196:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog)); safe FSM implementation is not required.
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:28:213:66|Found 4 by 4 bit less-than operator ('<') r_Master_TX_Byte60 (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":255:32:255:79|Found 4 by 4 bit less-than operator ('<') r_SM_COM_1_sqmuxa_0 (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":255:32:255:79|Found 4 by 4 bit less-than operator ('<') r_SM_COM_1_sqmuxa_1 (in view: work.mem_command_3s_2s_5000s_1000s_0_1(verilog))
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[7] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[6] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[5] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.command[4] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[23] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[22] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[21] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[20] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[19] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[18] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[17] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[16] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[13] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[12] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[11] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[10] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[9] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[8] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[7] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[6] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[3] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[1] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
-@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":133:4:133:9|Register bit current_command\.addr_data[0] (in view view:work.mem_command_3s_2s_5000s_1000s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":249:4:249:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)); safe FSM implementation is not required.
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":266:28:266:66|Found 4 by 4 bit less-than operator ('<') r_Master_TX_Byte60 (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog))
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":308:32:308:79|Found 4 by 4 bit less-than operator ('<') r_SM_COM_1_sqmuxa_0 (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog))
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":308:32:308:79|Found 4 by 4 bit less-than operator ('<') r_SM_COM_1_sqmuxa_1 (in view: work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog))
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.command[7] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.command[6] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.command[5] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.command[4] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[23] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[22] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[21] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[20] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[19] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[18] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[17] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[16] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[13] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[12] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[11] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[10] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[9] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[8] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[7] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[6] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[3] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[1] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":186:4:186:9|Register bit current_command\.addr_data[0] (in view view:work.mem_command_3s_2s_5000s_1000s_1s_0s_0_1(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":170:2:170:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog) instance o_RX_Count[12:0] 
 Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog))
 original code -> new code
@@ -625,35 +734,47 @@ original code -> new code
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":88:2:88:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_SPI_Clk_Edges[4:0] 
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":197:2:197:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_RX_Bit_Count[2:0] 
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":167:2:167:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_TX_Bit_Count[2:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\clock_gen.v":310:0:310:5|Found counter in view:work.UART_CORE_UART_CORE_0_Clock_gen_0s_0s(verilog) instance xmit_cntr[3:0] 
+@N: MF239 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\clock_gen.v":299:34:299:51|Found 13-bit decrementor, 'un3_baud_cntr[12:0]'
+Encoding state machine xmit_state[5:0] (in view: work.UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s(verilog))
+original code -> new code
+   00000000000000000000000000000000 -> 000001
+   00000000000000000000000000000001 -> 000010
+   00000000000000000000000000000010 -> 000100
+   00000000000000000000000000000011 -> 001000
+   00000000000000000000000000000100 -> 010000
+   00000000000000000000000000000101 -> 100000
+@W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\tx_async.v":119:0:119:5|Register bit xmit_state[4] (in view view:work.UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\tx_async.v":268:0:268:5|Found counter in view:work.UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s(verilog) instance xmit_bit_sel[3:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
-
-
-Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 113MB)
-
-
-Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
-
-
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
-
-
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
-
-
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 113MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 114MB)
 
 
 High Fanout Net Report
@@ -663,14 +784,14 @@ Driver Instance / Pin Name                                                      
 ----------------------------------------------------------------------------------------------------------------
 MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m7 / Y                                 36                              
 MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_CS_Inactive_Count_0_sqmuxa_1_i_0 / Y     27                              
-rst_n_pad / Y                                                                   136 : 129 asynchronous set/reset
+rst_n_pad / Y                                                                   163 : 159 asynchronous set/reset
 ================================================================================================================
 
 @N: FP130 |Promoting Net rst_n_c on CLKBUF  rst_n_pad 
 @N: FP130 |Promoting Net FPGA_CLK_c on CLKINT  clk_div_1M.clk_out_inferred_clock 
 @N: FP130 |Promoting Net CLKA_c on CLKBUF  CLKA_pad 
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_CS_Inactive_Count_0_sqmuxa_1_i_0, fanout 27 segments 2
 Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m7, fanout 36 segments 2
@@ -680,7 +801,7 @@ Added 2 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 2 Combinational Cells via replication
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 
 
@@ -691,8 +812,8 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:
 
 Clock optimization not enabled
 1 non-gated/non-generated clock tree(s) driving 5 clock pin(s) of sequential element(s)
-1 gated/generated clock tree(s) driving 165 clock pin(s) of sequential element(s)
-0 instances converted, 165 sequential instances remain driven by gated/generated clocks
+1 gated/generated clock tree(s) driving 196 clock pin(s) of sequential element(s)
+0 instances converted, 196 sequential instances remain driven by gated/generated clocks
 
 =============================== Non-Gated/Non-Generated Clocks ================================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
@@ -702,33 +823,33 @@ Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample I
 ======================================================================= Gated/Generated Clocks ========================================================================
 Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance     Explanation                                                             
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 165        fifo_SM_PROG[0]     No generated or derived clock directive on output of sequential instance
+@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 196        r_Mem_Power         No generated or derived clock directive on output of sequential instance
 =======================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 116MB)
 
 Writing Analyst data base C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 113MB peak: 115MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 Writing EDIF Netlist and constraint files
 L-2016.09M-SP1-5
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 @W: MT420 |Found inferred clock top|CLKA with period 10.00ns. Please declare a user-defined clock on object "p:CLKA"
 @W: MT420 |Found inferred clock clk_div_10s|clk_out_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:clk_div_1M.clk_out"
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri Mar 10 19:35:42 2023
+# Timing Report written on Tue Mar 14 21:25:59 2023
 #
 
 
@@ -1416,10 +1537,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 115MB)
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
 
 --------------------------------------------------------------------------------
 Target Part: AGLN250V2_VQFP100_STD
@@ -1430,82 +1551,85 @@ Report for cell top.verilog
              AND2A     2      1.0        2.0
               AND3    11      1.0       11.0
                AO1    82      1.0       82.0
-              AO1A     6      1.0        6.0
-              AO1B     1      1.0        1.0
+              AO1A     5      1.0        5.0
+              AO1B     4      1.0        4.0
+              AO1C     1      1.0        1.0
+              AO1D     1      1.0        1.0
               AOI1     1      1.0        1.0
              AOI1A     4      1.0        4.0
              AOI1B     1      1.0        1.0
                AX1     1      1.0        1.0
               AX1A     1      1.0        1.0
               AX1B     1      1.0        1.0
-              AX1C     1      1.0        1.0
-              AXO2     1      1.0        1.0
+              AX1C     2      1.0        2.0
+              AXO1     1      1.0        1.0
              AXOI5     1      1.0        1.0
               BUFF     2      1.0        2.0
             CLKINT     1      0.0        0.0
-               GND     6      0.0        0.0
+               GND    10      0.0        0.0
                INV    16      1.0       16.0
                MX2    35      1.0       35.0
               MX2A     2      1.0        2.0
-              MX2B     1      1.0        1.0
+              MX2B     2      1.0        2.0
              NAND2     4      1.0        4.0
-              NOR2    10      1.0       10.0
-             NOR2A    37      1.0       37.0
-             NOR2B    38      1.0       38.0
+              NOR2    12      1.0       12.0
+             NOR2A    43      1.0       43.0
+             NOR2B    44      1.0       44.0
               NOR3     5      1.0        5.0
-             NOR3A    10      1.0       10.0
+             NOR3A    19      1.0       19.0
              NOR3B     7      1.0        7.0
-             NOR3C    14      1.0       14.0
-               OA1     3      1.0        3.0
+             NOR3C    17      1.0       17.0
+               OA1     4      1.0        4.0
               OA1A     1      1.0        1.0
               OA1B     4      1.0        4.0
               OA1C     3      1.0        3.0
-               OR2    24      1.0       24.0
-              OR2A    13      1.0       13.0
-              OR2B     7      1.0        7.0
-               OR3     6      1.0        6.0
+               OR2    30      1.0       30.0
+              OR2A    15      1.0       15.0
+              OR2B     4      1.0        4.0
+               OR3    18      1.0       18.0
               OR3A     3      1.0        3.0
-               VCC     6      0.0        0.0
+               VCC    10      0.0        0.0
+               XA1     3      1.0        3.0
               XA1B    11      1.0       11.0
-             XNOR2    36      1.0       36.0
+             XNOR2    48      1.0       48.0
                XO1     2      1.0        2.0
-              XO1A     4      1.0        4.0
-              XOR2   161      1.0      161.0
+              XO1A     6      1.0        6.0
+              XOR2   163      1.0      163.0
 
 
-              DFN1     5      1.0        5.0
-            DFN1C0    67      1.0       67.0
-            DFN1E0     1      1.0        1.0
+              DFN1     7      1.0        7.0
+            DFN1C0    87      1.0       87.0
           DFN1E0C0     6      1.0        6.0
+          DFN1E0P0     1      1.0        1.0
             DFN1E1    31      1.0       31.0
-          DFN1E1C0    31      1.0       31.0
+          DFN1E1C0    36      1.0       36.0
           DFN1E1P0     7      1.0        7.0
-            DFN1P0    14      1.0       14.0
+            DFN1P0    18      1.0       18.0
             RAM4K9     4      0.0        0.0
                    -----          ----------
-             TOTAL   838               821.0
+             TOTAL   946               921.0
 
 
   IO Cell usage:
               cell count
             CLKBUF     2
-             INBUF     1
-            OUTBUF     9
+             INBUF     3
+            OUTBUF    12
                    -----
-             TOTAL    12
+             TOTAL    17
 
 
-Core Cells         : 821 of 6144 (13%)
-IO Cells           : 12
+Core Cells         : 921 of 6144 (15%)
+IO Cells           : 17
 
   RAM/ROM Usage Summary
 Block Rams : 4 of 8 (50%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 115MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 116MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Fri Mar 10 19:35:42 2023
+# Tue Mar 14 21:25:59 2023
 
 ###########################################################]

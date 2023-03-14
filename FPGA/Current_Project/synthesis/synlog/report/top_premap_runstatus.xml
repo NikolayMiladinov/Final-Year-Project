@@ -13,7 +13,7 @@ The file contains the job information from mapper to be displayed as part of the
 </job_status>
 <job_info>
 <info name="Notes">
-<data>24</data>
+<data>32</data>
 <report_link name="more">
 <data>C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\report\top_premap_notes.txt</data>
 </report_link>
@@ -40,7 +40,7 @@ The file contains the job information from mapper to be displayed as part of the
 <data>112MB</data>
 </info>
 <info name="Date &amp; Time">
-<data type="timestamp">1678476941</data>
+<data type="timestamp">1678829158</data>
 </info>
 </job_info>
 </job_run_status>
