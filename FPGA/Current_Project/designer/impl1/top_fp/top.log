@@ -6,16 +6,12 @@ Software Version: 11.9.6.7
 PDB file
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
 l1\top.pdb' has been loaded successfully.
-DESIGN : top;  CHECKSUM : 760B;  PDB_VERSION : 1.9
+DESIGN : top;  CHECKSUM : 8ACA;  PDB_VERSION : 1.9
 Driver : 3.0.0 build 1
 programmer '84415' : FlashPro3
 Opened
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
 l1\top_fp\top.pro'
-PDB file
-'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
-l1\top.pdb' has been loaded successfully.
-DESIGN : top;  CHECKSUM : 760B;  PDB_VERSION : 1.9
 programmer '84415' : Scan Chain...
 Warning: programmer '84415' : Vpump has been selected on programmer AND an externally provided
          Vpump has also been detected. Using externally provided Vpump voltage source.
@@ -24,15 +20,13 @@ programmer '84415' : Executing action PROGRAM
 programmer '84415' : EXPORT FSN[48] = 01377840c859
 programmer '84415' : Erase ...
 programmer '84415' : Completed erase
-programmer '84415' : EXPORT CHECKSUM[16] = 760b
+programmer '84415' : EXPORT CHECKSUM[16] = 8aca
 programmer '84415' : Programming FPGA Array
 programmer '84415' : Verifying FPGA Array
 programmer '84415' :         Verifying FPGA Array -- pass
-programmer '84415' : Finished: Tue Mar 14 21:28:01 2023 (Elapsed time 00:00:30)
+programmer '84415' : Finished: Sat Apr 22 14:59:57 2023 (Elapsed time 00:00:32)
 programmer '84415' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o
 
-Warning: Project 'top' has been modified. Do you want to save it? [YES]
-Project saved.
 Project closed.

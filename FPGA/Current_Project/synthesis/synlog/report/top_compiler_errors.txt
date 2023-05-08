@@ -1,2 +1,3 @@
-@E: CL172 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":73:15:73:26|Only one always block can assign a given variable fifo_SM_PROG[2:0]
+@E: CG342 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":102:12:102:25|Expecting target variable, found r_SM_UART_TEST -- possible misspelling
+@E: CS187 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":391:0:391:8|Expecting endmodule
 

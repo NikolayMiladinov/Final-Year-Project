@@ -1,42 +1,68 @@
 
-fsm_encoding {910321035} sequential
+fsm_encoding {810321036} sequential
 
-fsm_state_encoding {910321035} IDLE {00}
+fsm_state_encoding {810321036} IDLE {00}
 
-fsm_state_encoding {910321035} TRANSFER {01}
+fsm_state_encoding {810321036} TRANSFER {01}
 
-fsm_state_encoding {910321035} CS_INACTIVE {10}
+fsm_state_encoding {810321036} CS_INACTIVE {10}
 
-fsm_registers {910321035} {r_SM_CS[1]}  {r_SM_CS[0]} 
+fsm_registers {810321036} {r_SM_CS[1]}  {r_SM_CS[0]} 
 
-fsm_encoding {1211901194} onehot
+fsm_encoding {1111901195} onehot
 
-fsm_state_encoding {1211901194} tx_idle {000001}
+fsm_state_encoding {1111901195} tx_idle {000001}
 
-fsm_state_encoding {1211901194} tx_load {000010}
+fsm_state_encoding {1111901195} tx_load {000010}
 
-fsm_state_encoding {1211901194} start_bit {000100}
+fsm_state_encoding {1111901195} start_bit {000100}
 
-fsm_state_encoding {1211901194} tx_data_bits {001000}
+fsm_state_encoding {1111901195} tx_data_bits {001000}
 
-fsm_state_encoding {1211901194} parity_bit {010000}
+fsm_state_encoding {1111901195} parity_bit {010000}
 
-fsm_state_encoding {1211901194} tx_stop_bit {100000}
+fsm_state_encoding {1111901195} tx_stop_bit {100000}
 
-fsm_registers {1211901194} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
+fsm_registers {1111901195} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
 
-fsm_encoding {1624942492} sequential
+fsm_encoding {1028602864} sequential
 
-fsm_state_encoding {1624942492} IDLE {0}
+fsm_state_encoding {1028602864} 00 {00}
 
-fsm_state_encoding {1624942492} BUSY {1}
+fsm_state_encoding {1028602864} 01 {01}
 
-fsm_registers {1624942492} {r_SM_COM[0]} 
+fsm_state_encoding {1028602864} 10 {10}
 
-fsm_encoding {1816021601} sequential
+fsm_state_encoding {1028602864} 11 {11}
 
-fsm_state_encoding {1816021601} WRITING {0}
+fsm_registers {1028602864} {rx_state[1]}  {rx_state[0]} 
 
-fsm_state_encoding {1816021601} WAIT {1}
+fsm_encoding {1524442442} sequential
 
-fsm_registers {1816021601} {fifo_SM_PROG[0]} 
+fsm_state_encoding {1524442442} IDLE {0}
+
+fsm_state_encoding {1524442442} BUSY {1}
+
+fsm_registers {1524442442} {r_SM_COM[0]} 
+
+fsm_encoding {1510141013} sequential
+
+fsm_state_encoding {1510141013} SEND_IDLE {00}
+
+fsm_state_encoding {1510141013} GET_DATA {01}
+
+fsm_state_encoding {1510141013} WRITE_DATA {10}
+
+fsm_state_encoding {1510141013} TRANSFER {11}
+
+fsm_registers {1510141013} {r_SM_UART_SEND[1]}  {r_SM_UART_SEND[0]} 
+
+fsm_encoding {1716621661} sequential
+
+fsm_state_encoding {1716621661} FIFO_IDLE {00}
+
+fsm_state_encoding {1716621661} FIFO_UART_RECEIVE {01}
+
+fsm_state_encoding {1716621661} FIFO_UART_SEND {10}
+
+fsm_registers {1716621661} {r_fifo_sm[1]}  {r_fifo_sm[0]} 

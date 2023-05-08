@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Tue Mar 14 21:27:09 2023 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Sat Apr 22 14:59:11 2023 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
@@ -22,31 +22,31 @@ Number |Port         |Function         |State       |I/O Std  |Output Drive (mA)
 3       MEM_CM_READY  IO66RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
 4       TEST_CLK      GAB2/IO65RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
 5       TEST_CS_n     IO64RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
-6       TEST_MISO     GAC2/IO63RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-7       TEST_MOSI     IO62RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
+6       FIFO_STATE0   GAC2/IO63RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+7       FIFO_STATE1   IO62RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
 8       TEST_VCC      IO61RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
 9                     GND               Reserved
 10      rst_n         GFB1/IO60RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
-11                    GFB0/IO59RSB3     Special
+11      TEST_RX       GFB0/IO59RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
 12                    VCOMPLF           Reserved
-13                    GFA0/IO57RSB3     Special
+13      TEST_TX       GFA0/IO57RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
 14                    VCCPLF            Reserved
 15      CLKA          GFA1/IO58RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
-16                    GFA2/IO56RSB3     Special
+16      UART_RX       GFA2/IO56RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
 17                    VCC               Reserved
 18                    VCCIB3            Reserved
 19      UART_TX       GFC2/IO55RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
 20      pb_sw1        GEC1/IO54RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
-21      pb_sw2        GEC0/IO53RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
+21                    GEC0/IO53RSB3     Special
 22                    GEA1/IO52RSB3     Special
 23                    GEA0/IO51RSB3     Special
 24                    VMV3              Reserved
 25                    GNDQ              Reserved
-26      SPI_CLK       GEA2/IO50RSB2     Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
-27      SPI_CS_n      FF/GEB2/IO49RSB2  Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
-28      SPI_MISO      GEC2/IO48RSB2     Special      LVCMOS18  ---                ---   None           ---               No           No             No               No
-29      SPI_MOSI      IO47RSB2          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
-30      MEM_VCC       IO46RSB2          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
+26                    GEA2/IO50RSB2     Special
+27                    FF/GEB2/IO49RSB2  Special
+28      TEST_MOSI     GEC2/IO48RSB2     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+29                    IO47RSB2          Unassigned
+30                    IO46RSB2          Unassigned
 31                    IO45RSB2          Unassigned
 32                    IO44RSB2          Unassigned
 33                    IO43RSB2          Unassigned
@@ -85,14 +85,14 @@ Number |Port         |Function         |State       |I/O Std  |Output Drive (mA)
 66                    VCCIB1            Reserved
 67                    GND               Reserved
 68                    VCC               Reserved
-69                    IO24RSB1          Unassigned
-70                    GBC2/IO23RSB1     Special
-71                    GBB2/IO22RSB1     Special
-72                    IO21RSB1          Unassigned
-73                    GBA2/IO20RSB1     Special
+69      SPI_MOSI      IO24RSB1          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
+70      SPI_MISO      GBC2/IO23RSB1     Special      LVCMOS18  ---                ---   None           ---               No           No             No               No
+71      SPI_CS_n      GBB2/IO22RSB1     Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
+72      SPI_CLK       IO21RSB1          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
+73      MEM_VCC       GBA2/IO20RSB1     Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
 74                    VMV1              Reserved
 75                    GNDQ              Reserved
-76                    GBA1/IO19RSB0     Special
+76      TEST_MISO     GBA1/IO19RSB0     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
 77                    GBA0/IO18RSB0     Special
 78                    GBB1/IO17RSB0     Special
 79                    GBB0/IO16RSB0     Special

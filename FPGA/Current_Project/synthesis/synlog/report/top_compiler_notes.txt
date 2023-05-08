@@ -25,7 +25,6 @@
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1163:7:1163:9|Synthesizing module GND in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1864:7:1864:9|Synthesizing module VCC in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v":5:7:5:21|Synthesizing module FIFO_INPUT_SAVE in library work.
-@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\smartgen\FIFO_OUTPUT_SEND\FIFO_OUTPUT_SEND.v":5:7:5:22|Synthesizing module FIFO_OUTPUT_SEND in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\spi_master.v":35:7:35:16|Synthesizing module spi_master in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\SPI_Master_With_Single_CS.v":37:7:37:31|Synthesizing module SPI_Master_With_Single_CS in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v":38:7:38:37|Synthesizing module UART_CORE_UART_CORE_0_Clock_gen in library work.
@@ -37,28 +36,12 @@
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":31:7:31:36|Synthesizing module UART_CORE_UART_CORE_0_COREUART in library work.
 @N: CG179 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\CoreUART.v":390:22:390:33|Removing redundant assignment.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE.v":9:7:9:15|Synthesizing module UART_CORE in library work.
-@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":6:7:6:17|Synthesizing module mem_command in library work.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":4:7:4:17|Synthesizing module mem_command in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":4:7:4:9|Synthesizing module top in library work.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[1] is always 1.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[4] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[5] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[6] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[7] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[0] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[1] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[3] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[6] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[7] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[8] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[9] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[10] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[12] is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[13] is always 0.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Trying to extract state machine for register fifo_SM_PROG.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_fifo_send_re is always 0.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Command[0] is always 1.
-@N: CL189 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":160:2:160:7|Register bit r_Addr_Data[11] is always 0.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":249:4:249:9|Trying to extract state machine for register r_SM_COM.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":166:2:166:7|Trying to extract state machine for register r_fifo_sm.
+@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":7:10:7:15|Input pb_sw2 is unused.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":244:4:244:9|Trying to extract state machine for register r_SM_COM.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":101:4:101:9|Trying to extract state machine for register r_SM_UART_SEND.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Trying to extract state machine for register xmit_state.
 @N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":44:11:44:21|Input tx_dout_reg is unused.

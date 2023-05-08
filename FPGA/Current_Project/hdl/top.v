@@ -18,39 +18,45 @@ module top(
     input  UART_RX,
     output UART_TX,
 
-    // SPI Test pins
+    // SPI and UART Test pins
     output TEST_MOSI,
     output TEST_CLK,
     output TEST_MISO,
     output TEST_CS_n,
     output TEST_VCC,
+    output TEST_RX,
+    output TEST_TX,
 
     // Other test pins
     output FPGA_CLK,
-    output MEM_CM_READY
+    output MEM_CM_READY,
+    output FIFO_STATE0,
+    output FIFO_STATE1
   );
 
   parameter SPI_MODE = 3; // CPOL = 1, CPHA = 1
   parameter CLKS_PER_HALF_BIT = 2;  // divide by 4
-  parameter CLK_DIV_PARAM = 10;
+  parameter CLK_DIV_PARAM = 10; // Divide CLK freq by that number
   parameter MAX_BYTES_PER_CS = 5000;
   parameter MAX_WAIT_CYCLES = 1000;
-  parameter BAUD_VAL = 1;
-  parameter BAUD_VAL_FRACTION = 0;
+  parameter BAUD_VAL = 12; // Baud rate = clk_freq / ((1 + BAUD_VAL)x16)
+  parameter BAUD_VAL_FRACTION = 0; // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
 
   // Control signals
   logic CLK1;
   logic r_Mem_Power;
+  logic r_SPI_en;
+  logic r_UART_en;
 
   // SPI pins
   logic int_SPI_CLK;
   logic int_SPI_CS_n;
   logic int_SPI_MOSI;
 
-  assign MEM_VCC = r_Mem_Power;
-  assign SPI_CLK = MEM_VCC & int_SPI_CLK;
-  assign SPI_CS_n = MEM_VCC & int_SPI_CS_n;
-  assign SPI_MOSI = MEM_VCC & int_SPI_MOSI;
+  assign MEM_VCC  = r_Mem_Power;
+  assign SPI_CLK  = r_Mem_Power & int_SPI_CLK;
+  assign SPI_CS_n = r_Mem_Power & int_SPI_CS_n;
+  assign SPI_MOSI = r_Mem_Power & int_SPI_MOSI;
 
   // Memory controller inputs/outputs
   SPI_Command  r_Command;
@@ -63,14 +69,16 @@ module top(
   // FIFO pins for testing, to be deleted
   logic [7:0]  w_fifo_save_data_in;
   logic        r_fifo_save_we = 1'b0;
-  logic [11:0] w_fifo_save_count;
+  logic [12:0] w_fifo_save_count;
 
   logic [7:0]  w_fifo_send_data_out;
   logic        w_fifo_send_empty;
   logic        r_fifo_send_re = 1'b0;
 
+  logic [2:0]  r_fifo_sm;
+
   // State machine
-  logic [2:0]  fifo_SM_PROG;
+  logic [2:0]  fifo_SM_PROG = 3'b0;
   localparam WRITING = 3'b0;
   localparam LOAD = 3'b1;
   localparam WAIT = 3'b10;
@@ -78,15 +86,20 @@ module top(
   localparam p_CACHE_READ = 3'b100;
   localparam RECEIVING = 3'b101;
   localparam EVAL = 3'b110;
+  localparam IDLE = 3'b111;
 
   // Assign output pins
-  assign TEST_VCC     = MEM_VCC;
+  assign TEST_VCC     = r_Mem_Power;
   assign TEST_MOSI    = SPI_MOSI;
   assign TEST_CLK     = SPI_CLK;
   assign TEST_CS_n    = SPI_CS_n;
   assign TEST_MISO    = SPI_MISO;
   assign FPGA_CLK     = CLK1;
   assign MEM_CM_READY = w_Master_CM_Ready;
+  assign TEST_RX      = UART_RX;
+  assign TEST_TX      = UART_TX;
+  assign FIFO_STATE0   = r_fifo_sm[0];
+  assign FIFO_STATE1   = r_fifo_sm[1];
 
 
   // Divide clock by CLK_DIV_PARAM
@@ -104,6 +117,8 @@ module top(
     // Control/Data Signals,
     .i_Rst_L(rst_n),            // FPGA Reset
     .i_Clk(CLK1),              // FPGA Clock
+    .i_SPI_en(r_SPI_en),
+    .i_UART_en(r_UART_en),
     
     // command specific inputs
     .i_Command(r_Command),          // command type
@@ -125,107 +140,118 @@ module top(
     .i_UART_RX(UART_RX),
     .o_UART_TX(UART_TX),
 
-    // FIFO pins for testing
-    .i_fifo_save_data_in(w_fifo_save_data_in),
-    .i_fifo_save_we(r_fifo_save_we),
-    .o_fifo_save_count(w_fifo_save_count),
-
-    .o_fifo_send_data_out(w_fifo_send_data_out),
-    .i_fifo_send_re(r_fifo_send_re),
-    .o_fifo_send_empty(w_fifo_send_empty)
+    // FIFO state
+    .i_fifo_sm(r_fifo_sm),
+    .o_fifo_save_count(w_fifo_save_count)
   );
 
-  // Testing sequence for SPI -> on push of button 1, transmit a byte
-  // always @(posedge CLK1) begin
-  //   if(pb_sw1==1'b0 && w_Master_CM_Ready==1'b1) begin
-  //     r_Command         <= WRITE_ENABLE;
-  //     r_Addr_Data[15:8] <= 8'h95;
-  //     r_Master_CM_DV    <= 1'b1;
-  //   end else begin
-  //     r_Master_CM_DV    <= 1'b0;
-  //   end
-  // end
 
   always @(posedge CLK1 or negedge rst_n) begin
     if (~rst_n) begin
-      r_Mem_Power <= 1'b0;
-    end
-    else if(~pb_sw1) begin
-      r_Mem_Power <= 1'b1;
-    end
-  end
-
-  assign w_fifo_save_data_in = w_fifo_save_count[7:0];
-
-  always @(posedge CLK1 or negedge rst_n) begin
-    if (~rst_n) begin
-      fifo_SM_PROG <= WRITING;
+      fifo_SM_PROG      <= WRITING;
+      r_fifo_sm         <= FIFO_IDLE;
+      r_Addr_Data[7:0]  <= 8'h00;
+      r_Master_CM_DV    <= 1'b0;
+      r_Command         <= NO_COMMAND;
+      r_fifo_save_we    <= 1'b0;
+      r_SPI_en          <= 1'b0;
+      r_UART_en         <= 1'b0;
+      r_Mem_Power       <= 1'b0;
     end else begin
-      case (fifo_SM_PROG)
-        WRITING: begin
-          if(w_fifo_save_count >= 'd128) begin
-            // fifo_SM_PROG    <= LOAD;
-            if (~pb_sw2) begin
-              fifo_SM_PROG    <= WAIT;
-            end
-            r_fifo_save_we  <= 1'b0;
-          end else begin
-            if (~r_fifo_save_we) begin
-              r_fifo_save_we      <= 1'b1;
-              // w_fifo_save_data_in <= w_fifo_save_count[7:0];
-            end else begin
-              r_fifo_save_we  <= 1'b0;
-            end
-          end
-        end
-        LOAD: begin
-          r_Master_CM_DV  <= 1'b0;
-          r_fifo_save_we  <= 1'b0;
-          if (w_Master_CM_Ready) begin
-            r_Command         <= PROG_LOAD1;
-            r_Addr_Data[12:0] <= 'h034;
-            r_Master_CM_DV    <= 1'b1;
-            fifo_SM_PROG      <= WAIT;
-          end
-        end
-        WAIT: begin
-          if (w_Master_CM_Ready) begin
-            r_Command         <= GET_FEATURE;
-            r_Addr_Data[15:8] <= 8'hC0;
-            r_Master_CM_DV    <= 1'b1;
-          end else begin
-            r_Master_CM_DV    <= 1'b0;
-          end
-          if (w_RX_Feature_DV) begin
-            r_RX_Feature_Byte <= w_RX_Feature_Byte;
-            // Do some processing and either stay in wait or move to next state
+      case (r_fifo_sm)
+        FIFO_IDLE: begin
+          if (~pb_sw1) begin
+            r_fifo_sm <= FIFO_UART_RECEIVE;
           end
         end 
-        p_CACHE_READ: begin
-          if (w_Master_CM_Ready) begin
-            r_Command         <= CACHE_READ;
-            r_Addr_Data[12:0] <= 'h834;
-            r_Master_CM_DV    <= 1'b1;
-            fifo_SM_PROG      <= RECEIVING;
-          end else begin
-            r_Master_CM_DV    <= 1'b0;
+        FIFO_UART_RECEIVE: begin
+          if (w_fifo_save_count >= 'd2048) begin
+            r_fifo_sm <= FIFO_MEM_SEND;
           end
-        end
-        RECEIVING: begin
-          if (w_Master_CM_Ready) begin
-            fifo_SM_PROG      <= EVAL;
-          end else begin
-            r_Master_CM_DV    <= 1'b0;
+        end 
+        FIFO_UART_SEND: begin
+          
+        end 
+        FIFO_MEM_RECEIVE: begin
+          if (w_fifo_save_count >= 'd2048) begin
+            r_fifo_sm <= FIFO_;
           end
-        end
-        EVAL: begin
-          if(~w_fifo_send_empty) begin
-            r_fifo_send_re <= 1'b1;
-          end else begin
-            r_fifo_send_re <= 1'b0;
+        end 
+        FIFO_MEM_SEND: begin
+          if (w_fifo_save_count == 'd0) begin
+            r_fifo_sm <= FIFO_MEM_RECEIVE;
           end
-        end
+        end 
       endcase
+      // case (fifo_SM_PROG)
+      //   WRITING: begin
+      //     if(w_fifo_save_count >= 'd128) begin
+            
+      //       if (~pb_sw1) begin
+      //         fifo_SM_PROG    <= IDLE;
+      //         r_Addr_Data[7:0] <= 8'hBB;
+      //       end
+      //       r_fifo_save_we  <= 1'b0;
+      //     end else begin
+      //       if (~r_fifo_save_we) begin
+      //         r_fifo_save_we      <= 1'b1;
+      //         // w_fifo_save_data_in <= w_fifo_save_count[7:0];
+      //       end else begin
+      //         r_fifo_save_we  <= 1'b0;
+      //       end
+      //     end
+      //   end
+      //   LOAD: begin
+      //     r_Master_CM_DV  <= 1'b0;
+      //     r_fifo_save_we  <= 1'b0;
+      //     if (w_Master_CM_Ready) begin
+      //       r_Command         <= PROG_LOAD1;
+      //       r_Addr_Data[12:0] <= 'h034;
+      //       r_Master_CM_DV    <= 1'b1;
+      //       fifo_SM_PROG      <= WAIT;
+      //     end
+      //   end
+      //   WAIT: begin
+      //     if (w_Master_CM_Ready) begin
+      //       r_Command         <= GET_FEATURE;
+      //       r_Addr_Data[15:8] <= 8'hB0;
+      //       r_Master_CM_DV    <= 1'b1;
+      //     end else begin
+      //       r_Master_CM_DV    <= 1'b0;
+      //     end
+      //     if (w_RX_Feature_DV) begin
+      //       r_RX_Feature_Byte <= w_RX_Feature_Byte;
+      //       // Do some processing and either stay in wait or move to next state
+      //     end
+      //   end 
+      //   p_CACHE_READ: begin
+      //     if (w_Master_CM_Ready) begin
+      //       r_Command         <= CACHE_READ;
+      //       r_Addr_Data[12:0] <= 'h834;
+      //       r_Master_CM_DV    <= 1'b1;
+      //       fifo_SM_PROG      <= RECEIVING;
+      //     end else begin
+      //       r_Master_CM_DV    <= 1'b0;
+      //     end
+      //   end
+      //   RECEIVING: begin
+      //     if (w_Master_CM_Ready) begin
+      //       fifo_SM_PROG      <= EVAL;
+      //     end else begin
+      //       r_Master_CM_DV    <= 1'b0;
+      //     end
+      //   end
+      //   EVAL: begin
+      //     if(~w_fifo_send_empty) begin
+      //       r_fifo_send_re <= 1'b1;
+      //     end else begin
+      //       r_fifo_send_re <= 1'b0;
+      //     end
+      //   end
+      //   IDLE: begin
+          
+      //   end
+      // endcase
     end
   end
 

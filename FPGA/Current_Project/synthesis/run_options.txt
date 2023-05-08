@@ -1,14 +1,13 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09M-SP1-5
 #--  Project file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\run_options.txt
-#--  Written on Tue Mar 14 21:25:56 2023
+#--  Written on Sat Apr 22 14:58:11 2023
 
 
 #project files
 add_file -include "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/command_vars.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/clk_div.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/smartgen/FIFO_INPUT_SAVE/FIFO_INPUT_SAVE.v"
-add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/smartgen/FIFO_OUTPUT_SEND/FIFO_OUTPUT_SEND.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/spi_master.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/hdl/SPI_Master_With_Single_CS.v"
 add_file -verilog "C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Clock_gen.v"

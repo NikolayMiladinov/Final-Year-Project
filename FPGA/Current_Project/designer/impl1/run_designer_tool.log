@@ -7,61 +7,13 @@ Release: v11.9 SP6
 Info: The design top.adb was last modified by software version 11.9.6.7.
 Opened an existing Libero design top.adb.
 
-The Execute Script command succeeded ( 00:00:20 )
+The Execute Script command succeeded ( 00:00:22 )
 Warning: The following files already exist:
          
          C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\desi\
          gner\impl1\top.pdb
          
          Do you want to replace the files? [YES]
-***** Layout Variables *********************************************
-
-Mode: TIMING_DRIVEN
-Power-driven Layout: OFF
-Incremental Placement: OFF
-Incremental Route: OFF
-
-
-Info: I/O Bank Assigner detected (2) out of (4) I/O Bank(s) with locked I/O technologies.
-
-Running I/O Bank Assigner.
-
-I/O Bank Assigner completed successfully.
- 
-
-Planning global net placement...
-
-
-Global net placement completed successfully.
-
-                        o - o - o - o - o - o
-
-Timing-driven Placer Started: Tue Mar 14 21:26:48 2023
-
-Placer Finished: Tue Mar 14 21:26:54 2023
-Total Placer CPU Time:     00:00:06
-
-                        o - o - o - o - o - o
-
-
-Timing-driven Router 
-Design: top                             Started: Tue Mar 14 21:26:55 2023
-
- 
-Iterative improvement...
-
-Timing-driven Router completed successfully.
-
-Design: top                             
-Finished: Tue Mar 14 21:26:59 2023
-Total CPU Time:     00:00:03            Total Elapsed Time: 00:00:04
-Total Memory Usage: 173.3 Mbytes
-                        o - o - o - o - o - o
-
-Loading the Timing data for the design.
-Finished loading the Timing data.
-
-The Layout command succeeded ( 00:00:14 )
 
 The Export-map command succeeded ( 00:00:04 )
 Warning: Overwriting the existing file:
@@ -70,9 +22,9 @@ Warning: Overwriting the existing file:
 Wrote to the file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.pdb
-CHECKSUM: 760B
+CHECKSUM: 0C5E
 
-The Generate programming file command succeeded ( 00:00:19 )
+The Generate programming file command succeeded ( 00:00:05 )
 Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.

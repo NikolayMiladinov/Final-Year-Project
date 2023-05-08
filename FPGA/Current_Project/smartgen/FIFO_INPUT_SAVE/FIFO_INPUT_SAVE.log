@@ -1,6 +1,6 @@
  ** Message System Log
  ** Database: 
- ** Date:   Thu Mar 09 12:50:55 2023
+ ** Date:   Mon Apr 24 07:37:06 2023
 
 
 ****************
@@ -16,9 +16,9 @@ Read Clock                      : Rising
 Write Clock                     : Rising
 Reset                           : Active Low
 Read Enable                     : Active High
-Write Depth                     : 2048
+Write Depth                     : 4096
 Write Width                     : 8
-Read Depth                      : 2048
+Read Depth                      : 4096
 Read Width                      : 8
 Almost Full                     : 65536
 Almost Empty                    : 65536
@@ -65,29 +65,28 @@ Portname Clock                  : CLK
 Cascade Configuration:
      Port A configuration       : 512x8
      Port B configuration       : 512x8
-     Number of blocks depth wise: 4
+     Number of blocks depth wise: 8
      Number of blocks width wise: 1
 
 **************
 Compile Report
 **************
 
-Warning:  CMP503: Remapped 12 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE pin on the enable flip-flop is not being driven by a global net.
+Warning:  CMP503: Remapped 14 enable flip-flop(s) to a 2-tile implementation because the CLR/PRE pin on the enable flip-flop is not being driven by a global net.
 
 Netlist Resource Report
 =======================
 
-    CORE                       Used:    374  Total:   6144   (6.09%)
+    CORE                       Used:    505  Total:   6144   (8.22%)
     IO (W/ clocks)             Used:      0  Total:     68   (0.00%)
-    Differential IO            Used:      0  Total:     13   (0.00%)
     GLOBAL (Chip+Quadrant)     Used:      0  Total:     18   (0.00%)
     PLL                        Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      4  Total:      8   (50.00%)
+    RAM/FIFO                   Used:      8  Total:      8   (100.00%)
     Low Static ICC             Used:      0  Total:      1   (0.00%)
     FlashROM                   Used:      0  Total:      1   (0.00%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Wrote Verilog netlist to C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v.
 
- ** Log Ended:   Thu Mar 09 12:50:55 2023
+ ** Log Ended:   Mon Apr 24 07:37:07 2023
 

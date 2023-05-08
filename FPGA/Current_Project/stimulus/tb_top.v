@@ -2,7 +2,7 @@
 
 module tb_top();
 
-parameter MAIN_CLK_DELAY = 10;
+parameter MAIN_CLK_DELAY = 25;
 logic SYSCLK = 1'b0;
 logic SW1 = 1'b1;
 logic SW2 = 1'b1;
@@ -11,7 +11,7 @@ logic SPI_CLK, SPI_MOSI, SPI_CS_n, MEM_VCC;
 logic SPI_MISO = 1'b0;
 logic UART_RX, UART_TX;
 logic TEST_CLK, TEST_MOSI, TEST_MISO, TEST_CS_n, TEST_VCC;
-logic FPGA_CLK, MEM_CM_READY;
+logic FPGA_CLK, MEM_CM_READY, FIFO_STATE0, FIFO_STATE1;
 
 always #(MAIN_CLK_DELAY) SYSCLK = ~SYSCLK;
 
@@ -37,7 +37,9 @@ top top_0(
     .TEST_CS_n(TEST_CS_n),
     .TEST_VCC(TEST_VCC),
     .FPGA_CLK(FPGA_CLK),
-    .MEM_CM_READY(MEM_CM_READY)
+    .MEM_CM_READY(MEM_CM_READY),
+    .FIFO_STATE0(FIFO_STATE0),
+    .FIFO_STATE1(FIFO_STATE1)
 );
 
 initial begin
@@ -50,11 +52,11 @@ rst_n = 1'b1;
 SW1 = 1'b0;
 #400
 SW1 = 1'b1;
-#8000
+#150000
 SW2 = 1'b0;
 #400
 SW2 = 1'b1;
-#85000
+#8500000
 $stop;
 
 end
