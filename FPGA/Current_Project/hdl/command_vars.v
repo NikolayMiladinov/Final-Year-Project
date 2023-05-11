@@ -13,11 +13,12 @@ typedef enum logic [7:0] {
     Block_Lock = 8'hA0, Conf = 8'hB0, Status = 8'hC0, Die_Sel = 8'hD0
 } FEATURE_ADDRESS;
 
-localparam FIFO_IDLE = 3'b000;
-localparam FIFO_UART_RECEIVE = 3'b001;
-localparam FIFO_UART_SEND = 3'b010;
-localparam FIFO_MEM_SEND = 3'b011;
-localparam FIFO_MEM_RECEIVE = 3'b100;
+localparam [2:0] FIFO_IDLE = 3'b000;
+localparam [2:0] FIFO_UART_RECEIVE = 3'b001;
+localparam [2:0] FIFO_UART_SEND = 3'b010;
+localparam [2:0] FIFO_MEM_SEND = 3'b011;
+localparam [2:0] FIFO_MEM_RECEIVE = 3'b100;
+localparam [2:0] FIFO_COMPRESS = 3'b101;
 
 // Timings:
 // Power-up: Chip selection not allowed until Vcc_min = 1.7V is reached
