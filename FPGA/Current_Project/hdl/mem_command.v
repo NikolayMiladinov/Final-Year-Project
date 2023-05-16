@@ -12,6 +12,7 @@ module mem_command #(
     // Control/Data Signals,
     input           i_Rst_L,            // FPGA Reset
     input           i_Clk,              // FPGA Clock
+    input           i_Clk_tick,         // Clock tick
     input           i_SPI_en,           // Enable for SPI
     input           i_UART_en,          // Enable for UART
     
@@ -146,7 +147,7 @@ module mem_command #(
             r_UART_RX_Ready_prv <= 1'b0;
             w_fifo_count_prev   <= 'd1000; // Testing only
 
-        end else begin
+        end else if(i_Clk_tick) begin
             // default assignments
             r_fifo_re           <= 1'b0;
             r_fifo_we           <= 1'b0;
@@ -284,7 +285,7 @@ module mem_command #(
         if(~i_Rst_L) begin
             current_command.command     <= NO_COMMAND;
             current_command.addr_data   <= 'b0;
-        end else begin
+        end else if(i_Clk_tick) begin
             // Single clock cycle data valid pulse, save command and address internally
             if(i_CM_DV) begin
                 current_command.command     <= i_Command;
@@ -336,7 +337,7 @@ module mem_command #(
             r_TX_Count       <= 'b0;
             r_SM_COM         <= IDLE;
             r_Master_TX_Byte <= 'b0;
-        end else begin 
+        end else if(i_Clk_tick) begin 
             // Default assignment
             r_Master_TX_DV  <= 1'b0;
 
@@ -439,6 +440,7 @@ module mem_command #(
     // Control/Data Signals,
     .i_Rst_L(i_Rst_L),              // FPGA Reset
     .i_Clk(i_Clk & i_SPI_en),       // FPGA Clock
+    .i_Clk_tick(i_Clk_tick),
     // TX (MOSI) Signals
     .i_TX_Count(current_command.num_bytes), // Number of bytes per CS low
     .i_TX_Byte(r_Master_TX_Byte),   // Byte to transmit on MOSI

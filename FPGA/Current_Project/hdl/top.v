@@ -51,7 +51,7 @@ module top(
   parameter DIE_SEL_ADDRESS = 8'hD0;
 
   // Control signals
-  logic CLK1;               // Internal clock after dividing the 20 MHz input clock (CLKA)
+  logic CLK_tick;               // Internal clock after dividing the 20 MHz input clock (CLKA)
   logic r_Mem_Power; // VCC line and all other SPI lines are low when r_Mem_Power is low
   logic r_SPI_en;    // Enables or disables the clock inside SPI module
   logic r_UART_en;   // Enables or disables the clock inside UART module
@@ -119,7 +119,7 @@ module top(
   assign TEST_CLK     = SPI_CLK;
   assign TEST_CS_n    = SPI_CS_n;
   assign TEST_MISO    = SPI_MISO;
-  assign FPGA_CLK     = CLK1;
+  assign FPGA_CLK     = CLK_tick;
   assign MEM_CM_READY = r_Mem_Power; // changed for testing
   assign TEST_RX      = UART_RX;
   assign TEST_TX      = w_fifo_count[0];
@@ -128,9 +128,10 @@ module top(
 
 
   // Divide clock by CLK_DIV_PARAM
+  // Outputs a clock tick, which is inputted into every always block
   clk_div #(.div(CLK_DIV_PARAM)) clk_div_1M (
     .clk_in(CLKA),
-    .clk_out(CLK1),
+    .clk_tick(CLK_tick),
     .rst_n(rst_n)
   );
 
@@ -141,7 +142,8 @@ module top(
   MEM_COMMAND_CONTROLLER (
     // Control/Data Signals,
     .i_Rst_L(rst_n),            // FPGA Reset
-    .i_Clk(CLK1),               // FPGA Clock
+    .i_Clk(CLKA),               // FPGA Clock
+    .i_Clk_tick(CLK_tick),      // Clock tick
     .i_SPI_en(r_SPI_en),        // SPI Enable
     .i_UART_en(r_UART_en),      // UART Enable
     
@@ -173,7 +175,7 @@ module top(
   );
 
 
-  always @(posedge CLK1 or negedge rst_n) begin
+  always @(posedge CLKA or negedge rst_n) begin
     // Reset condition
     if (~rst_n) begin
       r_fifo_sm         <= FIFO_IDLE;
@@ -188,7 +190,7 @@ module top(
       r_Mem_Power       <= 1'b0;
       r_RX_Feature_Byte <= 8'b0;
       r_TRANSFER_SIZE   <= 'd2048; // default transfer size, half a page, same in mem_command
-    end else begin
+    end else if(CLK_tick) begin
       // Transfer size wire will change during a UART message before it is the final value
       if (w_transfer_size_DV) begin
         r_TRANSFER_SIZE <= w_transfer_size;

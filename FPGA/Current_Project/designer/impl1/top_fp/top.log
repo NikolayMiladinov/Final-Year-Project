@@ -24,14 +24,9 @@ programmer '84415' : EXPORT CHECKSUM[16] = 3020
 programmer '84415' : Programming FPGA Array
 programmer '84415' : Verifying FPGA Array
 programmer '84415' :         Verifying FPGA Array -- pass
-programmer '84415' : Finished: Mon May 15 18:37:37 2023 (Elapsed time 00:00:29)
+programmer '84415' : Finished: Mon May 15 22:17:16 2023 (Elapsed time 00:00:29)
 programmer '84415' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o
 
-programmer '84415' : Scan Chain...
-Error: Vjtag is disconnected or shorted. Please check the FPGA's Vjtag pin is properly
-       connected. Please check that the target board is powered.
-Error: programmer '84415' : Scan Chain FAILED.
-Error: Failed to run Action.
 Project closed.

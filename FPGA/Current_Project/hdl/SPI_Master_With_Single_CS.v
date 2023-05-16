@@ -43,6 +43,7 @@ module SPI_Master_With_Single_CS
    // Control/Data Signals,
    input        i_Rst_L,     // FPGA Reset
    input        i_Clk,       // FPGA Clock
+   input        i_Clk_tick,  // Clock tick
    
    // TX (MOSI) Signals
    input [$clog2(MAX_BYTES_PER_CS+1)-1:0] i_TX_Count,  // # bytes per CS low
@@ -61,7 +62,7 @@ module SPI_Master_With_Single_CS
    input  i_SPI_MISO,
    output o_SPI_MOSI,
    output o_SPI_CS_n
-   ); /* synthesis syn_noprune=1 */;
+   ); /* synthesis syn_noprune=1 */
 
   localparam IDLE        = 2'b00;
   localparam TRANSFER    = 2'b01;
@@ -82,6 +83,7 @@ module SPI_Master_With_Single_CS
    // Control/Data Signals,
    .i_Rst_L(i_Rst_L),     // FPGA Reset
    .i_Clk(i_Clk),         // FPGA Clock
+   .i_Clk_tick(i_Clk_tick),
    
    // TX (MOSI) Signals
    .i_TX_Byte(i_TX_Byte),         // Byte to transmit
@@ -100,23 +102,17 @@ module SPI_Master_With_Single_CS
 
 
   // Purpose: Control CS line using State Machine
-  always @(posedge i_Clk or negedge i_Rst_L)
-  begin
-    if (~i_Rst_L)
-    begin
+  always @(posedge i_Clk or negedge i_Rst_L) begin
+    if (~i_Rst_L) begin
       r_SM_CS             <= IDLE;
       r_CS_n              <= 1'b1;   // Resets to high
       r_TX_Count          <= 0;
       r_CS_Inactive_Count <= 'b1;
-    end
-    else
-    begin
+    end else if(i_Clk_tick) begin
 
       case (r_SM_CS)      
-      IDLE:
-        begin
-          if (r_CS_n & i_TX_DV) // Start of transmission
-          begin
+      IDLE: begin
+          if (r_CS_n & i_TX_DV) begin // Start of transmission
             r_TX_Count          <= i_TX_Count - 1'b1;   // Register TX Count
             r_CS_Inactive_Count <= i_CS_INACTIVE_CLKS;  // Register # of inactive clk cycles when CS goes high
             r_CS_n              <= 1'b0;                // Drive CS low
@@ -124,40 +120,29 @@ module SPI_Master_With_Single_CS
           end
         end
 
-      TRANSFER:
-        begin
+      TRANSFER: begin
           // Wait until SPI is done transferring do next thing
-          if (w_Master_Ready)
-          begin
-            if (r_TX_Count > 0)
-            begin
-              if (i_TX_DV)
-              begin
+          if (w_Master_Ready) begin
+            if (r_TX_Count > 0) begin
+              if (i_TX_DV) begin
                 r_TX_Count <= r_TX_Count - 1'b1;
               end
-            end
-            else
-            begin
+            end else begin
               r_CS_n  <= 1'b1; // we done, so set CS high
               r_SM_CS <= CS_INACTIVE;
             end
           end
         end
 
-      CS_INACTIVE:
-        begin
-          if (r_CS_Inactive_Count > 0)
-          begin
+      CS_INACTIVE: begin
+          if (r_CS_Inactive_Count > 0) begin
             r_CS_Inactive_Count <= r_CS_Inactive_Count - 1'b1;
-          end
-          else
-          begin
+          end else begin
             r_SM_CS <= IDLE;
           end
         end
 
-      default:
-        begin
+      default: begin
           r_CS_n  <= 1'b1;
           r_SM_CS <= IDLE;
         end
@@ -167,15 +152,11 @@ module SPI_Master_With_Single_CS
 
 
   // Purpose: Keep track of RX_Count
-  always @(posedge i_Clk)
-  begin
-    begin
-      if (r_CS_n)
-      begin
+  always @(posedge i_Clk) begin
+    if(i_Clk_tick) begin
+      if (r_CS_n) begin
         o_RX_Count <= 0;
-      end
-      else if (o_RX_DV)
-      begin
+      end else if (o_RX_DV) begin
         o_RX_Count <= o_RX_Count + 1'b1;
       end
     end

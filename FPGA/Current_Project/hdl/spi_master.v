@@ -39,6 +39,7 @@ module spi_master
    // Control/Data Signals,
    input        i_Rst_L,     // FPGA Reset
    input        i_Clk,       // FPGA Clock
+   input        i_Clk_tick,  // Clock tick
    
    // TX (MOSI) Signals
    input [7:0]  i_TX_Byte,        // Byte to transmit on MOSI
@@ -85,19 +86,15 @@ module spi_master
 
 
   // Purpose: Generate SPI Clock correct number of times when DV pulse comes
-  always @(posedge i_Clk or negedge i_Rst_L)
-  begin
-    if (~i_Rst_L)
-    begin
+  always @(posedge i_Clk or negedge i_Rst_L) begin
+    if (~i_Rst_L) begin
       o_TX_Ready      <= 1'b0;
       r_SPI_Clk_Edges <= 0;
       r_Leading_Edge  <= 1'b0;
       r_Trailing_Edge <= 1'b0;
       r_SPI_Clk       <= w_CPOL; // assign default state to idle state
       r_SPI_Clk_Count <= 0;
-    end
-    else
-    begin
+    end else if(i_Clk_tick) begin
 
       // Default assignments
       r_Leading_Edge  <= 1'b0;
@@ -151,7 +148,7 @@ module spi_master
       r_TX_Byte <= 8'h00;
       r_TX_DV   <= 1'b0;
     end
-    else
+    else if(i_Clk_tick)
       begin
         r_TX_DV <= i_TX_DV; // 1 clock cycle delay
         if (i_TX_DV)
@@ -171,7 +168,7 @@ module spi_master
       o_SPI_MOSI     <= 1'b0;
       r_TX_Bit_Count <= 3'b111; // send MSb first
     end
-    else
+    else if(i_Clk_tick)
     begin
       // If ready is high, reset bit counts to default
       if (o_TX_Ready)
@@ -202,7 +199,7 @@ module spi_master
       o_RX_DV        <= 1'b0;
       r_RX_Bit_Count <= 3'b111;
     end
-    else
+    else if(i_Clk_tick)
     begin
 
       // Default Assignments
@@ -232,7 +229,7 @@ module spi_master
     begin
       o_SPI_Clk  <= w_CPOL;
     end
-    else
+    else if(i_Clk_tick)
       begin
         o_SPI_Clk <= r_SPI_Clk;
       end // else: !if(~i_Rst_L)
