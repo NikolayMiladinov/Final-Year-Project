@@ -53,7 +53,7 @@ module spi_master
    output reg o_SPI_Clk,
    input      i_SPI_MISO,
    output reg o_SPI_MOSI
-   );
+   ); /* synthesis syn_noprune=1 */
 
   // SPI Interface (All Runs at SPI Clock Domain)
   wire w_CPOL;     // Clock polarity
@@ -64,7 +64,7 @@ module spi_master
   reg [4:0] r_SPI_Clk_Edges;
   reg r_Leading_Edge;
   reg r_Trailing_Edge;
-  reg       r_TX_DV;
+  reg       r_TX_DV /* synthesis syn_preserve=1 syn_noprune=1 */;
   reg [7:0] r_TX_Byte;
 
   reg [2:0] r_RX_Bit_Count;

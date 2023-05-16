@@ -12,7 +12,6 @@ vmap igloo "C:/Microsemi/Libero_SoC_v11.9/Designer/lib/modelsim/precompiled/vlog
 
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/hdl/clk_div.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/smartgen/FIFO_INPUT_SAVE/FIFO_INPUT_SAVE.v"
-vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/smartgen/FIFO_OUTPUT_SEND/FIFO_OUTPUT_SEND.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/hdl/spi_master.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/hdl/SPI_Master_With_Single_CS.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/component/work/UART_CORE/UART_CORE_0/rtl/vlog/core/Clock_gen.v"
@@ -27,4 +26,4 @@ vlog "+incdir+${PROJECT_DIR}/hdl" "+incdir+${PROJECT_DIR}/stimulus" -sv -work pr
 
 vsim -L igloo -L presynth  -t 1ps presynth.tb_top
 add wave /tb_top/*
-run 1000ns
+run 100000ns

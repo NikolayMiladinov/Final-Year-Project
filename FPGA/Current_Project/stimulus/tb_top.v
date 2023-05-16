@@ -10,7 +10,7 @@ logic rst_n = 1'b1;
 logic SPI_CLK, SPI_MOSI, SPI_CS_n, MEM_VCC;
 logic SPI_MISO = 1'b0;
 logic UART_RX, UART_TX;
-logic TEST_CLK, TEST_MOSI, TEST_MISO, TEST_CS_n, TEST_VCC;
+logic TEST_CLK, TEST_MOSI, TEST_MISO, TEST_CS_n, TEST_VCC, TEST_RX, TEST_TX;
 logic FPGA_CLK, MEM_CM_READY, FIFO_STATE0, FIFO_STATE1;
 
 always #(MAIN_CLK_DELAY) SYSCLK = ~SYSCLK;
@@ -36,6 +36,8 @@ top top_0(
     .TEST_MISO(TEST_MISO),
     .TEST_CS_n(TEST_CS_n),
     .TEST_VCC(TEST_VCC),
+    .TEST_RX(TEST_RX),
+    .TEST_TX(TEST_TX),
     .FPGA_CLK(FPGA_CLK),
     .MEM_CM_READY(MEM_CM_READY),
     .FIFO_STATE0(FIFO_STATE0),
@@ -48,21 +50,21 @@ initial begin
 rst_n = 1'b0;
 #10
 rst_n = 1'b1;
-#200
+#40000
 SW1 = 1'b0;
 #400
 SW1 = 1'b1;
-#150000
-SW2 = 1'b0;
-#400
-SW2 = 1'b1;
-#8500000
+#1500000
+//SW2 = 1'b0;
+//#400
+//SW2 = 1'b1;
+//#8500000
 $stop;
 
 end
 
 always @(negedge SPI_CLK) begin
-    SPI_MISO = ~SPI_MISO;
+    SPI_MISO <= 1'b1;
 end
 
 endmodule

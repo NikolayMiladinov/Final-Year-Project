@@ -37,32 +37,48 @@ fsm_state_encoding {1028602864} 11 {11}
 
 fsm_registers {1028602864} {rx_state[1]}  {rx_state[0]} 
 
-fsm_encoding {1524442442} sequential
+fsm_encoding {1717621762} onehot
 
-fsm_state_encoding {1524442442} IDLE {0}
+fsm_state_encoding {1717621762} SEND_CHECK {0000001}
 
-fsm_state_encoding {1524442442} BUSY {1}
+fsm_state_encoding {1717621762} SEND_CHECK_EVAL {0000010}
 
-fsm_registers {1524442442} {r_SM_COM[0]} 
+fsm_state_encoding {1717621762} SEND_WRITE_DISABLE {0000100}
 
-fsm_encoding {1510141013} sequential
+fsm_state_encoding {1717621762} SEND_WRITE_ENABLE {0001000}
 
-fsm_state_encoding {1510141013} SEND_IDLE {00}
+fsm_state_encoding {1717621762} SEND_PROG_EXEC {0010000}
 
-fsm_state_encoding {1510141013} GET_DATA {01}
+fsm_state_encoding {1717621762} SEND_PROG_LOAD {0100000}
 
-fsm_state_encoding {1510141013} WRITE_DATA {10}
+fsm_state_encoding {1717621762} RESET_MEM {1000000}
 
-fsm_state_encoding {1510141013} TRANSFER {11}
+fsm_registers {1717621762} {r_SEND_sm[6]}  {r_SEND_sm[5]}  {r_SEND_sm[4]}  {r_SEND_sm[3]}  {r_SEND_sm[2]}  {r_SEND_sm[1]}  {r_SEND_sm[0]} 
 
-fsm_registers {1510141013} {r_SM_UART_SEND[1]}  {r_SM_UART_SEND[0]} 
+fsm_encoding {1717621763} onehot
 
-fsm_encoding {1716621661} sequential
+fsm_state_encoding {1717621763} RECEIVE_CHECK {00001}
 
-fsm_state_encoding {1716621661} FIFO_IDLE {00}
+fsm_state_encoding {1717621763} RECEIVE_CHECK_EVAL {00010}
 
-fsm_state_encoding {1716621661} FIFO_UART_RECEIVE {01}
+fsm_state_encoding {1717621763} RECEIVE_WRITE_DISABLE {00100}
 
-fsm_state_encoding {1716621661} FIFO_UART_SEND {10}
+fsm_state_encoding {1717621763} RECEIVE_PAGE_READ {01000}
 
-fsm_registers {1716621661} {r_fifo_sm[1]}  {r_fifo_sm[0]} 
+fsm_state_encoding {1717621763} RECEIVE_CACHE_READ {10000}
+
+fsm_registers {1717621763} {r_RECEIVE_sm[4]}  {r_RECEIVE_sm[3]}  {r_RECEIVE_sm[2]}  {r_RECEIVE_sm[1]}  {r_RECEIVE_sm[0]} 
+
+fsm_encoding {1717621761} onehot
+
+fsm_state_encoding {1717621761} FIFO_IDLE {00001}
+
+fsm_state_encoding {1717621761} FIFO_UART_RECEIVE {00010}
+
+fsm_state_encoding {1717621761} FIFO_UART_SEND {00100}
+
+fsm_state_encoding {1717621761} FIFO_MEM_SEND {01000}
+
+fsm_state_encoding {1717621761} FIFO_MEM_RECEIVE {10000}
+
+fsm_registers {1717621761} {r_fifo_sm[4]}  {r_fifo_sm[3]}  {r_fifo_sm[2]}  {r_fifo_sm[1]}  {r_fifo_sm[0]} 

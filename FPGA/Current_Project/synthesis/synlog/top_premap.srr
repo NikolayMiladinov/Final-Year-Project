@@ -1,4 +1,4 @@
-# Sat Apr 22 14:58:13 2023
+# Mon May 15 22:13:22 2023
 
 Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -22,12 +22,10 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":206:0:206:5|Removing sequential instance overflow (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":447:0:447:5|Removing sequential instance parity_err (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":231:0:231:5|Removing sequential instance framing_error (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":197:2:197:7|Removing sequential instance o_RX_Byte[7:0] (in view: work.spi_master_3s_2s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":229:2:229:7|Removing sequential instance o_SPI_Clk (in view: work.spi_master_3s_2s(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":286:0:286:5|Removing sequential instance overflow_int (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":286:0:286:5|Removing sequential instance framing_error_int (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 112MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
 
 
 
@@ -37,19 +35,19 @@ Clock Summary
 Start                                  Requested     Requested     Clock        Clock                   Clock
 Clock                                  Frequency     Period        Type         Group                   Load 
 -------------------------------------------------------------------------------------------------------------
-clk_div_10s|clk_out_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     240  
+clk_div_10s|clk_out_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     433  
 top|CLKA                               100.0 MHz     10.000        inferred     Inferred_clkgroup_1     5    
 =============================================================================================================
 
-@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":968:11:968:31|Found inferred clock clk_div_10s|clk_out_inferred_clock which controls 240 sequential elements including MEM_COMMAND_CONTROLLER.FIFO_SAVE.\\DFN1C0_MEM_RADDR\[11\]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\smartgen\fifo_input_save\fifo_input_save.v":1261:11:1261:18|Found inferred clock clk_div_10s|clk_out_inferred_clock which controls 433 sequential elements including MEM_COMMAND_CONTROLLER.fifo_.RAM4K9_2. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\clk_div.v":11:0:11:5|Found inferred clock top|CLKA which controls 5 sequential elements including clk_div_1M.clk_count[3:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 112MB)
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
 
-Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_1000s_0_1_2(verilog))
+Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_30s_0_1_2(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
@@ -69,33 +67,39 @@ original code -> new code
    10 -> 10
    11 -> 11
 @N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":286:0:286:5|There are no possible illegal states for state machine rx_state[3:0] (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)); safe FSM implementation is not required.
-Encoding state machine r_SM_COM[1:0] (in view: work.mem_command_Z1(verilog))
+Encoding state machine r_SEND_sm[6:0] (in view: work.top(verilog))
 original code -> new code
-   00 -> 0
-   01 -> 1
-@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":244:4:244:9|There are no possible illegal states for state machine r_SM_COM[1:0] (in view: work.mem_command_Z1(verilog)); safe FSM implementation is not required.
-Encoding state machine r_SM_UART_SEND[3:0] (in view: work.mem_command_Z1(verilog))
+   000 -> 0000001
+   001 -> 0000010
+   010 -> 0000100
+   011 -> 0001000
+   100 -> 0010000
+   101 -> 0100000
+   110 -> 1000000
+Encoding state machine r_RECEIVE_sm[4:0] (in view: work.top(verilog))
 original code -> new code
-   00 -> 00
-   01 -> 01
-   10 -> 10
-   11 -> 11
-@N: MO225 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":101:4:101:9|There are no possible illegal states for state machine r_SM_UART_SEND[3:0] (in view: work.mem_command_Z1(verilog)); safe FSM implementation is not required.
-Encoding state machine r_fifo_sm[2:0] (in view: work.top(verilog))
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine r_fifo_sm[4:0] (in view: work.top(verilog))
 original code -> new code
-   000 -> 00
-   001 -> 01
-   010 -> 10
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
 None
 None
 
-Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 27MB peak: 112MB)
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 28MB peak: 114MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Sat Apr 22 14:58:13 2023
+# Mon May 15 22:13:22 2023
 
 ###########################################################]

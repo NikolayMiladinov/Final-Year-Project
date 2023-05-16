@@ -2,72 +2,85 @@ Target Part: AGLN250V2_VQFP100_STD
 Report for cell top.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2    55      1.0       55.0
-             AND2A     1      1.0        1.0
-              AND3    11      1.0       11.0
-               AO1    46      1.0       46.0
-              AO1A     2      1.0        2.0
-              AO1C     1      1.0        1.0
-              AO1D     1      1.0        1.0
+              AND2    89      1.0       89.0
+             AND2A     5      1.0        5.0
+              AND3    27      1.0       27.0
+               AO1   110      1.0      110.0
+              AO13     3      1.0        3.0
+              AO16     1      1.0        1.0
+              AO18     1      1.0        1.0
+              AO1A    19      1.0       19.0
+              AO1B     2      1.0        2.0
+              AO1C    13      1.0       13.0
+              AO1D     2      1.0        2.0
               AOI1     7      1.0        7.0
-             AOI1B     2      1.0        2.0
-               AX1     9      1.0        9.0
-              AX1A     1      1.0        1.0
+             AOI1A     4      1.0        4.0
+             AOI1B     3      1.0        3.0
+               AX1     4      1.0        4.0
+              AX1A     5      1.0        5.0
               AX1B     9      1.0        9.0
-              AX1C     1      1.0        1.0
-              AX1D     1      1.0        1.0
-              AX1E     1      1.0        1.0
+              AX1C     4      1.0        4.0
+              AX1D     6      1.0        6.0
+              AX1E     2      1.0        2.0
              AXOI4     1      1.0        1.0
              AXOI5     1      1.0        1.0
-             AXOI7     1      1.0        1.0
-              BUFF     2      1.0        2.0
-            CLKINT     1      0.0        0.0
+              BUFF     5      1.0        5.0
+            CLKINT     3      0.0        0.0
                GND    11      0.0        0.0
-               INV    17      1.0       17.0
+               INV    20      1.0       20.0
               MAJ3     1      1.0        1.0
-               MX2    29      1.0       29.0
-              MX2A     1      1.0        1.0
-              MX2B     1      1.0        1.0
-              MX2C     5      1.0        5.0
-             NAND2     4      1.0        4.0
-              NOR2    30      1.0       30.0
-             NOR2A    27      1.0       27.0
-             NOR2B    18      1.0       18.0
-              NOR3    10      1.0       10.0
-             NOR3A    17      1.0       17.0
-             NOR3B     7      1.0        7.0
-             NOR3C    11      1.0       11.0
-               OA1     3      1.0        3.0
-              OA1A     1      1.0        1.0
-              OA1B     2      1.0        2.0
-              OA1C     2      1.0        2.0
-               OR2    25      1.0       25.0
-              OR2A    12      1.0       12.0
-              OR2B     5      1.0        5.0
-               OR3     9      1.0        9.0
-              OR3A     2      1.0        2.0
-              OR3B     1      1.0        1.0
-              OR3C     1      1.0        1.0
+               MX2    80      1.0       80.0
+              MX2A     6      1.0        6.0
+              MX2B    17      1.0       17.0
+              MX2C     7      1.0        7.0
+             NAND2     2      1.0        2.0
+             NAND3     2      1.0        2.0
+            NAND3A     6      1.0        6.0
+            NAND3B     6      1.0        6.0
+            NAND3C     2      1.0        2.0
+              NOR2    38      1.0       38.0
+             NOR2A   116      1.0      116.0
+             NOR2B   165      1.0      165.0
+              NOR3    27      1.0       27.0
+             NOR3A    45      1.0       45.0
+             NOR3B    45      1.0       45.0
+             NOR3C    42      1.0       42.0
+               OA1    22      1.0       22.0
+              OA1A    21      1.0       21.0
+              OA1B     9      1.0        9.0
+              OA1C     9      1.0        9.0
+              OAI1     2      1.0        2.0
+               OR2    82      1.0       82.0
+              OR2A    60      1.0       60.0
+              OR2B    12      1.0       12.0
+               OR3    64      1.0       64.0
+              OR3A    14      1.0       14.0
+              OR3B     6      1.0        6.0
+              OR3C     2      1.0        2.0
                VCC    11      0.0        0.0
-               XA1     3      1.0        3.0
-              XA1A     1      1.0        1.0
-              XA1B     2      1.0        2.0
-              XA1C     2      1.0        2.0
-             XNOR2    25      1.0       25.0
-              XO1A     4      1.0        4.0
-              XOR2   124      1.0      124.0
+               XA1     8      1.0        8.0
+              XA1A    14      1.0       14.0
+              XA1B    12      1.0       12.0
+              XA1C     3      1.0        3.0
+              XAI1     1      1.0        1.0
+             XNOR2    65      1.0       65.0
+             XNOR3     5      1.0        5.0
+               XO1     8      1.0        8.0
+              XO1A     7      1.0        7.0
+              XOR2   182      1.0      182.0
+              XOR3     2      1.0        2.0
 
 
-            DFN1C0    97      1.0       97.0
-          DFN1E0C0    10      1.0       10.0
-          DFN1E0P0     3      1.0        3.0
-            DFN1E1    11      1.0       11.0
-          DFN1E1C0    64      1.0       64.0
-          DFN1E1P0     7      1.0        7.0
-            DFN1P0     5      1.0        5.0
-            RAM4K9     4      0.0        0.0
+            DFN1C0    94      1.0       94.0
+          DFN1E0C0   108      1.0      108.0
+          DFN1E0P0     2      1.0        2.0
+            DFN1E1    21      1.0       21.0
+          DFN1E1C0   152      1.0      152.0
+          DFN1E1P0    14      1.0       14.0
+            DFN1P0    23      1.0       23.0
+            RAM4K9     8      0.0        0.0
                    -----          ----------
-             TOTAL   779               752.0
+             TOTAL  2007              1974.0
 
 
   IO Cell usage:
@@ -79,9 +92,9 @@ Report for cell top.verilog
              TOTAL    21
 
 
-Core Cells         : 752 of 6144 (12%)
+Core Cells         : 1974 of 6144 (32%)
 IO Cells           : 21
 
   RAM/ROM Usage Summary
-Block Rams : 4 of 8 (50%)
+Block Rams : 8 of 8 (100%)
 

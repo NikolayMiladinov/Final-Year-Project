@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Sat Apr 22 14:58:23 2023 ***************************************************************************
+                          Mon May 15 22:14:48 2023 ***************************************************************************
 
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
 File Name: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl1\top.adb
 Design Name: top  Design State: compile
-Last Saved: Sat Apr 22 14:27:49 2023
+Last Saved: Mon May 15 18:36:36 2023
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Sat Apr 22 14:58:21 2023:
+Source File(s) Imported on Mon May 15 22:14:44 2023:
         C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.edn
 
 
@@ -34,7 +34,7 @@ Back Annotation File: N/A
 ***** Bitstream Variables ******************************************
 
 Bitstream File: N/A
-     Lock Mode: OFF
+     Lock Mode: off
 
 
 ***** Compile Variables ********************************************
@@ -78,61 +78,111 @@ report_high_fanout_nets_limit      : 10
 =====================================================================
 Compile starts ...
 
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA0 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA1 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA2 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA3 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA4 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA5 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA6 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA7 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTA8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_1_DOUTB8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA0 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA1 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA2 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA3 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA4 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA5 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA6 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA7 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTA8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_3_DOUTB8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA0 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA1 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA2 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA3 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA4 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA5 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA6 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA7 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTA8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_2_DOUTB8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA0 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA1 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA2 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA3 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA4 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA5 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA6 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA7 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTA8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/FIFO_SAVE/RAM4K9_0_DOUTB8 drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[0] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[1] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[2] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[3] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[4] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[5] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[6] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[7] drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_DV drives no
+         load.
 Warning: Top level port pb_sw2 is not connected to any IO pad
 
 Netlist Optimization Report
 ===========================
 
 Optimized macros:
-  - Dangling net drivers:   9
+  - Dangling net drivers:   11
   - Buffers:                0
   - Inverters:              0
-  - Tieoff:                 30
-  - Logic combining:        79
+  - Tieoff:                 36
+  - Logic combining:        121
 
-    Total macros optimized  118
+    Total macros optimized  168
 
-There were 0 error(s) and 41 warning(s) in this design.
+There were 0 error(s) and 90 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
@@ -144,11 +194,11 @@ There were 0 error(s) and 0 warning(s).
 Compile report:
 ===============
 
-    CORE                       Used:    634  Total:   6144   (10.32%)
+    CORE                       Used:   1806  Total:   6144   (29.39%)
     IO (W/ clocks)             Used:     21  Total:     68   (30.88%)
-    GLOBAL (Chip+Quadrant)     Used:      3  Total:     18   (16.67%)
+    GLOBAL (Chip+Quadrant)     Used:      5  Total:     18   (27.78%)
     PLL                        Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      4  Total:      8   (50.00%)
+    RAM/FIFO                   Used:      8  Total:      8   (100.00%)
     Low Static ICC             Used:      0  Total:      1   (0.00%)
     FlashROM                   Used:      0  Total:      1   (0.00%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
@@ -157,7 +207,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 3      | 6  (50.00%)*
+    Chip global     | 5      | 6  (83.33%)*
     Quadrant global | 0      | 12 (0.00%)
 
     (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
@@ -168,8 +218,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 441          | 441
-    SEQ     | 193          | 193
+    COMB    | 1401         | 1401
+    SEQ     | 405          | 405
 
 I/O Function:
 
@@ -202,11 +252,17 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    197     CLK_NET       Net   : FPGA_CLK_c
+    393     SET/RESET_NET Net   : rst_n_c
+                          Driver: rst_n_pad
+                          Source: NETLIST
+    270     CLK_NET       Net   : FPGA_CLK_c
                           Driver: clk_div_1M/clk_out_RNIOLD3
                           Source: NETLIST
-    190     SET/RESET_NET Net   : rst_n_c
-                          Driver: rst_n_pad
+    79      CLK_NET       Net   : I_388
+                          Driver: I_388
+                          Source: NETLIST
+    70      CLK_NET       Net   : I_389
+                          Driver: I_389
                           Source: NETLIST
     5       CLK_NET       Net   : CLKA_c
                           Driver: CLKA_pad
@@ -215,63 +271,56 @@ The following nets have been assigned to a chip global resource:
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
+    24      INT_NET       Net   : N_60
+                          Driver:
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_fifo_sm_10_i_i_0
+    23      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
                           Driver:
 MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_clock_int
-    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS[1]
-                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS[1]
-    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/N_162_1
+    21      INT_NET       Net   : MEM_COMMAND_CONTROLLER/N_846
                           Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/rx_state_RNINTHS_1[0]
-    12      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2[1]
-                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2[1]
-    12      INT_NET       Net   :
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/rx_bit_cnte
-                          Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/receive_count_RNIR2DR1[3]
-    12      INT_NET       Net   :
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/baud_cntr8
-                          Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_cntr_RNI352C4[10]
-    11      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_UART_WEN
-                          Driver: MEM_COMMAND_CONTROLLER/r_UART_WEN
-    11      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_Inactive_Count[0]
-                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_Inactive_Count[0]
-    11      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/xmit_pulse
-                          Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/xmit_clock_RNIOF6F
-    10      INT_NET       Net   : MEM_COMMAND_CONTROLLER/FIFO_SAVE/Z\\MEM_WADDR[5]
-                          Driver: MEM_COMMAND_CONTROLLER/FIFO_SAVE/\\DFN1C0_MEM_WADDR[5]
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_Command_4_sqmuxa_i_i_o2
+    20      INT_NET       Net   : r_fifo_sm[4]
+                          Driver: r_fifo_sm[4]
+    20      INT_NET       Net   : r_fifo_sm[3]
+                          Driver: r_fifo_sm[3]
+    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/int_SPI_CS_n
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/command_1
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_i_a3
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_43
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIOCJI[0]
+    18      INT_NET       Net   : r_Master_CM_DV
+                          Driver: r_Master_CM_DV
+    18      INT_NET       Net   : r_Master_CM_DV_0
+                          Driver: r_Master_CM_DV_0
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
+    32      INT_NET       Net   : MEM_COMMAND_CONTROLLER/fifo_/DFN1E1C0_1_Q
+                          Driver: MEM_COMMAND_CONTROLLER/fifo_/DFN1E1C0_1
+    24      INT_NET       Net   : N_60
+                          Driver:
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_fifo_sm_10_i_i_0
+    23      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
                           Driver:
 MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_clock_int
-    16      INT_NET       Net   : MEM_COMMAND_CONTROLLER/FIFO_SAVE/DFN1E1C0_0_Q
-                          Driver: MEM_COMMAND_CONTROLLER/FIFO_SAVE/DFN1E1C0_0
-    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS[1]
-                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS[1]
-    13      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/N_162_1
+    21      INT_NET       Net   : MEM_COMMAND_CONTROLLER/N_846
                           Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/rx_state_RNINTHS_1[0]
-    12      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2[1]
-                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIE78K2[1]
-    12      INT_NET       Net   :
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/rx_bit_cnte
-                          Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/receive_count_RNIR2DR1[3]
-    12      INT_NET       Net   :
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/baud_cntr8
-                          Driver:
-MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_cntr_RNI352C4[10]
-    11      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_UART_WEN
-                          Driver: MEM_COMMAND_CONTROLLER/r_UART_WEN
-    11      INT_NET       Net   : MEM_COMMAND_CONTROLLER/FIFO_SAVE/Z\\MEM_WADDR[8]
-                          Driver: MEM_COMMAND_CONTROLLER/FIFO_SAVE/\\DFN1C0_MEM_WADDR[8]
-    11      INT_NET       Net   : MEM_COMMAND_CONTROLLER/FIFO_SAVE/Z\\MEM_WADDR[2]
-                          Driver: MEM_COMMAND_CONTROLLER/FIFO_SAVE/\\DFN1C0_MEM_WADDR[2]
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_Command_4_sqmuxa_i_i_o2
+    20      INT_NET       Net   : r_fifo_sm[4]
+                          Driver: r_fifo_sm[4]
+    20      INT_NET       Net   : r_fifo_sm[3]
+                          Driver: r_fifo_sm[3]
+    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/int_SPI_CS_n
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/command_1
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_i_a3
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_43
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIOCJI[0]
+    18      INT_NET       Net   : r_Master_CM_DV
+                          Driver: r_Master_CM_DV
 ====================
 Flash*Freeze report:
 ====================

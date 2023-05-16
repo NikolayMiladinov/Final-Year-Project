@@ -14,11 +14,11 @@ The file contains the job information from compiler to be displayed as part of t
   </job_status>
 <job_info> 
 			<info name="Notes">
-  <data>52</data>
+  <data>55</data>
   <report_link name="more"><data>C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\report\top_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
-  <data>180</data>
+  <data>203</data>
   <report_link name="more"><data>C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\report\top_compiler_warnings.txt</data></report_link>
   </info>
 			<info name="Errors">
@@ -35,7 +35,7 @@ The file contains the job information from compiler to be displayed as part of t
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1682171892</data>
+  <data type="timestamp">1684185201</data>
   </info>
 			</job_info>
 </job_run_status>

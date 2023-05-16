@@ -3,9 +3,9 @@
 
 module mem_command #(
     parameter SPI_MODE          = 3,    // Mode 3: CPOL = 1, CPHA = 1; clock is high during deselect
-    parameter CLKS_PER_HALF_BIT = 2,    // SPI_CLK_FREQ = CLK_FREQ/(2xCLKS_PER_HALF_BIT)
+    parameter CLKS_PER_HALF_BIT = 4,    // SPI_CLK_FREQ = CLK_FREQ/(2xCLKS_PER_HALF_BIT)
     parameter MAX_BYTES_PER_CS  = 5000, // Maximum number of bytes per transaction with memory chip
-    parameter MAX_WAIT_CYCLES   = 1000, // Maximum number of wait cycles after deasserting (active low) CS
+    parameter MAX_WAIT_CYCLES   = 30, // Maximum number of wait cycles after deasserting (active low) CS
     parameter BAUD_VAL          = 1,    // Baud rate = clk_freq / ((1 + BAUD_VAL)x16)
     parameter BAUD_VAL_FRACTION = 0     // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
 ) (
@@ -37,39 +37,82 @@ module mem_command #(
     output o_UART_TX,
 
     // FIFO state
-    input [2:0]     i_fifo_sm,          // Fifo states: UART send/receive, SPI(MEM) send/receive
+    input  [2:0]    i_fifo_sm,          // Fifo states: UART send/receive, SPI(MEM) send/receive
     output [12:0]   o_fifo_count,       // Fifo count: from read perspective
-    output [12:0]   o_transfer_size     // Size of UART transfer (when all data is saved in FIFO, its count should be = to transfer size)
-);
+    output [12:0]   o_transfer_size,    // Size of UART transfer (when all data is saved in FIFO, its count should be = to transfer size)
+    output          o_transfer_size_DV  // Data valid pulse that indicates when transfer_size has changed and is valid
+); /* synthesis syn_noprune=1 */;
 
     // Master Specific Inputs
-    logic [7:0]   r_Master_TX_Byte = 0; // Byte to be transmitted
-    logic         r_Master_TX_DV = 1'b0;// Data valid pulse telling the SPI module to read the TX_Byte register
+    logic [7:0]   r_Master_TX_Byte;     // Byte to be transmitted
+    logic         r_Master_TX_DV;       // Data valid pulse telling the SPI module to read the TX_Byte register
 
     // Master Specific Outputs
     logic        w_Master_TX_Ready;     // Indicates if SPI module is ready or busy
     logic [$clog2(MAX_BYTES_PER_CS+1)-1:0] w_Master_RX_Count; // SPI module counts the number of bytes received in a single transaction (during CS low)
-    logic [$clog2(MAX_BYTES_PER_CS+1)-1:0] r_TX_Count = 'b0;  // Counts the number of byter that were transmitted, incremented right after a data valid transmit pulse
+    logic [$clog2(MAX_BYTES_PER_CS+1)-1:0] r_TX_Count;  // Counts the number of byter that were transmitted, incremented right after a data valid transmit pulse
     logic        w_Master_RX_DV;        // Data valid pulse indicating RX_Byte is valid and can be read
     logic [7:0]  w_Master_RX_Byte;      // Byte received from SPI
 
     //FIFO for saving incoming UART data
-    logic [7:0]  r_fifo_data_in = 'b0;  // Data to be saved in FIFO
+    logic [7:0]  r_fifo_data_in;        // Data to be saved in FIFO
     logic [7:0]  w_fifo_data_out;       // Data coming out of FIFO
-    logic        r_fifo_we = 'b0;       // Write enable of FIFO
-    logic        r_fifo_re = 'b0;       // Read enable of FIFO (has 2 cycle delay)
-    logic [1:0]  r_fifo_re_delay = 'b0; // Delayed read enable, used for logic
+    logic        r_fifo_we;             // Write enable of FIFO
+    logic        r_fifo_re;             // Read enable of FIFO (has 2 cycle delay)
+    logic [1:0]  r_fifo_re_delay;       // Delayed read enable, used for logic
     logic        w_fifo_full, w_fifo_empty;   // Full and empty flags for FIFO
     logic [12:0] w_fifo_count;          // Number of bytes in FIFO from read perspective
 
-    logic [12:0] r_TRANSFER_SIZE = 'd2048;    // UART sends how much the transfer size will be and sets this variable
-    logic [12:0] r_UART_count    = 'b0; // Counts the number of bytes sent through UART
-    logic [7:0]  r_UART_command  = 'b0; // 1st byte in UART transaction is always the command
-    localparam [7:0] DATA_TRANSFER   = 8'h0F; // Data transfer command is followed by 2 bytes indicating the size of transfer, followed by the data
+    logic [12:0] r_TRANSFER_SIZE;       // UART sends how much the transfer size will be and sets this variable
+    logic        r_transfer_size_DV;
+    logic [12:0] r_UART_count;          // Counts the number of bytes sent through UART
+    logic [7:0]  r_UART_command;        // 1st byte in UART transaction is always the command
+    // h21 = ! character
+    localparam DATA_TRANSFER   = 8'h21; // Data transfer command is followed by 2 bytes indicating the size of transfer, followed by the data
+
+    // UART Inputs
+    logic [7:0] r_UART_Data_In;         // Byte to be sent through UART
+    logic       r_UART_OEN;             // Active low read enable, assert low when reading from buffer
+    logic       r_UART_WEN;             // Active low write enable, assert low when data is to be transmitted
+    logic [12:0]w_UART_BAUD_VAL;
+    logic [2:0] w_UART_BAUD_VAL_FRACTION;
+    logic       w_PARITY_ERR;
+
+    assign w_UART_BAUD_VAL = BAUD_VAL;
+    assign w_UART_BAUD_VAL_FRACTION = BAUD_VAL_FRACTION;
+
+    // UART Outputs
+    logic [7:0] w_UART_Data_Out;        // Data coming out of UART
+    logic       w_UART_Framing_Err;     // Framing error, high indicates a missing stop bit, cleared by asserting OEN low
+    logic       w_UART_Overflow;        // When high indicates an overflow in data received
+    logic       w_UART_RX_Ready;        // When high indicates data is available in receive buffer
+    logic       w_UART_TX_Ready;        // When low indicates transmit buffer cannot store more data
+    logic       r_UART_RX_Ready_prv;    // Used for logic
+
+    // State machine for transmitting SPI command
+    logic       r_SM_COM;
+    localparam  IDLE        = 1'b0;
+    localparam  BUSY        = 1'b1;
+
+    // State machine for sending data from FIFO to SPI/UART
+    logic      r_SM_SEND;
+    localparam SEND_IDLE    = 1'b0;
+    localparam WRITE_DATA   = 1'b1;
+
+    typedef struct {
+        logic [7:0]                               command; // stores the current command that is/was transmitted
+        logic [$clog2(MAX_BYTES_PER_CS+1)-1:0]  num_bytes; // Number of bytes that will be transmitted
+        logic [23:0]                            addr_data /* synthesis syn_preserve=1 syn_noprune=1 */; // all commands have at most 24bits of address+data, except page program
+        logic [$clog2(MAX_WAIT_CYCLES)-1:0]   wait_cycles /* synthesis syn_preserve=1 syn_noprune=1 syn_keep=1 */; // How many cycles to wait after CS goes HIGH
+        logic [7:0]                             prog_data; // Data to be saved in memory chip from FIFO during PROG_LOAD command
+    } my_command_t;
+
+    my_command_t current_command;   // Stores current command
 
     // Assign outputs
     assign o_fifo_count = w_fifo_count; // Top level needs to know the FIFO count and data transfer size
     assign o_transfer_size = r_TRANSFER_SIZE;
+    assign o_transfer_size_DV = r_transfer_size_DV;
 
     // Getting feature data
     // Feature data is available on 3rd byte received during a GET_FEATURE command
@@ -83,54 +126,25 @@ module mem_command #(
     // When SPI module is ready and chip select goes high, then the module is ready to transmit the next command
     assign o_CM_Ready = o_SPI_CS_n & w_Master_TX_Ready & ~i_CM_DV;
 
-    // UART Inputs
-    logic [7:0] r_UART_Data_In = 'b0;   // Byte to be sent through UART
-    logic       r_UART_OEN = 'b1;       // Active low read enable, assert low when reading from buffer
-    logic       r_UART_OEN_delay = 'b1; // Delayed version upper register
-    logic       r_UART_WEN = 'b1;       // Active low write enable, assert low when data is to be transmitted
-
-    // UART Outputs
-    logic [7:0] w_UART_Data_Out;        // Data coming out of UART
-    logic       w_UART_Framing_Err;     // Framing error, high indicates a missing stop bit, cleared by asserting OEN low
-    logic       w_UART_Overflow;        // When high indicates an overflow in data received
-    logic       w_UART_RX_Ready;        // When high indicates data is available in receive buffer
-    logic       w_UART_TX_Ready;        // When low indicates transmit buffer cannot store more data
-
-    // State machine for transmitting SPI command
-    logic       r_SM_COM    = 1'b0;
-    localparam  IDLE        = 1'b0;
-    localparam  BUSY        = 1'b1;
-
-    // State machine for sending data from FIFO to SPI/UART
-    logic      r_SM_SEND    = 1'b0;
-    localparam SEND_IDLE    = 1'b0;
-    localparam WRITE_DATA   = 1'b1;
-
-    typedef struct {
-        SPI_Command command; // stores the current command that is/was transmitted
-        logic [$clog2(MAX_BYTES_PER_CS+1)-1:0]  num_bytes; // Number of bytes that will be transmitted
-        logic [23:0]                            addr_data; // all commands have at most 24bits of address+data, except page program
-        logic [$clog2(MAX_WAIT_CYCLES+1)-1:0]   wait_cycles; // How many cycles to wait after CS goes HIGH
-        logic [7:0]                             prog_data; // Data to be saved in memory chip from FIFO during PROG_LOAD command
-    } my_command_t;
-
-    my_command_t current_command;   // Stores current command
-
+    logic [12:0] w_fifo_count_prev; // for testing
 
     always @(posedge i_Clk or negedge i_Rst_L) begin
         // Reset data transfer registers and states
         if (~i_Rst_L) begin
             r_SM_SEND           <= SEND_IDLE;
             r_UART_Data_In      <= 'b0;
+            r_fifo_data_in      <= 'b0;
             r_fifo_re           <= 1'b0;
+            r_fifo_re_delay     <= 'b0;
             r_fifo_we           <= 1'b0;
             r_UART_WEN          <= 1'b1;
             r_UART_OEN          <= 1'b1;
-            r_UART_OEN_delay    <= 1'b1;
             r_TRANSFER_SIZE     <= 'd2048;
             r_UART_count        <= 'b0;
             r_UART_command      <= 'b0;
-            r_fifo_re_delay     <= 'b0;
+            r_transfer_size_DV  <= 1'b0;
+            r_UART_RX_Ready_prv <= 1'b0;
+            w_fifo_count_prev   <= 'd1000; // Testing only
 
         end else begin
             // default assignments
@@ -138,17 +152,34 @@ module mem_command #(
             r_fifo_we           <= 1'b0;
             r_UART_OEN          <= 1'b1;
             r_UART_WEN          <= 1'b1;
+            r_transfer_size_DV  <= 1'b0;
             
             // Cannot receive data from both UART and SPI because there is only 1 FIFO, hence the need for these states
             case (i_fifo_sm)
+
+                FIFO_IDLE: begin
+                    // For testing purposes
+                    if (SIM_TEST == 1) begin
+                        if (w_fifo_count == 'b0 && w_fifo_count_prev != 'b0) begin
+                            r_fifo_data_in   <= 'b1; // Save RX byte received from SPI
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count < 'd20) begin
+                            r_fifo_data_in   <= w_fifo_count +'b1; // Save RX byte received from SPI
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end
+                    end
+                end
 
                 // Receiving data from UART
                 FIFO_UART_RECEIVE: begin
                     // w_UART_RX_Ready signals there is data in receive buffer
                     // OEN signals the byte has been read, but has one cycle delay
                     // Hence to not register the same byte more than once, use the additional delayed OEN
-                    if (w_UART_RX_Ready && r_UART_OEN && r_UART_OEN_delay) begin
-                        r_UART_OEN      <= 1'b0; // Clears UART receive buffer and tells it that data was read (1 cycle delay)
+                    if (w_UART_RX_Ready && ~r_UART_RX_Ready_prv) begin
+                        r_UART_RX_Ready_prv <= 1'b1; // w_UART_RX_Ready is high
+                        r_UART_OEN          <= 1'b0; // Clears UART receive buffer and tells it that data was read
 
                         // Decide what to do with received UART byte
                         if(r_UART_count == 'b0) r_UART_command  <= w_UART_Data_Out; // First byte of UART transaction is always the command
@@ -157,8 +188,10 @@ module mem_command #(
                                 // Command for transferring data: 1st byte is command, 2nd & 3rd bytes are for the number of data bytes to be transferred
                                 DATA_TRANSFER: begin
                                     if (r_UART_count == 'd1) r_TRANSFER_SIZE[12:8]   <= w_UART_Data_Out[4:0]; // Second byte of UART transaction is the MSB of the size
-                                    else if (r_UART_count == 'd2) r_TRANSFER_SIZE[7:0]   <= w_UART_Data_Out; // First byte of UART transaction is the LSB of the size
-                                    else begin
+                                    else if (r_UART_count == 'd2) begin
+                                        r_TRANSFER_SIZE[7:0]    <= w_UART_Data_Out; // First byte of UART transaction is the LSB of the size
+                                        r_transfer_size_DV      <= 1'b1;
+                                    end else begin
                                         r_fifo_data_in    <= w_UART_Data_Out; // After data size is sent, bytes after that are data bytes
                                         r_fifo_we         <= 1'b1; // Write enable for FIFO
                                     end
@@ -167,10 +200,17 @@ module mem_command #(
                         end
 
                         // After byte is processed, increment UART_count or reset it
+                        r_UART_count <= r_UART_count + 'b1;
                         // CAREFUL: if Transfer size was 0, then the count would reset after 3rd byte is processed because new transfer size is not yet saved
-                        if (r_UART_command == DATA_TRANSFER && r_UART_count == (r_TRANSFER_SIZE + 'd2)) begin
+                        if (r_TRANSFER_SIZE == 'b0) begin
+                            
+                        end else if (r_UART_command == DATA_TRANSFER && r_UART_count == (r_TRANSFER_SIZE + 'd2)) begin
                             r_UART_count <= 'b0;
-                        end else r_UART_count <= r_UART_count + 'b1;
+                        end //else r_UART_count <= r_UART_count + 'b1;
+                    end else if (r_UART_RX_Ready_prv && ~w_UART_RX_Ready) begin
+                        r_UART_RX_Ready_prv <= 1'b0;
+                    end else if (r_UART_RX_Ready_prv && w_UART_RX_Ready) begin
+                        r_UART_OEN          <= 1'b0;
                     end
                 end 
 
@@ -201,7 +241,7 @@ module mem_command #(
                 FIFO_MEM_RECEIVE: begin
                     // CAREFULL: currently only command that receives data from mem chip is cache read
                     // During cache read, bytes 4 and after are for data, RX data valid pulse indicates when to save the data
-                    if (w_Master_RX_DV && w_Master_RX_Count >= 'd4 && current_command.command == CACHE_READ) begin
+                    if (w_Master_RX_DV && w_Master_RX_Count >= 'd4 && current_command.command == CACHE_READ && ~w_fifo_full) begin
                         r_fifo_data_in   <= w_Master_RX_Byte; // Save RX byte received from SPI
                         r_fifo_we        <= 1'b1; // Write enable for FIFO
                     end
@@ -213,15 +253,15 @@ module mem_command #(
                         SEND_IDLE: begin
                             // Begin sending data when SPI is ready (TX_DV is asserted only when SPI is ready, once per byte), there is data in FIFO and there are still bytes to be transmitted
                             // current_command.num_bytes is affected by r_TRANSFER_SIZE
-                            // This begins on 3rd byte of cache read to prepare the data before next TX_DV pulse (works because SPI clock is at least 4x slower)
-                            if (r_TX_Count >= 'd2 && ((r_TX_Count - 'b1) < current_command.num_bytes) && r_Master_TX_DV && w_fifo_count > 'd0 && ~w_fifo_empty) begin
+                            // This begins on 3rd byte of cache read to prepare the data before next TX_DV pulse (works because SPI clock is at least 2x slower and needs to transmit 8 bits)
+                            if (current_command.command == PROG_LOAD1 && r_TX_Count >= 'd3 && r_TX_Count < current_command.num_bytes && r_Master_TX_DV && ~w_fifo_empty) begin
                                 r_SM_SEND       <= WRITE_DATA;
                                 r_fifo_re       <= 1'b1;
                             end
                         end
                         WRITE_DATA: begin
                             // Send data through SPI when fifo_out is valid (2 cycles after RE is HIGH)
-                            if(r_TX_Count < 'd2) r_SM_SEND <= SEND_IDLE; // For safety, if by mistake in this state, go to idle and wait
+                            if(r_TX_Count < 'd3 || current_command.command != PROG_LOAD1) r_SM_SEND <= SEND_IDLE; // For safety, if by mistake in this state, go to idle and wait
                             else if(r_fifo_re_delay[1]) begin
                                 current_command.prog_data   <= w_fifo_data_out; // Register the data coming out of FIFO
                                 r_SM_SEND                   <= SEND_IDLE;
@@ -234,7 +274,6 @@ module mem_command #(
             // Shift registers for delay
             r_fifo_re_delay[0]  <= r_fifo_re;
             r_fifo_re_delay[1]  <= r_fifo_re_delay[0];
-            r_UART_OEN_delay  <= r_UART_OEN;
         end
     end
 
@@ -248,14 +287,14 @@ module mem_command #(
         end else begin
             // Single clock cycle data valid pulse, save command and address internally
             if(i_CM_DV) begin
-                current_command.command     <= SPI_Command'(i_Command);
+                current_command.command     <= i_Command;
                 current_command.addr_data   <= i_Addr_Data;
             end
         end
     end
 
     // Whenever the command changes, change the number of bytes for that transaction
-    always @(current_command.command) begin
+    always @(current_command.command or r_TRANSFER_SIZE) begin
         case (current_command.command)
             RESET, WRITE_ENABLE, WRITE_DISABLE: begin // One byte
                 current_command.num_bytes       <= 'b1;
@@ -293,9 +332,10 @@ module mem_command #(
     always @(posedge i_Clk or negedge i_Rst_L) begin
         // Reset registers for SPI logic
         if(~i_Rst_L) begin
-            r_Master_TX_DV  <= 1'b0;
-            r_TX_Count      <= 'b0;
-            r_SM_COM        <= IDLE;
+            r_Master_TX_DV   <= 1'b0;
+            r_TX_Count       <= 'b0;
+            r_SM_COM         <= IDLE;
+            r_Master_TX_Byte <= 'b0;
         end else begin 
             // Default assignment
             r_Master_TX_DV  <= 1'b0;
@@ -364,7 +404,10 @@ module mem_command #(
                                 r_TX_Count  <= 'b0;
                                 r_SM_COM    <= IDLE;
                             end
-                        end 
+                        end else begin
+                            r_TX_Count  <= 'b0;
+                            r_SM_COM    <= IDLE;
+                        end
                     end
                 endcase
             end
@@ -417,8 +460,8 @@ module mem_command #(
     // Instantiate UART
     UART_CORE UART_Master(
         // Inputs
-        .BAUD_VAL(BAUD_VAL),        // Determines baud rate
-        .BAUD_VAL_FRACTION(BAUD_VAL_FRACTION), // Additional precision for baud rate, increments of 0.125 for baud val
+        .BAUD_VAL(w_UART_BAUD_VAL),        // Determines baud rate
+        .BAUD_VAL_FRACTION(w_UART_BAUD_VAL_FRACTION), // Additional precision for baud rate, increments of 0.125 for baud val
         .BIT8(1'b1),                // Always transmit 8 data bits
         .CLK(i_Clk & i_UART_en),
         .CSN(1'b0),                 // Chip select can be zero
@@ -433,7 +476,7 @@ module mem_command #(
         .DATA_OUT(w_UART_Data_Out), // Data received
         .FRAMING_ERR(w_UART_Framing_Err), // Error if no stop bit is detected
         .OVERFLOW(w_UART_Overflow), // Error if too many bits are detected
-        .PARITY_ERR(),              
+        .PARITY_ERR(w_PARITY_ERR),              
         .RXRDY(w_UART_RX_Ready),    // High when data is available to be read
         .TX(o_UART_TX),             // Transmit line
         .TXRDY(w_UART_TX_Ready)     // Low when transmit buffer is full

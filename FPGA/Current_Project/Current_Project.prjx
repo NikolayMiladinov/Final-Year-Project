@@ -142,18 +142,18 @@ SIZE="10850"
 ENDFILE
 VALUE "<project>\designer\impl1\top.adb,adb"
 STATE="ood"
-TIME="1679066426"
-SIZE="749056"
+TIME="1682171950"
+SIZE="773632"
 ENDFILE
 VALUE "<project>\designer\impl1\top.ide_des,ide_des"
 STATE="utd"
-TIME="1679066426"
+TIME="1682171950"
 SIZE="1044"
 ENDFILE
 VALUE "<project>\designer\impl1\top.pdb,pdb"
 STATE="ood"
-TIME="1679066424"
-SIZE="54958"
+TIME="1682171943"
+SIZE="58399"
 ENDFILE
 VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
 STATE="utd"
@@ -187,13 +187,13 @@ SIZE="456"
 ENDFILE
 VALUE "<project>\hdl\command_vars.v,hdl"
 STATE="utd"
-TIME="1681898833"
-SIZE="1488"
+TIME="1683773515"
+SIZE="1560"
 ENDFILE
 VALUE "<project>\hdl\mem_command.v,hdl"
 STATE="utd"
-TIME="1682336555"
-SIZE="16420"
+TIME="1683773268"
+SIZE="24360"
 ENDFILE
 VALUE "<project>\hdl\spi_master.v,hdl"
 STATE="utd"
@@ -207,8 +207,8 @@ SIZE="6102"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1682319427"
-SIZE="7481"
+TIME="1683767171"
+SIZE="20490"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
@@ -288,28 +288,28 @@ SIZE="1839"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
-TIME="1679062746"
+TIME="1682169383"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
 STATE="ood"
-TIME="1679066386"
-SIZE="344520"
+TIME="1682171895"
+SIZE="415601"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1679066386"
+TIME="1682171895"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
 STATE="ood"
-TIME="1679066386"
+TIME="1682171895"
 SIZE="394"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1679066387"
-SIZE="3659"
+TIME="1682171895"
+SIZE="3511"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -420,8 +420,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -479,10 +479,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Place and Route:top_placeroute_log.rpt
-HDL;stimulus\tb_top.v;0
-ACTIVEVIEW;Reports
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"

@@ -1,26 +1,29 @@
 @N|Running in 64-bit mode
 @N|Running in 64-bit mode
 @N:: Running Verilog Compiler in System Verilog mode
-@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:6|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v_unit in library work.
-@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:6|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v_unit in library work.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:8|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v_unit in library work.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:8|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v_unit in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v":1:7:1:13|Synthesizing module clk_div in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":929:7:929:12|Synthesizing module DFN1C0 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1283:7:1283:9|Synthesizing module INV in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":2:7:2:10|Synthesizing module AND2 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":20:7:20:10|Synthesizing module AND3 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1929:7:1929:10|Synthesizing module XOR2 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1905:7:1905:11|Synthesizing module XNOR2 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":86:7:86:9|Synthesizing module AO1 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1325:7:1325:9|Synthesizing module MX2 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":977:7:977:14|Synthesizing module DFN1E1C0 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1349:7:1349:11|Synthesizing module NAND2 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1464:7:1464:9|Synthesizing module OR2 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1996:7:1996:12|Synthesizing module RAM4K9 in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1953:7:1953:10|Synthesizing module BUFF in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1470:7:1470:10|Synthesizing module OR2A in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1386:7:1386:12|Synthesizing module NAND3C in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1929:7:1929:10|Synthesizing module XOR2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":2:7:2:10|Synthesizing module AND2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1996:7:1996:12|Synthesizing module RAM4K9 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":86:7:86:9|Synthesizing module AO1 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1905:7:1905:11|Synthesizing module XNOR2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1325:7:1325:9|Synthesizing module MX2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":929:7:929:12|Synthesizing module DFN1C0 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":977:7:977:14|Synthesizing module DFN1E1C0 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1283:7:1283:9|Synthesizing module INV in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1464:7:1464:9|Synthesizing module OR2 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":20:7:20:10|Synthesizing module AND3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1380:7:1380:12|Synthesizing module NAND3B in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1482:7:1482:9|Synthesizing module OR3 in library work.
-@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":8:7:8:11|Synthesizing module AND2A in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1001:7:1001:12|Synthesizing module DFN1P0 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1368:7:1368:11|Synthesizing module NAND3 in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1374:7:1374:12|Synthesizing module NAND3A in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":8:7:8:11|Synthesizing module AND2A in library work.
+@N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1349:7:1349:11|Synthesizing module NAND2 in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1398:7:1398:11|Synthesizing module NOR2A in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1163:7:1163:9|Synthesizing module GND in library work.
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1864:7:1864:9|Synthesizing module VCC in library work.
@@ -38,10 +41,10 @@
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE.v":9:7:9:15|Synthesizing module UART_CORE in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":4:7:4:17|Synthesizing module mem_command in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":4:7:4:9|Synthesizing module top in library work.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":166:2:166:7|Trying to extract state machine for register r_fifo_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":176:2:176:7|Trying to extract state machine for register r_fifo_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":176:2:176:7|Trying to extract state machine for register r_SEND_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":176:2:176:7|Trying to extract state machine for register r_RECEIVE_sm.
 @N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":7:10:7:15|Input pb_sw2 is unused.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":244:4:244:9|Trying to extract state machine for register r_SM_COM.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":101:4:101:9|Trying to extract state machine for register r_SM_UART_SEND.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Trying to extract state machine for register xmit_state.
 @N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":44:11:44:21|Input tx_dout_reg is unused.

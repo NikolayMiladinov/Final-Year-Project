@@ -1,3 +1,2 @@
-@E: CG342 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":102:12:102:25|Expecting target variable, found r_SM_UART_TEST -- possible misspelling
-@E: CS187 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":391:0:391:8|Expecting endmodule
+@E: CG577 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":288:47:288:57|Expecting parameter, localparam, or type identifier
 

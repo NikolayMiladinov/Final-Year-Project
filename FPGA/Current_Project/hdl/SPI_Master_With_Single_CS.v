@@ -61,7 +61,7 @@ module SPI_Master_With_Single_CS
    input  i_SPI_MISO,
    output o_SPI_MOSI,
    output o_SPI_CS_n
-   );
+   ); /* synthesis syn_noprune=1 */;
 
   localparam IDLE        = 2'b00;
   localparam TRANSFER    = 2'b01;

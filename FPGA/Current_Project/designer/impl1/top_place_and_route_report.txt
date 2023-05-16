@@ -1,0 +1,379 @@
+***************************************************************************
+                               Status Report
+                          Mon May 15 22:15:25 2023 ***************************************************************************
+
+Product: Designer
+Release: v11.9 SP6
+Version: 11.9.6.7
+File Name: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl1\top.adb
+Design Name: top  Design State: layout
+Last Saved: Mon May 15 22:14:50 2023
+
+***** Device Data **************************************************
+
+Family: IGLOO  Die: AGLN250V2  Package: 100 VQFP
+Speed: STD  Voltage: 1.2
+
+Restrict JTAG Pins: YES
+Restrict Probe Pins: YES
+
+Junction Temperature Range:   COM
+Voltage Range:   COM
+
+***** Import Variables *********************************************
+
+Source File(s) Imported on Mon May 15 22:14:44 2023:
+        C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.edn
+
+
+***** CAE Variables ************************************************
+
+Back Annotation File: N/A
+
+
+***** Bitstream Variables ******************************************
+
+Bitstream File: N/A
+     Lock Mode: off
+
+
+***** Compile Variables ********************************************
+
+Netlist PIN properties overwrite existing properties: 0
+
+Compile Output:
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : IGLOO
+Device      : AGLN250V2
+Package     : 100 VQFP
+Source      :
+C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top\
+.edn
+Format      : EDIF
+Topcell     : top
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.26:1.20:1.14
+
+Keep Existing Physical Constraints : Yes
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+Warning: CMP201: Net r_RX_Feature_Byte[0] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[1] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[2] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[3] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[4] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[5] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[6] drives no load.
+Warning: CMP201: Net r_RX_Feature_Byte[7] drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA0 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA1 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA2 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA3 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA4 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA5 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA6 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA7 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTB8 drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_DV drives no
+         load.
+Warning: Top level port pb_sw2 is not connected to any IO pad
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   11
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 36
+  - Logic combining:        121
+
+    Total macros optimized  168
+
+There were 0 error(s) and 90 warning(s) in this design.
+=====================================================================
+
+Reading previous post-compile physical placement constraints.
+
+
+There were 0 error(s) and 0 warning(s).
+
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:   1806  Total:   6144   (29.39%)
+    IO (W/ clocks)             Used:     21  Total:     68   (30.88%)
+    GLOBAL (Chip+Quadrant)     Used:      5  Total:     18   (27.78%)
+    PLL                        Used:      0  Total:      1   (0.00%)
+    RAM/FIFO                   Used:      8  Total:      8   (100.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 5      | 6  (83.33%)*
+    Quadrant global | 0      | 12 (0.00%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 1401         | 1401
+    SEQ     | 405          | 405
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 5             | 0            | 0
+    Output I/O                            | 16            | 0            | 0
+    Bidirectional I/O                     | 0             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVCMOS33                        | 3.30v | N/A   | 4     | 12     | 0
+    LVCMOS18                        | 1.80v | N/A   | 1     | 4      | 0
+
+I/O Placement:
+
+    Locked  :  21 ( 100.00% )
+    Placed  :   0
+    UnPlaced:   0
+
+Net information report:
+=======================
+
+The following nets have been assigned to a chip global resource:
+    Fanout  Type          Name
+    --------------------------
+    393     SET/RESET_NET Net   : rst_n_c
+                          Driver: rst_n_pad
+                          Source: NETLIST
+    270     CLK_NET       Net   : FPGA_CLK_c
+                          Driver: clk_div_1M/clk_out_RNIOLD3
+                          Source: NETLIST
+    79      CLK_NET       Net   : I_388
+                          Driver: I_388
+                          Source: NETLIST
+    70      CLK_NET       Net   : I_389
+                          Driver: I_389
+                          Source: NETLIST
+    5       CLK_NET       Net   : CLKA_c
+                          Driver: CLKA_pad
+                          Source: NETLIST
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    24      INT_NET       Net   : N_60
+                          Driver:
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_fifo_sm_10_i_i_0
+    23      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
+                          Driver:
+MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_clock_int
+    21      INT_NET       Net   : MEM_COMMAND_CONTROLLER/N_846
+                          Driver:
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_Command_4_sqmuxa_i_i_o2
+    20      INT_NET       Net   : r_fifo_sm[4]
+                          Driver: r_fifo_sm[4]
+    20      INT_NET       Net   : r_fifo_sm[3]
+                          Driver: r_fifo_sm[3]
+    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/int_SPI_CS_n
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/command_1
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_i_a3
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_43
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIOCJI[0]
+    18      INT_NET       Net   : r_Master_CM_DV
+                          Driver: r_Master_CM_DV
+    18      INT_NET       Net   : r_Master_CM_DV_0
+                          Driver: r_Master_CM_DV_0
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    32      INT_NET       Net   : MEM_COMMAND_CONTROLLER/fifo_/DFN1E1C0_1_Q
+                          Driver: MEM_COMMAND_CONTROLLER/fifo_/DFN1E1C0_1
+    24      INT_NET       Net   : N_60
+                          Driver:
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_fifo_sm_10_i_i_0
+    23      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
+                          Driver:
+MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_clock_int
+    21      INT_NET       Net   : MEM_COMMAND_CONTROLLER/N_846
+                          Driver:
+MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_Command_4_sqmuxa_i_i_o2
+    20      INT_NET       Net   : r_fifo_sm[4]
+                          Driver: r_fifo_sm[4]
+    20      INT_NET       Net   : r_fifo_sm[3]
+                          Driver: r_fifo_sm[3]
+    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/int_SPI_CS_n
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/command_1
+                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_i_a3
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_43
+                          Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIOCJI[0]
+    18      INT_NET       Net   : r_Master_CM_DV
+                          Driver: r_Master_CM_DV
+====================
+Flash*Freeze report:
+====================
+
+The design does not use the Flash*Freeze feature.
+
+====================
+
+
+Layout Output:
+***** Layout Variables *********************************************
+
+Mode: TIMING_DRIVEN
+Power-driven Layout: OFF
+Incremental Placement: OFF
+Incremental Route: OFF
+
+
+Info: I/O Bank Assigner detected (2) out of (4) I/O Bank(s) with locked I/O technologies.
+
+Running I/O Bank Assigner.
+
+I/O Bank Assigner completed successfully.
+
+
+Planning global net placement...
+
+
+Global net placement completed successfully.
+
+                        o - o - o - o - o - o
+
+Timing-driven Placer Started: Mon May 15 22:14:55 2023
+
+Placer Finished: Mon May 15 22:15:11 2023
+Total Placer CPU Time:     00:00:16
+
+                        o - o - o - o - o - o
+
+
+Timing-driven Router 
+Design: top                             Started: Mon May 15 22:15:13 2023
+
+ 
+Iterative improvement...
+
+Timing-driven Router completed successfully.
+
+Design: top                             
+Finished: Mon May 15 22:15:22 2023
+Total CPU Time:     00:00:05            Total Elapsed Time: 00:00:09
+Total Memory Usage: 192.7 Mbytes
+                        o - o - o - o - o - o
+
+
+

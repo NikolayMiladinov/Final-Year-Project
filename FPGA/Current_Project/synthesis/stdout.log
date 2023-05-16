@@ -1,0 +1,23 @@
+
+Starting:    C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\mbin\synplify.exe
+Install:     C:\Microsemi\Libero_SoC_v11.9\SynplifyPro
+Hostname:    XPS-NICK
+Date:        Mon May 15 16:38:18 2023
+Version:     L-2016.09M-SP1-5
+
+Arguments:   -product synplify_pro top_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+
+
+Warning: File already exists in project: "C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v"
+auto_infer_blackbox is not supported in current product.
+TCL script complete: "top_syn.tcl"
+New HDL Analyst: enabled
+exit status=0
+License checkin: synplifypro_actel

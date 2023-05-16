@@ -1,8 +1,8 @@
 C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  top  -multisrs  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_comp.srs  -osyn  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_mult.srs  -log  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\top_multi_srs_gen.srr 
 relcom:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\syn_nfilter.exe -link -top top -multisrs ..\synwork\top_comp.srs -osyn ..\synwork\top_mult.srs -log ..\synlog\top_multi_srs_gen.srr
 rc:0 success:1 runtime:0
-file:..\synwork\top_comp.srs|io:i|time:1682171892|size:54430|exec:0|csum:B45EA27FD8ABCBE986D72FBCAB16C7D4
-file:..\synwork\top_mult.srs|io:o|time:1682171893|size:5362|exec:0|csum:
-file:..\synlog\top_multi_srs_gen.srr|io:o|time:1682171893|size:550|exec:0|csum:
+file:..\synwork\top_comp.srs|io:i|time:1684185201|size:69532|exec:0|csum:DE5779A0C8E72A0D09C5623B94BE4CFA
+file:..\synwork\top_mult.srs|io:o|time:1684185202|size:12893|exec:0|csum:
+file:..\synlog\top_multi_srs_gen.srr|io:o|time:1684185202|size:550|exec:0|csum:
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\syn_nfilter.exe|io:i|time:1509015412|size:3128832|exec:1|csum:962D613D77B03012E41E67FDFAA0D819
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\syn_nfilter.exe|io:i|time:1509015684|size:3947520|exec:1|csum:17B0DA4185D3A16356E0044EDC31C9F0
