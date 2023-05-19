@@ -34,16 +34,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Mon May 15 22:14:55 2023
+Timing-driven Placer Started: Thu May 18 14:31:11 2023
 
-Placer Finished: Mon May 15 22:15:11 2023
-Total Placer CPU Time:     00:00:16
+Placer Finished: Thu May 18 14:31:26 2023
+Total Placer CPU Time:     00:00:15
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: top                             Started: Mon May 15 22:15:13 2023
+Design: top                             Started: Thu May 18 14:31:29 2023
 
  
 Iterative improvement...
@@ -51,9 +51,9 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: top                             
-Finished: Mon May 15 22:15:22 2023
-Total CPU Time:     00:00:05            Total Elapsed Time: 00:00:09
-Total Memory Usage: 192.7 Mbytes
+Finished: Thu May 18 14:31:39 2023
+Total CPU Time:     00:00:03            Total Elapsed Time: 00:00:10
+Total Memory Usage: 193.2 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -82,6 +82,6 @@ Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.
 
-The Execute Script command succeeded ( 00:00:34 )
+The Execute Script command succeeded ( 00:00:35 )
 Design closed.
 

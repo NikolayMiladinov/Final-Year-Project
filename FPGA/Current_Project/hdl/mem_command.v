@@ -5,15 +5,13 @@ module mem_command #(
     parameter SPI_MODE          = 3,    // Mode 3: CPOL = 1, CPHA = 1; clock is high during deselect
     parameter CLKS_PER_HALF_BIT = 4,    // SPI_CLK_FREQ = CLK_FREQ/(2xCLKS_PER_HALF_BIT)
     parameter MAX_BYTES_PER_CS  = 5000, // Maximum number of bytes per transaction with memory chip
-    parameter MAX_WAIT_CYCLES   = 30, // Maximum number of wait cycles after deasserting (active low) CS
+    parameter MAX_WAIT_CYCLES   = 200, // Maximum number of wait cycles after deasserting (active low) CS
     parameter BAUD_VAL          = 1,    // Baud rate = clk_freq / ((1 + BAUD_VAL)x16)
     parameter BAUD_VAL_FRACTION = 0     // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
 ) (
     // Control/Data Signals,
     input           i_Rst_L,            // FPGA Reset
     input           i_Clk,              // FPGA Clock
-    input           i_SPI_en,           // Enable for SPI
-    input           i_UART_en,          // Enable for UART
     
     // command specific inputs
     input [7:0]     i_Command,          // command type
@@ -38,6 +36,7 @@ module mem_command #(
 
     // FIFO state
     input  [2:0]    i_fifo_sm,          // Fifo states: UART send/receive, SPI(MEM) send/receive
+    output          o_send_sm,          // Top lvl does not change state during a read from FIFO
     output [12:0]   o_fifo_count,       // Fifo count: from read perspective
     output [12:0]   o_transfer_size,    // Size of UART transfer (when all data is saved in FIFO, its count should be = to transfer size)
     output          o_transfer_size_DV  // Data valid pulse that indicates when transfer_size has changed and is valid
@@ -74,9 +73,9 @@ module mem_command #(
     logic [7:0] r_UART_Data_In;         // Byte to be sent through UART
     logic       r_UART_OEN;             // Active low read enable, assert low when reading from buffer
     logic       r_UART_WEN;             // Active low write enable, assert low when data is to be transmitted
-    logic [12:0]w_UART_BAUD_VAL;
-    logic [2:0] w_UART_BAUD_VAL_FRACTION;
-    logic       w_PARITY_ERR;
+    logic [12:0]w_UART_BAUD_VAL;        // Baud rate = clk_freq / ((1 + BAUD_VAL)x16)
+    logic [2:0] w_UART_BAUD_VAL_FRACTION; // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
+    logic       w_PARITY_ERR;           // Not used
 
     assign w_UART_BAUD_VAL = BAUD_VAL;
     assign w_UART_BAUD_VAL_FRACTION = BAUD_VAL_FRACTION;
@@ -88,6 +87,7 @@ module mem_command #(
     logic       w_UART_RX_Ready;        // When high indicates data is available in receive buffer
     logic       w_UART_TX_Ready;        // When low indicates transmit buffer cannot store more data
     logic       r_UART_RX_Ready_prv;    // Used for logic
+    logic       r_UART_TX_Ready_prv;    // Used for logic
 
     // State machine for transmitting SPI command
     logic       r_SM_COM;
@@ -110,6 +110,7 @@ module mem_command #(
     my_command_t current_command;   // Stores current command
 
     // Assign outputs
+    assign o_send_sm = r_SM_SEND;
     assign o_fifo_count = w_fifo_count; // Top level needs to know the FIFO count and data transfer size
     assign o_transfer_size = r_TRANSFER_SIZE;
     assign o_transfer_size_DV = r_transfer_size_DV;
@@ -144,6 +145,7 @@ module mem_command #(
             r_UART_command      <= 'b0;
             r_transfer_size_DV  <= 1'b0;
             r_UART_RX_Ready_prv <= 1'b0;
+            r_UART_TX_Ready_prv <= 1'b0;
             w_fifo_count_prev   <= 'd1000; // Testing only
 
         end else begin
@@ -177,7 +179,7 @@ module mem_command #(
                     // w_UART_RX_Ready signals there is data in receive buffer
                     // OEN signals the byte has been read, but has one cycle delay
                     // Hence to not register the same byte more than once, use the additional delayed OEN
-                    if (w_UART_RX_Ready && ~r_UART_RX_Ready_prv) begin
+                    if (w_UART_RX_Ready && ~r_UART_RX_Ready_prv) begin // the _prv register makes sure this is entered only once (RX_READY has a delay to it)
                         r_UART_RX_Ready_prv <= 1'b1; // w_UART_RX_Ready is high
                         r_UART_OEN          <= 1'b0; // Clears UART receive buffer and tells it that data was read
 
@@ -201,16 +203,15 @@ module mem_command #(
 
                         // After byte is processed, increment UART_count or reset it
                         r_UART_count <= r_UART_count + 'b1;
-                        // CAREFUL: if Transfer size was 0, then the count would reset after 3rd byte is processed because new transfer size is not yet saved
-                        if (r_TRANSFER_SIZE == 'b0) begin
-                            
-                        end else if (r_UART_command == DATA_TRANSFER && r_UART_count == (r_TRANSFER_SIZE + 'd2)) begin
+                        // CAREFUL: transfer size of 0 causes issues
+                        // if Transfer size was 0, then the count would reset after 3rd byte is processed because new transfer size is not yet save
+                        if (r_TRANSFER_SIZE != 'b0 && r_UART_command == DATA_TRANSFER && r_UART_count == (r_TRANSFER_SIZE + 'd2)) begin
                             r_UART_count <= 'b0;
                         end //else r_UART_count <= r_UART_count + 'b1;
                     end else if (r_UART_RX_Ready_prv && ~w_UART_RX_Ready) begin
                         r_UART_RX_Ready_prv <= 1'b0;
                     end else if (r_UART_RX_Ready_prv && w_UART_RX_Ready) begin
-                        r_UART_OEN          <= 1'b0;
+                        r_UART_OEN          <= 1'b0; // Hold the clear signal until w_UART_RX_Ready goes low
                     end
                 end 
 
@@ -219,9 +220,12 @@ module mem_command #(
                     case (r_SM_SEND)
                         SEND_IDLE: begin
                             // Send data when UART is ready until fifo is empty
-                            if (w_fifo_count>'d0 && w_UART_TX_Ready && ~w_fifo_empty) begin
+                            if (w_fifo_count>'d0 && w_UART_TX_Ready && ~w_fifo_empty && ~r_UART_TX_Ready_prv) begin // the _prv register makes sure this is entered only once (TX_READY has a delay to it)
                                 r_SM_SEND       <= WRITE_DATA;
                                 r_fifo_re       <= 1'b1; // Cleared on next cycle by default assignment
+                                r_UART_TX_Ready_prv <= 1'b1;
+                            end else if(r_UART_TX_Ready_prv && ~w_UART_TX_Ready) begin
+                                r_UART_TX_Ready_prv <= 1'b0;
                             end
                         end
                         WRITE_DATA: begin
@@ -296,28 +300,38 @@ module mem_command #(
     // Whenever the command changes, change the number of bytes for that transaction
     always @(current_command.command or r_TRANSFER_SIZE) begin
         case (current_command.command)
-            RESET, WRITE_ENABLE, WRITE_DISABLE: begin // One byte
+            RESET: begin
                 current_command.num_bytes       <= 'b1;
+                current_command.wait_cycles     <= 'd10;
+            end
+            WRITE_ENABLE, WRITE_DISABLE: begin // One byte
+                current_command.num_bytes       <= 'b1;
+                current_command.wait_cycles     <= 'b1;
             end
 
             GET_FEATURE: begin // 1st byte command, 2nd byte address, 3rd byte MISO data
                 current_command.num_bytes       <= 'd3;
+                current_command.wait_cycles     <= 'b1;
             end
 
             SET_FEATURE: begin // 1st byte command, 2nd byte address, 3rd byte MOSI data
                 current_command.num_bytes       <= 'd3;
+                current_command.wait_cycles     <= 'b1;
             end
 
             PAGE_READ, CACHE_REQ_PAGE, CACHE_LAST, PROG_EXEC, BLOCK_ERASE: begin // 1st byte command, bytes 2,3,4 are the address
                 current_command.num_bytes       <= 'd4;
+                current_command.wait_cycles     <= 'd20;
             end
 
             CACHE_READ: begin // 1st byte command, bytes 2,3,4 are the column address (3 dummy bits, 13 bit address, 8 dummy bits), every following byte is MISO data
                 current_command.num_bytes       <= r_TRANSFER_SIZE + 'd4; // # bytes to be read from memory + 4 bytes for command and address
+                current_command.wait_cycles     <= 'b1;
             end
 
             PROG_LOAD1: begin // 1st byte command, bytes 2,3 are the column address (3 dummy bits, 13 bit address), every following byte is MOSI data
                 current_command.num_bytes       <= r_TRANSFER_SIZE + 'd3; // # bytes to store in memory + 3 bytes for command and address
+                current_command.wait_cycles     <= 'b1;
             end
 
             default: begin
@@ -438,7 +452,7 @@ module mem_command #(
     (
     // Control/Data Signals,
     .i_Rst_L(i_Rst_L),              // FPGA Reset
-    .i_Clk(i_Clk & i_SPI_en),       // FPGA Clock
+    .i_Clk(i_Clk),                  // FPGA Clock
     // TX (MOSI) Signals
     .i_TX_Count(current_command.num_bytes), // Number of bytes per CS low
     .i_TX_Byte(r_Master_TX_Byte),   // Byte to transmit on MOSI
@@ -463,7 +477,7 @@ module mem_command #(
         .BAUD_VAL(w_UART_BAUD_VAL),        // Determines baud rate
         .BAUD_VAL_FRACTION(w_UART_BAUD_VAL_FRACTION), // Additional precision for baud rate, increments of 0.125 for baud val
         .BIT8(1'b1),                // Always transmit 8 data bits
-        .CLK(i_Clk & i_UART_en),
+        .CLK(i_Clk),
         .CSN(1'b0),                 // Chip select can be zero
         .DATA_IN(r_UART_Data_In),   // Data to be transmitted
         .ODD_N_EVEN(1'b0),          // No parity bit

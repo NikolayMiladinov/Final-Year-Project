@@ -30,31 +30,29 @@ module top(
     // Other test pins
     output FPGA_CLK,
     output MEM_CM_READY,
-    output FIFO_STATE0,
-    output FIFO_STATE1
+    output FIFO_TRIG_WR,
+    output FIFO_TRIG_RE
   ); /* synthesis syn_noprune=1 */
 
   parameter SPI_MODE = 3;           // Mode 3: CPOL = 1, CPHA = 1; clock is high during deselect
   parameter CLKS_PER_HALF_BIT = 2;  // SPI_CLK_FREQ = CLK_FREQ/(CLKS_PER_HALF_BIT)
   parameter CLK_DIV_PARAM = 10;     // Divide CLK freq by that number
   parameter MAX_BYTES_PER_CS = 5000;// Maximum number of bytes per transaction with memory chip
-  parameter MAX_WAIT_CYCLES = 30; // Maximum number of wait cycles after deasserting (active low) CS
+  parameter MAX_WAIT_CYCLES = 200;  // Maximum number of wait cycles after deasserting (active low) CS
   parameter BAUD_VAL = 12;          // Baud rate = clk_freq / ((1 + BAUD_VAL)x16)
   parameter BAUD_VAL_FRACTION = 0;  // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
 
   // Page address that will be used to store data from UART to memory, no specific reason for this exact address
   // First couple pages are used for OTP, parameters page and Unique page
-  parameter PAGE_ADDRESS = 24'h000120; // 4th block, 32nd page
-  parameter BLOCK_LOCK_ADDRESS = 8'hA0; 
-  parameter CONF_ADDRESS = 8'hB0; 
-  parameter STATUS_ADDRESS = 8'hC0;
-  parameter DIE_SEL_ADDRESS = 8'hD0;
+  parameter PAGE_ADDRESS = 24'h000310;  // 4th block, 32nd page
+  parameter BLOCK_LOCK_ADDRESS = 8'hA0; // Address in GET/SET FEATURE command to access status of which blocks are locked (cannot write to these blocks)
+  parameter CONF_ADDRESS = 8'hB0;       // Address in GET/SET FEATURE command to access status of the configuration (usually normal mode)
+  parameter STATUS_ADDRESS = 8'hC0;     // Address in GET/SET FEATURE command to access status of the chip
+  parameter DIE_SEL_ADDRESS = 8'hD0;    // Address in GET/SET FEATURE command to access information on which die is selected (2 dies total)
 
   // Control signals
-  logic CLK1;               // Internal clock after dividing the 20 MHz input clock (CLKA)
+  logic CLK1;        // Internal clock after dividing the 20 MHz input clock (CLKA)
   logic r_Mem_Power; // VCC line and all other SPI lines are low when r_Mem_Power is low
-  logic r_SPI_en;    // Enables or disables the clock inside SPI module
-  logic r_UART_en;   // Enables or disables the clock inside UART module
 
   // SPI pins
   logic int_SPI_CLK;  // Internal SPI_CLK that connects to SPI module
@@ -64,7 +62,7 @@ module top(
   // SPI pins with power control; important that CS_n rises and falls with VCC of memory chip
   assign MEM_VCC  = r_Mem_Power;
   assign SPI_CLK  = r_Mem_Power & int_SPI_CLK;
-  assign SPI_CS_n = r_Mem_Power & int_SPI_CS_n;
+  assign SPI_CS_n = r_Mem_Power & int_SPI_CS_n; // Should rise/fall with VCC when powering on/off
   assign SPI_MOSI = r_Mem_Power & int_SPI_MOSI;
 
   // Memory controller inputs/outputs
@@ -95,23 +93,25 @@ module top(
   // States are in the included file command_vars
   logic [2:0]  r_fifo_sm;
 
+  logic        w_send_sm; // Two-state register in mem_command, used so that fifo state changes only when in idle state
+
   // State machine for writing/reading from memory chip
   // Used for doing the correct command sequence when reading/storing data in the memory chip
   logic [2:0]  r_SEND_sm;
-  localparam SEND_CHECK = 3'b000;
-  localparam SEND_CHECK_EVAL = 3'b001;
-  localparam SEND_WRITE_DISABLE = 3'b010;
-  localparam SEND_WRITE_ENABLE = 3'b011;
-  localparam SEND_PROG_EXEC = 3'b100;
-  localparam SEND_PROG_LOAD = 3'b101;
-  localparam RESET_MEM = 3'b110;
+  localparam SEND_CHECK           = 3'b000; // Initiates GET FEATURE command, address depends on previous states
+  localparam SEND_CHECK_EVAL      = 3'b001; // Checks the results of GET FEATURE command
+  localparam SEND_WRITE_DISABLE   = 3'b010; // WRITE DISABLE command
+  localparam SEND_WRITE_ENABLE    = 3'b011; // WRITE ENABLE command
+  localparam SEND_SET_FEATURE     = 3'b100; // SET FEATURE command if result of GET FEATURE is not what was expected
+  localparam SEND_PROG_LOAD_EXEC  = 3'b101; // Initiates PROGRAM LOAD or EXECUTE if LOAD was done 
+  localparam RESET_MEM            = 3'b110; // RESET command
 
   logic [2:0]  r_RECEIVE_sm;
-  localparam RECEIVE_CHECK = 3'b000;
-  localparam RECEIVE_CHECK_EVAL = 3'b001;
+  localparam RECEIVE_CHECK        = 3'b000;
+  localparam RECEIVE_CHECK_EVAL   = 3'b001;
   localparam RECEIVE_WRITE_DISABLE = 3'b010;
-  localparam RECEIVE_PAGE_READ = 3'b011;
-  localparam RECEIVE_CACHE_READ = 3'b100;
+  localparam RECEIVE_PAGE_READ    = 3'b011; // PAGE READ command with address specified in parameter section
+  localparam RECEIVE_CACHE_READ   = 3'b100; // Initiate CACHE READ command when PAGE READ is finished (can be combined with page read state)
 
   // Assign output pins
   assign TEST_VCC     = r_Mem_Power;
@@ -120,11 +120,11 @@ module top(
   assign TEST_CS_n    = SPI_CS_n;
   assign TEST_MISO    = SPI_MISO;
   assign FPGA_CLK     = CLK1;
-  assign MEM_CM_READY = r_Mem_Power; // changed for testing
+  assign MEM_CM_READY = 1'b0; // extra pin for testing
   assign TEST_RX      = UART_RX;
-  assign TEST_TX      = w_fifo_count[0];
-  assign FIFO_STATE0   = SPI_MISO;
-  assign FIFO_STATE1   = SPI_MOSI;
+  assign TEST_TX      = UART_TX;
+  assign FIFO_TRIG_WR = r_fifo_sm[0]&&r_fifo_sm[1]&&(~r_fifo_sm[2]);  // Triggers high during a write to the memory
+  assign FIFO_TRIG_RE = ~r_fifo_sm[0]&~r_fifo_sm[1]&r_fifo_sm[2];     // Triggers high during a read to the memory
 
 
   // Divide clock by CLK_DIV_PARAM
@@ -142,8 +142,6 @@ module top(
     // Control/Data Signals,
     .i_Rst_L(rst_n),            // FPGA Reset
     .i_Clk(CLK1),               // FPGA Clock
-    .i_SPI_en(r_SPI_en),        // SPI Enable
-    .i_UART_en(r_UART_en),      // UART Enable
     
     // command specific inputs
     .i_Command(r_Command),          
@@ -167,6 +165,7 @@ module top(
 
     // FIFO state
     .i_fifo_sm(r_fifo_sm),
+    .o_send_sm(w_send_sm),
     .o_fifo_count(w_fifo_count),
     .o_transfer_size(w_transfer_size),
     .o_transfer_size_DV(w_transfer_size_DV)
@@ -183,8 +182,6 @@ module top(
       r_Master_CM_DV    <= 1'b0;
       r_Command         <= NO_COMMAND;
       r_Command_prev    <= NO_COMMAND;
-      r_SPI_en          <= 1'b0;
-      r_UART_en         <= 1'b0;
       r_Mem_Power       <= 1'b0;
       r_RX_Feature_Byte <= 8'b0;
       r_TRANSFER_SIZE   <= 'd2048; // default transfer size, half a page, same in mem_command
@@ -202,9 +199,7 @@ module top(
 
         // Idle state, push button 1 changes state to receiving data from UART
         FIFO_IDLE: begin
-          // Disable both SPI and UART to save power
-          r_SPI_en          <= 1'b0;
-          r_UART_en         <= 1'b0;
+          // Power off memory chip to save power
           r_Mem_Power       <= 1'b0;
 
           // Change state when push button 1 is pressed
@@ -212,46 +207,32 @@ module top(
             if (SIM_TEST == 1) r_fifo_sm <= FIFO_MEM_SEND; // for testing
             else r_fifo_sm <= FIFO_UART_RECEIVE;
             
-            r_UART_en       <= 1'b1;
-            r_SPI_en       <= 1'b1;
             r_Mem_Power     <= 1'b1;
           end
         end 
 
         // Receive data from UART
         FIFO_UART_RECEIVE: begin
-          // Disable SPI
-          // r_SPI_en          <= 1'b0;
+          // Power off memory chip to save power
           // r_Mem_Power       <= 1'b0; // changed for testing
 
-          // Enable UART if disabled
-          if (~r_UART_en) begin
-            r_UART_en       <= 1'b1;
-          end else begin
-            // Go to next state when the FIFO has the correct amount of bytes stored
-            // CAREFULL: if FIFO was not emptied before this state, this logic does not work
-            // Could be fixed by saving the beginning count when entering the state
-            if (w_fifo_count >= r_TRANSFER_SIZE) begin
-              r_fifo_sm     <= FIFO_MEM_SEND;
-              r_SPI_en      <= 1'b1;
-            end
+          // Go to next state when the FIFO has the correct amount of bytes stored
+          // CAREFULL: if FIFO was not emptied before this state, this logic does not work
+          // Could be fixed by saving the beginning count when entering the state
+          if (w_fifo_count >= r_TRANSFER_SIZE && ~pb_sw1) begin
+            r_fifo_sm     <= FIFO_MEM_SEND;
           end
         end 
 
         // Send the data in FIFO through UART
         FIFO_UART_SEND: begin
-          // Disable SPI
-          // r_SPI_en          <= 1'b0;
-          // r_Mem_Power       <= 1'b0; // changed for testing
+          // Power off memory chip to save power
+          if(w_Master_CM_Ready) r_Mem_Power <= 1'b0; // Only power off if SPI is idle
 
-          // Enable UART if previously disabled
-          if (~r_UART_en) begin
-            r_UART_en       <= 1'b1;
-          end else begin
-            // Change state when FIFO is emptied, when all data has been sent
-            if (w_fifo_count == 'd0) begin
-              r_fifo_sm     <= FIFO_IDLE;
-            end
+          // Change state when FIFO is emptied, when all data has been sent
+          // ~w_send_sm makes sure state does not change during a read from FIFO
+          if (w_fifo_count == 'd0 && ~w_send_sm) begin
+            r_fifo_sm     <= FIFO_IDLE;
           end
         end 
 
@@ -259,19 +240,17 @@ module top(
         // Check status of chip -> page read -> wait until chip is not busy -> cache read
         // Currently this reads a specific page with previously specified address
         FIFO_MEM_RECEIVE: begin
-          // Disable UART
-          r_UART_en         <= 1'b0;
           r_Master_CM_DV    <= 1'b0;
           // Enable SPI and turn on memory chip
           // CAREFULL: increasing clock frequency might preemptively send commands to the chip before VCC has reached threshold voltage
-          if(~r_Mem_Power || ~r_SPI_en) begin
+          if(~r_Mem_Power) begin // TO DO: if this is turned on in this state, there needs to be some wait time before sending first SPI command
             r_Mem_Power     <= 1'b1;
-            r_SPI_en        <= 1'b1;
           end else begin
             // Decided to use states to create the sequential logic for the whole read sequence
             case (r_RECEIVE_sm)
 
               // This state issues the GET_FEATURE command, then moves to checking the data that is received from the chip
+              // TO DO: initiate two consecutive GET FEATURE commands after PAGE READ as first one sometimes does not work
               RECEIVE_CHECK: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
                   r_Command         <= GET_FEATURE;
@@ -302,7 +281,6 @@ module top(
                     else if(r_Command_prev == CACHE_READ && w_fifo_count >= r_TRANSFER_SIZE) begin
                       r_RECEIVE_sm  <= RECEIVE_CHECK; // Reset this state machine, so that it always starts with checking the status
                       r_fifo_sm     <= FIFO_UART_SEND;
-                      r_UART_en     <= 1'b1;
                     end
                     
                   end
@@ -326,8 +304,6 @@ module top(
                   r_Command_prev    <= CACHE_READ;
                   r_Addr_Data[12:0] <= 'b0;   // CACHE_READ requires a 13-bit column addres, putting 0 means it will save data in the page from 0th byte
                   r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
-                end
-                else if(w_Master_CM_Ready && r_Command_prev == CACHE_READ) begin
                   r_RECEIVE_sm      <= RECEIVE_CHECK;
                 end
               end
@@ -349,33 +325,53 @@ module top(
         // Send data in FIFO to memory chip
         // Check status of chip -> write enable -> program load -> check status -> program execute -> wait until chip is not busy by checking status
         FIFO_MEM_SEND: begin
-          // Disable UART
-          r_UART_en       <= 1'b0;
           r_Master_CM_DV  <= 1'b0;
           // Enable SPI and turn on memory chip
           // CAREFULL: increasing clock frequency might preemptively send commands to the chip before VCC has reached threshold voltage
-          if(~r_Mem_Power || ~r_SPI_en) begin
+          if(~r_Mem_Power) begin // TO DO: if this is turned on in this state, there needs to be some wait time before sending first SPI command
             r_Mem_Power   <= 1'b1;
-            r_SPI_en      <= 1'b1;
           end else begin
             // Decided to use states to create the sequential logic for the whole read sequence
             case (r_SEND_sm)
 
               // Issue a reset command at the begginning, then use get feature to check when the reset is finished (OIP bit is high during reset)
               RESET_MEM: begin
-                if (w_Master_CM_Ready) begin  // If SPI is ready for another command
+                if (w_Master_CM_Ready) begin        // If SPI is ready for another command
                   r_Command         <= RESET;
                   r_Command_prev    <= RESET;
-                  r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
-                  r_SEND_sm         <= SEND_CHECK; // TO DO: check if ECC is enabled/disabled and use set_feature if needed to change it
+                  r_Master_CM_DV    <= 1'b1;        // Issues a data valid pulse (should be 1 clock cycle)
+                  r_SEND_sm         <= SEND_CHECK;  // TO DO: check if ECC is enabled/disabled and use set_feature if needed to change it
+                end
+              end
+
+              // Do a SET FEATURE command when chip is not in correct state
+              // Upon power-up all block are locked, so a SET_FEATURE command is necessary
+              // Address is set previously by GET FEATURE command, so not necessary to change it
+              // Based on address from previous GET FEATURE command, send the correct data to change the chip's features
+              SEND_SET_FEATURE: begin
+                if (w_Master_CM_Ready) begin        // If SPI is ready for another command
+                  r_Command         <= SET_FEATURE;
+                  r_Command_prev    <= SET_FEATURE;
+                  if(r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS) r_Addr_Data[7:0] <= 'b0; // unlock all blocks, so they can all be written to
+                  else if(r_Addr_Data[15:8] == CONF_ADDRESS) r_Addr_Data[7:0] <= 'h10; // normal configuration with ECC enabled
+                  r_Master_CM_DV    <= 1'b1;        // Issues a data valid pulse (should be 1 clock cycle)
+                  r_SEND_sm         <= SEND_CHECK;  // Make sure SET FEATURE worked, if not SET FEATURE is initiated again
                 end
               end
 
               // This state issues the GET_FEATURE command, then moves to checking the data that is received from the chip
+              // TO DO: initiate two consecutive GET FEATURE commands after PROG EXEC as first one sometimes does not work
               SEND_CHECK: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
                   r_Command         <= GET_FEATURE;
-                  r_Addr_Data[15:8] <= STATUS_ADDRESS; // Address for getting the status of the chip
+
+                  if((r_Command_prev == RESET && r_Addr_Data[15:8] == STATUS_ADDRESS && ~r_RX_Feature_Byte[0]) || (r_Command_prev == SET_FEATURE && r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS)) begin
+                    r_Addr_Data[15:8] <= BLOCK_LOCK_ADDRESS; // Address for getting the block lock status of the chip
+                    r_Command_prev    <= GET_FEATURE;
+                  end else if((r_Command_prev == GET_FEATURE && r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS) || (r_Command_prev == SET_FEATURE && r_Addr_Data[15:8] == CONF_ADDRESS)) begin
+                    r_Addr_Data[15:8] <= CONF_ADDRESS;       // Address for getting the configuration status of the chip
+                    r_Command_prev    <= GET_FEATURE;
+                  end else r_Addr_Data[15:8] <= STATUS_ADDRESS; // Address for getting the status of the chip
                   r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
                   r_SEND_sm         <= SEND_CHECK_EVAL;
                 end
@@ -387,32 +383,48 @@ module top(
 
                   r_RX_Feature_Byte <= w_RX_Feature_Byte; // Save the byte from GET_FEATURE command to internal register
 
-                  // Feature Byte: 0 -> Operation in Progress (1 when busy), 1 -> Write enable (should be 1)
-                  // 2 -> Erase fail, 3 -> Program (Write) fail, 4-6 -> ECC registers, 7 -> Cache read busy (CRBSY)
-                  if(w_RX_Feature_Byte[0]) r_SEND_sm <= SEND_CHECK; // If chip is busy, poll GET_FEATURE until it isn't
-                  else if(~w_RX_Feature_Byte[1] && r_Command_prev == WRITE_DISABLE && w_fifo_count == 'b0) begin
-                    r_SEND_sm       <= SEND_CHECK;        // Reset state so it always begins with a status check
-                    r_fifo_sm       <= FIFO_MEM_RECEIVE;  // Move to next state
-                  end
-                  else if(~w_RX_Feature_Byte[1]) r_SEND_sm <= SEND_WRITE_ENABLE; // Write enable should be high before writing to the chip
-                  else if(w_RX_Feature_Byte[1] && r_Command_prev == WRITE_DISABLE) r_SEND_sm <= SEND_WRITE_DISABLE; // If write disable unsuccessful, try again
-                  else if(w_RX_Feature_Byte[3])  r_SEND_sm <= RESET_MEM; // This clears the prog fail status
-                  else begin
-                    
-                    // If chip is in the correct status, decide what to do next
-                    // CAREFULL: currently all data in FIFO is transferred to the chip
-                    // Checks whether sequence has begun, if not then begin sequence by doing prog load
-                    if(~(r_Command_prev == PROG_LOAD1 || r_Command_prev == PROG_EXEC || r_Command_prev == WRITE_DISABLE)) r_SEND_sm <= SEND_PROG_LOAD;
-                    // If data is loaded onto chip, perform program execute
-                    else if(w_fifo_count == 'b0 && r_Command_prev == PROG_LOAD1) r_SEND_sm     <= SEND_PROG_EXEC;
-                    // If the last command for writing to chip, program execute, has been done, perform write disable
-                    else if(w_fifo_count == 'b0 && r_Command_prev == PROG_EXEC) r_SEND_sm <= SEND_WRITE_DISABLE;
-                    else r_SEND_sm <= SEND_CHECK;
+                  // Block Lock Byte: 0 -> nothing, 1 -> should be 0, 2 -> High block lower part, 3-6 -> Block Lock bits, 7 -> should be 0
+                  
+                  // Configuration Byte: 0 -> continuous read, 2-3 -> Driver strength (00 is for 100%), 4 -> ECC enable, 
+                  // 5 -> LOT enable (keep at 0), 1,6,7 -> configuration bits (0 is for normal)
 
+                  // Status Byte: 0 -> Operation in Progress (1 when busy), 1 -> Write enable (should be 1)
+                  // 2 -> Erase fail, 3 -> Program (Write) fail, 4-6 -> ECC registers, 7 -> Cache read busy (CRBSY)
+
+                  if(r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS) begin
+                    if(w_RX_Feature_Byte != 'b0) r_SEND_sm <= SEND_SET_FEATURE; // unlock all blocks
+                    else r_SEND_sm <= SEND_CHECK;
+                  end else if (r_Addr_Data[15:8] == CONF_ADDRESS) begin
+                    if(w_RX_Feature_Byte != 'h10) r_SEND_sm <= SEND_SET_FEATURE; // normal configuration, ECC enabled, 100% driver strength
+                    else r_SEND_sm <= SEND_CHECK;
+                  end else if(r_Addr_Data[15:8] == STATUS_ADDRESS) begin
+
+                    if(w_RX_Feature_Byte[0] || r_Command_prev == RESET) r_SEND_sm <= SEND_CHECK; // If chip is busy, poll GET_FEATURE until it isn't
+                    else if(w_RX_Feature_Byte[3])  r_SEND_sm <= RESET_MEM; // This clears the prog fail status
+                    else if(~w_RX_Feature_Byte[1] && (r_Command_prev == WRITE_DISABLE || r_Command_prev == PROG_EXEC) && w_fifo_count == 'b0) begin
+                      r_SEND_sm       <= SEND_CHECK;        // Reset state so it always begins with a status check
+                      r_fifo_sm       <= FIFO_MEM_RECEIVE;  // Move to next state
+                    end
+                    // If the last command for writing to chip, program execute, has been done, perform write disable
+                    else if(w_fifo_count == 'b0 && r_Command_prev == PROG_EXEC && w_RX_Feature_Byte[1]) r_SEND_sm <= SEND_WRITE_DISABLE;
+                    else if(~w_RX_Feature_Byte[1]) r_SEND_sm <= SEND_WRITE_ENABLE; // Write enable should be high before writing to the chip
+                    else if(w_RX_Feature_Byte[1] && r_Command_prev == WRITE_DISABLE) r_SEND_sm <= SEND_WRITE_DISABLE; // If write disable unsuccessful, try again
+                    else begin
+                      
+                      // If chip is in the correct status, decide what to do next
+                      // CAREFULL: currently all data in FIFO is transferred to the chip
+                      // Checks whether sequence has begun, if not then begin sequence by doing prog load
+                      if(~(r_Command_prev == PROG_LOAD1 || r_Command_prev == PROG_EXEC || r_Command_prev == WRITE_DISABLE)) r_SEND_sm <= SEND_PROG_LOAD_EXEC;
+                      // If data is loaded onto chip, perform program execute
+                      else if(w_fifo_count == 'b0 && r_Command_prev == PROG_LOAD1) r_SEND_sm     <= SEND_PROG_LOAD_EXEC;
+                      else r_SEND_sm <= SEND_CHECK;
+
+                    end
                   end
                 end
               end
 
+              // TO DO: Write enable and disable state can be combined with some logic
               // Write enable command, check status after
               SEND_WRITE_ENABLE: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
@@ -434,22 +446,19 @@ module top(
               end
 
               // Program load command, where data is transferred from FIFO to memory chip, check status after
-              SEND_PROG_LOAD: begin
-                if (w_Master_CM_Ready) begin  // If SPI is ready for another command
-                  r_Command         <= PROG_LOAD1;
-                  r_Command_prev    <= PROG_LOAD1;
-                  r_Addr_Data[12:0] <= 'b0;   // PROG_LOAD requires a 13-bit column addres, putting 0 means it will save data in the page from 0th byte
-                  r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
-                  r_SEND_sm         <= SEND_CHECK;
-                end
-              end
-
               // Program execute command, where data is transferred from memory cache to page, check status after
-              SEND_PROG_EXEC: begin
+              SEND_PROG_LOAD_EXEC: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
-                  r_Command         <= PROG_EXEC;
-                  r_Command_prev    <= PROG_EXEC;
-                  r_Addr_Data[23:0] <= PAGE_ADDRESS; // Assign the correct page address to store data in memory chip
+                  
+                  if(r_Command_prev == PROG_LOAD1) begin
+                    r_Command         <= PROG_EXEC;
+                    r_Command_prev    <= PROG_EXEC;
+                    r_Addr_Data[23:0] <= PAGE_ADDRESS; // Assign the correct page address to store data in memory chip
+                  end else begin
+                    r_Command         <= PROG_LOAD1;
+                    r_Command_prev    <= PROG_LOAD1;
+                    r_Addr_Data[12:0] <= 'b0;   // PROG_LOAD requires a 13-bit column addres, putting 0 means it will save data in the page from 0th byte
+                  end
                   r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
                   r_SEND_sm         <= SEND_CHECK;
                 end

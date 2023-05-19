@@ -9,13 +9,13 @@ Opened an existing Libero design
 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/designer/impl\
 1/top.adb.
 
-The Export-map command succeeded ( 00:00:05 )
+The Export-map command succeeded ( 00:00:04 )
 Wrote to the file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.pdb
-CHECKSUM: 3020
+CHECKSUM: 4B57
 
-The Generate programming file command succeeded ( 00:00:05 )
+The Generate programming file command succeeded ( 00:00:04 )
 Design saved to file
 C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/designer/impl\
 1/top.adb.

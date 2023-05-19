@@ -1,7 +1,7 @@
 # Synopsys Constraint Checker, version mapact, Build 2172R, built Oct 30 2017
 # Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Mon May 15 22:13:22 2023
+# Written on Thu May 18 13:20:19 2023
 
 
 ##### DESIGN INFO #######################################################
@@ -36,8 +36,8 @@ top|CLKA                               top|CLKA                               | 
 Unconstrained Start/End Points
 ******************************
 
-p:FIFO_STATE0
-p:FIFO_STATE1
+p:FIFO_TRIG_RE
+p:FIFO_TRIG_WR
 p:MEM_CM_READY
 p:MEM_VCC
 p:SPI_CLK

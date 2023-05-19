@@ -1,4 +1,2 @@
-CKID0001:@|S:MEM_COMMAND_CONTROLLER.un1_i_Clk_1@|E:MEM_COMMAND_CONTROLLER.UART_Master.UART_CORE_0.tx_hold_reg[7]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
-CKID0002:@|S:MEM_COMMAND_CONTROLLER.un1_i_Clk@|E:MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_TX_Count[12]@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002 
-CKID0003:@|S:clk_div_1M.clk_out@|E:r_Master_CM_DV_0@|F:@syn_sample_clock_path2==CKID0003@|M:ClockId0003 
-CKID0004:@|S:CLKA@|E:clk_div_1M.clk_count[3]@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004 
+CKID0001:@|S:clk_div_1M.clk_out@|E:r_Master_CM_DV_0@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:CLKA@|E:clk_div_1M.clk_count[3]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 

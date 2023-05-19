@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Mon May 15 22:14:48 2023 ***************************************************************************
+                          Thu May 18 13:20:31 2023 ***************************************************************************
 
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
 File Name: C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl1\top.adb
 Design Name: top  Design State: compile
-Last Saved: Mon May 15 18:36:36 2023
+Last Saved: Thu May 18 13:00:57 2023
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Mon May 15 22:14:44 2023:
+Source File(s) Imported on Thu May 18 13:20:28 2023:
         C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.edn
 
 
@@ -78,7 +78,6 @@ report_high_fanout_nets_limit      : 10
 =====================================================================
 Compile starts ...
 
-Warning: CMP201: Net r_RX_Feature_Byte[0] drives no load.
 Warning: CMP201: Net r_RX_Feature_Byte[1] drives no load.
 Warning: CMP201: Net r_RX_Feature_Byte[2] drives no load.
 Warning: CMP201: Net r_RX_Feature_Byte[3] drives no load.
@@ -86,6 +85,8 @@ Warning: CMP201: Net r_RX_Feature_Byte[4] drives no load.
 Warning: CMP201: Net r_RX_Feature_Byte[5] drives no load.
 Warning: CMP201: Net r_RX_Feature_Byte[6] drives no load.
 Warning: CMP201: Net r_RX_Feature_Byte[7] drives no load.
+Warning: CMP201: Net MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_DV drives no
+         load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA0 drives no load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA1 drives no load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2_DOUTA2 drives no load.
@@ -166,23 +167,21 @@ Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA6 drives no load
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA7 drives no load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTA8 drives no load.
 Warning: CMP201: Net MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4_DOUTB8 drives no load.
-Warning: CMP201: Net MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_DV drives no
-         load.
 Warning: Top level port pb_sw2 is not connected to any IO pad
 
 Netlist Optimization Report
 ===========================
 
 Optimized macros:
-  - Dangling net drivers:   11
+  - Dangling net drivers:   8
   - Buffers:                0
   - Inverters:              0
   - Tieoff:                 36
-  - Logic combining:        121
+  - Logic combining:        118
 
-    Total macros optimized  168
+    Total macros optimized  162
 
-There were 0 error(s) and 90 warning(s) in this design.
+There were 0 error(s) and 89 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
@@ -194,9 +193,9 @@ There were 0 error(s) and 0 warning(s).
 Compile report:
 ===============
 
-    CORE                       Used:   1806  Total:   6144   (29.39%)
+    CORE                       Used:   1906  Total:   6144   (31.02%)
     IO (W/ clocks)             Used:     21  Total:     68   (30.88%)
-    GLOBAL (Chip+Quadrant)     Used:      5  Total:     18   (27.78%)
+    GLOBAL (Chip+Quadrant)     Used:      3  Total:     18   (16.67%)
     PLL                        Used:      0  Total:      1   (0.00%)
     RAM/FIFO                   Used:      8  Total:      8   (100.00%)
     Low Static ICC             Used:      0  Total:      1   (0.00%)
@@ -207,7 +206,7 @@ Global Information:
 
     Type            | Used   | Total
     ----------------|--------|--------------
-    Chip global     | 5      | 6  (83.33%)*
+    Chip global     | 3      | 6  (50.00%)*
     Quadrant global | 0      | 12 (0.00%)
 
     (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
@@ -218,8 +217,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 1401         | 1401
-    SEQ     | 405          | 405
+    COMB    | 1496         | 1496
+    SEQ     | 410          | 410
 
 I/O Function:
 
@@ -252,17 +251,11 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    393     SET/RESET_NET Net   : rst_n_c
-                          Driver: rst_n_pad
-                          Source: NETLIST
-    270     CLK_NET       Net   : FPGA_CLK_c
+    422     CLK_NET       Net   : FPGA_CLK_c
                           Driver: clk_div_1M/clk_out_RNIOLD3
                           Source: NETLIST
-    79      CLK_NET       Net   : I_388
-                          Driver: I_388
-                          Source: NETLIST
-    70      CLK_NET       Net   : I_389
-                          Driver: I_389
+    398     SET/RESET_NET Net   : rst_n_c
+                          Driver: rst_n_pad
                           Source: NETLIST
     5       CLK_NET       Net   : CLKA_c
                           Driver: CLKA_pad
@@ -271,27 +264,25 @@ The following nets have been assigned to a chip global resource:
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : N_60
-                          Driver:
-MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_fifo_sm_10_i_i_0
+    24      INT_NET       Net   : un1_r_fifo_sm_8
+                          Driver: MEM_COMMAND_CONTROLLER/un1_r_fifo_sm_8
     23      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
                           Driver:
 MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_clock_int
-    21      INT_NET       Net   : MEM_COMMAND_CONTROLLER/N_846
-                          Driver:
-MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_Command_4_sqmuxa_i_i_o2
-    20      INT_NET       Net   : r_fifo_sm[4]
-                          Driver: r_fifo_sm[4]
-    20      INT_NET       Net   : r_fifo_sm[3]
-                          Driver: r_fifo_sm[3]
-    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/int_SPI_CS_n
+    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_SM_COM
+                          Driver: MEM_COMMAND_CONTROLLER/r_SM_COM
+    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/int_SPI_CS_n
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n
-    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/command_1
-                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_i_a3
-    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_43
+    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_304
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIOCJI[0]
-    18      INT_NET       Net   : r_Master_CM_DV
-                          Driver: r_Master_CM_DV
+    21      INT_NET       Net   : FIFO_TRIG_WR_c
+                          Driver: r_fifo_sm[3]
+    21      INT_NET       Net   : FIFO_TRIG_RE_c
+                          Driver: r_fifo_sm[4]
+    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/w_Master_CM_Ready_0
+                          Driver: MEM_COMMAND_CONTROLLER/UART_Master/o_CM_Ready_0
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/w_Master_CM_Ready
+                          Driver: MEM_COMMAND_CONTROLLER/UART_Master/o_CM_Ready
     18      INT_NET       Net   : r_Master_CM_DV_0
                           Driver: r_Master_CM_DV_0
 
@@ -300,27 +291,25 @@ Nets that are candidates for clock assignment and the resulting fanout:
     --------------------------
     32      INT_NET       Net   : MEM_COMMAND_CONTROLLER/fifo_/DFN1E1C0_1_Q
                           Driver: MEM_COMMAND_CONTROLLER/fifo_/DFN1E1C0_1
-    24      INT_NET       Net   : N_60
-                          Driver:
-MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_fifo_sm_10_i_i_0
+    24      INT_NET       Net   : un1_r_fifo_sm_8
+                          Driver: MEM_COMMAND_CONTROLLER/un1_r_fifo_sm_8
     23      INT_NET       Net   : MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/baud_clock
                           Driver:
 MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_CLOCK_GEN/genblk1.baud_clock_int
-    21      INT_NET       Net   : MEM_COMMAND_CONTROLLER/N_846
-                          Driver:
-MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/un1_r_Command_4_sqmuxa_i_i_o2
-    20      INT_NET       Net   : r_fifo_sm[4]
-                          Driver: r_fifo_sm[4]
-    20      INT_NET       Net   : r_fifo_sm[3]
-                          Driver: r_fifo_sm[3]
-    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/int_SPI_CS_n
+    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/r_SM_COM
+                          Driver: MEM_COMMAND_CONTROLLER/r_SM_COM
+    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/int_SPI_CS_n
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n
-    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/command_1
-                          Driver: MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_i_a3
-    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_43
+    22      INT_NET       Net   : MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_304
                           Driver: MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_SM_CS_RNIOCJI[0]
-    18      INT_NET       Net   : r_Master_CM_DV
-                          Driver: r_Master_CM_DV
+    21      INT_NET       Net   : FIFO_TRIG_WR_c
+                          Driver: r_fifo_sm[3]
+    21      INT_NET       Net   : FIFO_TRIG_RE_c
+                          Driver: r_fifo_sm[4]
+    20      INT_NET       Net   : MEM_COMMAND_CONTROLLER/w_Master_CM_Ready_0
+                          Driver: MEM_COMMAND_CONTROLLER/UART_Master/o_CM_Ready_0
+    19      INT_NET       Net   : MEM_COMMAND_CONTROLLER/w_Master_CM_Ready
+                          Driver: MEM_COMMAND_CONTROLLER/UART_Master/o_CM_Ready
 ====================
 Flash*Freeze report:
 ====================

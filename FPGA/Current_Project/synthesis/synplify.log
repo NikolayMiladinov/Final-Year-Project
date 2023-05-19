@@ -2,7 +2,7 @@
 Starting:    C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_SoC_v11.9\SynplifyPro
 Hostname:    XPS-NICK
-Date:        Mon May 15 22:13:20 2023
+Date:        Thu May 18 13:20:17 2023
 Version:     L-2016.09M-SP1-5
 
 Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log top_syn.tcl
@@ -17,6 +17,7 @@ Running in Vendor Mode
 
 
 Warning: File already exists in project: "C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v"
+Warning: File already exists in project: "C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v"
 auto_infer_blackbox is not supported in current product.
 
 log file: "C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.srr"
@@ -29,32 +30,32 @@ Running top_syn|synthesis
 
 
 Running: compile (Compile) on top_syn|synthesis
-# Mon May 15 22:13:20 2023
+# Thu May 18 13:20:17 2023
 
 
 Running: compile_flow (Compile Process) on top_syn|synthesis
-# Mon May 15 22:13:20 2023
+# Thu May 18 13:20:17 2023
 
 
 Running: compiler (Compile Input) on top_syn|synthesis
-# Mon May 15 22:13:20 2023
+# Thu May 18 13:20:17 2023
 
 Copied C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_comp.srs to C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.srs
 
 
 compiler completed
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 Return Code: 0
 Run Time:00h:00m:02s
 
 
 Running: multi_srs_gen (Multi-srs Generator) on top_syn|synthesis
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 
 multi_srs_gen completed
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 Return Code: 0
 Run Time:00h:00m:00s
@@ -65,11 +66,11 @@ Complete: Compile Process on top_syn|synthesis
 
 
 Running: premap (Pre-mapping) on top_syn|synthesis
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 
 premap completed with warnings
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 Return Code: 1
 Run Time:00h:00m:00s
@@ -78,22 +79,22 @@ Complete: Compile on top_syn|synthesis
 
 
 Running: map (Map) on top_syn|synthesis
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 License granted for 4 parallel jobs
 
 
 Running: fpga_mapper (Map & Optimize) on top_syn|synthesis
-# Mon May 15 22:13:22 2023
+# Thu May 18 13:20:19 2023
 
 Copied C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_m.srm to C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.srm
 
 
 fpga_mapper completed with warnings
-# Mon May 15 22:13:27 2023
+# Thu May 18 13:20:25 2023
 
 Return Code: 1
-Run Time:00h:00m:05s
+Run Time:00h:00m:06s
 
 Complete: Map on top_syn|synthesis
 

@@ -7,21 +7,19 @@
 
 Clock optimization not enabled
 1 non-gated/non-generated clock tree(s) driving 5 clock pin(s) of sequential element(s)
-3 gated/generated clock tree(s) driving 425 clock pin(s) of sequential element(s)
-0 instances converted, 425 sequential instances remain driven by gated/generated clocks
+1 gated/generated clock tree(s) driving 429 clock pin(s) of sequential element(s)
+0 instances converted, 429 sequential instances remain driven by gated/generated clocks
 
 =============================== Non-Gated/Non-Generated Clocks ================================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
 -----------------------------------------------------------------------------------------------
-@K:CKID0004       CLKA                port                   5          clk_div_1M.clk_count[3]
+@K:CKID0002       CLKA                port                   5          clk_div_1M.clk_count[3]
 ===============================================================================================
-====================================================================================================== Gated/Generated Clocks =======================================================================================================
-Clock Tree ID     Driving Element                        Drive Element Type     Fanout     Sample Instance                                                   Explanation                                                             
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       MEM_COMMAND_CONTROLLER.un1_i_Clk_1     NOR2B                  79         MEM_COMMAND_CONTROLLER.UART_Master.UART_CORE_0.tx_hold_reg[7]     Clock conversion disabled                                               
-@K:CKID0002       MEM_COMMAND_CONTROLLER.un1_i_Clk       NOR2B                  71         MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_TX_Count[12]               Clock conversion disabled                                               
-@K:CKID0003       clk_div_1M.clk_out                     DFN1C0                 275        r_Master_CM_DV_0                                                  No generated or derived clock directive on output of sequential instance
-=====================================================================================================================================================================================================================================
+======================================================================== Gated/Generated Clocks ========================================================================
+Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance      Explanation                                                             
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       clk_div_1M.clk_out     DFN1C0                 429        r_Master_CM_DV_0     No generated or derived clock directive on output of sequential instance
+========================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
