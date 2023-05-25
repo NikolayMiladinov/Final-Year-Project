@@ -5,7 +5,7 @@
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
-Date: Thu May 18 14:31:42 2023
+Date: Thu May 25 13:37:48 2023
 Design Name: top  Family: IGLOO  Die: AGLN250V2  Package: 100 VQFP
 
 
@@ -22,9 +22,9 @@ Global Nets Information:
         |-----------------------------------------------------|
         |CLKA_c              |        5 |        0 |        0 |
         |-----------------------------------------------------|
-        |FPGA_CLK_c          |      405 |        1 |      256 |
+        |FPGA_CLK_c          |      418 |        1 |      256 |
         |-----------------------------------------------------|
-        |rst_n_c             |      390 |        0 |      256 |
+        |rst_n_c             |      403 |        0 |      256 |
         |-----------------------------------------------------|
 
 Nets Sharing Loads:

@@ -1,24 +1,24 @@
-@P:  Worst Slack : -45.661
-@P:  clk_div_10s|clk_out_inferred_clock - Estimated Frequency : 18.0 MHz
+@P:  Worst Slack : -49.416
+@P:  clk_div_10s|clk_out_inferred_clock - Estimated Frequency : 16.8 MHz
 @P:  clk_div_10s|clk_out_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  clk_div_10s|clk_out_inferred_clock - Estimated Period : 55.661
+@P:  clk_div_10s|clk_out_inferred_clock - Estimated Period : 59.416
 @P:  clk_div_10s|clk_out_inferred_clock - Requested Period : 10.000
-@P:  clk_div_10s|clk_out_inferred_clock - Slack : -45.661
+@P:  clk_div_10s|clk_out_inferred_clock - Slack : -49.416
 @P:  top|CLKA - Estimated Frequency : 82.2 MHz
 @P:  top|CLKA - Requested Frequency : 100.0 MHz
 @P:  top|CLKA - Estimated Period : 12.169
 @P:  top|CLKA - Requested Period : 10.000
 @P:  top|CLKA - Slack : -2.170
-@P:  Total Area : 2068.0
-@P:  Total Area : 1927.0
-@P:  Total Area : 504.0
-@P:  Total Area : 293.0
-@P:  Total Area : 167.0
-@P:  Total Area : 56.0
+@P:  Total Area : 2226.0
+@P:  Total Area : 2073.0
+@P:  Total Area : 211.0
+@P:  Total Area : 211.0
+@P:  Total Area : 90.0
+@P:  Total Area : 51.0
 @P:  Total Area : 55.0
-@P:  Total Area : 412.0
-@P:  Total Area : 196.0
+@P:  Total Area : 622.0
+@P:  Total Area : 158.0
 @P:  Total Area : 437.0
 @P:  Total Area : 14.0
-@P:  Total Area : 2068.0
-@P:  CPU Time : 0h:00m:03s
+@P:  Total Area : 2226.0
+@P:  CPU Time : 0h:00m:02s

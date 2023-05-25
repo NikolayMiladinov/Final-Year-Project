@@ -5,7 +5,7 @@
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
-Date: Thu May 18 14:31:42 2023
+Date: Thu May 25 13:37:48 2023
 Design Name: top  Family: IGLOO  Die: AGLN250V2  Package: 100 VQFP
 
 
@@ -13,8 +13,8 @@ I/O Function:
 
     Type                                  | w/o register  | w/ register  | w/ DDR register
     --------------------------------------|---------------|--------------|----------------
-    Input I/O                             | 5             | 0            | 0
-    Output I/O                            | 16            | 0            | 0
+    Input I/O                             | 4             | 0            | 0
+    Output I/O                            | 17            | 0            | 0
     Bidirectional I/O                     | 0             | 0            | 0
     Differential Input I/O Pairs          | 0             | 0            | 0
     Differential Output I/O Pairs         | 0             | 0            | 0
@@ -25,7 +25,7 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVCMOS33                        | 3.30v | N/A   | 4     | 12     | 0
+    LVCMOS33                        | 3.30v | N/A   | 3     | 13     | 0
     LVCMOS18                        | 1.80v | N/A   | 1     | 4      | 0
 
 I/O Bank Resource Usage:
@@ -34,9 +34,9 @@ I/O Bank Resource Usage:
           |-------|-------|------|-------|-------|--------|------|-------|----------
           | Vcci  | Vref  | Used | Total | Used  | Total  | Used | Total | Vref Pins
     ------|-------|-------|------|-------|-------|--------|------|-------|----------
-    Bank0 | 3.30v | N/A   | 0    | 20    | 0     | 0      | N/A  | N/A   | N/A
+    Bank0 | 1.80v | N/A   | 0    | 20    | 0     | 0      | N/A  | N/A   | N/A
     Bank1 | 1.80v | N/A   | 5    | 14    | 0     | 0      | N/A  | N/A   | N/A
-    Bank2 | 3.30v | N/A   | 0    | 17    | 0     | 0      | N/A  | N/A   | N/A
+    Bank2 | 1.80v | N/A   | 0    | 17    | 0     | 0      | N/A  | N/A   | N/A
     Bank3 | 3.30v | N/A   | 16   | 17    | 0     | 0      | N/A  | N/A   | N/A
 
 I/O Voltage Usage:
@@ -45,6 +45,6 @@ I/O Voltage Usage:
     -------|-------|------|-------
      Vcci  | Vref  | Used | Total
     -------|-------|------|-------
-     1.80v | N/A   | 5    | 14
-     3.30v | N/A   | 16   | 54
+     1.80v | N/A   | 5    | 51
+     3.30v | N/A   | 16   | 17
 

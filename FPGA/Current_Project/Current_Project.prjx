@@ -141,7 +141,7 @@ TIME="1678454932"
 SIZE="10850"
 ENDFILE
 VALUE "<project>\designer\impl1\top.adb,adb"
-STATE="ood"
+STATE="utd"
 TIME="1682171950"
 SIZE="773632"
 ENDFILE
@@ -151,14 +151,19 @@ TIME="1682171950"
 SIZE="1044"
 ENDFILE
 VALUE "<project>\designer\impl1\top.pdb,pdb"
-STATE="ood"
-TIME="1682171943"
-SIZE="58399"
+STATE="utd"
+TIME="1685018281"
+SIZE="93860"
 ENDFILE
 VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
 STATE="utd"
-TIME="1682171904"
-SIZE="13655"
+TIME="1685011686"
+SIZE="16719"
+ENDFILE
+VALUE "<project>\designer\impl1\top_floorplan_log.rpt,log"
+STATE="utd"
+TIME="1684140961"
+SIZE="385"
 ENDFILE
 VALUE "<project>\designer\impl1\top_fp\projectData\top.pdb,pdb"
 STATE="utd"
@@ -172,8 +177,18 @@ SIZE="2482"
 ENDFILE
 VALUE "<project>\designer\impl1\top_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1682171952"
-SIZE="3385"
+TIME="1685018270"
+SIZE="2571"
+ENDFILE
+VALUE "<project>\designer\impl1\top_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1685018281"
+SIZE="853"
+ENDFILE
+VALUE "<project>\designer\impl1\top_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1685018274"
+SIZE="1198"
 ENDFILE
 VALUE "<project>\designer\impl1\UART_CORE.ide_des,ide_des"
 STATE="utd"
@@ -182,33 +197,33 @@ SIZE="242"
 ENDFILE
 VALUE "<project>\hdl\clk_div.v,hdl"
 STATE="utd"
-TIME="1677253909"
+TIME="1684197449"
 SIZE="456"
 ENDFILE
 VALUE "<project>\hdl\command_vars.v,hdl"
 STATE="utd"
-TIME="1683773515"
-SIZE="1560"
+TIME="1685012076"
+SIZE="2648"
 ENDFILE
 VALUE "<project>\hdl\mem_command.v,hdl"
 STATE="utd"
-TIME="1683773268"
-SIZE="24360"
+TIME="1685013263"
+SIZE="28218"
 ENDFILE
 VALUE "<project>\hdl\spi_master.v,hdl"
 STATE="utd"
-TIME="1677951166"
-SIZE="7713"
+TIME="1684197449"
+SIZE="7788"
 ENDFILE
 VALUE "<project>\hdl\SPI_Master_With_Single_CS.v,hdl"
 STATE="utd"
-TIME="1678059331"
-SIZE="6102"
+TIME="1684197449"
+SIZE="6133"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1683767171"
-SIZE="20490"
+TIME="1685018154"
+SIZE="27785"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
@@ -258,8 +273,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\stimulus\tb_top.v,tb_hdl"
 STATE="utd"
-TIME="1681971172"
-SIZE="1245"
+TIME="1685011966"
+SIZE="1330"
 ENDFILE
 VALUE "<project>\stimulus\uart_tb.v,tb_hdl"
 STATE="utd"
@@ -292,7 +307,7 @@ TIME="1682169383"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
-STATE="ood"
+STATE="utd"
 TIME="1682171895"
 SIZE="415601"
 ENDFILE
@@ -302,7 +317,7 @@ TIME="1682171895"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
-STATE="ood"
+STATE="utd"
 TIME="1682171895"
 SIZE="394"
 ENDFILE
@@ -315,6 +330,27 @@ ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "top::work"
+FILE "<project>\hdl\top.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\top_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\top_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
 LIST "UART_CORE::work"
 FILE "<project>\component\work\UART_CORE\UART_CORE.v,hdl"
 LIST AssociatedStimulus
@@ -358,7 +394,7 @@ LIST SimulationOptions
 UseAutomaticDoFile=false
 IncludeWaveDo=false
 Type=max
-RunTime=1000ns
+RunTime=100000ns
 Resolution=1ps
 VsimOpt=
 EntityName=testbench
@@ -420,8 +456,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -429,7 +465,7 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM=""
+PARAM=" -l presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -454,6 +490,20 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "top::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 LIST "UART_CORE::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -479,8 +529,10 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+Reports;Reports;0
+ReportsCurrentItem;Compile:top_compile_log.rpt
+HDL;stimulus\tb_top.v;0
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"

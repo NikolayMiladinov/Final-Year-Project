@@ -6,7 +6,7 @@ Software Version: 11.9.6.7
 PDB file
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\imp\
 l1\top.pdb' has been loaded successfully.
-DESIGN : top;  CHECKSUM : 4B57;  PDB_VERSION : 1.9
+DESIGN : top;  CHECKSUM : 9438;  PDB_VERSION : 1.9
 Driver : 3.0.0 build 1
 programmer '84415' : FlashPro3
 Opened
@@ -20,11 +20,11 @@ programmer '84415' : Executing action PROGRAM
 programmer '84415' : EXPORT FSN[48] = 01377840c859
 programmer '84415' : Erase ...
 programmer '84415' : Completed erase
-programmer '84415' : EXPORT CHECKSUM[16] = 4b57
+programmer '84415' : EXPORT CHECKSUM[16] = 9438
 programmer '84415' : Programming FPGA Array
 programmer '84415' : Verifying FPGA Array
 programmer '84415' :         Verifying FPGA Array -- pass
-programmer '84415' : Finished: Thu May 18 14:33:55 2023 (Elapsed time 00:00:32)
+programmer '84415' : Finished: Thu May 25 13:41:29 2023 (Elapsed time 00:00:30)
 programmer '84415' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

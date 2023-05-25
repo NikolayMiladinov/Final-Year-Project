@@ -37,6 +37,7 @@ module mem_command #(
     // FIFO state
     input  [2:0]    i_fifo_sm,          // Fifo states: UART send/receive, SPI(MEM) send/receive
     output          o_send_sm,          // Top lvl does not change state during a read from FIFO
+    output          o_UART_RX_Ready,    // Signal to top level that there is UART data to be processed
     output [12:0]   o_fifo_count,       // Fifo count: from read perspective
     output [12:0]   o_transfer_size,    // Size of UART transfer (when all data is saved in FIFO, its count should be = to transfer size)
     output          o_transfer_size_DV  // Data valid pulse that indicates when transfer_size has changed and is valid
@@ -114,6 +115,7 @@ module mem_command #(
     assign o_fifo_count = w_fifo_count; // Top level needs to know the FIFO count and data transfer size
     assign o_transfer_size = r_TRANSFER_SIZE;
     assign o_transfer_size_DV = r_transfer_size_DV;
+    assign o_UART_RX_Ready = w_UART_RX_Ready;
 
     // Getting feature data
     // Feature data is available on 3rd byte received during a GET_FEATURE command
@@ -377,8 +379,8 @@ module mem_command #(
                                     if (r_TX_Count == 'd1)  r_Master_TX_Byte <= current_command.addr_data[15:8];
 
                                     else if (r_TX_Count == 'd2) begin
-                                        // If it's set feature, MOSI data is send, if it's get feature, MOSI is 0 and data is MISO
-                                        if(current_command.command[5]) r_Master_TX_Byte <= current_command.addr_data[7:0];
+                                        // If it's set feature, MOSI data is send, if it's get feature, MOSI is 0 and data is on MISO
+                                        if(current_command.command[4]) r_Master_TX_Byte <= current_command.addr_data[7:0];
                                         else r_Master_TX_Byte <= 'b0;
                                     end
                                 end

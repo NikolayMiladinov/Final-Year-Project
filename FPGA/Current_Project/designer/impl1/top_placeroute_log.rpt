@@ -3,7 +3,7 @@ Version: 11.9.6.7
 Release: v11.9 SP6
 
 Info: The design top.adb was last modified by software version 11.9.6.7.
-Opened an existing Libero design top.adb.
+Opened an existing design top.adb.
 'BA_NAME' set to 'top_ba'
 'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
 'IDE_DESIGNERVIEW_COUNT' set to '1'
@@ -20,7 +20,7 @@ Incremental Placement: OFF
 Incremental Route: OFF
 
 
-Info: I/O Bank Assigner detected (2) out of (4) I/O Bank(s) with locked I/O technologies.
+Info: I/O Bank Assigner detected (3) out of (4) I/O Bank(s) with locked I/O technologies.
 
 Running I/O Bank Assigner.
 
@@ -34,16 +34,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Thu May 18 14:31:11 2023
+Timing-driven Placer Started: Thu May 25 13:37:16 2023
 
-Placer Finished: Thu May 18 14:31:26 2023
-Total Placer CPU Time:     00:00:15
+Placer Finished: Thu May 25 13:37:32 2023
+Total Placer CPU Time:     00:00:16
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: top                             Started: Thu May 18 14:31:29 2023
+Design: top                             Started: Thu May 25 13:37:34 2023
 
  
 Iterative improvement...
@@ -51,15 +51,15 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: top                             
-Finished: Thu May 18 14:31:39 2023
+Finished: Thu May 25 13:37:44 2023
 Total CPU Time:     00:00:03            Total Elapsed Time: 00:00:10
-Total Memory Usage: 193.2 Mbytes
+Total Memory Usage: 194.2 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
 Finished loading the Timing data.
 
-The Layout command succeeded ( 00:00:32 )
+The Layout command succeeded ( 00:00:33 )
 Wrote status report to file: top_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )

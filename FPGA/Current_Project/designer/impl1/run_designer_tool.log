@@ -5,9 +5,9 @@ Release: v11.9 SP6
 'IDE_DESIGNERVIEW_ROOTDIR' set to
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer'
 Info: The design top.adb was last modified by software version 11.9.6.7.
-Opened an existing Libero design top.adb.
+Opened an existing design top.adb.
 
-The Execute Script command succeeded ( 01:00:03 )
+The Execute Script command succeeded ( 00:00:32 )
 Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.
@@ -15,13 +15,13 @@ Wrote pin report to file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top_report_pin_byname.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Wrote pin report to file:
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top_report_pin_bynumber.txt
 
 The Report command succeeded ( 00:00:01 )
 
-The Execute Script command succeeded ( 00:00:01 )
+The Execute Script command succeeded ( 00:00:02 )
 Design closed.
 

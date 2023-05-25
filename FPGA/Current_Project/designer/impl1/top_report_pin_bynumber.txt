@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Thu May 18 14:31:44 2023 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Thu May 25 13:37:50 2023 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
@@ -18,28 +18,28 @@ Flash*Freeze information
 Number |Port         |Function         |State       |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Use I/O Reg |Hot Swappable |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |
 -------|-------------|-----------------|------------|---------|------------------|-----|--------------|-----------------|------------|--------------|----------------|---------------------------------------------|
 1                     GND               Reserved
-2       FPGA_CLK      GAA2/IO67RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-3       TEST_VCC      IO66RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
-4       TEST_CLK      GAB2/IO65RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-5       TEST_CS_n     IO64RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
-6       TEST_MISO     GAC2/IO63RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-7       TEST_MOSI     IO62RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
-8       MEM_CM_READY  IO61RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
+2       FPGA_CLK      GAA2/IO67RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
+3       TEST_VCC      IO66RSB3          Fixed        LVCMOS33  2                  High  None           5                 No           No             ---              No
+4       TEST_CLK      GAB2/IO65RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
+5       TEST_CS_n     IO64RSB3          Fixed        LVCMOS33  2                  High  None           5                 No           No             ---              No
+6       TEST_MISO     GAC2/IO63RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
+7       TEST_MOSI     IO62RSB3          Fixed        LVCMOS33  2                  High  None           5                 No           No             ---              No
+8       MEM_CM_READY  IO61RSB3          Fixed        LVCMOS33  2                  High  None           5                 No           No             ---              No
 9                     GND               Reserved
 10      rst_n         GFB1/IO60RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
-11      TEST_RX       GFB0/IO59RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+11      TEST_RX       GFB0/IO59RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
 12                    VCOMPLF           Reserved
-13      TEST_TX       GFA0/IO57RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+13      TEST_TX       GFA0/IO57RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
 14                    VCCPLF            Reserved
 15      CLKA          GFA1/IO58RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
 16      UART_RX       GFA2/IO56RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
 17                    VCC               Reserved
 18                    VCCIB3            Reserved
 19      UART_TX       GFC2/IO55RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-20      pb_sw1        GEC1/IO54RSB3     Special      LVCMOS33  ---                ---   None           ---               No           No             No               No
-21                    GEC0/IO53RSB3     Special
-22      FIFO_TRIG_RE  GEA1/IO52RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
-23      FIFO_TRIG_WR  GEA0/IO51RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+20                    GEC1/IO54RSB3     Special
+21      FIFO_TRIG_DL  GEC0/IO53RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
+22      FIFO_TRIG_RE  GEA1/IO52RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
+23      FIFO_TRIG_WR  GEA0/IO51RSB3     Special      LVCMOS33  2                  High  None           5                 No           No             ---              No
 24                    VMV3              Reserved
 25                    GNDQ              Reserved
 26                    GEA2/IO50RSB2     Special
