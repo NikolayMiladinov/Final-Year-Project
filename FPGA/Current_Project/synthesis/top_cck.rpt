@@ -1,7 +1,7 @@
 # Synopsys Constraint Checker, version mapact, Build 2172R, built Oct 30 2017
 # Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Thu May 25 13:36:55 2023
+# Written on Fri May 26 16:57:34 2023
 
 
 ##### DESIGN INFO #######################################################
@@ -24,11 +24,10 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting                               Ending                                 |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-clk_div_10s|clk_out_inferred_clock     clk_div_10s|clk_out_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
-top|CLKA                               top|CLKA                               |     10.000           |     No paths         |     No paths         |     No paths                         
-=========================================================================================================================================================================================
+Starting     Ending       |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-------------------------------------------------------------------------------------------------------------------------------------
+top|CLKA     top|CLKA     |     10.000           |     No paths         |     No paths         |     No paths                         
+=====================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -37,24 +36,14 @@ Unconstrained Start/End Points
 ******************************
 
 p:FIFO_TRIG_DL
-p:FIFO_TRIG_RE
 p:FIFO_TRIG_WR
-p:MEM_CM_READY
 p:MEM_VCC
 p:SPI_CLK
 p:SPI_CS_n
 p:SPI_MISO
 p:SPI_MOSI
-p:TEST_CLK
-p:TEST_CS_n
-p:TEST_MISO
-p:TEST_MOSI
-p:TEST_RX
-p:TEST_TX
-p:TEST_VCC
 p:UART_RX
 p:UART_TX
-p:pb_sw1
 p:rst_n
 
 

@@ -17,7 +17,7 @@ always #(MAIN_CLK_DELAY) SYSCLK = ~SYSCLK;
 top top_0(
     // Inputs
     .CLKA(SYSCLK),
-    .pb_sw1(SW1),
+    //.pb_sw1(SW1),
     .rst_n(rst_n),
     // SPI
     .MEM_VCC(MEM_VCC),
@@ -29,17 +29,17 @@ top top_0(
     .UART_RX(UART_RX),
     .UART_TX(UART_TX),
     // Test pins
-    .TEST_CLK(TEST_CLK),
-    .TEST_MOSI(TEST_MOSI),
-    .TEST_MISO(TEST_MISO),
-    .TEST_CS_n(TEST_CS_n),
-    .TEST_VCC(TEST_VCC),
-    .TEST_RX(TEST_RX),
-    .TEST_TX(TEST_TX),
-    .FPGA_CLK(FPGA_CLK),
-    .MEM_CM_READY(MEM_CM_READY),
+    //.TEST_CLK(TEST_CLK),
+    //.TEST_MOSI(TEST_MOSI),
+    //.TEST_MISO(TEST_MISO),
+    //.TEST_CS_n(TEST_CS_n),
+    //.TEST_VCC(TEST_VCC),
+    //.TEST_RX(TEST_RX),
+    //.TEST_TX(TEST_TX),
+    //.FPGA_CLK(FPGA_CLK),
+    //.MEM_CM_READY(MEM_CM_READY),
     .FIFO_TRIG_WR(FIFO_STATE0),
-    .FIFO_TRIG_RE(FIFO_STATE1),
+    //.FIFO_TRIG_RE(FIFO_STATE1),
     .FIFO_TRIG_DL(FIFO_TRIG_DL)
 );
 

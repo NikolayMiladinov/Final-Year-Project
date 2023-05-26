@@ -5,7 +5,7 @@
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
-Date: Thu May 25 13:37:48 2023
+Date: Fri May 26 16:58:29 2023
 Design Name: top  Family: IGLOO  Die: AGLN250V2  Package: 100 VQFP
 Design State: Post-Layout
 
@@ -13,12 +13,10 @@ The following nets have been routed to a chip global resource:
 
     Fanout            Name
     ----------------------
-    5                 Net   : CLKA_c
+    447               Net   : CLKA_c
                       Driver: CLKA_pad/U0/U1/U_GL
-    411               Net   : rst_n_c
+    419               Net   : rst_n_c
                       Driver: rst_n_pad/U0/U1/U_GL
-    435               Net   : FPGA_CLK_c
-                      Driver: clk_div_1M/clk_out_RNIOLD3/U_GL
 
 
 

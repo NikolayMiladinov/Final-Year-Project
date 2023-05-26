@@ -1,2 +1,1 @@
-CKID0001:@|S:clk_div_1M.clk_out@|E:r_Master_CM_DV_0@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
-CKID0002:@|S:CLKA@|E:clk_div_1M.clk_count[3]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 
+CKID0001:@|S:CLKA@|E:r_Master_CM_DV_0@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 

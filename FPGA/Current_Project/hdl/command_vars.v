@@ -1,4 +1,9 @@
 parameter SIM_TEST = 0;
+parameter CLK_DIV_BYPASS = 1; // 1 to bypass the clock division and have a 20MHz clock
+// If bypassing division, make CLK_DIV_PARAM = 1
+parameter CLK_DIV_PARAM = 1;  // Divide CLK freq by that number
+parameter TIMER_2MS_COUNT = 40000/CLK_DIV_PARAM; // CLK is 20MHz/CLK_DIV_PARAM
+
 
 
 localparam [7:0]  RESET             = 8'hFF;

@@ -43,6 +43,11 @@ module mem_command #(
     output          o_transfer_size_DV  // Data valid pulse that indicates when transfer_size has changed and is valid
 ); /* synthesis syn_noprune=1 */;
 
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_1_25MS_COUNT = 25000/CLK_DIV_PARAM; // 1.25ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_5MS_COUNT = 10000/CLK_DIV_PARAM; // 0.5ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_24MS_COUNT = 4800/CLK_DIV_PARAM; // 0.24ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_08MS_COUNT = 1600/CLK_DIV_PARAM; // 0.08ms in number of cycles (normal clk frequency is 20MHz)
+
     // Master Specific Inputs
     logic [7:0]   r_Master_TX_Byte;     // Byte to be transmitted
     logic         r_Master_TX_DV;       // Data valid pulse telling the SPI module to read the TX_Byte register
@@ -304,40 +309,52 @@ module mem_command #(
         case (current_command.command)
             RESET: begin
                 current_command.num_bytes       <= 'b1;
-                current_command.wait_cycles     <= 'd10;
+                // After power-up, the reset command is issued and it takes a max of 1.25ms for the chip to complete the command
+                // Therefore, need to wait 1.25ms after issuing the command -> wait_cycles = 1.25ms * clk_freq
+                current_command.wait_cycles     <= TIMER_1_25MS_COUNT;
             end
             WRITE_ENABLE, WRITE_DISABLE: begin // One byte
                 current_command.num_bytes       <= 'b1;
-                current_command.wait_cycles     <= 'b1;
+                current_command.wait_cycles     <= 'd2;
             end
 
             GET_FEATURE: begin // 1st byte command, 2nd byte address, 3rd byte MISO data
                 current_command.num_bytes       <= 'd3;
-                current_command.wait_cycles     <= 'b1;
+                current_command.wait_cycles     <= 'd2;
             end
 
             SET_FEATURE: begin // 1st byte command, 2nd byte address, 3rd byte MOSI data
                 current_command.num_bytes       <= 'd3;
-                current_command.wait_cycles     <= 'b1;
+                current_command.wait_cycles     <= 'd2;
             end
 
-            PAGE_READ, CACHE_REQ_PAGE, CACHE_LAST, PROG_EXEC, BLOCK_ERASE: begin // 1st byte command, bytes 2,3,4 are the address
+            BLOCK_ERASE: begin // 1st byte command, bytes 2,3,4 are the address
                 current_command.num_bytes       <= 'd4;
-                current_command.wait_cycles     <= 'd20;
+                current_command.wait_cycles     <= TIMER_0_5MS_COUNT;
+            end
+
+            PROG_EXEC: begin // 1st byte command, bytes 2,3,4 are the address
+                current_command.num_bytes       <= 'd4;
+                current_command.wait_cycles     <= TIMER_0_24MS_COUNT;
+            end
+
+            PAGE_READ, CACHE_REQ_PAGE, CACHE_LAST: begin // 1st byte command, bytes 2,3,4 are the address
+                current_command.num_bytes       <= 'd4;
+                current_command.wait_cycles     <= TIMER_0_08MS_COUNT;
             end
 
             CACHE_READ: begin // 1st byte command, bytes 2,3,4 are the column address (3 dummy bits, 13 bit address, 8 dummy bits), every following byte is MISO data
                 current_command.num_bytes       <= r_TRANSFER_SIZE + 'd4; // # bytes to be read from memory + 4 bytes for command and address
-                current_command.wait_cycles     <= 'b1;
+                current_command.wait_cycles     <= 'd2;
             end
 
             PROG_LOAD1: begin // 1st byte command, bytes 2,3 are the column address (3 dummy bits, 13 bit address), every following byte is MOSI data
                 current_command.num_bytes       <= r_TRANSFER_SIZE + 'd3; // # bytes to store in memory + 3 bytes for command and address
-                current_command.wait_cycles     <= 'b1;
+                current_command.wait_cycles     <= 'd2;
             end
 
             default: begin
-                current_command.wait_cycles     <= 'b1; // Min wait time between commands is 50ns (1 clock cycle at 20 MHz)
+                current_command.wait_cycles     <= 'd2; // Min wait time between commands is 50ns (1 clock cycle at 20 MHz)
                 current_command.num_bytes       <= 'd1;
             end
         endcase

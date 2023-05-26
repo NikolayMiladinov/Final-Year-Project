@@ -3,7 +3,7 @@ Version: 11.9.6.7
 Release: v11.9 SP6
 
 Info: The design top.adb was last modified by software version 11.9.6.7.
-Opened an existing design top.adb.
+Opened an existing Libero design top.adb.
 'BA_NAME' set to 'top_ba'
 'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
 'IDE_DESIGNERVIEW_COUNT' set to '1'

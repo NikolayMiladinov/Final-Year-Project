@@ -2,7 +2,7 @@ Timing Report Max Delay Analysis
 
 SmartTime Version v11.9 SP6
 Microsemi Corporation - Microsemi Libero Software Release v11.9 SP6 (Version 11.9.6.7)
-Date: Thu May 25 13:37:54 2023
+Date: Fri May 26 16:58:35 2023
 
 
 Design: top
@@ -24,23 +24,15 @@ Scenario for Timing Analysis: Primary
 SUMMARY
 
 Clock Domain:               CLKA
-Period (ns):                8.115
-Frequency (MHz):            123.229
+Period (ns):                39.246
+Frequency (MHz):            25.480
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Setup (ns):        N/A
-Max Clock-To-Out (ns):      14.818
-
-Clock Domain:               clk_div_1M/clk_out:Q
-Period (ns):                38.872
-Frequency (MHz):            25.725
-Required Period (ns):       N/A
-Required Frequency (MHz):   N/A
-External Setup (ns):        5.117
-Max Clock-To-Out (ns):      26.353
+External Setup (ns):        6.094
+Max Clock-To-Out (ns):      21.384
 
                             Input to Output
-Max Delay (ns):             9.325
+Max Delay (ns):             N/A
 
 END SUMMARY
 -----------------------------------------------------
@@ -50,450 +42,152 @@ Clock Domain CLKA
 SET Register to Register
 
 Path 1
-  From:                  clk_div_1M/clk_count[2]:CLK
-  To:                    clk_div_1M/clk_count[0]:D
-  Delay (ns):            6.972
-  Slack (ns):
-  Arrival (ns):          10.136
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   8.115
-
-Path 2
-  From:                  clk_div_1M/clk_count[2]:CLK
-  To:                    clk_div_1M/clk_count[2]:D
-  Delay (ns):            6.972
-  Slack (ns):
-  Arrival (ns):          10.136
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   8.084
-
-Path 3
-  From:                  clk_div_1M/clk_count[2]:CLK
-  To:                    clk_div_1M/clk_out:D
-  Delay (ns):            6.809
-  Slack (ns):
-  Arrival (ns):          9.973
-  Required (ns):
-  Setup (ns):            1.169
-  Minimum Period (ns):   7.978
-
-Path 4
-  From:                  clk_div_1M/clk_count[1]:CLK
-  To:                    clk_div_1M/clk_count[2]:D
-  Delay (ns):            6.465
-  Slack (ns):
-  Arrival (ns):          9.629
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   7.577
-
-Path 5
-  From:                  clk_div_1M/clk_count[0]:CLK
-  To:                    clk_div_1M/clk_count[2]:D
-  Delay (ns):            5.992
-  Slack (ns):
-  Arrival (ns):          9.125
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   7.073
-
-
-Expanded Path 1
-  From: clk_div_1M/clk_count[2]:CLK
-  To: clk_div_1M/clk_count[0]:D
-  data required time                             N/C
-  data arrival time                          -   10.136
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        CLKA
-               +     0.000          Clock source
-  0.000                        CLKA (r)
-               +     0.000          net: CLKA
-  0.000                        CLKA_pad/U0/U0:PAD (r)
-               +     0.971          cell: ADLIB:IOPAD_IN
-  0.971                        CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  0.971                        CLKA_pad/U0/U1:A (r)
-               +     1.016          cell: ADLIB:CLKIO
-  1.987                        CLKA_pad/U0/U1:Y (r)
-               +     1.177          net: CLKA_c
-  3.164                        clk_div_1M/clk_count[2]:CLK (r)
-               +     1.606          cell: ADLIB:DFN1C0
-  4.770                        clk_div_1M/clk_count[2]:Q (f)
-               +     0.498          net: clk_div_1M/clk_count[2]
-  5.268                        clk_div_1M/clk_count_RNI7AC8[3]:A (f)
-               +     1.457          cell: ADLIB:NOR2A
-  6.725                        clk_div_1M/clk_count_RNI7AC8[3]:Y (f)
-               +     0.654          net: clk_div_1M/clk_count11_0
-  7.379                        clk_div_1M/clk_count_RNO[0]:A (f)
-               +     2.380          cell: ADLIB:OA1C
-  9.759                        clk_div_1M/clk_count_RNO[0]:Y (r)
-               +     0.377          net: clk_div_1M/clk_count_3[0]
-  10.136                       clk_div_1M/clk_count[0]:D (r)
-                                    
-  10.136                       data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          CLKA
-               +     0.000          Clock source
-  N/C                          CLKA (r)
-               +     0.000          net: CLKA
-  N/C                          CLKA_pad/U0/U0:PAD (r)
-               +     0.971          cell: ADLIB:IOPAD_IN
-  N/C                          CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  N/C                          CLKA_pad/U0/U1:A (r)
-               +     1.016          cell: ADLIB:CLKIO
-  N/C                          CLKA_pad/U0/U1:Y (r)
-               +     1.146          net: CLKA_c
-  N/C                          clk_div_1M/clk_count[0]:CLK (r)
-               -     1.112          Library setup time: ADLIB:DFN1C0
-  N/C                          clk_div_1M/clk_count[0]:D
-
-
-END SET Register to Register
-
-----------------------------------------------------
-
-SET External Setup
-
-No Path
-
-END SET External Setup
-
-----------------------------------------------------
-
-SET Clock to Output
-
-Path 1
-  From:                  clk_div_1M/clk_out:CLK
-  To:                    FPGA_CLK
-  Delay (ns):            11.654
-  Slack (ns):
-  Arrival (ns):          14.818
-  Required (ns):
-  Clock to Out (ns):     14.818
-
-
-Expanded Path 1
-  From: clk_div_1M/clk_out:CLK
-  To: FPGA_CLK
-  data required time                             N/C
-  data arrival time                          -   14.818
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        CLKA
-               +     0.000          Clock source
-  0.000                        CLKA (r)
-               +     0.000          net: CLKA
-  0.000                        CLKA_pad/U0/U0:PAD (r)
-               +     0.971          cell: ADLIB:IOPAD_IN
-  0.971                        CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  0.971                        CLKA_pad/U0/U1:A (r)
-               +     1.016          cell: ADLIB:CLKIO
-  1.987                        CLKA_pad/U0/U1:Y (r)
-               +     1.177          net: CLKA_c
-  3.164                        clk_div_1M/clk_out:CLK (r)
-               +     1.606          cell: ADLIB:DFN1C0
-  4.770                        clk_div_1M/clk_out:Q (f)
-               +     2.839          net: clk_div_1M/clk_out_i
-  7.609                        clk_div_1M/clk_out_RNIOLD3:A (f)
-               +     1.869          cell: ADLIB:CLKINT
-  9.478                        clk_div_1M/clk_out_RNIOLD3:Y (f)
-               +     1.259          net: FPGA_CLK_c
-  10.737                       FPGA_CLK_pad/U0/U1:D (f)
-               +     1.402          cell: ADLIB:IOTRI_OB_EB
-  12.139                       FPGA_CLK_pad/U0/U1:DOUT (f)
-               +     0.000          net: FPGA_CLK_pad/U0/NET1
-  12.139                       FPGA_CLK_pad/U0/U0:D (f)
-               +     2.679          cell: ADLIB:IOPAD_TRI
-  14.818                       FPGA_CLK_pad/U0/U0:PAD (f)
-               +     0.000          net: FPGA_CLK
-  14.818                       FPGA_CLK (f)
-                                    
-  14.818                       data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          CLKA
-               +     0.000          Clock source
-  N/C                          CLKA (r)
-                                    
-  N/C                          FPGA_CLK (f)
-
-
-END SET Clock to Output
-
-----------------------------------------------------
-
-SET Register to Asynchronous
-
-No Path
-
-END SET Register to Asynchronous
-
-----------------------------------------------------
-
-SET External Recovery
-
-Path 1
-  From:                  rst_n
-  To:                    clk_div_1M/clk_count[3]:CLR
-  Delay (ns):            3.176
-  Slack (ns):
-  Arrival (ns):          3.176
-  Required (ns):
-  Recovery (ns):         0.235
-  External Recovery (ns): 0.247
-
-Path 2
-  From:                  rst_n
-  To:                    clk_div_1M/clk_out:CLR
-  Delay (ns):            3.176
-  Slack (ns):
-  Arrival (ns):          3.176
-  Required (ns):
-  Recovery (ns):         0.235
-  External Recovery (ns): 0.247
-
-Path 3
-  From:                  rst_n
-  To:                    clk_div_1M/clk_count[1]:CLR
-  Delay (ns):            3.176
-  Slack (ns):
-  Arrival (ns):          3.176
-  Required (ns):
-  Recovery (ns):         0.235
-  External Recovery (ns): 0.247
-
-Path 4
-  From:                  rst_n
-  To:                    clk_div_1M/clk_count[0]:CLR
-  Delay (ns):            3.138
-  Slack (ns):
-  Arrival (ns):          3.138
-  Required (ns):
-  Recovery (ns):         0.235
-  External Recovery (ns): 0.240
-
-Path 5
-  From:                  rst_n
-  To:                    clk_div_1M/clk_count[2]:CLR
-  Delay (ns):            3.138
-  Slack (ns):
-  Arrival (ns):          3.138
-  Required (ns):
-  Recovery (ns):         0.235
-  External Recovery (ns): 0.209
-
-
-Expanded Path 1
-  From: rst_n
-  To: clk_div_1M/clk_count[3]:CLR
-  data required time                             N/C
-  data arrival time                          -   3.176
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        rst_n (r)
-               +     0.000          net: rst_n
-  0.000                        rst_n_pad/U0/U0:PAD (r)
-               +     0.971          cell: ADLIB:IOPAD_IN
-  0.971                        rst_n_pad/U0/U0:Y (r)
-               +     0.000          net: rst_n_pad/U0/NET1
-  0.971                        rst_n_pad/U0/U1:A (r)
-               +     1.016          cell: ADLIB:CLKIO
-  1.987                        rst_n_pad/U0/U1:Y (r)
-               +     1.189          net: rst_n_c
-  3.176                        clk_div_1M/clk_count[3]:CLR (r)
-                                    
-  3.176                        data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          CLKA
-               +     0.000          Clock source
-  N/C                          CLKA (r)
-               +     0.000          net: CLKA
-  N/C                          CLKA_pad/U0/U0:PAD (r)
-               +     0.971          cell: ADLIB:IOPAD_IN
-  N/C                          CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  N/C                          CLKA_pad/U0/U1:A (r)
-               +     1.016          cell: ADLIB:CLKIO
-  N/C                          CLKA_pad/U0/U1:Y (r)
-               +     1.177          net: CLKA_c
-  N/C                          clk_div_1M/clk_count[3]:CLK (r)
-               -     0.235          Library recovery time: ADLIB:DFN1C0
-  N/C                          clk_div_1M/clk_count[3]:CLR
-
-
-END SET External Recovery
-
-----------------------------------------------------
-
-SET Asynchronous to Register
-
-No Path
-
-END SET Asynchronous to Register
-
-----------------------------------------------------
-
-Clock Domain clk_div_1M/clk_out:Q
-
-SET Register to Register
-
-Path 1
   From:                  MEM_COMMAND_CONTROLLER/current_command.command[0]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[7]:D
-  Delay (ns):            37.717
+  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[8]:D
+  Delay (ns):            38.178
   Slack (ns):
-  Arrival (ns):          43.892
+  Arrival (ns):          41.362
   Required (ns):
   Setup (ns):            1.112
-  Minimum Period (ns):   38.872
+  Minimum Period (ns):   39.246
 
 Path 2
+  From:                  MEM_COMMAND_CONTROLLER/current_command.command[5]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[8]:D
+  Delay (ns):            38.169
+  Slack (ns):
+  Arrival (ns):          41.339
+  Required (ns):
+  Setup (ns):            1.112
+  Minimum Period (ns):   39.223
+
+Path 3
+  From:                  MEM_COMMAND_CONTROLLER/r_TRANSFER_SIZE[7]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[8]:D
+  Delay (ns):            37.910
+  Slack (ns):
+  Arrival (ns):          41.117
+  Required (ns):
+  Setup (ns):            1.112
+  Minimum Period (ns):   39.001
+
+Path 4
+  From:                  MEM_COMMAND_CONTROLLER/current_command.command[0]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[4]:D
+  Delay (ns):            37.650
+  Slack (ns):
+  Arrival (ns):          40.834
+  Required (ns):
+  Setup (ns):            1.112
+  Minimum Period (ns):   38.806
+
+Path 5
   From:                  MEM_COMMAND_CONTROLLER/current_command.command[0]:CLK
   To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[5]:D
-  Delay (ns):            37.717
+  Delay (ns):            37.653
   Slack (ns):
-  Arrival (ns):          43.892
+  Arrival (ns):          40.837
   Required (ns):
   Setup (ns):            1.112
-  Minimum Period (ns):   38.864
-
-Path 3
-  From:                  MEM_COMMAND_CONTROLLER/current_command.command[4]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[7]:D
-  Delay (ns):            37.314
-  Slack (ns):
-  Arrival (ns):          43.441
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   38.421
-
-Path 4
-  From:                  MEM_COMMAND_CONTROLLER/current_command.command[4]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[5]:D
-  Delay (ns):            37.314
-  Slack (ns):
-  Arrival (ns):          43.441
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   38.413
-
-Path 5
-  From:                  MEM_COMMAND_CONTROLLER/current_command.command[7]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/r_TX_Count[7]:D
-  Delay (ns):            37.252
-  Slack (ns):
-  Arrival (ns):          43.404
-  Required (ns):
-  Setup (ns):            1.112
-  Minimum Period (ns):   38.384
+  Minimum Period (ns):   38.789
 
 
 Expanded Path 1
   From: MEM_COMMAND_CONTROLLER/current_command.command[0]:CLK
-  To: MEM_COMMAND_CONTROLLER/r_TX_Count[7]:D
+  To: MEM_COMMAND_CONTROLLER/r_TX_Count[8]:D
   data required time                             N/C
-  data arrival time                          -   43.892
+  data arrival time                          -   41.362
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
-  0.000                        clk_div_1M/clk_out:Q
+  0.000                        CLKA
                +     0.000          Clock source
-  0.000                        clk_div_1M/clk_out:Q (r)
-               +     3.108          net: clk_div_1M/clk_out_i
-  3.108                        clk_div_1M/clk_out_RNIOLD3:A (r)
-               +     1.869          cell: ADLIB:CLKINT
-  4.977                        clk_div_1M/clk_out_RNIOLD3:Y (r)
-               +     1.198          net: FPGA_CLK_c
-  6.175                        MEM_COMMAND_CONTROLLER/current_command.command[0]:CLK (r)
+  0.000                        CLKA (r)
+               +     0.000          net: CLKA
+  0.000                        CLKA_pad/U0/U0:PAD (r)
+               +     0.971          cell: ADLIB:IOPAD_IN
+  0.971                        CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  0.971                        CLKA_pad/U0/U1:A (r)
+               +     1.016          cell: ADLIB:CLKIO
+  1.987                        CLKA_pad/U0/U1:Y (r)
+               +     1.197          net: CLKA_c
+  3.184                        MEM_COMMAND_CONTROLLER/current_command.command[0]:CLK (r)
                +     1.606          cell: ADLIB:DFN1E1C0
-  7.781                        MEM_COMMAND_CONTROLLER/current_command.command[0]:Q (f)
-               +     1.079          net: MEM_COMMAND_CONTROLLER/command[0]
-  8.860                        MEM_COMMAND_CONTROLLER/un1_r_TRANSFER_SIZE_14_m7_a0:C (f)
-               +     2.394          cell: ADLIB:NOR3
-  11.254                       MEM_COMMAND_CONTROLLER/un1_r_TRANSFER_SIZE_14_m7_a0:Y (r)
-               +     0.727          net: MEM_COMMAND_CONTROLLER/ADD_N_4_10
-  11.981                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_1:B (r)
-               +     1.077          cell: ADLIB:OR2A
-  13.058                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_1:Y (r)
-               +     2.215          net: MEM_COMMAND_CONTROLLER/i4_mux
-  15.273                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m4:B (r)
-               +     2.413          cell: ADLIB:XOR2
-  17.686                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m4:Y (r)
-               +     0.358          net: MEM_COMMAND_CONTROLLER/ADD_m4
-  18.044                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_N_5_mux_i_0:A (r)
-               +     0.766          cell: ADLIB:AO1C
-  18.810                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_N_5_mux_i_0:Y (f)
-               +     1.716          net: MEM_COMMAND_CONTROLLER/N182
-  20.526                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I31_Y:B (f)
-               +     1.634          cell: ADLIB:AO1
-  22.160                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I31_Y:Y (f)
-               +     0.390          net: MEM_COMMAND_CONTROLLER/N231
-  22.550                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I51_un1_Y:B (f)
-               +     1.137          cell: ADLIB:NOR3B
-  23.687                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I51_un1_Y:Y (f)
-               +     0.285          net: MEM_COMMAND_CONTROLLER/I51_un1_Y
-  23.972                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I51_Y:A (f)
-               +     1.073          cell: ADLIB:OR2
-  25.045                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I51_Y:Y (f)
-               +     0.516          net: MEM_COMMAND_CONTROLLER/N254
-  25.561                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I65_un1_Y:B (f)
-               +     1.458          cell: ADLIB:NOR2B
-  27.019                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I65_un1_Y:Y (f)
-               +     0.377          net: MEM_COMMAND_CONTROLLER/I65_un1_Y
-  27.396                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I80_Y:C (f)
-               +     1.572          cell: ADLIB:OR3
-  28.968                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I80_Y:Y (f)
-               +     0.377          net: MEM_COMMAND_CONTROLLER/N304
-  29.345                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I99_Y:C (f)
-               +     1.853          cell: ADLIB:XNOR3
-  31.198                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I99_Y:Y (f)
-               +     0.377          net: MEM_COMMAND_CONTROLLER/r_TX_Count12_10
-  31.575                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9_0:C (f)
-               +     1.157          cell: ADLIB:AO1D
-  32.732                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9_0:Y (f)
-               +     0.285          net: MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9_0
-  33.017                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9:A (f)
-               +     1.073          cell: ADLIB:OR2
-  34.090                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9:Y (f)
-               +     1.446          net: MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9
-  35.536                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE:A (f)
-               +     1.217          cell: ADLIB:OR3
-  36.753                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE:Y (f)
-               +     1.604          net: MEM_COMMAND_CONTROLLER/r_TX_Count13
-  38.357                       MEM_COMMAND_CONTROLLER/r_SM_COM_RNI8L727K:B (f)
-               +     1.542          cell: ADLIB:NOR2B
-  39.899                       MEM_COMMAND_CONTROLLER/r_SM_COM_RNI8L727K:Y (f)
-               +     1.592          net: MEM_COMMAND_CONTROLLER/N_149
-  41.491                       MEM_COMMAND_CONTROLLER/r_TX_Count_RNO[7]:C (f)
-               +     2.024          cell: ADLIB:XA1A
-  43.515                       MEM_COMMAND_CONTROLLER/r_TX_Count_RNO[7]:Y (f)
-               +     0.377          net: MEM_COMMAND_CONTROLLER/N_58
-  43.892                       MEM_COMMAND_CONTROLLER/r_TX_Count[7]:D (f)
+  4.790                        MEM_COMMAND_CONTROLLER/current_command.command[0]:Q (f)
+               +     2.242          net: MEM_COMMAND_CONTROLLER/command[0]
+  7.032                        MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_0_a3_0:C (f)
+               +     2.498          cell: ADLIB:NOR3
+  9.530                        MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m3_0_a3_0:Y (r)
+               +     1.831          net: MEM_COMMAND_CONTROLLER/ADD_N_4_3
+  11.361                       MEM_COMMAND_CONTROLLER/un1_r_TRANSFER_SIZE_14_m19:A (r)
+               +     1.506          cell: ADLIB:AX1
+  12.867                       MEM_COMMAND_CONTROLLER/un1_r_TRANSFER_SIZE_14_m19:Y (r)
+               +     1.315          net: MEM_COMMAND_CONTROLLER/un1_r_TRANSFER_SIZE_14[8]
+  14.182                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m1_e_3:A (r)
+               +     1.901          cell: ADLIB:NOR3B
+  16.083                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m1_e_3:Y (r)
+               +     0.422          net: MEM_COMMAND_CONTROLLER/ADD_m1_e_3
+  16.505                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m2_e_4:B (r)
+               +     2.096          cell: ADLIB:OA1A
+  18.601                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_m2_e_4:Y (r)
+               +     0.377          net: MEM_COMMAND_CONTROLLER/I21_un1_Y
+  18.978                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I21_Y:C (r)
+               +     1.546          cell: ADLIB:AO1A
+  20.524                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I21_Y:Y (r)
+               +     1.908          net: MEM_COMMAND_CONTROLLER/N221
+  22.432                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I45_Y:B (r)
+               +     1.602          cell: ADLIB:OR2
+  24.034                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I45_Y:Y (r)
+               +     0.785          net: MEM_COMMAND_CONTROLLER/N248
+  24.819                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I81_Y_0:C (r)
+               +     2.123          cell: ADLIB:AO1
+  26.942                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I81_Y_0:Y (r)
+               +     0.380          net: MEM_COMMAND_CONTROLLER/ADD_13x13_fast_I81_Y_0
+  27.322                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I98_Y:B (r)
+               +     2.245          cell: ADLIB:AX1D
+  29.567                       MEM_COMMAND_CONTROLLER/r_TX_Count12_a_4_ADD_13x13_fast_I98_Y:Y (f)
+               +     0.358          net: MEM_COMMAND_CONTROLLER/r_TX_Count12_9
+  29.925                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_6:C (f)
+               +     1.113          cell: ADLIB:XO1
+  31.038                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_6:Y (f)
+               +     0.358          net: MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_6
+  31.396                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9:C (f)
+               +     1.113          cell: ADLIB:XO1
+  32.509                       MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9:Y (f)
+               +     1.137          net: MEM_COMMAND_CONTROLLER/r_TX_Count12_NE_9
+  33.646                       MEM_COMMAND_CONTROLLER/r_TX_Count_RNITSL0KL[0]:A (f)
+               +     1.210          cell: ADLIB:OR3
+  34.856                       MEM_COMMAND_CONTROLLER/r_TX_Count_RNITSL0KL[0]:Y (f)
+               +     0.991          net: MEM_COMMAND_CONTROLLER/r_TX_Count13
+  35.847                       MEM_COMMAND_CONTROLLER/r_SM_COM_RNIQPSKRN:B (f)
+               +     1.325          cell: ADLIB:MX2
+  37.172                       MEM_COMMAND_CONTROLLER/r_SM_COM_RNIQPSKRN:Y (f)
+               +     2.239          net: MEM_COMMAND_CONTROLLER/un1_r_Master_TX_DV6_1[0]
+  39.411                       MEM_COMMAND_CONTROLLER/r_TX_Count_RNO[8]:C (f)
+               +     1.574          cell: ADLIB:XA1
+  40.985                       MEM_COMMAND_CONTROLLER/r_TX_Count_RNO[8]:Y (f)
+               +     0.377          net: MEM_COMMAND_CONTROLLER/r_TX_Count_n8
+  41.362                       MEM_COMMAND_CONTROLLER/r_TX_Count[8]:D (f)
                                     
-  43.892                       data arrival time
+  41.362                       data arrival time
   ________________________________________________________
   Data required time calculation
-  N/C                          clk_div_1M/clk_out:Q
+  N/C                          CLKA
                +     0.000          Clock source
-  N/C                          clk_div_1M/clk_out:Q (r)
-               +     3.108          net: clk_div_1M/clk_out_i
-  N/C                          clk_div_1M/clk_out_RNIOLD3:A (r)
-               +     1.869          cell: ADLIB:CLKINT
-  N/C                          clk_div_1M/clk_out_RNIOLD3:Y (r)
-               +     1.155          net: FPGA_CLK_c
-  N/C                          MEM_COMMAND_CONTROLLER/r_TX_Count[7]:CLK (r)
+  N/C                          CLKA (r)
+               +     0.000          net: CLKA
+  N/C                          CLKA_pad/U0/U0:PAD (r)
+               +     0.971          cell: ADLIB:IOPAD_IN
+  N/C                          CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  N/C                          CLKA_pad/U0/U1:A (r)
+               +     1.016          cell: ADLIB:CLKIO
+  N/C                          CLKA_pad/U0/U1:Y (r)
+               +     1.241          net: CLKA_c
+  N/C                          MEM_COMMAND_CONTROLLER/r_TX_Count[8]:CLK (r)
                -     1.112          Library setup time: ADLIB:DFN1E0C0
-  N/C                          MEM_COMMAND_CONTROLLER/r_TX_Count[7]:D
+  N/C                          MEM_COMMAND_CONTROLLER/r_TX_Count[8]:D
 
 
 END SET Register to Register
@@ -505,59 +199,59 @@ SET External Setup
 Path 1
   From:                  rst_n
   To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[4]:E
-  Delay (ns):            10.044
+  Delay (ns):            8.391
   Slack (ns):
-  Arrival (ns):          10.044
+  Arrival (ns):          8.391
   Required (ns):
-  Setup (ns):            1.289
-  External Setup (ns):   5.117
+  Setup (ns):            0.947
+  External Setup (ns):   6.094
 
 Path 2
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[5]:E
-  Delay (ns):            9.158
+  To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[1]:E
+  Delay (ns):            8.292
   Slack (ns):
-  Arrival (ns):          9.158
+  Arrival (ns):          8.292
   Required (ns):
-  Setup (ns):            1.289
-  External Setup (ns):   4.223
+  Setup (ns):            0.947
+  External Setup (ns):   6.044
 
 Path 3
   From:                  rst_n
   To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[6]:E
-  Delay (ns):            8.922
+  Delay (ns):            8.114
   Slack (ns):
-  Arrival (ns):          8.922
+  Arrival (ns):          8.114
   Required (ns):
-  Setup (ns):            1.289
-  External Setup (ns):   4.008
+  Setup (ns):            0.947
+  External Setup (ns):   5.812
 
 Path 4
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[0]:E
-  Delay (ns):            8.482
+  To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[2]:E
+  Delay (ns):            8.103
   Slack (ns):
-  Arrival (ns):          8.482
+  Arrival (ns):          8.103
   Required (ns):
-  Setup (ns):            1.289
-  External Setup (ns):   3.558
+  Setup (ns):            0.947
+  External Setup (ns):   5.806
 
 Path 5
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[1]:E
-  Delay (ns):            8.482
+  To:                    MEM_COMMAND_CONTROLLER/current_command.prog_data[7]:E
+  Delay (ns):            7.784
   Slack (ns):
-  Arrival (ns):          8.482
+  Arrival (ns):          7.784
   Required (ns):
-  Setup (ns):            1.289
-  External Setup (ns):   3.558
+  Setup (ns):            0.947
+  External Setup (ns):   5.536
 
 
 Expanded Path 1
   From: rst_n
   To: MEM_COMMAND_CONTROLLER/current_command.prog_data[4]:E
   data required time                             N/C
-  data arrival time                          -   10.044
+  data arrival time                          -   8.391
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -570,30 +264,34 @@ Expanded Path 1
   0.971                        rst_n_pad/U0/U1:A (r)
                +     1.016          cell: ADLIB:CLKIO
   1.987                        rst_n_pad/U0/U1:Y (r)
-               +     1.163          net: rst_n_c
-  3.150                        MEM_COMMAND_CONTROLLER/r_fifo_re_delay_RNIS3522[1]:A (r)
-               +     1.082          cell: ADLIB:NOR3C
-  4.232                        MEM_COMMAND_CONTROLLER/r_fifo_re_delay_RNIS3522[1]:Y (r)
-               +     0.380          net: MEM_COMMAND_CONTROLLER/prog_data_1_sqmuxa_1
-  4.612                        MEM_COMMAND_CONTROLLER/current_command.command_RNIQC5E6[0]:A (r)
-               +     0.924          cell: ADLIB:NOR2A
-  5.536                        MEM_COMMAND_CONTROLLER/current_command.command_RNIQC5E6[0]:Y (r)
-               +     4.508          net: MEM_COMMAND_CONTROLLER/prog_data_1_sqmuxa
-  10.044                       MEM_COMMAND_CONTROLLER/current_command.prog_data[4]:E (r)
+               +     1.175          net: rst_n_c
+  3.162                        MEM_COMMAND_CONTROLLER/r_fifo_re_delay_RNIADFP[1]:A (r)
+               +     0.903          cell: ADLIB:NOR2B
+  4.065                        MEM_COMMAND_CONTROLLER/r_fifo_re_delay_RNIADFP[1]:Y (r)
+               +     0.301          net: MEM_COMMAND_CONTROLLER/prog_data_1_sqmuxa_0
+  4.366                        MEM_COMMAND_CONTROLLER/r_fifo_re_delay_RNI957F6[1]:B (r)
+               +     1.648          cell: ADLIB:NOR3B
+  6.014                        MEM_COMMAND_CONTROLLER/r_fifo_re_delay_RNI957F6[1]:Y (r)
+               +     2.377          net: MEM_COMMAND_CONTROLLER/prog_data_1_sqmuxa
+  8.391                        MEM_COMMAND_CONTROLLER/current_command.prog_data[4]:E (r)
                                     
-  10.044                       data arrival time
+  8.391                        data arrival time
   ________________________________________________________
   Data required time calculation
-  N/C                          clk_div_1M/clk_out:Q
+  N/C                          CLKA
                +     0.000          Clock source
-  N/C                          clk_div_1M/clk_out:Q (r)
-               +     3.108          net: clk_div_1M/clk_out_i
-  N/C                          clk_div_1M/clk_out_RNIOLD3:A (r)
-               +     1.869          cell: ADLIB:CLKINT
-  N/C                          clk_div_1M/clk_out_RNIOLD3:Y (r)
-               +     1.239          net: FPGA_CLK_c
+  N/C                          CLKA (r)
+               +     0.000          net: CLKA
+  N/C                          CLKA_pad/U0/U0:PAD (r)
+               +     0.971          cell: ADLIB:IOPAD_IN
+  N/C                          CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  N/C                          CLKA_pad/U0/U1:A (r)
+               +     1.016          cell: ADLIB:CLKIO
+  N/C                          CLKA_pad/U0/U1:Y (r)
+               +     1.257          net: CLKA_c
   N/C                          MEM_COMMAND_CONTROLLER/current_command.prog_data[4]:CLK (r)
-               -     1.289          Library setup time: ADLIB:DFN1E1
+               -     0.947          Library setup time: ADLIB:DFN1E1
   N/C                          MEM_COMMAND_CONTROLLER/current_command.prog_data[4]:E
 
 
@@ -604,105 +302,109 @@ END SET External Setup
 SET Clock to Output
 
 Path 1
-  From:                  r_Command_prev[4]:CLK
-  To:                    FIFO_TRIG_DL
-  Delay (ns):            20.130
-  Slack (ns):
-  Arrival (ns):          26.353
-  Required (ns):
-  Clock to Out (ns):     26.353
-
-Path 2
   From:                  r_Command_prev[3]:CLK
   To:                    FIFO_TRIG_DL
-  Delay (ns):            19.132
+  Delay (ns):            18.196
   Slack (ns):
-  Arrival (ns):          25.305
+  Arrival (ns):          21.384
   Required (ns):
-  Clock to Out (ns):     25.305
+  Clock to Out (ns):     21.384
+
+Path 2
+  From:                  r_Command_prev[6]:CLK
+  To:                    FIFO_TRIG_DL
+  Delay (ns):            17.794
+  Slack (ns):
+  Arrival (ns):          20.982
+  Required (ns):
+  Clock to Out (ns):     20.982
 
 Path 3
-  From:                  r_Command_prev[0]:CLK
-  To:                    FIFO_TRIG_DL
-  Delay (ns):            17.935
-  Slack (ns):
-  Arrival (ns):          24.097
-  Required (ns):
-  Clock to Out (ns):     24.097
-
-Path 4
-  From:                  r_Command_prev[1]:CLK
-  To:                    FIFO_TRIG_DL
-  Delay (ns):            17.397
-  Slack (ns):
-  Arrival (ns):          23.559
-  Required (ns):
-  Clock to Out (ns):     23.559
-
-Path 5
   From:                  r_Command_prev[7]:CLK
   To:                    FIFO_TRIG_DL
-  Delay (ns):            16.992
+  Delay (ns):            17.711
   Slack (ns):
-  Arrival (ns):          23.125
+  Arrival (ns):          20.918
   Required (ns):
-  Clock to Out (ns):     23.125
+  Clock to Out (ns):     20.918
+
+Path 4
+  From:                  r_Command_prev[4]:CLK
+  To:                    FIFO_TRIG_DL
+  Delay (ns):            17.143
+  Slack (ns):
+  Arrival (ns):          20.415
+  Required (ns):
+  Clock to Out (ns):     20.415
+
+Path 5
+  From:                  r_Command_prev[5]:CLK
+  To:                    FIFO_TRIG_DL
+  Delay (ns):            16.821
+  Slack (ns):
+  Arrival (ns):          20.028
+  Required (ns):
+  Clock to Out (ns):     20.028
 
 
 Expanded Path 1
-  From: r_Command_prev[4]:CLK
+  From: r_Command_prev[3]:CLK
   To: FIFO_TRIG_DL
   data required time                             N/C
-  data arrival time                          -   26.353
+  data arrival time                          -   21.384
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
-  0.000                        clk_div_1M/clk_out:Q
+  0.000                        CLKA
                +     0.000          Clock source
-  0.000                        clk_div_1M/clk_out:Q (r)
-               +     3.108          net: clk_div_1M/clk_out_i
-  3.108                        clk_div_1M/clk_out_RNIOLD3:A (r)
-               +     1.869          cell: ADLIB:CLKINT
-  4.977                        clk_div_1M/clk_out_RNIOLD3:Y (r)
-               +     1.246          net: FPGA_CLK_c
-  6.223                        r_Command_prev[4]:CLK (r)
-               +     1.606          cell: ADLIB:DFN1E1C0
-  7.829                        r_Command_prev[4]:Q (f)
-               +     1.456          net: r_Command_prev[4]
-  9.285                        MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_Addr_Data_26_2_a2[12]:B (f)
-               +     1.491          cell: ADLIB:NOR2B
-  10.776                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_Addr_Data_26_2_a2[12]:Y (f)
-               +     0.514          net: MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_393
-  11.290                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/un8_FIFO_TRIG_DL_0_a2_2:C (f)
-               +     1.215          cell: ADLIB:NOR3C
-  12.505                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/un8_FIFO_TRIG_DL_0_a2_2:Y (f)
-               +     1.440          net: MEM_COMMAND_CONTROLLER/SPI_CS_Master/N_395
-  13.945                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/un8_FIFO_TRIG_DL_0_a2:B (f)
-               +     1.554          cell: ADLIB:NOR2B
-  15.499                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/un8_FIFO_TRIG_DL_0_a2:Y (f)
-               +     1.670          net: MEM_COMMAND_CONTROLLER/un8_FIFO_TRIG_DL
-  17.169                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/FIFO_TRIG_DL_0:C (f)
-               +     0.871          cell: ADLIB:AOI1D
-  18.040                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/FIFO_TRIG_DL_0:Y (f)
-               +     4.232          net: FIFO_TRIG_DL_c
-  22.272                       FIFO_TRIG_DL_pad/U0/U1:D (f)
-               +     1.402          cell: ADLIB:IOTRI_OB_EB
-  23.674                       FIFO_TRIG_DL_pad/U0/U1:DOUT (f)
+  0.000                        CLKA (r)
+               +     0.000          net: CLKA
+  0.000                        CLKA_pad/U0/U0:PAD (r)
+               +     0.971          cell: ADLIB:IOPAD_IN
+  0.971                        CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  0.971                        CLKA_pad/U0/U1:A (r)
+               +     1.016          cell: ADLIB:CLKIO
+  1.987                        CLKA_pad/U0/U1:Y (r)
+               +     1.201          net: CLKA_c
+  3.188                        r_Command_prev[3]:CLK (r)
+               +     1.049          cell: ADLIB:DFN1E0C0
+  4.237                        r_Command_prev[3]:Q (r)
+               +     0.650          net: r_Command_prev[3]
+  4.887                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/FIFO_TRIG_DL_0_a2_0_0:C (r)
+               +     1.688          cell: ADLIB:NOR3C
+  6.575                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/FIFO_TRIG_DL_0_a2_0_0:Y (r)
+               +     1.529          net: MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/FIFO_TRIG_DL_0_a2_0_0
+  8.104                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/FIFO_TRIG_DL_0_a2_0:A (r)
+               +     1.083          cell: ADLIB:NOR2B
+  9.187                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/FIFO_TRIG_DL_0_a2_0:Y (r)
+               +     0.508          net: MEM_COMMAND_CONTROLLER/N_565
+  9.695                        MEM_COMMAND_CONTROLLER/FIFO_TRIG_DL_0_a2:B (r)
+               +     1.819          cell: ADLIB:NOR3B
+  11.514                       MEM_COMMAND_CONTROLLER/FIFO_TRIG_DL_0_a2:Y (r)
+               +     2.105          net: MEM_COMMAND_CONTROLLER/N_575
+  13.619                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/FIFO_TRIG_DL_0:C (r)
+               +     0.977          cell: ADLIB:OA1
+  14.596                       MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/FIFO_TRIG_DL_0:Y (r)
+               +     3.156          net: FIFO_TRIG_DL_c
+  17.752                       FIFO_TRIG_DL_pad/U0/U1:D (r)
+               +     1.371          cell: ADLIB:IOTRI_OB_EB
+  19.123                       FIFO_TRIG_DL_pad/U0/U1:DOUT (r)
                +     0.000          net: FIFO_TRIG_DL_pad/U0/NET1
-  23.674                       FIFO_TRIG_DL_pad/U0/U0:D (f)
-               +     2.679          cell: ADLIB:IOPAD_TRI
-  26.353                       FIFO_TRIG_DL_pad/U0/U0:PAD (f)
+  19.123                       FIFO_TRIG_DL_pad/U0/U0:D (r)
+               +     2.261          cell: ADLIB:IOPAD_TRI
+  21.384                       FIFO_TRIG_DL_pad/U0/U0:PAD (r)
                +     0.000          net: FIFO_TRIG_DL
-  26.353                       FIFO_TRIG_DL (f)
+  21.384                       FIFO_TRIG_DL (r)
                                     
-  26.353                       data arrival time
+  21.384                       data arrival time
   ________________________________________________________
   Data required time calculation
-  N/C                          clk_div_1M/clk_out:Q
+  N/C                          CLKA
                +     0.000          Clock source
-  N/C                          clk_div_1M/clk_out:Q (r)
+  N/C                          CLKA (r)
                                     
-  N/C                          FIFO_TRIG_DL (f)
+  N/C                          FIFO_TRIG_DL (r)
 
 
 END SET Clock to Output
@@ -721,35 +423,25 @@ SET External Recovery
 
 Path 1
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
-  Delay (ns):            3.218
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6:RESET
+  Delay (ns):            3.255
   Slack (ns):
-  Arrival (ns):          3.218
+  Arrival (ns):          3.255
   Required (ns):
   Recovery (ns):         4.747
-  External Recovery (ns): 1.726
+  External Recovery (ns): 4.755
 
 Path 2
   From:                  rst_n
   To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7:RESET
-  Delay (ns):            3.218
+  Delay (ns):            3.254
   Slack (ns):
-  Arrival (ns):          3.218
+  Arrival (ns):          3.254
   Required (ns):
   Recovery (ns):         4.747
-  External Recovery (ns): 1.726
+  External Recovery (ns): 4.754
 
 Path 3
-  From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_5:RESET
-  Delay (ns):            3.218
-  Slack (ns):
-  Arrival (ns):          3.218
-  Required (ns):
-  Recovery (ns):         4.747
-  External Recovery (ns): 1.726
-
-Path 4
   From:                  rst_n
   To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:RESET
   Delay (ns):            3.218
@@ -757,9 +449,9 @@ Path 4
   Arrival (ns):          3.218
   Required (ns):
   Recovery (ns):         4.747
-  External Recovery (ns): 1.725
+  External Recovery (ns): 4.735
 
-Path 5
+Path 4
   From:                  rst_n
   To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2:RESET
   Delay (ns):            3.218
@@ -767,14 +459,24 @@ Path 5
   Arrival (ns):          3.218
   Required (ns):
   Recovery (ns):         4.747
-  External Recovery (ns): 1.725
+  External Recovery (ns): 4.735
+
+Path 5
+  From:                  rst_n
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
+  Delay (ns):            3.218
+  Slack (ns):
+  Arrival (ns):          3.218
+  Required (ns):
+  Recovery (ns):         4.747
+  External Recovery (ns): 4.735
 
 
 Expanded Path 1
   From: rst_n
-  To: MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
+  To: MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6:RESET
   data required time                             N/C
-  data arrival time                          -   3.218
+  data arrival time                          -   3.255
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -787,23 +489,27 @@ Expanded Path 1
   0.971                        rst_n_pad/U0/U1:A (r)
                +     1.016          cell: ADLIB:CLKIO
   1.987                        rst_n_pad/U0/U1:Y (r)
-               +     1.231          net: rst_n_c
-  3.218                        MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET (r)
+               +     1.268          net: rst_n_c
+  3.255                        MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6:RESET (r)
                                     
-  3.218                        data arrival time
+  3.255                        data arrival time
   ________________________________________________________
   Data required time calculation
-  N/C                          clk_div_1M/clk_out:Q
+  N/C                          CLKA
                +     0.000          Clock source
-  N/C                          clk_div_1M/clk_out:Q (r)
-               +     3.108          net: clk_div_1M/clk_out_i
-  N/C                          clk_div_1M/clk_out_RNIOLD3:A (r)
-               +     1.869          cell: ADLIB:CLKINT
-  N/C                          clk_div_1M/clk_out_RNIOLD3:Y (r)
-               +     1.262          net: FPGA_CLK_c
-  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:CLKA (r)
+  N/C                          CLKA (r)
+               +     0.000          net: CLKA
+  N/C                          CLKA_pad/U0/U0:PAD (r)
+               +     0.971          cell: ADLIB:IOPAD_IN
+  N/C                          CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  N/C                          CLKA_pad/U0/U1:A (r)
+               +     1.016          cell: ADLIB:CLKIO
+  N/C                          CLKA_pad/U0/U1:Y (r)
+               +     1.260          net: CLKA_c
+  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6:CLKA (r)
                -     4.747          Library recovery time: ADLIB:RAM4K9
-  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
+  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_6:RESET
 
 
 END SET External Recovery
@@ -822,60 +528,7 @@ Path set Pin to Pin
 
 SET Input to Output
 
-Path 1
-  From:                  SPI_MISO
-  To:                    TEST_MISO
-  Delay (ns):            9.325
-  Slack (ns):
-  Arrival (ns):          9.325
-  Required (ns):
-
-Path 2
-  From:                  UART_RX
-  To:                    TEST_RX
-  Delay (ns):            6.633
-  Slack (ns):
-  Arrival (ns):          6.633
-  Required (ns):
-
-
-Expanded Path 1
-  From: SPI_MISO
-  To: TEST_MISO
-  data required time                             N/C
-  data arrival time                          -   9.325
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        SPI_MISO (f)
-               +     0.000          net: SPI_MISO
-  0.000                        SPI_MISO_pad/U0/U0:PAD (f)
-               +     0.917          cell: ADLIB:IOPAD_IN
-  0.917                        SPI_MISO_pad/U0/U0:Y (f)
-               +     0.000          net: SPI_MISO_pad/U0/NET1
-  0.917                        SPI_MISO_pad/U0/U1:YIN (f)
-               +     0.256          cell: ADLIB:IOIN_IB
-  1.173                        SPI_MISO_pad/U0/U1:Y (f)
-               +     4.073          net: SPI_MISO_c_c
-  5.246                        TEST_MISO_pad/U0/U1:D (f)
-               +     1.400          cell: ADLIB:IOTRI_OB_EB
-  6.646                        TEST_MISO_pad/U0/U1:DOUT (f)
-               +     0.000          net: TEST_MISO_pad/U0/NET1
-  6.646                        TEST_MISO_pad/U0/U0:D (f)
-               +     2.679          cell: ADLIB:IOPAD_TRI
-  9.325                        TEST_MISO_pad/U0/U0:PAD (f)
-               +     0.000          net: TEST_MISO
-  9.325                        TEST_MISO (f)
-                                    
-  9.325                        data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          SPI_MISO (f)
-                                    
-  N/C                          TEST_MISO (f)
-                                    
-  N/C                          data required time
-
+No Path
 
 END SET Input to Output
 

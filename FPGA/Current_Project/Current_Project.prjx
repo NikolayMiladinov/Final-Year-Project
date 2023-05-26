@@ -142,13 +142,13 @@ SIZE="10850"
 ENDFILE
 VALUE "<project>\designer\impl1\top.adb,adb"
 STATE="utd"
-TIME="1682171950"
-SIZE="773632"
+TIME="1685018281"
+SIZE="5249536"
 ENDFILE
 VALUE "<project>\designer\impl1\top.ide_des,ide_des"
 STATE="utd"
-TIME="1682171950"
-SIZE="1044"
+TIME="1685018281"
+SIZE="1045"
 ENDFILE
 VALUE "<project>\designer\impl1\top.pdb,pdb"
 STATE="utd"
@@ -157,8 +157,8 @@ SIZE="93860"
 ENDFILE
 VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
 STATE="utd"
-TIME="1685011686"
-SIZE="16719"
+TIME="1685018232"
+SIZE="16513"
 ENDFILE
 VALUE "<project>\designer\impl1\top_floorplan_log.rpt,log"
 STATE="utd"
@@ -167,12 +167,12 @@ SIZE="385"
 ENDFILE
 VALUE "<project>\designer\impl1\top_fp\projectData\top.pdb,pdb"
 STATE="utd"
-TIME="1678829602"
-SIZE="59326"
+TIME="1683979177"
+SIZE="90258"
 ENDFILE
 VALUE "<project>\designer\impl1\top_fp\top.pro,pro"
 STATE="utd"
-TIME="1678829602"
+TIME="1683979177"
 SIZE="2482"
 ENDFILE
 VALUE "<project>\designer\impl1\top_placeroute_log.rpt,log"
@@ -227,13 +227,13 @@ SIZE="27785"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1678812065"
-SIZE="2085"
+TIME="1684932865"
+SIZE="1971"
 ENDFILE
 VALUE "<project>\simulation\setup.do,do"
 STATE="utd"
-TIME="1679065509"
-SIZE="2411"
+TIME="1683977101"
+SIZE="2274"
 ENDFILE
 VALUE "<project>\simulation\testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -303,27 +303,27 @@ SIZE="1839"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
-TIME="1682169383"
+TIME="1684412364"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
 STATE="utd"
-TIME="1682171895"
-SIZE="415601"
+TIME="1685018222"
+SIZE="1172250"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1682171895"
+TIME="1685018222"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1682171895"
+TIME="1685018222"
 SIZE="394"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1682171895"
+TIME="1685018222"
 SIZE="3511"
 ENDFILE
 ENDLIST
@@ -456,8 +456,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -465,7 +465,7 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM=" -l presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -529,10 +529,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Compile:top_compile_log.rpt
-HDL;stimulus\tb_top.v;0
-ACTIVEVIEW;Reports
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"

@@ -1,16 +1,16 @@
 C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis   -part AGLN250V2  -package VQFP100  -grade STD    -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\report\top_fpga_mapper.xml  -top_level_module  top  -licensetype  synplifypro_actel  -flow mapping  -mp  4  -prjfile  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\scratchproject.prs  -implementation  synthesis  -multisrs  -oedif  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.edn   -freq 100.000   C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_prem.srd  -sap  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap  -otap  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.tap  -omap  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.map  -devicelib  C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v  -sap  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.sap  -ologparam  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\syntmp\top.plg  -osyn  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top.srm  -prjdir  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\  -prjname  top_syn  -log  C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synlog\top_fpga_mapper.srr 
 relcom:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe -prodtype synplify_pro -encrypt -pro -rundir ..\..\synthesis -part AGLN250V2 -package VQFP100 -grade STD -globalthreshold 50 -maxfan 24 -opcond COMWC -report_path 4000 -RWCheckOnRam 0 -summaryfile ..\synlog\report\top_fpga_mapper.xml -top_level_module top -licensetype synplifypro_actel -flow mapping -mp 4 -prjfile ..\scratchproject.prs -implementation synthesis -multisrs -oedif ..\top.edn -freq 100.000 ..\synwork\top_prem.srd -sap ..\top.sap -otap ..\top.tap -omap ..\top.map -devicelib ..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v -sap ..\top.sap -ologparam top.plg -osyn ..\top.srm -prjdir ..\ -prjname top_syn -log ..\synlog\top_fpga_mapper.srr
-rc:1 success:1 runtime:7
+rc:1 success:1 runtime:9
 file:..\scratchproject.prs|io:o|time:1684197810|size:3646|exec:0|csum:
-file:..\top.edn|io:o|time:1685018222|size:1172250|exec:0|csum:
-file:..\synwork\top_prem.srd|io:i|time:1685018214|size:93944|exec:0|csum:598F16308693ACF41901A59249FC784E
-file:..\top.sap|io:o|time:1685018215|size:3298|exec:0|csum:
+file:..\top.edn|io:o|time:1685116663|size:1335680|exec:0|csum:
+file:..\synwork\top_prem.srd|io:i|time:1685116654|size:90834|exec:0|csum:D6AD7987DA650223C106C7D7B7730CAC
+file:..\top.sap|io:o|time:1685116654|size:2859|exec:0|csum:
 file:..\top.tap|io:o|time:0|size:0|exec:0|csum:
-file:..\top.map|io:o|time:1685018222|size:28|exec:0|csum:
+file:..\top.map|io:o|time:1685116663|size:28|exec:0|csum:
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v|io:i|time:1509013088|size:50704|exec:0|csum:30991078F83C3293651DECB436D35B5C
-file:..\top.sap|io:o|time:1685018215|size:3298|exec:0|csum:
-file:top.plg|io:o|time:1685018222|size:916|exec:0|csum:
-file:..\top.srm|io:o|time:1685018222|size:89355|exec:0|csum:
-file:..\synlog\top_fpga_mapper.srr|io:o|time:1685018222|size:85393|exec:0|csum:
+file:..\top.sap|io:o|time:1685116654|size:2859|exec:0|csum:
+file:top.plg|io:o|time:1685116663|size:548|exec:0|csum:
+file:..\top.srm|io:o|time:1685116663|size:88746|exec:0|csum:
+file:..\synlog\top_fpga_mapper.srr|io:o|time:1685116663|size:66891|exec:0|csum:
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\m_proasic.exe|io:i|time:1509359472|size:11119104|exec:1|csum:6BD6E9876645BB1B346C655471A0D71C
 file:..\..\..\..\..\..\..\..\..\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\m_proasic.exe|io:i|time:1509360886|size:14301696|exec:1|csum:CA7B630F1194A591FA1E520688EE75E2

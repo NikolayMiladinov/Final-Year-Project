@@ -3,11 +3,6 @@
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\command_vars.v":1:0:1:8|Synthesizing module work_C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v_unit in library work.
 
 Selecting top level module top
-@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v":1:7:1:13|Synthesizing module clk_div in library work.
-
-	div=32'b00000000000000000000000000001010
-   Generated name = clk_div_10s
-
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1953:7:1953:10|Synthesizing module BUFF in library work.
 
 @N: CG364 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\proasic\igloo.v":1386:7:1386:12|Synthesizing module NAND3C in library work.
@@ -248,11 +243,11 @@ Selecting top level module top
 	SPI_MODE=32'b00000000000000000000000000000011
 	CLKS_PER_HALF_BIT=32'b00000000000000000000000000000010
 	MAX_BYTES_PER_CS=32'b00000000000000000001001110001000
-	MAX_CS_INACTIVE_CLKS=32'b00000000000000000000000011001000
+	MAX_CS_INACTIVE_CLKS=32'b00000000000000000110000110101000
 	IDLE=2'b00
 	TRANSFER=2'b01
 	CS_INACTIVE=2'b10
-   Generated name = SPI_Master_With_Single_CS_3s_2s_5000s_200s_0_1_2
+   Generated name = SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2
 
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Clock_gen.v":38:7:38:37|Synthesizing module UART_CORE_UART_CORE_0_Clock_gen in library work.
 
@@ -320,9 +315,13 @@ Selecting top level module top
 	SPI_MODE=32'b00000000000000000000000000000011
 	CLKS_PER_HALF_BIT=32'b00000000000000000000000000000010
 	MAX_BYTES_PER_CS=32'b00000000000000000001001110001000
-	MAX_WAIT_CYCLES=32'b00000000000000000000000011001000
-	BAUD_VAL=32'b00000000000000000000000000001100
+	MAX_WAIT_CYCLES=32'b00000000000000000110000110101000
+	BAUD_VAL=32'b00000000000000000000000010000001
 	BAUD_VAL_FRACTION=32'b00000000000000000000000000000000
+	TIMER_1_25MS_COUNT=15'b110000110101000
+	TIMER_0_5MS_COUNT=15'b010011100010000
+	TIMER_0_24MS_COUNT=15'b001001011000000
+	TIMER_0_08MS_COUNT=15'b000011001000000
 	DATA_TRANSFER=8'b00100001
 	IDLE=1'b0
 	BUSY=1'b1
@@ -330,16 +329,11 @@ Selecting top level module top
 	WRITE_DATA=1'b1
    Generated name = mem_command_Z1
 
-@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":134:4:134:9|Pruning unused register w_fifo_count_prev[12:0]. Make sure that there are no unused intermediate registers.
-@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":134:4:134:9|Feedback mux created for signal current_command.prog_data[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@W: CL169 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":139:4:139:9|Pruning unused register w_fifo_count_prev[12:0]. Make sure that there are no unused intermediate registers.
+@A: CL282 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":139:4:139:9|Feedback mux created for signal current_command.prog_data[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":4:7:4:9|Synthesizing module top in library work.
 
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Optimizing register bit r_Pwrup_Timer[12] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Optimizing register bit r_Pwrup_Timer[13] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Optimizing register bit r_Pwrup_Timer[14] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL190 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Optimizing register bit r_Pwrup_Timer[15] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: CL279 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Pruning register bits 15 to 12 of r_Pwrup_Timer[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Trying to extract state machine for register r_fifo_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":189:2:189:7|Trying to extract state machine for register r_fifo_sm.
 Extracted state machine for register r_fifo_sm
 State machine has 6 reachable states with original encodings of:
    000
@@ -348,7 +342,7 @@ State machine has 6 reachable states with original encodings of:
    011
    100
    110
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Trying to extract state machine for register r_SEND_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":189:2:189:7|Trying to extract state machine for register r_SEND_sm.
 Extracted state machine for register r_SEND_sm
 State machine has 7 reachable states with original encodings of:
    000
@@ -358,7 +352,7 @@ State machine has 7 reachable states with original encodings of:
    100
    101
    110
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":183:2:183:7|Trying to extract state machine for register r_RECEIVE_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":189:2:189:7|Trying to extract state machine for register r_RECEIVE_sm.
 Extracted state machine for register r_RECEIVE_sm
 State machine has 5 reachable states with original encodings of:
    000
@@ -366,7 +360,6 @@ State machine has 5 reachable states with original encodings of:
    010
    011
    100
-@N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":6:10:6:15|Input pb_sw1 is unused.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state.
 Extracted state machine for register rx_state
 State machine has 4 reachable states with original encodings of:

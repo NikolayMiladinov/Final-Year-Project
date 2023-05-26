@@ -3,7 +3,7 @@
 
 module top(
     input CLKA,
-    input pb_sw1,
+    // input pb_sw1,
     input rst_n,
 
     // SPI PINS
@@ -18,29 +18,28 @@ module top(
     output UART_TX,
 
     // SPI and UART Test pins
-    output TEST_MOSI,
-    output TEST_CLK,
-    output TEST_MISO,
-    output TEST_CS_n,
-    output TEST_VCC,
-    output TEST_RX,
-    output TEST_TX,
+    // output TEST_MOSI,
+    // output TEST_CLK,
+    // output TEST_MISO,
+    // output TEST_CS_n,
+    // output TEST_VCC,
+    // output TEST_RX,
+    // output TEST_TX,
 
     // Other test pins
-    output FPGA_CLK,
-    output MEM_CM_READY,
+    // output FPGA_CLK,
+    // output MEM_CM_READY,
     output FIFO_TRIG_WR,
-    output FIFO_TRIG_RE,
+    // output FIFO_TRIG_RE,
     output FIFO_TRIG_DL
   ); /* synthesis syn_noprune=1 */
 
+  // Parameters for memmory controller
   parameter SPI_MODE = 3;           // Mode 3: CPOL = 1, CPHA = 1; clock is high during deselect
   parameter CLKS_PER_HALF_BIT = 2;  // SPI_CLK_FREQ = CLK_FREQ/(CLKS_PER_HALF_BIT)
-  parameter CLK_DIV_PARAM = 10;     // Divide CLK freq by that number
-  parameter TIMER_2MS_COUNT = 40000/CLK_DIV_PARAM; // CLK is 20MHz/CLK_DIV_PARAM
   parameter MAX_BYTES_PER_CS = 5000;// Maximum number of bytes per transaction with memory chip
-  parameter MAX_WAIT_CYCLES = 200;  // Maximum number of wait cycles after deasserting (active low) CS
-  parameter BAUD_VAL = 12;          // Baud rate = clk_freq / ((1 + BAUD_VAL)x16)
+  parameter MAX_WAIT_CYCLES = 25000;  // Maximum number of wait cycles after deasserting (active low) CS
+  parameter BAUD_VAL = (130/CLK_DIV_PARAM) - 1; // Baud rate = clk_freq / ((1 + BAUD_VAL)x16); This achieves a 9600 baud rate
   parameter BAUD_VAL_FRACTION = 0;  // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
 
   // Page address that will be used to store data from UART to memory, no specific reason for this exact address
@@ -52,7 +51,7 @@ module top(
   parameter DIE_SEL_ADDRESS = 8'hD0;    // Address in GET/SET FEATURE command to access information on which die is selected (2 dies total)
 
   // Control signals
-  logic CLK1;        // Internal clock after dividing the 20 MHz input clock (CLKA)
+  logic CLK1;        // Internal clock after dividing the 20 MHz input clock (CLKA); division can be bypassed as well (look at command_vars file)
   logic r_Mem_Power; // VCC line and all other SPI lines are low when r_Mem_Power is low
 
   // SPI pins
@@ -61,7 +60,7 @@ module top(
   logic int_SPI_MOSI; // Internal SPI_MOSI that connects to SPI module
 
   // SPI pins with power control; important that CS_n rises and falls with VCC of memory chip
-  assign MEM_VCC  = r_Mem_Power;
+  assign MEM_VCC  = r_Mem_Power; 
   assign SPI_CLK  = r_Mem_Power & int_SPI_CLK;
   assign SPI_CS_n = r_Mem_Power & int_SPI_CS_n; // Should rise/fall with VCC when powering on/off
   assign SPI_MOSI = r_Mem_Power & int_SPI_MOSI;
@@ -77,7 +76,7 @@ module top(
   // CACHE_READ (+ other types of cache read), PROG_LOAD have a 2 byte address (3 dummy bits, followed by 13-bit column address)
   // Column address indicates from which byte the operation on the specific page should begin (i.e. to change/read only last 10 bytes of a page)
   // However, reading/writing part of a page should not decrease the time to save/read the page
-  logic [23:0] r_Addr_Data /* synthesis syn_preserve=1 syn_noprune=1 */; 
+  logic [23:0] r_Addr_Data /* synthesis syn_preserve=1 syn_noprune=1 */; // TO DO: remove MSB 7 bits; [16:0] are only needed
   logic        w_Master_CM_Ready; // Indicates that the SPI is ready for the next command when high, busy when low
   logic [7:0]  w_RX_Feature_Byte, r_RX_Feature_Byte /* synthesis syn_preserve=1 syn_noprune=1 */; // wire that connects to mem_command module and internal register to save the feature byte
   logic        w_RX_Feature_DV; // Data valid for when to save the feature byte to the internal register
@@ -116,30 +115,37 @@ module top(
   localparam RECEIVE_PAGE_READ    = 3'b011; // PAGE READ command with address specified in parameter section
   localparam RECEIVE_CACHE_READ   = 3'b100; // Initiate CACHE READ command when PAGE READ is finished (can be combined with page read state)
 
-  // For commands that need waiting, do get_feature command twice
-  logic r_check_twice; // used to accomplish the logic in comment above
+  // For commands that need waiting, do get_feature command twice 
+  logic [1:0] r_check_twice; // used to accomplish the logic in comment above
 
   // Assign output pins
-  assign TEST_VCC     = r_Mem_Power;
-  assign TEST_MOSI    = SPI_MOSI;
-  assign TEST_CLK     = SPI_CLK;
-  assign TEST_CS_n    = SPI_CS_n;
-  assign TEST_MISO    = SPI_MISO;
-  assign FPGA_CLK     = CLK1;
-  assign MEM_CM_READY = 1'b0; // extra pin for testing
-  assign TEST_RX      = UART_RX;
-  assign TEST_TX      = UART_TX;
+  // assign TEST_VCC     = r_Mem_Power;
+  // assign TEST_MOSI    = SPI_MOSI;
+  // assign TEST_CLK     = SPI_CLK;
+  // assign TEST_CS_n    = SPI_CS_n;
+  // assign TEST_MISO    = SPI_MISO;
+  // assign FPGA_CLK     = CLK1;
+  // assign MEM_CM_READY = 1'b0; // extra pin for testing
+  // assign TEST_RX      = UART_RX;
+  // assign TEST_TX      = UART_TX;
   assign FIFO_TRIG_WR = ~r_fifo_sm[0]&&r_fifo_sm[1]&&r_fifo_sm[2];  // Triggers high during memory power-up
-  assign FIFO_TRIG_RE = ~r_fifo_sm[0]&~r_fifo_sm[1]&r_fifo_sm[2];     // Triggers high during a read to the memory
+  // assign FIFO_TRIG_RE = ~r_fifo_sm[0]&~r_fifo_sm[1]&r_fifo_sm[2];     // Triggers high during a read to the memory
   assign FIFO_TRIG_DL = r_fifo_sm[0]&&r_fifo_sm[1]&&(~r_fifo_sm[2])&&(r_Command_prev == BLOCK_ERASE); // Triggers high during a block erase command
 
 
-  // Divide clock by CLK_DIV_PARAM
-  clk_div #(.div(CLK_DIV_PARAM)) clk_div_1M (
-    .clk_in(CLKA),
-    .clk_out(CLK1),
-    .rst_n(rst_n)
-  );
+  generate
+    if(CLK_DIV_BYPASS == 0) begin
+      // Divide clock by CLK_DIV_PARAM
+      clk_div #(.div(CLK_DIV_PARAM)) clk_div_1M (
+        .clk_in(CLKA),
+        .clk_out(CLK1),
+        .rst_n(rst_n)
+      );
+    end else begin
+      assign CLK1 = CLKA;
+    end
+  endgenerate
+  
 
   // Instantiate UUT
   mem_command #(.SPI_MODE(SPI_MODE),.CLKS_PER_HALF_BIT(CLKS_PER_HALF_BIT),
@@ -192,9 +198,9 @@ module top(
       r_Command_prev    <= NO_COMMAND;
       r_Mem_Power       <= 1'b0;
       r_RX_Feature_Byte <= 8'b0;
-      r_check_twice     <= 1'b0;
+      r_check_twice     <= 2'b0;
       r_TRANSFER_SIZE   <= 'd2048; // default transfer size, half a page, same in mem_command
-      r_Pwrup_Timer      <= 'b0;
+      r_Pwrup_Timer     <= 'b0;
     end else begin
       // Transfer size wire will change during a UART message before it is the final value
       if (w_transfer_size_DV) begin
@@ -203,19 +209,18 @@ module top(
 
       // SPI/UART are enabled/disabled depending on state
       // Cannot receive data from both UART and SPI because there is only 1 FIFO, hence the need for these states
-      // TO DO: add a state that performs checks/changes upon power-up of memory chip
 
       case (r_fifo_sm)
 
         // Idle state, push button 1 changes state to receiving data from UART
         FIFO_IDLE: begin
-          // Power off memory chip to save power
+          // Power off memory chip to save power 
           r_Mem_Power       <= 1'b0;
 
           // Change state when push button 1 is pressed 
-          if (SIM_TEST == 1 && ~pb_sw1) r_fifo_sm <= FIFO_WAIT_MEM_PWRUP; // for testing
+          // if (SIM_TEST == 1 && ~pb_sw1) r_fifo_sm <= FIFO_WAIT_MEM_PWRUP; // for testing
           // When UART data is available, start processing it
-          else if (w_UART_RX_Ready) r_fifo_sm <= FIFO_UART_RECEIVE;
+          if (w_UART_RX_Ready) r_fifo_sm <= FIFO_UART_RECEIVE;
         end 
 
         // Receive data from UART
@@ -272,7 +277,6 @@ module top(
             case (r_RECEIVE_sm)
 
               // This state issues the GET_FEATURE command, then moves to checking the data that is received from the chip
-              // TO DO: initiate two consecutive GET FEATURE commands after PAGE READ as first one sometimes does not work
               RECEIVE_CHECK: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
                   r_Command         <= GET_FEATURE;
@@ -293,9 +297,9 @@ module top(
 
                   // Do a get feature command twice if previous command was READ
                   // Often the first get feature is not accurate
-                  if(~r_check_twice && (r_Command_prev == CACHE_READ || r_Command_prev == PAGE_READ)) begin
+                  if(r_check_twice == 2'b0 && (r_Command_prev == CACHE_READ || r_Command_prev == PAGE_READ)) begin
                     r_RECEIVE_sm  <= RECEIVE_CHECK;
-                    r_check_twice <= 1'b1;
+                    r_check_twice <= 2'b1;
                   end
                   else if(w_RX_Feature_Byte[0] || w_RX_Feature_Byte[7]) r_RECEIVE_sm <= RECEIVE_CHECK; // If chip is busy, poll GET_FEATURE until it isn't 
                   else if(w_RX_Feature_Byte[1]) r_RECEIVE_sm <= RECEIVE_WRITE_DISABLE; // Write enable should be 0 in read mode, disable if high
@@ -325,6 +329,7 @@ module top(
                 end
               end
 
+              // TO DO: CACHE READ and PAGE READ states can be combined
               // Cache read command, check status after
               RECEIVE_CACHE_READ: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
@@ -333,7 +338,7 @@ module top(
                   r_Addr_Data[23:0] <= 'b0;   // CACHE_READ requires a 13-bit column addres, putting 0 means it will save data in the page from 0th byte
                   r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
                   r_RECEIVE_sm      <= RECEIVE_CHECK;
-                  r_check_twice     <= 1'b0;  // Reset logic to issue get feature command twice
+                  r_check_twice     <= 2'b0;  // Reset logic to issue get feature command twice
                 end
               end
 
@@ -345,7 +350,7 @@ module top(
                   r_Addr_Data[23:0] <= PAGE_ADDRESS; // Assign the correct page address to read data from memory chip
                   r_Master_CM_DV    <= 1'b1; // Issues a data valid pulse (should be 1 clock cycle)
                   r_RECEIVE_sm      <= RECEIVE_CHECK;
-                  r_check_twice     <= 1'b0; // Reset logic to issue get feature command twice
+                  r_check_twice     <= 2'b0; // Reset logic to issue get feature command twice
                 end
               end
             endcase
@@ -367,8 +372,8 @@ module top(
                   r_Command         <= RESET;
                   r_Command_prev    <= RESET;
                   r_Master_CM_DV    <= 1'b1;        // Issues a data valid pulse (should be 1 clock cycle)
-                  r_SEND_sm         <= SEND_CHECK;  // TO DO: check if ECC is enabled/disabled and use set_feature if needed to change it
-                  r_check_twice     <= 1'b0;        // Reset logic to issue get feature command twice
+                  r_SEND_sm         <= SEND_CHECK;
+                  r_check_twice     <= 2'b0;        // Reset logic to issue get feature command twice
                 end
               end
 
@@ -387,13 +392,14 @@ module top(
                 end
               end
 
-              // This state issues the GET_FEATURE command, then moves to checking the data that is received from the chip
-              // TO DO: initiate two consecutive GET FEATURE commands after PROG EXEC as first one sometimes does not work
+              // This state issues the GET_FEATURE command, then moves to checking the data that is received from the chip 
               SEND_CHECK: begin
                 if (w_Master_CM_Ready) begin  // If SPI is ready for another command
                   r_Command           <= GET_FEATURE;
 
-                  if((r_Command_prev == RESET && r_Addr_Data[15:8] == STATUS_ADDRESS && ~r_RX_Feature_Byte[0]) || (r_Command_prev == SET_FEATURE && r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS)) begin
+                  // Makes sure after reset status of chip is checked twice as sometimes the first check is incorrect
+                  if(r_Command_prev == RESET && r_check_twice < 2'd2) r_Addr_Data[15:8] <= STATUS_ADDRESS; // Address for getting the status of the chip
+                  else if((r_Command_prev == RESET && r_Addr_Data[15:8] == STATUS_ADDRESS && ~r_RX_Feature_Byte[0]) || (r_Command_prev == SET_FEATURE && r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS)) begin
                     r_Addr_Data[15:8] <= BLOCK_LOCK_ADDRESS; // Address for getting the block lock status of the chip
                     r_Command_prev    <= GET_FEATURE;
                   end else if((r_Command_prev == GET_FEATURE && r_Addr_Data[15:8] == BLOCK_LOCK_ADDRESS) || (r_Command_prev == SET_FEATURE && r_Addr_Data[15:8] == CONF_ADDRESS)) begin
@@ -427,12 +433,15 @@ module top(
                   end else if(r_Addr_Data[15:8] == STATUS_ADDRESS) begin
                     // Do a get feature command twice if previous command was RESET, ERASE or PROGRAM
                     // Often the first get feature is not accurate
-                    if(~r_check_twice && (r_Command_prev == RESET || r_Command_prev == BLOCK_ERASE || r_Command_prev == PROG_LOAD1 || r_Command_prev == PROG_EXEC)) begin
+                    if(r_check_twice == 2'b0 && (r_Command_prev == RESET || r_Command_prev == BLOCK_ERASE || r_Command_prev == PROG_LOAD1 || r_Command_prev == PROG_EXEC)) begin
                       r_SEND_sm     <= SEND_CHECK;
-                      r_check_twice <= 1'b1;
+                      r_check_twice <= 2'b1;
+                    end else if(r_check_twice == 2'b1 && r_Command_prev == RESET) begin // Needed for checking twice the status after a reset
+                      r_SEND_sm     <= SEND_CHECK;
+                      r_check_twice <= 2'd2;
                     end
-                    else if(w_RX_Feature_Byte[0] || r_Command_prev == RESET) r_SEND_sm <= SEND_CHECK; // If chip is busy, poll GET_FEATURE until it isn't
-                    else if(w_RX_Feature_Byte[3])  r_SEND_sm <= RESET_MEM; // This clears the prog fail status
+                    else if(w_RX_Feature_Byte[0]) r_SEND_sm <= SEND_CHECK; // If chip is busy, poll GET_FEATURE until it isn't
+                    else if(w_RX_Feature_Byte[3] || w_RX_Feature_Byte[2])  r_SEND_sm <= RESET_MEM; // This clears the prog/erase fail status
                     else if(~w_RX_Feature_Byte[1] && (r_Command_prev == WRITE_DISABLE || r_Command_prev == PROG_EXEC) && w_fifo_count == 'b0) begin
                       r_SEND_sm       <= RESET_MEM;        // Reset state so it always begins with a mem reset
                       r_fifo_sm       <= FIFO_MEM_RECEIVE; // Move to next state
@@ -490,7 +499,7 @@ module top(
                   end
                   r_Master_CM_DV    <= 1'b1;  // Issues a data valid pulse (should be 1 clock cycle)
                   r_SEND_sm         <= SEND_CHECK;
-                  r_check_twice     <= 1'b0;  // Reset logic to issue get feature command twice
+                  r_check_twice     <= 2'b0;  // Reset logic to issue get feature command twice
                 end
               end
             endcase
