@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Fri May 26 16:58:30 2023 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Fri May 26 17:17:25 2023 Pinchecksum: NOT-AVAILABLE
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
@@ -18,11 +18,11 @@ Flash*Freeze information
 Number |Port         |Function         |State       |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Use I/O Reg |Hot Swappable |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |
 -------|-------------|-----------------|------------|---------|------------------|-----|--------------|-----------------|------------|--------------|----------------|---------------------------------------------|
 1                     GND               Reserved
-2                     GAA2/IO67RSB3     Special
-3                     IO66RSB3          Unassigned
-4                     GAB2/IO65RSB3     Special
-5                     IO64RSB3          Unassigned
-6                     GAC2/IO63RSB3     Special
+2       MEM_VCC       GAA2/IO67RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+3       SPI_CLK       IO66RSB3          Fixed        LVCMOS33  8                  High  None           5                 No           No             ---              No
+4       SPI_CS_n      GAB2/IO65RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
+5       SPI_MISO      IO64RSB3          Fixed        LVCMOS33  ---                ---   None           ---               No           No             No               No
+6       SPI_MOSI      GAC2/IO63RSB3     Special      LVCMOS33  8                  High  None           5                 No           No             ---              No
 7                     IO62RSB3          Unassigned
 8                     IO61RSB3          Unassigned
 9                     GND               Reserved
@@ -85,11 +85,11 @@ Number |Port         |Function         |State       |I/O Std  |Output Drive (mA)
 66                    VCCIB1            Reserved
 67                    GND               Reserved
 68                    VCC               Reserved
-69      SPI_MOSI      IO24RSB1          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
-70      SPI_MISO      GBC2/IO23RSB1     Special      LVCMOS18  ---                ---   None           ---               No           No             No               No
-71      SPI_CS_n      GBB2/IO22RSB1     Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
-72      SPI_CLK       IO21RSB1          Fixed        LVCMOS18  4                  High  None           5                 No           No             ---              No
-73      MEM_VCC       GBA2/IO20RSB1     Special      LVCMOS18  4                  High  None           5                 No           No             ---              No
+69                    IO24RSB1          Unassigned
+70                    GBC2/IO23RSB1     Special
+71                    GBB2/IO22RSB1     Special
+72                    IO21RSB1          Unassigned
+73                    GBA2/IO20RSB1     Special
 74                    VMV1              Reserved
 75                    GNDQ              Reserved
 76                    GBA1/IO19RSB0     Special

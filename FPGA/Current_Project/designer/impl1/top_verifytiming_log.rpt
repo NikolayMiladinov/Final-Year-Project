@@ -14,7 +14,7 @@ Opened an existing Libero design top.adb.
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 Wrote timing report to file: top_maxdelay_timing_report.txt
 
-The Report command succeeded ( 00:00:03 )
+The Report command succeeded ( 00:00:02 )
 Wrote timing report to file: top_mindelay_timing_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -28,6 +28,6 @@ Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.
 
-The Execute Script command succeeded ( 00:00:03 )
+The Execute Script command succeeded ( 00:00:04 )
 Design closed.
 

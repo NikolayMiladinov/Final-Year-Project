@@ -115,7 +115,7 @@ module top(
   localparam RECEIVE_PAGE_READ    = 3'b011; // PAGE READ command with address specified in parameter section
   localparam RECEIVE_CACHE_READ   = 3'b100; // Initiate CACHE READ command when PAGE READ is finished (can be combined with page read state)
 
-  // For commands that need waiting, do get_feature command twice 
+  // For commands that need waiting, do get_feature command twice
   logic [1:0] r_check_twice; // used to accomplish the logic in comment above
 
   // Assign output pins

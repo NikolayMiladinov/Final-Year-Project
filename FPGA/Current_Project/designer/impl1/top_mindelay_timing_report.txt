@@ -2,7 +2,7 @@ Timing Report Min Delay Analysis
 
 SmartTime Version v11.9 SP6
 Microsemi Corporation - Microsemi Libero Software Release v11.9 SP6 (Version 11.9.6.7)
-Date: Fri May 26 16:58:35 2023
+Date: Fri May 26 17:17:29 2023
 
 
 Design: top
@@ -26,8 +26,8 @@ SUMMARY
 Clock Domain:               CLKA
 Required Period (ns):       N/A
 Required Frequency (MHz):   N/A
-External Hold (ns):         0.053
-Min Clock-To-Out (ns):      3.413
+External Hold (ns):         0.235
+Min Clock-To-Out (ns):      3.972
 
                             Input to Output
 Min Delay (ns):             N/A
@@ -40,20 +40,20 @@ Clock Domain CLKA
 SET Register to Register
 
 Path 1
-  From:                  MEM_COMMAND_CONTROLLER/r_UART_Data_In[3]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[3]:D
+  From:                  MEM_COMMAND_CONTROLLER/r_Master_TX_Byte[2]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_Byte[2]:D
   Delay (ns):            0.499
   Slack (ns):
-  Arrival (ns):          1.641
+  Arrival (ns):          1.626
   Required (ns):
   Hold (ns):             0.000
 
 Path 2
-  From:                  MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[1]:D
-  Delay (ns):            0.512
+  From:                  MEM_COMMAND_CONTROLLER/r_UART_Data_In[6]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[6]:D
+  Delay (ns):            0.499
   Slack (ns):
-  Arrival (ns):          1.627
+  Arrival (ns):          1.611
   Required (ns):
   Hold (ns):             0.000
 
@@ -62,228 +62,33 @@ Path 3
   To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[1]:D
   Delay (ns):            0.499
   Slack (ns):
-  Arrival (ns):          1.685
+  Arrival (ns):          1.641
   Required (ns):
   Hold (ns):             0.000
 
 Path 4
-  From:                  MEM_COMMAND_CONTROLLER/r_UART_Data_In[2]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[2]:D
+  From:                  MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[5]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx_byte[5]:D
   Delay (ns):            0.499
   Slack (ns):
-  Arrival (ns):          1.685
+  Arrival (ns):          1.665
   Required (ns):
   Hold (ns):             0.000
 
 Path 5
-  From:                  MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[3]:CLK
-  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx_byte[3]:D
-  Delay (ns):            0.499
+  From:                  MEM_COMMAND_CONTROLLER/r_fifo_re_delay[0]:CLK
+  To:                    MEM_COMMAND_CONTROLLER/r_fifo_re_delay[1]:D
+  Delay (ns):            0.510
   Slack (ns):
-  Arrival (ns):          1.685
+  Arrival (ns):          1.652
   Required (ns):
   Hold (ns):             0.000
 
 
 Expanded Path 1
-  From: MEM_COMMAND_CONTROLLER/r_UART_Data_In[3]:CLK
-  To: MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[3]:D
-  data arrival time                              1.641
-  data required time                         -   N/C
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        CLKA
-               +     0.000          Clock source
-  0.000                        CLKA (r)
-               +     0.000          net: CLKA
-  0.000                        CLKA_pad/U0/U0:PAD (r)
-               +     0.314          cell: ADLIB:IOPAD_IN
-  0.314                        CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  0.314                        CLKA_pad/U0/U1:A (r)
-               +     0.347          cell: ADLIB:CLKIO
-  0.661                        CLKA_pad/U0/U1:Y (r)
-               +     0.481          net: CLKA_c
-  1.142                        MEM_COMMAND_CONTROLLER/r_UART_Data_In[3]:CLK (r)
-               +     0.358          cell: ADLIB:DFN1E1C0
-  1.500                        MEM_COMMAND_CONTROLLER/r_UART_Data_In[3]:Q (r)
-               +     0.141          net: MEM_COMMAND_CONTROLLER/r_UART_Data_In[3]
-  1.641                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[3]:D (r)
-                                    
-  1.641                        data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          CLKA
-               +     0.000          Clock source
-  N/C                          CLKA (r)
-               +     0.000          net: CLKA
-  N/C                          CLKA_pad/U0/U0:PAD (r)
-               +     0.314          cell: ADLIB:IOPAD_IN
-  N/C                          CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  N/C                          CLKA_pad/U0/U1:A (r)
-               +     0.347          cell: ADLIB:CLKIO
-  N/C                          CLKA_pad/U0/U1:Y (r)
-               +     0.561          net: CLKA_c
-  N/C                          MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[3]:CLK (r)
-               +     0.000          Library hold time: ADLIB:DFN1E0C0
-  N/C                          MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/tx_hold_reg[3]:D
-
-
-END SET Register to Register
-
-----------------------------------------------------
-
-SET External Hold
-
-Path 1
-  From:                  UART_RX
-  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D
-  Delay (ns):            1.357
-  Slack (ns):
-  Arrival (ns):          1.357
-  Required (ns):
-  Hold (ns):             0.000
-  External Hold (ns):    0.053
-
-Path 2
-  From:                  SPI_MISO
-  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[3]:D
-  Delay (ns):            1.620
-  Slack (ns):
-  Arrival (ns):          1.620
-  Required (ns):
-  Hold (ns):             0.000
-  External Hold (ns):    -0.168
-
-Path 3
-  From:                  SPI_MISO
-  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[6]:D
-  Delay (ns):            1.620
-  Slack (ns):
-  Arrival (ns):          1.620
-  Required (ns):
-  Hold (ns):             0.000
-  External Hold (ns):    -0.168
-
-Path 4
-  From:                  SPI_MISO
-  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[5]:D
-  Delay (ns):            1.620
-  Slack (ns):
-  Arrival (ns):          1.620
-  Required (ns):
-  Hold (ns):             0.000
-  External Hold (ns):    -0.168
-
-Path 5
-  From:                  SPI_MISO
-  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[2]:D
-  Delay (ns):            1.617
-  Slack (ns):
-  Arrival (ns):          1.617
-  Required (ns):
-  Hold (ns):             0.000
-  External Hold (ns):    -0.169
-
-
-Expanded Path 1
-  From: UART_RX
-  To: MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D
-  data arrival time                              1.357
-  data required time                         -   N/C
-  slack                                          N/C
-  ________________________________________________________
-  Data arrival time calculation
-  0.000                        UART_RX (r)
-               +     0.000          net: UART_RX
-  0.000                        UART_RX_pad/U0/U0:PAD (r)
-               +     0.314          cell: ADLIB:IOPAD_IN
-  0.314                        UART_RX_pad/U0/U0:Y (r)
-               +     0.000          net: UART_RX_pad/U0/NET1
-  0.314                        UART_RX_pad/U0/U1:YIN (r)
-               +     0.086          cell: ADLIB:IOIN_IB
-  0.400                        UART_RX_pad/U0/U1:Y (r)
-               +     0.957          net: UART_RX_c
-  1.357                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D (r)
-                                    
-  1.357                        data arrival time
-  ________________________________________________________
-  Data required time calculation
-  N/C                          CLKA
-               +     0.000          Clock source
-  N/C                          CLKA (r)
-               +     0.000          net: CLKA
-  N/C                          CLKA_pad/U0/U0:PAD (r)
-               +     0.405          cell: ADLIB:IOPAD_IN
-  N/C                          CLKA_pad/U0/U0:Y (r)
-               +     0.000          net: CLKA_pad/U0/NET1
-  N/C                          CLKA_pad/U0/U1:A (r)
-               +     0.446          cell: ADLIB:CLKIO
-  N/C                          CLKA_pad/U0/U1:Y (r)
-               +     0.559          net: CLKA_c
-  N/C                          MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:CLK (r)
-               +     0.000          Library hold time: ADLIB:DFN1E1P0
-  N/C                          MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D
-
-
-END SET External Hold
-
-----------------------------------------------------
-
-SET Clock to Output
-
-Path 1
-  From:                  MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx:CLK
-  To:                    UART_TX
-  Delay (ns):            2.286
-  Slack (ns):
-  Arrival (ns):          3.413
-  Required (ns):
-  Clock to Out (ns):     3.413
-
-Path 2
-  From:                  r_fifo_sm[5]:CLK
-  To:                    FIFO_TRIG_WR
-  Delay (ns):            3.086
-  Slack (ns):
-  Arrival (ns):          4.224
-  Required (ns):
-  Clock to Out (ns):     4.224
-
-Path 3
-  From:                  MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_SPI_Clk:CLK
-  To:                    SPI_CLK
-  Delay (ns):            3.149
-  Slack (ns):
-  Arrival (ns):          4.264
-  Required (ns):
-  Clock to Out (ns):     4.264
-
-Path 4
-  From:                  MEM_COMMAND_CONTROLLER/SPI_CS_Master/r_CS_n:CLK
-  To:                    SPI_CS_n
-  Delay (ns):            3.206
-  Slack (ns):
-  Arrival (ns):          4.341
-  Required (ns):
-  Clock to Out (ns):     4.341
-
-Path 5
-  From:                  MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_SPI_MOSI:CLK
-  To:                    SPI_MOSI
-  Delay (ns):            3.219
-  Slack (ns):
-  Arrival (ns):          4.356
-  Required (ns):
-  Clock to Out (ns):     4.356
-
-
-Expanded Path 1
-  From: MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx:CLK
-  To: UART_TX
-  data arrival time                              3.413
+  From: MEM_COMMAND_CONTROLLER/r_Master_TX_Byte[2]:CLK
+  To: MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_Byte[2]:D
+  data arrival time                              1.626
   data required time                         -   N/C
   slack                                          N/C
   ________________________________________________________
@@ -300,28 +105,223 @@ Expanded Path 1
                +     0.347          cell: ADLIB:CLKIO
   0.661                        CLKA_pad/U0/U1:Y (r)
                +     0.466          net: CLKA_c
-  1.127                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx:CLK (r)
-               +     0.358          cell: ADLIB:DFN1E0P0
-  1.485                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx:Q (r)
-               +     0.806          net: UART_TX_c
-  2.291                        UART_TX_pad/U0/U1:D (r)
-               +     0.505          cell: ADLIB:IOTRI_OB_EB
-  2.796                        UART_TX_pad/U0/U1:DOUT (r)
-               +     0.000          net: UART_TX_pad/U0/NET1
-  2.796                        UART_TX_pad/U0/U0:D (r)
-               +     0.617          cell: ADLIB:IOPAD_TRI
-  3.413                        UART_TX_pad/U0/U0:PAD (r)
-               +     0.000          net: UART_TX
-  3.413                        UART_TX (r)
+  1.127                        MEM_COMMAND_CONTROLLER/r_Master_TX_Byte[2]:CLK (r)
+               +     0.358          cell: ADLIB:DFN1E0C0
+  1.485                        MEM_COMMAND_CONTROLLER/r_Master_TX_Byte[2]:Q (r)
+               +     0.141          net: MEM_COMMAND_CONTROLLER/r_Master_TX_Byte[2]
+  1.626                        MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_Byte[2]:D (r)
                                     
-  3.413                        data arrival time
+  1.626                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          CLKA
+               +     0.000          Clock source
+  N/C                          CLKA (r)
+               +     0.000          net: CLKA
+  N/C                          CLKA_pad/U0/U0:PAD (r)
+               +     0.314          cell: ADLIB:IOPAD_IN
+  N/C                          CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  N/C                          CLKA_pad/U0/U1:A (r)
+               +     0.347          cell: ADLIB:CLKIO
+  N/C                          CLKA_pad/U0/U1:Y (r)
+               +     0.521          net: CLKA_c
+  N/C                          MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_Byte[2]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E1C0
+  N/C                          MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/r_TX_Byte[2]:D
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                  UART_RX
+  To:                    MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D
+  Delay (ns):            1.178
+  Slack (ns):
+  Arrival (ns):          1.178
+  Required (ns):
+  Hold (ns):             0.000
+  External Hold (ns):    0.235
+
+Path 2
+  From:                  SPI_MISO
+  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[3]:D
+  Delay (ns):            1.568
+  Slack (ns):
+  Arrival (ns):          1.568
+  Required (ns):
+  Hold (ns):             0.000
+  External Hold (ns):    -0.111
+
+Path 3
+  From:                  SPI_MISO
+  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[0]:D
+  Delay (ns):            1.568
+  Slack (ns):
+  Arrival (ns):          1.568
+  Required (ns):
+  Hold (ns):             0.000
+  External Hold (ns):    -0.111
+
+Path 4
+  From:                  SPI_MISO
+  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[1]:D
+  Delay (ns):            1.568
+  Slack (ns):
+  Arrival (ns):          1.568
+  Required (ns):
+  Hold (ns):             0.000
+  External Hold (ns):    -0.111
+
+Path 5
+  From:                  SPI_MISO
+  To:                    MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_RX_Byte[6]:D
+  Delay (ns):            1.570
+  Slack (ns):
+  Arrival (ns):          1.570
+  Required (ns):
+  Hold (ns):             0.000
+  External Hold (ns):    -0.113
+
+
+Expanded Path 1
+  From: UART_RX
+  To: MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D
+  data arrival time                              1.178
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        UART_RX (r)
+               +     0.000          net: UART_RX
+  0.000                        UART_RX_pad/U0/U0:PAD (r)
+               +     0.314          cell: ADLIB:IOPAD_IN
+  0.314                        UART_RX_pad/U0/U0:Y (r)
+               +     0.000          net: UART_RX_pad/U0/NET1
+  0.314                        UART_RX_pad/U0/U1:YIN (r)
+               +     0.086          cell: ADLIB:IOIN_IB
+  0.400                        UART_RX_pad/U0/U1:Y (r)
+               +     0.778          net: UART_RX_c
+  1.178                        MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D (r)
+                                    
+  1.178                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          CLKA
+               +     0.000          Clock source
+  N/C                          CLKA (r)
+               +     0.000          net: CLKA
+  N/C                          CLKA_pad/U0/U0:PAD (r)
+               +     0.405          cell: ADLIB:IOPAD_IN
+  N/C                          CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  N/C                          CLKA_pad/U0/U1:A (r)
+               +     0.446          cell: ADLIB:CLKIO
+  N/C                          CLKA_pad/U0/U1:Y (r)
+               +     0.562          net: CLKA_c
+  N/C                          MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E1P0
+  N/C                          MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_RX/samples[2]:D
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                  r_fifo_sm[5]:CLK
+  To:                    FIFO_TRIG_WR
+  Delay (ns):            2.845
+  Slack (ns):
+  Arrival (ns):          3.972
+  Required (ns):
+  Clock to Out (ns):     3.972
+
+Path 2
+  From:                  r_Mem_Power:CLK
+  To:                    MEM_VCC
+  Delay (ns):            3.086
+  Slack (ns):
+  Arrival (ns):          4.213
+  Required (ns):
+  Clock to Out (ns):     4.213
+
+Path 3
+  From:                  MEM_COMMAND_CONTROLLER/UART_Master/UART_CORE_0/make_TX/tx:CLK
+  To:                    UART_TX
+  Delay (ns):            3.228
+  Slack (ns):
+  Arrival (ns):          4.392
+  Required (ns):
+  Clock to Out (ns):     4.392
+
+Path 4
+  From:                  MEM_COMMAND_CONTROLLER/SPI_CS_Master/SPI_Master_Inst/o_SPI_Clk:CLK
+  To:                    SPI_CLK
+  Delay (ns):            3.393
+  Slack (ns):
+  Arrival (ns):          4.505
+  Required (ns):
+  Clock to Out (ns):     4.505
+
+Path 5
+  From:                  r_Mem_Power:CLK
+  To:                    SPI_CS_n
+  Delay (ns):            3.872
+  Slack (ns):
+  Arrival (ns):          4.999
+  Required (ns):
+  Clock to Out (ns):     4.999
+
+
+Expanded Path 1
+  From: r_fifo_sm[5]:CLK
+  To: FIFO_TRIG_WR
+  data arrival time                              3.972
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        CLKA
+               +     0.000          Clock source
+  0.000                        CLKA (r)
+               +     0.000          net: CLKA
+  0.000                        CLKA_pad/U0/U0:PAD (r)
+               +     0.314          cell: ADLIB:IOPAD_IN
+  0.314                        CLKA_pad/U0/U0:Y (r)
+               +     0.000          net: CLKA_pad/U0/NET1
+  0.314                        CLKA_pad/U0/U1:A (r)
+               +     0.347          cell: ADLIB:CLKIO
+  0.661                        CLKA_pad/U0/U1:Y (r)
+               +     0.466          net: CLKA_c
+  1.127                        r_fifo_sm[5]:CLK (r)
+               +     0.358          cell: ADLIB:DFN1C0
+  1.485                        r_fifo_sm[5]:Q (r)
+               +     1.286          net: FIFO_TRIG_WR_c
+  2.771                        FIFO_TRIG_WR_pad/U0/U1:D (r)
+               +     0.468          cell: ADLIB:IOTRI_OB_EB
+  3.239                        FIFO_TRIG_WR_pad/U0/U1:DOUT (r)
+               +     0.000          net: FIFO_TRIG_WR_pad/U0/NET1
+  3.239                        FIFO_TRIG_WR_pad/U0/U0:D (r)
+               +     0.733          cell: ADLIB:IOPAD_TRI
+  3.972                        FIFO_TRIG_WR_pad/U0/U0:PAD (r)
+               +     0.000          net: FIFO_TRIG_WR
+  3.972                        FIFO_TRIG_WR (r)
+                                    
+  3.972                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          CLKA
                +     0.000          Clock source
   N/C                          CLKA (r)
                                     
-  N/C                          UART_TX (r)
+  N/C                          FIFO_TRIG_WR (r)
 
 
 END SET Clock to Output
@@ -340,7 +340,7 @@ SET External Removal
 
 Path 1
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:RESET
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
   Delay (ns):            1.141
   Slack (ns):
   Arrival (ns):          1.141
@@ -350,7 +350,7 @@ Path 1
 
 Path 2
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_7:RESET
   Delay (ns):            1.141
   Slack (ns):
   Arrival (ns):          1.141
@@ -360,7 +360,7 @@ Path 2
 
 Path 3
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_1:RESET
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3:RESET
   Delay (ns):            1.141
   Slack (ns):
   Arrival (ns):          1.141
@@ -370,7 +370,7 @@ Path 3
 
 Path 4
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2:RESET
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:RESET
   Delay (ns):            1.142
   Slack (ns):
   Arrival (ns):          1.142
@@ -380,7 +380,7 @@ Path 4
 
 Path 5
   From:                  rst_n
-  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_3:RESET
+  To:                    MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_2:RESET
   Delay (ns):            1.142
   Slack (ns):
   Arrival (ns):          1.142
@@ -391,7 +391,7 @@ Path 5
 
 Expanded Path 1
   From: rst_n
-  To: MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:RESET
+  To: MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
   data arrival time                              1.141
   data required time                         -   N/C
   slack                                          N/C
@@ -407,7 +407,7 @@ Expanded Path 1
                +     0.347          cell: ADLIB:CLKIO
   0.661                        rst_n_pad/U0/U1:Y (r)
                +     0.480          net: rst_n_c
-  1.141                        MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:RESET (r)
+  1.141                        MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET (r)
                                     
   1.141                        data arrival time
   ________________________________________________________
@@ -424,9 +424,9 @@ Expanded Path 1
                +     0.446          cell: ADLIB:CLKIO
   N/C                          CLKA_pad/U0/U1:Y (r)
                +     0.605          net: CLKA_c
-  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:CLKB (r)
+  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:CLKB (r)
                +     0.340          Library removal time: ADLIB:RAM4K9
-  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_4:RESET
+  N/C                          MEM_COMMAND_CONTROLLER/fifo_/RAM4K9_0:RESET
 
 
 END SET External Removal

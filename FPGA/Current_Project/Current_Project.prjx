@@ -152,13 +152,13 @@ SIZE="1045"
 ENDFILE
 VALUE "<project>\designer\impl1\top.pdb,pdb"
 STATE="utd"
-TIME="1685018281"
-SIZE="93860"
+TIME="1685117857"
+SIZE="94486"
 ENDFILE
 VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
 STATE="utd"
-TIME="1685018232"
-SIZE="16513"
+TIME="1685117060"
+SIZE="5732"
 ENDFILE
 VALUE "<project>\designer\impl1\top_floorplan_log.rpt,log"
 STATE="utd"
@@ -177,18 +177,18 @@ SIZE="2482"
 ENDFILE
 VALUE "<project>\designer\impl1\top_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1685018270"
-SIZE="2571"
+TIME="1685117845"
+SIZE="2578"
 ENDFILE
 VALUE "<project>\designer\impl1\top_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1685018281"
-SIZE="853"
+TIME="1685117857"
+SIZE="860"
 ENDFILE
 VALUE "<project>\designer\impl1\top_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1685018274"
-SIZE="1198"
+TIME="1685117850"
+SIZE="1205"
 ENDFILE
 VALUE "<project>\designer\impl1\UART_CORE.ide_des,ide_des"
 STATE="utd"
@@ -202,13 +202,13 @@ SIZE="456"
 ENDFILE
 VALUE "<project>\hdl\command_vars.v,hdl"
 STATE="utd"
-TIME="1685012076"
-SIZE="2648"
+TIME="1685116529"
+SIZE="2933"
 ENDFILE
 VALUE "<project>\hdl\mem_command.v,hdl"
 STATE="utd"
-TIME="1685013263"
-SIZE="28218"
+TIME="1685116542"
+SIZE="29517"
 ENDFILE
 VALUE "<project>\hdl\spi_master.v,hdl"
 STATE="utd"
@@ -222,8 +222,8 @@ SIZE="6133"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1685018154"
-SIZE="27785"
+TIME="1685117241"
+SIZE="28233"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
@@ -273,8 +273,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\stimulus\tb_top.v,tb_hdl"
 STATE="utd"
-TIME="1685011966"
-SIZE="1330"
+TIME="1685113200"
+SIZE="1352"
 ENDFILE
 VALUE "<project>\stimulus\uart_tb.v,tb_hdl"
 STATE="utd"
@@ -301,15 +301,10 @@ STATE="utd"
 TIME="1678476857"
 SIZE="1839"
 ENDFILE
-VALUE "<project>\synthesis\synwork\layer0.so,so"
-STATE="utd"
-TIME="1684412364"
-SIZE="159"
-ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
 STATE="utd"
-TIME="1685018222"
-SIZE="1172250"
+TIME="1685114873"
+SIZE="1186492"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
@@ -318,7 +313,7 @@ SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1685018222"
+TIME="1685114873"
 SIZE="394"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
@@ -330,6 +325,21 @@ ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "FIFO_INPUT_SAVE::work"
+FILE "<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v,hdl"
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\FIFO_INPUT_SAVE.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
 LIST "top::work"
 FILE "<project>\hdl\top.v,hdl"
 LIST ProjectState5.1
@@ -456,8 +466,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -465,7 +475,7 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM=""
+PARAM=" -l postsynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -490,6 +500,18 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "FIFO_INPUT_SAVE::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\FIFO_INPUT_SAVE.edn,syn_edn)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 LIST "top::work"
 LIST Impl1
 LiberoState=Post_Layout
@@ -529,8 +551,11 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Generate Programming Data:top_prgdata_log.rpt
+HDL;stimulus\tb_top.v;0
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"

@@ -13,7 +13,7 @@ Opened an existing Libero design top.adb.
 'C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 
- Netlist Reading Time = 1.0 seconds
+ Netlist Reading Time = 0.0 seconds
 Imported the file:
 
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\top\
@@ -213,14 +213,16 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVCMOS33                        | 3.30v | N/A   | 3     | 3      | 0
-    LVCMOS18                        | 1.80v | N/A   | 1     | 4      | 0
+    LVCMOS33                        | 3.30v | N/A   | 4     | 3      | 0
+    LVCMOS18                        | 1.80v | N/A   | 0     | 4      | 0
 
 I/O Placement:
 
-    Locked  :  11 ( 100.00% )
+    Locked  :   7 ( 63.64% )
     Placed  :   0
-    UnPlaced:   0
+    UnPlaced:   4 ( 36.36% )
+
+Warning: Only some I/Os are locked
 
 Net information report:
 =======================
@@ -308,6 +310,6 @@ Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.
 
-The Execute Script command succeeded ( 00:00:06 )
+The Execute Script command succeeded ( 00:00:05 )
 Design closed.
 

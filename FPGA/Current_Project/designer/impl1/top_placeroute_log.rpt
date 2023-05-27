@@ -34,16 +34,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Fri May 26 16:57:57 2023
+Timing-driven Placer Started: Fri May 26 17:16:50 2023
 
-Placer Finished: Fri May 26 16:58:14 2023
-Total Placer CPU Time:     00:00:17
+Placer Finished: Fri May 26 17:17:08 2023
+Total Placer CPU Time:     00:00:18
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: top                             Started: Fri May 26 16:58:16 2023
+Design: top                             Started: Fri May 26 17:17:10 2023
 
  
 Iterative improvement...
@@ -51,15 +51,15 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: top                             
-Finished: Fri May 26 16:58:25 2023
-Total CPU Time:     00:00:06            Total Elapsed Time: 00:00:09
+Finished: Fri May 26 17:17:20 2023
+Total CPU Time:     00:00:10            Total Elapsed Time: 00:00:10
 Total Memory Usage: 195.2 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
 Finished loading the Timing data.
 
-The Layout command succeeded ( 00:00:32 )
+The Layout command succeeded ( 00:00:35 )
 Wrote status report to file: top_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -68,7 +68,7 @@ Wrote globalnet report to file: top_globalnet_report.txt
 The Report command succeeded ( 00:00:00 )
 Wrote globalusage report to file: top_globalusage_report.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:00 )
 Wrote iobank report to file: top_iobank_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -77,11 +77,11 @@ Wrote pin report to file: top_report_pin_byname.txt
 The Report command succeeded ( 00:00:01 )
 Wrote pin report to file: top_report_pin_bynumber.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Design saved to file
 C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\designer\impl\
 1\top.adb.
 
-The Execute Script command succeeded ( 00:00:35 )
+The Execute Script command succeeded ( 00:00:37 )
 Design closed.
 
