@@ -1,4 +1,4 @@
-# Fri May 26 17:07:30 2023
+# Sat Jun 17 08:43:47 2023
 
 Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -24,7 +24,7 @@ Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 113MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
 
 Encoding state machine r_SEND_sm[6:0] (in view: work.top(verilog))
 original code -> new code
@@ -42,25 +42,37 @@ original code -> new code
    010 -> 00100
    011 -> 01000
    100 -> 10000
-Encoding state machine r_fifo_sm[5:0] (in view: work.top(verilog))
+Encoding state machine r_fifo_sm[6:0] (in view: work.top(verilog))
 original code -> new code
-   000 -> 000001
-   001 -> 000010
-   010 -> 000100
-   011 -> 001000
-   100 -> 010000
-   110 -> 100000
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":189:2:189:7|Found counter in view:work.top(verilog) instance r_Pwrup_Timer[15:0] 
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":314:60:314:91|Found 13 by 13 bit less-than operator ('<') un1_w_fifo_count_14 (in view: work.top(verilog))
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":365:4:365:9|Found counter in view:work.mem_command_Z1(verilog) instance r_TX_Count[12:0] 
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":139:4:139:9|Found counter in view:work.mem_command_Z1(verilog) instance r_UART_count[12:0] 
+   000 -> 0000001
+   001 -> 0000010
+   010 -> 0000100
+   011 -> 0001000
+   100 -> 0010000
+   101 -> 0100000
+   110 -> 1000000
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":200:2:200:7|Found counter in view:work.top(verilog) instance r_Pwrup_Timer[14:0] 
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":341:60:341:91|Found 13 by 13 bit less-than operator ('<') un1_w_fifo_count_14 (in view: work.top(verilog))
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":605:4:605:9|Found counter in view:work.mem_command_Z1(verilog) instance r_TX_Count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_comp_count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_UART_count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_count_mod8[2:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_bytes_to_pack[2:0] 
+Encoding state machine r_SM_COMPRESS[2:0] (in view: work.mem_command_Z1(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+@N: MF184 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":117:30:117:66|Found 8 by 8 bit subtractor, 'w_delta_byte_0_0[7:0]'
 @N: MF176 |Default generator successful 
-@N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":215:106:215:127|Found 12-bit incrementor, 'un1_r_TRANSFER_SIZE_1[13:1]'
 @N: MF176 |Default generator successful 
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":389:28:389:66|Found 13 by 13 bit less-than operator ('<') r_Master_TX_Byte62 (in view: work.mem_command_Z1(verilog))
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":103:2:103:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2(verilog) instance r_CS_Inactive_Count[14:0] 
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":170:2:170:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2(verilog) instance o_RX_Count[12:0] 
-Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2(verilog))
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":629:28:629:66|Found 13 by 13 bit less-than operator ('<') r_Master_TX_Byte62 (in view: work.mem_command_Z1(verilog))
+@N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":453:106:453:127|Found 12-bit incrementor, 'un1_r_TRANSFER_SIZE_1[13:1]'
+@N: MF176 |Default generator successful 
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":361:74:361:108|Found 3 by 3 bit less-than operator ('<') un1_r_bytes_to_pack (in view: work.mem_command_Z1(verilog))
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":103:2:103:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2(verilog) instance r_CS_Inactive_Count[18:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":170:2:170:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2(verilog) instance o_RX_Count[12:0] 
+Encoding state machine r_SM_CS[2:0] (in view: work.SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
@@ -95,68 +107,86 @@ original code -> new code
 @W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":261:0:261:5|Register bit last_bit[1] (in view view:work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":377:0:377:5|Removing sequential instance rx_shift[8] (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 116MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 127MB)
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 132MB)
 
 
-Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 122MB peak: 127MB)
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 132MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 122MB peak: 127MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 132MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 136MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 131MB peak: 150MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 136MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 132MB peak: 150MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 185MB peak: 186MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:11s; Memory used current: 166MB peak: 167MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 185MB peak: 186MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:11s; Memory used current: 165MB peak: 167MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 184MB peak: 186MB)
+Finished preparing to map (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:11s; Memory used current: 165MB peak: 167MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 163MB peak: 202MB)
+Finished technology mapping (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:12s; Memory used current: 188MB peak: 191MB)
 
 
 High Fanout Net Report
 **********************
 
-Driver Instance / Pin Name                                           Fanout, notes                   
------------------------------------------------------------------------------------------------------
-r_Master_CM_DV / Q                                                   34                              
-r_fifo_sm[3] / Q                                                     34                              
-MEM_COMMAND_CONTROLLER.r_Master_TX_DV / Q                            25                              
-MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_r_TX_Count_1_v_i[0] / Y     36                              
-rst_n_pad / Y                                                        423 : 422 asynchronous set/reset
-r_fifo_sm[5] / Q                                                     27                              
-MEM_COMMAND_CONTROLLER.o_CM_Ready / Y                                39                              
-=====================================================================================================
+Driver Instance / Pin Name                                         Fanout, notes                   
+---------------------------------------------------------------------------------------------------
+r_Master_CM_DV / Q                                                 34                              
+MEM_COMMAND_CONTROLLER.r_fifo_re_delay[1] / Q                      32                              
+MEM_COMMAND_CONTROLLER.r_pack_bit_width[0] / Q                     58                              
+MEM_COMMAND_CONTROLLER.r_pack_bit_width[1] / Q                     90                              
+MEM_COMMAND_CONTROLLER.r_pack_bit_width[2] / Q                     52                              
+MEM_COMMAND_CONTROLLER.r_bytes_to_pack[2] / Q                      37                              
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND / Q                        28                              
+MEM_COMMAND_CONTROLLER.r_count_mod8[1] / Q                         27                              
+MEM_COMMAND_CONTROLLER.r_count_mod8[2] / Q                         34                              
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_r_TX_Count_1_v[0] / Y     36                              
+rst_n_pad / Y                                                      526 : 525 asynchronous set/reset
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_SM_CS_0_sqmuxa_0_o3 / Y     47                              
+MEM_COMMAND_CONTROLLER.o_CM_Ready / Y                              38                              
+MEM_COMMAND_CONTROLLER.r_fifo_we_10_0_a5_0_2 / Y                   28                              
+MEM_COMMAND_CONTROLLER.r_pack_bit_width_0_sqmuxa_2_a2 / Y          30                              
+MEM_COMMAND_CONTROLLER.current_m1_e / Y                            27                              
+===================================================================================================
 
 @N: FP130 |Promoting Net rst_n_c on CLKBUF  rst_n_pad 
-@N: FP130 |Promoting Net CLKA_c on CLKBUF  CLKA_pad 
+@N: FP130 |Promoting Net CLK1 on CLKINT  genblk1\.clk_div_1M.clk_out_inferred_clock 
+@N: FP130 |Promoting Net MEM_COMMAND_CONTROLLER.r_pack_bit_width[1] on CLKINT  I_530 
+@N: FP130 |Promoting Net MEM_COMMAND_CONTROLLER.r_pack_bit_width[0] on CLKINT  I_531 
+@N: FP130 |Promoting Net MEM_COMMAND_CONTROLLER.r_pack_bit_width[2] on CLKINT  I_532 
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 163MB peak: 202MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:12s; Memory used current: 189MB peak: 191MB)
 
-Replicating Combinational Instance MEM_COMMAND_CONTROLLER.o_CM_Ready, fanout 39 segments 2
-Replicating Sequential Instance r_fifo_sm[5], fanout 27 segments 2
-Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_r_TX_Count_1_v_i[0], fanout 36 segments 2
-Replicating Sequential Instance MEM_COMMAND_CONTROLLER.r_Master_TX_DV, fanout 26 segments 2
-Replicating Sequential Instance r_fifo_sm[3], fanout 34 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.current_m1_e, fanout 27 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.r_pack_bit_width_0_sqmuxa_2_a2, fanout 30 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.r_fifo_we_10_0_a5_0_2, fanout 29 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.o_CM_Ready, fanout 38 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.r_SM_CS_0_sqmuxa_0_o3, fanout 47 segments 2
+Replicating Combinational Instance MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_r_TX_Count_1_v[0], fanout 36 segments 2
+Replicating Sequential Instance MEM_COMMAND_CONTROLLER.r_count_mod8[2], fanout 34 segments 2
+Replicating Sequential Instance MEM_COMMAND_CONTROLLER.r_count_mod8[1], fanout 27 segments 2
+Replicating Sequential Instance MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND, fanout 28 segments 2
+Replicating Sequential Instance MEM_COMMAND_CONTROLLER.r_bytes_to_pack[2], fanout 37 segments 2
+Replicating Sequential Instance MEM_COMMAND_CONTROLLER.r_fifo_re_delay[1], fanout 32 segments 2
 Replicating Sequential Instance r_Master_CM_DV, fanout 34 segments 2
 
 Added 0 Buffers
-Added 6 Cells via replication
-	Added 4 Sequential Cells via replication
-	Added 2 Combinational Cells via replication
+Added 12 Cells via replication
+	Added 6 Sequential Cells via replication
+	Added 6 Combinational Cells via replication
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 163MB peak: 202MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:12s; Memory used current: 189MB peak: 191MB)
 
 
 
@@ -166,39 +196,45 @@ Finished restoring hierarchy (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
 Clock optimization not enabled
-1 non-gated/non-generated clock tree(s) driving 455 clock pin(s) of sequential element(s)
-0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
-0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+1 non-gated/non-generated clock tree(s) driving 1 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 559 clock pin(s) of sequential element(s)
+0 instances converted, 559 sequential instances remain driven by gated/generated clocks
 
-============================ Non-Gated/Non-Generated Clocks ============================
-Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance 
-----------------------------------------------------------------------------------------
-@K:CKID0001       CLKA                port                   455        r_Master_CM_DV_0
-========================================================================================
+================================= Non-Gated/Non-Generated Clocks =================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance           
+--------------------------------------------------------------------------------------------------
+@K:CKID0002       CLKA                port                   1          genblk1.clk_div_1M.clk_out
+==================================================================================================
+============================================================================ Gated/Generated Clocks ============================================================================
+Clock Tree ID     Driving Element                Drive Element Type     Fanout     Sample Instance      Explanation                                                             
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       genblk1.clk_div_1M.clk_out     DFN1C0                 559        r_Master_CM_DV_0     No generated or derived clock directive on output of sequential instance
+================================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 155MB peak: 202MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:12s; Memory used current: 183MB peak: 191MB)
 
 Writing Analyst data base C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\synthesis\synwork\top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 157MB peak: 202MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:13s; Memory used current: 186MB peak: 191MB)
 
 Writing EDIF Netlist and constraint files
 L-2016.09M-SP1-5
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 159MB peak: 202MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 189MB peak: 191MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 157MB peak: 202MB)
+Start final timing analysis (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 186MB peak: 191MB)
 
 @W: MT420 |Found inferred clock top|CLKA with period 10.00ns. Please declare a user-defined clock on object "p:CLKA"
+@W: MT420 |Found inferred clock clk_div_2s|clk_out_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:genblk1\.clk_div_1M.clk_out"
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Fri May 26 17:07:40 2023
+# Timing Report written on Sat Jun 17 08:44:02 2023
 #
 
 
@@ -220,13 +256,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -50.497
+Worst slack in design: -50.761
 
-                   Requested     Estimated     Requested     Estimated                 Clock        Clock              
-Starting Clock     Frequency     Frequency     Period        Period        Slack       Type         Group              
------------------------------------------------------------------------------------------------------------------------
-top|CLKA           100.0 MHz     16.5 MHz      10.000        60.497        -50.497     inferred     Inferred_clkgroup_0
-=======================================================================================================================
+                                      Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                        Frequency     Frequency     Period        Period        Slack       Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------------
+clk_div_2s|clk_out_inferred_clock     100.0 MHz     16.5 MHz      10.000        60.761        -50.761     inferred     Inferred_clkgroup_0
+top|CLKA                              100.0 MHz     167.1 MHz     10.000        5.984         4.016       inferred     Inferred_clkgroup_1
+==========================================================================================================================================
 
 
 
@@ -235,12 +272,13 @@ top|CLKA           100.0 MHz     16.5 MHz      10.000        60.497        -50.4
 Clock Relationships
 *******************
 
-Clocks              |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
-------------------------------------------------------------------------------------------------------------
-Starting  Ending    |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
-------------------------------------------------------------------------------------------------------------
-top|CLKA  top|CLKA  |  10.000      -50.497  |  No paths    -      |  No paths    -      |  No paths    -    
-============================================================================================================
+Clocks                                                                |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                           Ending                             |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+clk_div_2s|clk_out_inferred_clock  clk_div_2s|clk_out_inferred_clock  |  10.000      -50.761  |  No paths    -      |  No paths    -      |  No paths    -    
+top|CLKA                           top|CLKA                           |  10.000      4.016    |  No paths    -      |  No paths    -      |  No paths    -    
+==============================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -254,7 +292,7 @@ No IO constraint found
 
 
 ====================================
-Detailed Report for Clock: top|CLKA
+Detailed Report for Clock: clk_div_2s|clk_out_inferred_clock
 ====================================
 
 
@@ -262,41 +300,41 @@ Detailed Report for Clock: top|CLKA
 Starting Points with Worst Slack
 ********************************
 
-                                                       Starting                                                  Arrival            
-Instance                                               Reference     Type         Pin     Net                    Time        Slack  
-                                                       Clock                                                                        
-------------------------------------------------------------------------------------------------------------------------------------
-MEM_COMMAND_CONTROLLER.current_command\.command[0]     top|CLKA      DFN1E1C0     Q       command[0]             1.771       -50.497
-MEM_COMMAND_CONTROLLER.r_TRANSFER_SIZE[1]              top|CLKA      DFN1E1C0     Q       w_transfer_size[1]     1.771       -48.535
-MEM_COMMAND_CONTROLLER.r_TRANSFER_SIZE[0]              top|CLKA      DFN1E1C0     Q       w_transfer_size[0]     1.771       -48.392
-MEM_COMMAND_CONTROLLER.current_command\.command[7]     top|CLKA      DFN1E1C0     Q       command[7]             1.395       -47.106
-MEM_COMMAND_CONTROLLER.current_command\.command[6]     top|CLKA      DFN1E1C0     Q       command[6]             1.395       -46.743
-MEM_COMMAND_CONTROLLER.current_command\.command[1]     top|CLKA      DFN1E1C0     Q       command[1]             1.771       -45.666
-MEM_COMMAND_CONTROLLER.current_command\.command[3]     top|CLKA      DFN1E1C0     Q       command[3]             1.771       -45.461
-MEM_COMMAND_CONTROLLER.r_TRANSFER_SIZE[4]              top|CLKA      DFN1E1C0     Q       w_transfer_size[4]     1.771       -45.435
-MEM_COMMAND_CONTROLLER.current_command\.command[2]     top|CLKA      DFN1E1C0     Q       command[2]             1.771       -45.290
-MEM_COMMAND_CONTROLLER.r_TRANSFER_SIZE[3]              top|CLKA      DFN1E1C0     Q       w_transfer_size[3]     1.771       -44.947
-====================================================================================================================================
+                                                       Starting                                                                          Arrival            
+Instance                                               Reference                             Type         Pin     Net                    Time        Slack  
+                                                       Clock                                                                                                
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.current_command\.command[3]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[3]             1.771       -50.761
+MEM_COMMAND_CONTROLLER.current_command\.command[0]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[0]             1.771       -50.506
+MEM_COMMAND_CONTROLLER.current_command\.command[2]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[2]             1.771       -50.426
+MEM_COMMAND_CONTROLLER.current_command\.command[1]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[1]             1.771       -48.948
+MEM_COMMAND_CONTROLLER.r_TRANSFER_SIZE[1]              clk_div_2s|clk_out_inferred_clock     DFN1C0       Q       w_transfer_size[1]     1.771       -48.927
+MEM_COMMAND_CONTROLLER.current_command\.command[5]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[5]             1.771       -48.777
+MEM_COMMAND_CONTROLLER.current_command\.command[4]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[4]             1.395       -48.764
+MEM_COMMAND_CONTROLLER.current_command\.command[7]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[7]             1.771       -48.217
+MEM_COMMAND_CONTROLLER.current_command\.command[6]     clk_div_2s|clk_out_inferred_clock     DFN1E1C0     Q       command[6]             1.771       -47.883
+MEM_COMMAND_CONTROLLER.r_TRANSFER_SIZE[0]              clk_div_2s|clk_out_inferred_clock     DFN1C0       Q       w_transfer_size[0]     1.771       -47.812
+============================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                          Starting                                              Required            
-Instance                                  Reference     Type         Pin     Net                Time         Slack  
-                                          Clock                                                                     
---------------------------------------------------------------------------------------------------------------------
-MEM_COMMAND_CONTROLLER.r_SM_COM           top|CLKA      DFN1C0       D       N_919_mux          8.622        -50.497
-MEM_COMMAND_CONTROLLER.r_TX_Count[1]      top|CLKA      DFN1E0C0     D       r_TX_Count_n1      8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[4]      top|CLKA      DFN1E0C0     D       r_TX_Count_n4      8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[5]      top|CLKA      DFN1E0C0     D       r_TX_Count_n5      8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[6]      top|CLKA      DFN1E0C0     D       r_TX_Count_n6      8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[7]      top|CLKA      DFN1E0C0     D       r_TX_Count_n7      8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[8]      top|CLKA      DFN1E0C0     D       r_TX_Count_n8      8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[10]     top|CLKA      DFN1E0C0     D       r_TX_Count_n10     8.705        -49.579
-MEM_COMMAND_CONTROLLER.r_TX_Count[2]      top|CLKA      DFN1E0C0     D       r_TX_Count_n2      8.622        -48.823
-MEM_COMMAND_CONTROLLER.r_TX_Count[3]      top|CLKA      DFN1E0C0     D       r_TX_Count_n3      8.622        -48.823
-====================================================================================================================
+                                              Starting                                                                      Required            
+Instance                                      Reference                             Type         Pin     Net                Time         Slack  
+                                              Clock                                                                                             
+------------------------------------------------------------------------------------------------------------------------------------------------
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND       clk_div_2s|clk_out_inferred_clock     DFN1C0       D       N_1865_mux         8.622        -50.761
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0     clk_div_2s|clk_out_inferred_clock     DFN1C0       D       N_1865_mux         8.622        -50.761
+MEM_COMMAND_CONTROLLER.r_TX_Count[1]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n1      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[2]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n2      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[3]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n3      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[5]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n5      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[6]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n6      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[8]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n8      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[9]          clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n9      8.622        -47.616
+MEM_COMMAND_CONTROLLER.r_TX_Count[10]         clk_div_2s|clk_out_inferred_clock     DFN1E0C0     D       r_TX_Count_n10     8.622        -47.616
+================================================================================================================================================
 
 
 
@@ -310,72 +348,72 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.622
 
-    - Propagation time:                      59.119
+    - Propagation time:                      59.383
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -50.497
+    = Slack (critical) :                     -50.761
 
     Number of logic level(s):                16
-    Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[0] / Q
-    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_COM / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
+    Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[3] / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND / D
+    The start point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
 
 Instance / Net                                                                    Pin      Pin               Arrival     No. of    
 Name                                                                 Type         Name     Dir     Delay     Time        Fan Out(s)
 -----------------------------------------------------------------------------------------------------------------------------------
-MEM_COMMAND_CONTROLLER.current_command\.command[0]                   DFN1E1C0     Q        Out     1.771     1.771       -         
-command[0]                                                           Net          -        -       5.438     -           18        
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         C        In      -         7.208       -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         Y        Out     1.804     9.012       -         
-ADD_N_4_3                                                            Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         B        In      -         12.679      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         Y        Out     1.236     13.915      -         
-i4_mux                                                               Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        A        In      -         17.582      -         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        Y        Out     0.981     18.564      -         
-un1_r_TRANSFER_SIZE_14[3]                                            Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        B        In      -         20.501      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        Y        Out     1.508     22.009      -         
-un1_m1_e_1_1                                                         Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        A        In      -         22.782      -         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        Y        Out     1.236     24.018      -         
-num_bytes[3]                                                         Net          -        -       3.420     -           6         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_6                NOR2A        B        In      -         27.438      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_6                NOR2A        Y        Out     0.977     28.415      -         
-ADD_N_4_12                                                           Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_6                     AO1A         C        In      -         29.188      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_6                     AO1A         Y        Out     1.574     30.762      -         
-ADD_N_7_mux_4                                                        Net          -        -       2.844     -           4         
-d_m1_e_0                                                             NOR2A        A        In      -         33.606      -         
-d_m1_e_0                                                             NOR2A        Y        Out     1.240     34.847      -         
-d_N_3_mux_4                                                          Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I53_Y_0       MX2C         A        In      -         35.619      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I53_Y_0       MX2C         Y        Out     1.366     36.985      -         
-N256                                                                 Net          -        -       0.927     -           2         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I72_Y         OR2          B        In      -         37.912      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I72_Y         OR2          Y        Out     1.554     39.466      -         
-N317                                                                 Net          -        -       0.927     -           2         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_un1_Y     NOR2B        B        In      -         40.393      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_un1_Y     NOR2B        Y        Out     1.508     41.901      -         
-I77_un1_Y                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_Y         OR3          C        In      -         42.673      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_Y         OR3          Y        Out     1.804     44.477      -         
-r_TX_Count12_a_4[13]                                                 Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_8                             OR3A         A        In      -         45.250      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_8                             OR3A         Y        Out     1.115     46.365      -         
-r_TX_Count12_NE_8                                                    Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          B        In      -         47.138      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          Y        Out     1.541     48.679      -         
-r_TX_Count13                                                         Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          B        In      -         50.616      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          Y        Out     1.407     52.024      -         
-un1_r_Master_TX_DV6_1[0]                                             Net          -        -       3.938     -           8         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         A        In      -         55.962      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         Y        Out     2.385     58.347      -         
-N_919_mux                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_SM_COM                                      DFN1C0       D        In      -         59.119      -         
+MEM_COMMAND_CONTROLLER.current_command\.command[3]                   DFN1E1C0     Q        Out     1.771     1.771       -         
+command[3]                                                           Net          -        -       4.009     -           9         
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m20_0_a3_4_0                NOR2         B        In      -         5.780       -         
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m20_0_a3_4_0                NOR2         Y        Out     1.554     7.334       -         
+N_1095_1                                                             Net          -        -       3.938     -           8         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIU26H_0[4]         NOR3B        B        In      -         11.272      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIU26H_0[4]         NOR3B        Y        Out     1.499     12.771      -         
+current_N_5                                                          Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8IJ1[4]          OA1          B        In      -         13.544      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8IJ1[4]          OA1          Y        Out     2.168     15.711      -         
+N_99                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIMEUL2[4]          OR2          B        In      -         18.555      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIMEUL2[4]          OR2          Y        Out     1.236     19.792      -         
+num_bytes27_1_0                                                      Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_a2[0]              OR2A         A        In      -         20.719      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_a2[0]              OR2A         Y        Out     1.290     22.009      -         
+N_3_1_i                                                              Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         A        In      -         22.782      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         Y        Out     1.236     24.018      -         
+num_bytes[0]                                                         Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        A        In      -         25.956      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        Y        Out     1.508     27.463      -         
+N172                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          B        In      -         30.308      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          Y        Out     1.437     31.744      -         
+N260                                                                 Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        C        In      -         33.682      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        Y        Out     2.368     36.050      -         
+r_TX_Count12_3                                                       Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          C        In      -         36.822      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          Y        Out     1.804     38.627      -         
+r_TX_Count12_NE_10_2                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          C        In      -         39.399      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          Y        Out     1.178     40.577      -         
+r_TX_Count12_NE_10_4                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          C        In      -         41.349      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          Y        Out     1.804     43.154      -         
+r_TX_Count12_NE_10_5                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          B        In      -         43.926      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          Y        Out     1.716     45.642      -         
+r_TX_Count12_NE_10                                                   Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          B        In      -         47.580      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          Y        Out     1.554     49.134      -         
+r_TX_Count13                                                         Net          -        -       4.790     -           12        
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          B        In      -         53.924      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          Y        Out     1.374     55.298      -         
+un1_r_Master_TX_DV6_1[0]                                             Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          A        In      -         56.071      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          Y        Out     2.385     58.455      -         
+N_1865_mux                                                           Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND                              DFN1C0       D        In      -         59.383      -         
 ===================================================================================================================================
-Total path delay (propagation time + setup) of 60.497 is 26.385(43.6%) logic and 34.112(56.4%) route.
+Total path delay (propagation time + setup) of 60.761 is 29.259(48.2%) logic and 31.502(51.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -385,72 +423,72 @@ Path information for path number 2:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.622
 
-    - Propagation time:                      59.107
+    - Propagation time:                      59.383
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -50.485
+    = Slack (critical) :                     -50.761
 
     Number of logic level(s):                16
-    Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[0] / Q
-    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_COM / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
+    Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[3] / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0 / D
+    The start point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
 
 Instance / Net                                                                    Pin      Pin               Arrival     No. of    
 Name                                                                 Type         Name     Dir     Delay     Time        Fan Out(s)
 -----------------------------------------------------------------------------------------------------------------------------------
-MEM_COMMAND_CONTROLLER.current_command\.command[0]                   DFN1E1C0     Q        Out     1.771     1.771       -         
-command[0]                                                           Net          -        -       5.438     -           18        
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         C        In      -         7.208       -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         Y        Out     1.804     9.012       -         
-ADD_N_4_3                                                            Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         B        In      -         12.679      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         Y        Out     1.236     13.915      -         
-i4_mux                                                               Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        A        In      -         17.582      -         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        Y        Out     0.981     18.564      -         
-un1_r_TRANSFER_SIZE_14[3]                                            Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        B        In      -         20.501      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        Y        Out     1.508     22.009      -         
-un1_m1_e_1_1                                                         Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        A        In      -         22.782      -         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        Y        Out     1.236     24.018      -         
-num_bytes[3]                                                         Net          -        -       3.420     -           6         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_6                NOR2A        B        In      -         27.438      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_6                NOR2A        Y        Out     0.977     28.415      -         
-ADD_N_4_12                                                           Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_6                     AO1A         C        In      -         29.188      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_6                     AO1A         Y        Out     1.574     30.762      -         
-ADD_N_7_mux_4                                                        Net          -        -       2.844     -           4         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m2_0_a2_10               NOR3         C        In      -         33.606      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m2_0_a2_10               NOR3         Y        Out     1.641     35.248      -         
-ADD_N_5_mux_13                                                       Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I53_Y_0       MX2C         S        In      -         36.020      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I53_Y_0       MX2C         Y        Out     0.952     36.973      -         
-N256                                                                 Net          -        -       0.927     -           2         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I72_Y         OR2          B        In      -         37.900      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I72_Y         OR2          Y        Out     1.554     39.453      -         
-N317                                                                 Net          -        -       0.927     -           2         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_un1_Y     NOR2B        B        In      -         40.381      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_un1_Y     NOR2B        Y        Out     1.508     41.888      -         
-I77_un1_Y                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_Y         OR3          C        In      -         42.661      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I77_Y         OR3          Y        Out     1.804     44.465      -         
-r_TX_Count12_a_4[13]                                                 Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_8                             OR3A         A        In      -         45.237      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_8                             OR3A         Y        Out     1.115     46.352      -         
-r_TX_Count12_NE_8                                                    Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          B        In      -         47.125      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          Y        Out     1.541     48.666      -         
-r_TX_Count13                                                         Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          B        In      -         50.604      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          Y        Out     1.407     52.011      -         
-un1_r_Master_TX_DV6_1[0]                                             Net          -        -       3.938     -           8         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         A        In      -         55.950      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         Y        Out     2.385     58.334      -         
-N_919_mux                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_SM_COM                                      DFN1C0       D        In      -         59.107      -         
+MEM_COMMAND_CONTROLLER.current_command\.command[3]                   DFN1E1C0     Q        Out     1.771     1.771       -         
+command[3]                                                           Net          -        -       4.009     -           9         
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m20_0_a3_4_0                NOR2         B        In      -         5.780       -         
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m20_0_a3_4_0                NOR2         Y        Out     1.554     7.334       -         
+N_1095_1                                                             Net          -        -       3.938     -           8         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIU26H_0[4]         NOR3B        B        In      -         11.272      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIU26H_0[4]         NOR3B        Y        Out     1.499     12.771      -         
+current_N_5                                                          Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8IJ1[4]          OA1          B        In      -         13.544      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8IJ1[4]          OA1          Y        Out     2.168     15.711      -         
+N_99                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIMEUL2[4]          OR2          B        In      -         18.555      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIMEUL2[4]          OR2          Y        Out     1.236     19.792      -         
+num_bytes27_1_0                                                      Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_a2[0]              OR2A         A        In      -         20.719      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_a2[0]              OR2A         Y        Out     1.290     22.009      -         
+N_3_1_i                                                              Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         A        In      -         22.782      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         Y        Out     1.236     24.018      -         
+num_bytes[0]                                                         Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        A        In      -         25.956      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        Y        Out     1.508     27.463      -         
+N172                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          B        In      -         30.308      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          Y        Out     1.437     31.744      -         
+N260                                                                 Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        C        In      -         33.682      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        Y        Out     2.368     36.050      -         
+r_TX_Count12_3                                                       Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          C        In      -         36.822      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          Y        Out     1.804     38.627      -         
+r_TX_Count12_NE_10_2                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          C        In      -         39.399      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          Y        Out     1.178     40.577      -         
+r_TX_Count12_NE_10_4                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          C        In      -         41.349      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          Y        Out     1.804     43.154      -         
+r_TX_Count12_NE_10_5                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          B        In      -         43.926      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          Y        Out     1.716     45.642      -         
+r_TX_Count12_NE_10                                                   Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          B        In      -         47.580      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          Y        Out     1.554     49.134      -         
+r_TX_Count13                                                         Net          -        -       4.790     -           12        
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          B        In      -         53.924      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          Y        Out     1.374     55.298      -         
+un1_r_Master_TX_DV6_1[0]                                             Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          A        In      -         56.071      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          Y        Out     2.385     58.455      -         
+N_1865_mux                                                           Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0                            DFN1C0       D        In      -         59.383      -         
 ===================================================================================================================================
-Total path delay (propagation time + setup) of 60.485 is 26.373(43.6%) logic and 34.112(56.4%) route.
+Total path delay (propagation time + setup) of 60.761 is 29.259(48.2%) logic and 31.502(51.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -460,69 +498,72 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.622
 
-    - Propagation time:                      58.793
+    - Propagation time:                      59.128
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -50.171
+    = Slack (non-critical) :                 -50.506
 
-    Number of logic level(s):                15
+    Number of logic level(s):                16
     Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[0] / Q
-    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_COM / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
+    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND / D
+    The start point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
 
 Instance / Net                                                                    Pin      Pin               Arrival     No. of    
 Name                                                                 Type         Name     Dir     Delay     Time        Fan Out(s)
 -----------------------------------------------------------------------------------------------------------------------------------
 MEM_COMMAND_CONTROLLER.current_command\.command[0]                   DFN1E1C0     Q        Out     1.771     1.771       -         
-command[0]                                                           Net          -        -       5.438     -           18        
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         C        In      -         7.208       -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         Y        Out     1.804     9.012       -         
-ADD_N_4_3                                                            Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         B        In      -         12.679      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         Y        Out     1.236     13.915      -         
-i4_mux                                                               Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        A        In      -         17.582      -         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        Y        Out     0.981     18.564      -         
-un1_r_TRANSFER_SIZE_14[3]                                            Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        B        In      -         20.501      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        Y        Out     1.508     22.009      -         
-un1_m1_e_1_1                                                         Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        A        In      -         22.782      -         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        Y        Out     1.236     24.018      -         
-num_bytes[3]                                                         Net          -        -       3.420     -           6         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I3_P0N        OR2A         B        In      -         27.438      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I3_P0N        OR2A         Y        Out     1.554     28.992      -         
-N182                                                                 Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I32_Y         NOR2A        A        In      -         29.764      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I32_Y         NOR2A        Y        Out     1.508     31.272      -         
-N232                                                                 Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_un1_Y     NOR2B        A        In      -         33.210      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_un1_Y     NOR2B        Y        Out     1.236     34.446      -         
-I55_un1_Y                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_Y         OR2          A        In      -         35.219      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_Y         OR2          Y        Out     1.219     36.438      -         
-N258                                                                 Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I93_Y         XNOR3        C        In      -         38.376      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I93_Y         XNOR3        Y        Out     2.368     40.744      -         
-r_TX_Count12_4                                                       Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNI49T3Q2[0]                       OR3          C        In      -         41.516      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNI49T3Q2[0]                       OR3          Y        Out     1.804     43.320      -         
-r_TX_Count12_NE_4                                                    Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNIRPQQU6[0]                       OR3          B        In      -         44.093      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNIRPQQU6[0]                       OR3          Y        Out     1.716     45.809      -         
-r_TX_Count12_NE_10                                                   Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          C        In      -         46.582      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          Y        Out     1.804     48.386      -         
-r_TX_Count13                                                         Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          B        In      -         50.324      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          Y        Out     1.374     51.698      -         
-un1_r_Master_TX_DV6_1[0]                                             Net          -        -       3.938     -           8         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         A        In      -         55.636      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         Y        Out     2.385     58.021      -         
-N_919_mux                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_SM_COM                                      DFN1C0       D        In      -         58.793      -         
+command[0]                                                           Net          -        -       5.329     -           17        
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI9RI8_0[1]         NOR2         B        In      -         7.100       -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI9RI8_0[1]         NOR2         Y        Out     1.554     8.653       -         
+N_1103_1                                                             Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI6KFL_0[6]         NOR2B        B        In      -         11.497      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI6KFL_0[6]         NOR2B        Y        Out     1.240     12.738      -         
+N_111                                                                Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIS5C21_0[6]        NOR2B        A        In      -         13.665      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIS5C21_0[6]        NOR2B        Y        Out     1.174     14.838      -         
+num_bytes28                                                          Net          -        -       3.074     -           5         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1_RNO_0[0]       OR2A         A        In      -         17.912      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1_RNO_0[0]       OR2A         Y        Out     1.290     19.203      -         
+N_1_3_i                                                              Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1[0]             AND2         B        In      -         19.975      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1[0]             AND2         Y        Out     1.508     21.483      -         
+num_bytes_0_1[0]                                                     Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         B        In      -         22.255      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         Y        Out     1.508     23.763      -         
+num_bytes[0]                                                         Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        A        In      -         25.701      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        Y        Out     1.508     27.208      -         
+N172                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          B        In      -         30.052      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          Y        Out     1.437     31.489      -         
+N260                                                                 Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        C        In      -         33.427      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        Y        Out     2.368     35.795      -         
+r_TX_Count12_3                                                       Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          C        In      -         36.567      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          Y        Out     1.804     38.371      -         
+r_TX_Count12_NE_10_2                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          C        In      -         39.144      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          Y        Out     1.178     40.322      -         
+r_TX_Count12_NE_10_4                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          C        In      -         41.094      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          Y        Out     1.804     42.898      -         
+r_TX_Count12_NE_10_5                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          B        In      -         43.671      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          Y        Out     1.716     45.388      -         
+r_TX_Count12_NE_10                                                   Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          B        In      -         47.325      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          Y        Out     1.554     48.879      -         
+r_TX_Count13                                                         Net          -        -       4.790     -           12        
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          B        In      -         53.669      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          Y        Out     1.374     55.043      -         
+un1_r_Master_TX_DV6_1[0]                                             Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          A        In      -         55.816      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          Y        Out     2.385     58.200      -         
+N_1865_mux                                                           Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND                              DFN1C0       D        In      -         59.128      -         
 ===================================================================================================================================
-Total path delay (propagation time + setup) of 60.171 is 26.882(44.7%) logic and 33.289(55.3%) route.
+Total path delay (propagation time + setup) of 60.506 is 28.548(47.2%) logic and 31.957(52.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -532,69 +573,72 @@ Path information for path number 4:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.622
 
-    - Propagation time:                      58.656
+    - Propagation time:                      59.128
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -50.034
+    = Slack (non-critical) :                 -50.506
 
-    Number of logic level(s):                15
+    Number of logic level(s):                16
     Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[0] / Q
-    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_COM / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
+    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0 / D
+    The start point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
 
 Instance / Net                                                                    Pin      Pin               Arrival     No. of    
 Name                                                                 Type         Name     Dir     Delay     Time        Fan Out(s)
 -----------------------------------------------------------------------------------------------------------------------------------
 MEM_COMMAND_CONTROLLER.current_command\.command[0]                   DFN1E1C0     Q        Out     1.771     1.771       -         
-command[0]                                                           Net          -        -       5.438     -           18        
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         C        In      -         7.208       -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         Y        Out     1.804     9.012       -         
-ADD_N_4_3                                                            Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         B        In      -         12.679      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         Y        Out     1.236     13.915      -         
-i4_mux                                                               Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        A        In      -         17.582      -         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        Y        Out     0.981     18.564      -         
-un1_r_TRANSFER_SIZE_14[3]                                            Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        B        In      -         20.501      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        Y        Out     1.508     22.009      -         
-un1_m1_e_1_1                                                         Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        A        In      -         22.782      -         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        Y        Out     1.236     24.018      -         
-num_bytes[3]                                                         Net          -        -       3.420     -           6         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I3_P0N        OR2A         B        In      -         27.438      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I3_P0N        OR2A         Y        Out     1.554     28.992      -         
-N182                                                                 Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I32_Y         NOR2A        A        In      -         29.764      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I32_Y         NOR2A        Y        Out     1.508     31.272      -         
-N232                                                                 Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_un1_Y     NOR2B        A        In      -         33.210      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_un1_Y     NOR2B        Y        Out     1.236     34.446      -         
-I55_un1_Y                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_Y         OR2          A        In      -         35.219      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I55_Y         OR2          Y        Out     1.219     36.438      -         
-N258                                                                 Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I78_un1_Y     NOR3C        C        In      -         38.376      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I78_un1_Y     NOR3C        Y        Out     1.541     39.917      -         
-I78_un1_Y                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I101_Y        AX1D         A        In      -         40.689      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I101_Y        AX1D         Y        Out     2.406     43.095      -         
-r_TX_Count12_12                                                      Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNIRPQQU6[0]                       OR3          C        In      -         43.868      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNIRPQQU6[0]                       OR3          Y        Out     1.804     45.672      -         
-r_TX_Count12_NE_10                                                   Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          C        In      -         46.444      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          Y        Out     1.804     48.248      -         
-r_TX_Count13                                                         Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          B        In      -         50.186      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          Y        Out     1.374     51.560      -         
-un1_r_Master_TX_DV6_1[0]                                             Net          -        -       3.938     -           8         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         A        In      -         55.498      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         Y        Out     2.385     57.883      -         
-N_919_mux                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_SM_COM                                      DFN1C0       D        In      -         58.656      -         
+command[0]                                                           Net          -        -       5.329     -           17        
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI9RI8_0[1]         NOR2         B        In      -         7.100       -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI9RI8_0[1]         NOR2         Y        Out     1.554     8.653       -         
+N_1103_1                                                             Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI6KFL_0[6]         NOR2B        B        In      -         11.497      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNI6KFL_0[6]         NOR2B        Y        Out     1.240     12.738      -         
+N_111                                                                Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIS5C21_0[6]        NOR2B        A        In      -         13.665      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIS5C21_0[6]        NOR2B        Y        Out     1.174     14.838      -         
+num_bytes28                                                          Net          -        -       3.074     -           5         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1_RNO_0[0]       OR2A         A        In      -         17.912      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1_RNO_0[0]       OR2A         Y        Out     1.290     19.203      -         
+N_1_3_i                                                              Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1[0]             AND2         B        In      -         19.975      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_1[0]             AND2         Y        Out     1.508     21.483      -         
+num_bytes_0_1[0]                                                     Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         B        In      -         22.255      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         Y        Out     1.508     23.763      -         
+num_bytes[0]                                                         Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        A        In      -         25.701      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        Y        Out     1.508     27.208      -         
+N172                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          B        In      -         30.052      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          Y        Out     1.437     31.489      -         
+N260                                                                 Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        C        In      -         33.427      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        Y        Out     2.368     35.795      -         
+r_TX_Count12_3                                                       Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          C        In      -         36.567      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          Y        Out     1.804     38.371      -         
+r_TX_Count12_NE_10_2                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          C        In      -         39.144      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          Y        Out     1.178     40.322      -         
+r_TX_Count12_NE_10_4                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          C        In      -         41.094      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          Y        Out     1.804     42.898      -         
+r_TX_Count12_NE_10_5                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          B        In      -         43.671      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          Y        Out     1.716     45.388      -         
+r_TX_Count12_NE_10                                                   Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          B        In      -         47.325      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          Y        Out     1.554     48.879      -         
+r_TX_Count13                                                         Net          -        -       4.790     -           12        
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          B        In      -         53.669      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          Y        Out     1.374     55.043      -         
+un1_r_Master_TX_DV6_1[0]                                             Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          A        In      -         55.816      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          Y        Out     2.385     58.200      -         
+N_1865_mux                                                           Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0                            DFN1C0       D        In      -         59.128      -         
 ===================================================================================================================================
-Total path delay (propagation time + setup) of 60.034 is 26.744(44.5%) logic and 33.289(55.5%) route.
+Total path delay (propagation time + setup) of 60.506 is 28.548(47.2%) logic and 31.957(52.8%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -604,72 +648,137 @@ Path information for path number 5:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         8.622
 
-    - Propagation time:                      58.581
+    - Propagation time:                      59.048
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -49.959
+    = Slack (non-critical) :                 -50.427
 
     Number of logic level(s):                16
-    Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[0] / Q
-    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_COM / D
-    The start point is clocked by            top|CLKA [rising] on pin CLK
-    The end   point is clocked by            top|CLKA [rising] on pin CLK
+    Starting point:                          MEM_COMMAND_CONTROLLER.current_command\.command[2] / Q
+    Ending point:                            MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND / D
+    The start point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            clk_div_2s|clk_out_inferred_clock [rising] on pin CLK
 
 Instance / Net                                                                    Pin      Pin               Arrival     No. of    
 Name                                                                 Type         Name     Dir     Delay     Time        Fan Out(s)
 -----------------------------------------------------------------------------------------------------------------------------------
-MEM_COMMAND_CONTROLLER.current_command\.command[0]                   DFN1E1C0     Q        Out     1.771     1.771       -         
-command[0]                                                           Net          -        -       5.438     -           18        
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         C        In      -         7.208       -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_0                NOR3         Y        Out     1.804     9.012       -         
-ADD_N_4_3                                                            Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         B        In      -         12.679      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3                       OR2A         Y        Out     1.236     13.915      -         
-i4_mux                                                               Net          -        -       3.667     -           7         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        A        In      -         17.582      -         
-MEM_COMMAND_CONTROLLER.un1_r_TRANSFER_SIZE_14.m24                    XNOR2        Y        Out     0.981     18.564      -         
-un1_r_TRANSFER_SIZE_14[3]                                            Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        B        In      -         20.501      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m1_e_9_1                 NOR2B        Y        Out     1.508     22.009      -         
-un1_m1_e_1_1                                                         Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        A        In      -         22.782      -         
-MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8AA1[1]          NOR2B        Y        Out     1.236     24.018      -         
-num_bytes[3]                                                         Net          -        -       3.420     -           6         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_6                NOR2A        B        In      -         27.438      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_0_a3_6                NOR2A        Y        Out     0.977     28.415      -         
-ADD_N_4_12                                                           Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_6                     AO1A         C        In      -         29.188      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_m3_6                     AO1A         Y        Out     1.574     30.762      -         
-ADD_N_7_mux_4                                                        Net          -        -       2.844     -           4         
-d_m1_e_0                                                             NOR2A        A        In      -         33.606      -         
-d_m1_e_0                                                             NOR2A        Y        Out     1.240     34.847      -         
-d_N_3_mux_4                                                          Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I53_Y_0       MX2C         A        In      -         35.619      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I53_Y_0       MX2C         Y        Out     1.366     36.985      -         
-N256                                                                 Net          -        -       0.927     -           2         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I67_un1_Y     NOR2B        A        In      -         37.912      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I67_un1_Y     NOR2B        Y        Out     1.236     39.148      -         
-I67_un1_Y                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I98_Y         AX1D         A        In      -         39.921      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I98_Y         AX1D         Y        Out     2.406     42.327      -         
-r_TX_Count12_9                                                       Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_6                             XO1          C        In      -         43.099      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_6                             XO1          Y        Out     1.178     44.277      -         
-r_TX_Count12_NE_6                                                    Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_9                             XO1          C        In      -         45.049      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count12_NE_9                             XO1          Y        Out     1.178     46.227      -         
-r_TX_Count12_NE_9                                                    Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          A        In      -         47.000      -         
-MEM_COMMAND_CONTROLLER.r_TX_Count_RNITSL0KL[0]                       OR3          Y        Out     1.174     48.173      -         
-r_TX_Count13                                                         Net          -        -       1.938     -           3         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          B        In      -         50.111      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNIQPSKRN                            MX2          Y        Out     1.374     51.485      -         
-un1_r_Master_TX_DV6_1[0]                                             Net          -        -       3.938     -           8         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         A        In      -         55.423      -         
-MEM_COMMAND_CONTROLLER.r_SM_COM_RNO                                  AX1B         Y        Out     2.385     57.808      -         
-N_919_mux                                                            Net          -        -       0.773     -           1         
-MEM_COMMAND_CONTROLLER.r_SM_COM                                      DFN1C0       D        In      -         58.581      -         
+MEM_COMMAND_CONTROLLER.current_command\.command[2]                   DFN1E1C0     Q        Out     1.771     1.771       -         
+command[2]                                                           Net          -        -       4.009     -           9         
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m20_0_a3_4_0                NOR2         A        In      -         5.780       -         
+MEM_COMMAND_CONTROLLER.SPI_CS_Master.un1_m20_0_a3_4_0                NOR2         Y        Out     1.219     6.999       -         
+N_1095_1                                                             Net          -        -       3.938     -           8         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIU26H_0[4]         NOR3B        B        In      -         10.938      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIU26H_0[4]         NOR3B        Y        Out     1.499     12.437      -         
+current_N_5                                                          Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8IJ1[4]          OA1          B        In      -         13.210      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIQ8IJ1[4]          OA1          Y        Out     2.168     15.377      -         
+N_99                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIMEUL2[4]          OR2          B        In      -         18.221      -         
+MEM_COMMAND_CONTROLLER.current_command\.command_RNIMEUL2[4]          OR2          Y        Out     1.236     19.457      -         
+num_bytes27_1_0                                                      Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_a2[0]              OR2A         A        In      -         20.385      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_a2[0]              OR2A         Y        Out     1.290     21.675      -         
+N_3_1_i                                                              Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         A        In      -         22.448      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0[0]               AND2         Y        Out     1.236     23.684      -         
+num_bytes[0]                                                         Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        A        In      -         25.622      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I0_CO1        NOR2A        Y        Out     1.508     27.129      -         
+N172                                                                 Net          -        -       2.844     -           4         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          B        In      -         29.973      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I56_Y         AO1          Y        Out     1.437     31.410      -         
+N260                                                                 Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        C        In      -         33.348      -         
+MEM_COMMAND_CONTROLLER.r_TX_Count12_a_4.ADD_13x13_fast_I92_Y         XNOR3        Y        Out     2.368     35.716      -         
+r_TX_Count12_3                                                       Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          C        In      -         36.488      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIO7T771[0]     OR3          Y        Out     1.804     38.292      -         
+r_TX_Count12_NE_10_2                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          C        In      -         39.065      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIGVBC52[0]     XO1          Y        Out     1.178     40.243      -         
+r_TX_Count12_NE_10_4                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          C        In      -         41.015      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI3HMHJ4[0]     OR3          Y        Out     1.804     42.819      -         
+r_TX_Count12_NE_10_5                                                 Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          B        In      -         43.592      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNIISJLEA[0]     OR3          Y        Out     1.716     45.308      -         
+r_TX_Count12_NE_10                                                   Net          -        -       1.938     -           3         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          B        In      -         47.246      -         
+MEM_COMMAND_CONTROLLER.current_command\.num_bytes_0_RNI1PTTVI[0]     OR2          Y        Out     1.554     48.800      -         
+r_TX_Count13                                                         Net          -        -       4.790     -           12        
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          B        In      -         53.590      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_RNIOQBQ7L                    MX2          Y        Out     1.374     54.964      -         
+un1_r_Master_TX_DV6_1[0]                                             Net          -        -       0.773     -           1         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          A        In      -         55.737      -         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND_0_RNI0DFSBL                  AX1          Y        Out     2.385     58.121      -         
+N_1865_mux                                                           Net          -        -       0.927     -           2         
+MEM_COMMAND_CONTROLLER.r_SM_MEM_COMMAND                              DFN1C0       D        In      -         59.048      -         
 ===================================================================================================================================
-Total path delay (propagation time + setup) of 59.959 is 26.001(43.4%) logic and 33.958(56.6%) route.
+Total path delay (propagation time + setup) of 60.427 is 28.924(47.9%) logic and 31.502(52.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: top|CLKA
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                Starting                                       Arrival          
+Instance                        Reference     Type       Pin     Net           Time        Slack
+                                Clock                                                           
+------------------------------------------------------------------------------------------------
+genblk1\.clk_div_1M.clk_out     top|CLKA      DFN1C0     Q       clk_out_i     1.771       4.016
+================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                Starting                                         Required          
+Instance                        Reference     Type       Pin     Net             Time         Slack
+                                Clock                                                              
+---------------------------------------------------------------------------------------------------
+genblk1\.clk_div_1M.clk_out     top|CLKA      DFN1C0     D       clk_out_i_i     8.705        4.016
+===================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            1.295
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         8.705
+
+    - Propagation time:                      4.690
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 4.015
+
+    Number of logic level(s):                1
+    Starting point:                          genblk1\.clk_div_1M.clk_out / Q
+    Ending point:                            genblk1\.clk_div_1M.clk_out / D
+    The start point is clocked by            top|CLKA [rising] on pin CLK
+    The end   point is clocked by            top|CLKA [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+genblk1\.clk_div_1M.clk_out         DFN1C0     Q        Out     1.771     1.771       -         
+clk_out_i                           Net        -        -       0.927     -           2         
+genblk1\.clk_div_1M.clk_out_RNO     INV        A        In      -         2.698       -         
+genblk1\.clk_div_1M.clk_out_RNO     INV        Y        Out     1.219     3.917       -         
+clk_out_i_i                         Net        -        -       0.773     -           1         
+genblk1\.clk_div_1M.clk_out         DFN1C0     D        In      -         4.690       -         
+================================================================================================
+Total path delay (propagation time + setup) of 5.985 is 4.285(71.6%) logic and 1.700(28.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -679,105 +788,107 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 157MB peak: 202MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 186MB peak: 191MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 157MB peak: 202MB)
+Finished timing report (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 186MB peak: 191MB)
 
 --------------------------------------------------------------------------------
 Target Part: AGLN250V2_VQFP100_STD
 Report for cell top.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2    98      1.0       98.0
-             AND2A     5      1.0        5.0
+              AND2   115      1.0      115.0
+             AND2A     7      1.0        7.0
               AND3    27      1.0       27.0
-               AO1   117      1.0      117.0
-              AO13     4      1.0        4.0
-              AO1A    34      1.0       34.0
-              AO1B     5      1.0        5.0
-              AO1C    19      1.0       19.0
-              AO1D     5      1.0        5.0
-              AOI1    17      1.0       17.0
-             AOI1A     4      1.0        4.0
-             AOI1B    10      1.0       10.0
-              AOI5     1      1.0        1.0
-               AX1     8      1.0        8.0
-              AX1A     5      1.0        5.0
-              AX1B    12      1.0       12.0
-              AX1C     4      1.0        4.0
-              AX1D    11      1.0       11.0
-              AX1E     1      1.0        1.0
-              AXO1     1      1.0        1.0
-             AXOI3     1      1.0        1.0
+               AO1   165      1.0      165.0
+              AO13    10      1.0       10.0
+              AO16     1      1.0        1.0
+              AO18     1      1.0        1.0
+              AO1A    38      1.0       38.0
+              AO1B     9      1.0        9.0
+              AO1C    23      1.0       23.0
+              AO1D    12      1.0       12.0
+              AOI1    11      1.0       11.0
+             AOI1A     6      1.0        6.0
+             AOI1B     2      1.0        2.0
+               AX1    14      1.0       14.0
+              AX1A     3      1.0        3.0
+              AX1B    23      1.0       23.0
+              AX1C    12      1.0       12.0
+              AX1D     4      1.0        4.0
+             AXOI2     8      1.0        8.0
              AXOI4     1      1.0        1.0
-             AXOI5     2      1.0        2.0
+             AXOI5     1      1.0        1.0
               BUFF     5      1.0        5.0
-               GND    10      0.0        0.0
-               INV    21      1.0       21.0
+            CLKINT     4      0.0        0.0
+               GND    11      0.0        0.0
+               INV    20      1.0       20.0
               MAJ3     1      1.0        1.0
-               MX2    86      1.0       86.0
-              MX2A     9      1.0        9.0
-              MX2B    15      1.0       15.0
-              MX2C    17      1.0       17.0
+               MX2   372      1.0      372.0
+              MX2A    25      1.0       25.0
+              MX2B    11      1.0       11.0
+              MX2C     9      1.0        9.0
              NAND2     2      1.0        2.0
              NAND3     2      1.0        2.0
             NAND3A     6      1.0        6.0
             NAND3B     6      1.0        6.0
             NAND3C     2      1.0        2.0
-              NOR2    54      1.0       54.0
-             NOR2A   177      1.0      177.0
-             NOR2B   174      1.0      174.0
-              NOR3    36      1.0       36.0
-             NOR3A    67      1.0       67.0
-             NOR3B    80      1.0       80.0
-             NOR3C    49      1.0       49.0
-               OA1    27      1.0       27.0
-              OA1A    27      1.0       27.0
+              NOR2    84      1.0       84.0
+             NOR2A   178      1.0      178.0
+             NOR2B   235      1.0      235.0
+              NOR3    27      1.0       27.0
+             NOR3A    72      1.0       72.0
+             NOR3B    67      1.0       67.0
+             NOR3C   104      1.0      104.0
+               OA1    20      1.0       20.0
+              OA1A    34      1.0       34.0
               OA1B     2      1.0        2.0
-              OA1C    11      1.0       11.0
-              OAI1     3      1.0        3.0
-               OR2   102      1.0      102.0
-              OR2A    78      1.0       78.0
-              OR2B    28      1.0       28.0
-               OR3    72      1.0       72.0
-              OR3A     8      1.0        8.0
-              OR3B     8      1.0        8.0
-               VCC    10      0.0        0.0
-               XA1    21      1.0       21.0
-              XA1A     7      1.0        7.0
-              XA1B    12      1.0       12.0
+              OA1C     2      1.0        2.0
+              OAI1     2      1.0        2.0
+               OR2   131      1.0      131.0
+              OR2A    69      1.0       69.0
+              OR2B    17      1.0       17.0
+               OR3    96      1.0       96.0
+              OR3A    20      1.0       20.0
+              OR3B     3      1.0        3.0
+              OR3C     2      1.0        2.0
+               VCC    11      0.0        0.0
+               XA1    26      1.0       26.0
+              XA1A     8      1.0        8.0
+              XA1B    22      1.0       22.0
               XA1C     6      1.0        6.0
-              XAI1     1      1.0        1.0
-             XNOR2    76      1.0       76.0
-             XNOR3     1      1.0        1.0
-               XO1    11      1.0       11.0
-              XO1A     4      1.0        4.0
-              XOR2   169      1.0      169.0
+             XAI1A     1      1.0        1.0
+             XNOR2    70      1.0       70.0
+             XNOR3     8      1.0        8.0
+               XO1     3      1.0        3.0
+              XO1A     6      1.0        6.0
+              XOR2   196      1.0      196.0
+              XOR3     1      1.0        1.0
 
 
-            DFN1C0    98      1.0       98.0
-          DFN1E0C0   101      1.0      101.0
+            DFN1C0   116      1.0      116.0
+          DFN1E0C0   154      1.0      154.0
           DFN1E0P0     4      1.0        4.0
             DFN1E1    21      1.0       21.0
-          DFN1E1C0   173      1.0      173.0
-          DFN1E1P0    13      1.0       13.0
-            DFN1P0    29      1.0       29.0
+          DFN1E1C0   227      1.0      227.0
+          DFN1E1P0    12      1.0       12.0
+            DFN1P0    10      1.0       10.0
             RAM4K9     8      0.0        0.0
                    -----          ----------
-             TOTAL  2342              2314.0
+             TOTAL  3044              3010.0
 
 
   IO Cell usage:
               cell count
-            CLKBUF     2
-             INBUF     2
+            CLKBUF     1
+             INBUF     3
             OUTBUF     7
                    -----
              TOTAL    11
 
 
-Core Cells         : 2314 of 6144 (38%)
+Core Cells         : 3010 of 6144 (49%)
 IO Cells           : 11
 
   RAM/ROM Usage Summary
@@ -785,9 +896,9 @@ Block Rams : 8 of 8 (100%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 32MB peak: 202MB)
+At Mapper Exit (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 32MB peak: 191MB)
 
-Process took 0h:00m:09s realtime, 0h:00m:08s cputime
-# Fri May 26 17:07:40 2023
+Process took 0h:00m:15s realtime, 0h:00m:14s cputime
+# Sat Jun 17 08:44:02 2023
 
 ###########################################################]

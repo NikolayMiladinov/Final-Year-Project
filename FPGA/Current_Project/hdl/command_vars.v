@@ -1,9 +1,13 @@
 parameter SIM_TEST = 0;
-parameter CLK_DIV_BYPASS = 1; // 1 to bypass the clock division and have a 20MHz clock
-// If bypassing division, make CLK_DIV_PARAM = 1
-parameter CLK_DIV_PARAM = 1;  // Divide CLK freq by that number
-parameter TIMER_2MS_COUNT = 40000/CLK_DIV_PARAM; // CLK is 20MHz/CLK_DIV_PARAM
+parameter NORM_CLK_FREQ     = 20; // !!!!!!!!!!!!! Do not change
 
+parameter PLL_FREQ          = 10; // in MHz
+parameter CLK_DIV_BYPASS    = 0; // 1 to bypass the clock division and have a 20MHz clock, 2 to use PLL
+parameter CLK_DIV_PARAM     = (CLK_DIV_BYPASS == 0) ? 2 : 1;  // Divide CLK freq by second number (after :)
+parameter CLK_PLL_MULT      = PLL_FREQ/20; // clk freq of PLL/20 MHz
+parameter CLK_PLL_DIV       = 20/PLL_FREQ;
+parameter TIMER_2MS_COUNT   = (CLK_DIV_BYPASS == 2) ? ((NORM_CLK_FREQ > PLL_FREQ) ? 40000/CLK_PLL_DIV : 40000*CLK_PLL_MULT) : 40000/CLK_DIV_PARAM; // CLK is 20MHz/CLK_DIV_PARAM
+parameter COMPRESS_EN       = 1;
 
 
 localparam [7:0]  RESET             = 8'hFF;
@@ -36,8 +40,8 @@ localparam FIFO_UART_RECEIVE    = 3'b001;
 localparam FIFO_UART_SEND       = 3'b010;
 localparam FIFO_MEM_SEND        = 3'b011;
 localparam FIFO_MEM_RECEIVE     = 3'b100;
-localparam FIFO_COMPRESS        = 3'b101;
-localparam FIFO_WAIT_MEM_PWRUP  = 3'b110;
+localparam FIFO_COMPRESS        = 3'b110;
+localparam FIFO_WAIT_MEM_PWRUP  = 3'b101;
 
 // Timings:
 // Power-up: Chip selection not allowed until Vcc_min = 1.7V is reached

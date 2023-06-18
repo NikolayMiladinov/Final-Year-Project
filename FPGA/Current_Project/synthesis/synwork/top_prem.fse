@@ -1,86 +1,98 @@
 
-fsm_encoding {810321036} sequential
+fsm_encoding {910321037} sequential
 
-fsm_state_encoding {810321036} IDLE {00}
+fsm_state_encoding {910321037} IDLE {00}
 
-fsm_state_encoding {810321036} TRANSFER {01}
+fsm_state_encoding {910321037} TRANSFER {01}
 
-fsm_state_encoding {810321036} CS_INACTIVE {10}
+fsm_state_encoding {910321037} CS_INACTIVE {10}
 
-fsm_registers {810321036} {r_SM_CS[1]}  {r_SM_CS[0]} 
+fsm_registers {910321037} {r_SM_CS[1]}  {r_SM_CS[0]} 
 
-fsm_encoding {1111901195} onehot
+fsm_encoding {1211901196} onehot
 
-fsm_state_encoding {1111901195} tx_idle {000001}
+fsm_state_encoding {1211901196} tx_idle {000001}
 
-fsm_state_encoding {1111901195} tx_load {000010}
+fsm_state_encoding {1211901196} tx_load {000010}
 
-fsm_state_encoding {1111901195} start_bit {000100}
+fsm_state_encoding {1211901196} start_bit {000100}
 
-fsm_state_encoding {1111901195} tx_data_bits {001000}
+fsm_state_encoding {1211901196} tx_data_bits {001000}
 
-fsm_state_encoding {1111901195} parity_bit {010000}
+fsm_state_encoding {1211901196} parity_bit {010000}
 
-fsm_state_encoding {1111901195} tx_stop_bit {100000}
+fsm_state_encoding {1211901196} tx_stop_bit {100000}
 
-fsm_registers {1111901195} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
+fsm_registers {1211901196} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
 
-fsm_encoding {1028602864} sequential
+fsm_encoding {1128602865} sequential
 
-fsm_state_encoding {1028602864} 00 {00}
+fsm_state_encoding {1128602865} 00 {00}
 
-fsm_state_encoding {1028602864} 01 {01}
+fsm_state_encoding {1128602865} 01 {01}
 
-fsm_state_encoding {1028602864} 10 {10}
+fsm_state_encoding {1128602865} 10 {10}
 
-fsm_state_encoding {1028602864} 11 {11}
+fsm_state_encoding {1128602865} 11 {11}
 
-fsm_registers {1028602864} {rx_state[1]}  {rx_state[0]} 
+fsm_registers {1128602865} {rx_state[1]}  {rx_state[0]} 
 
-fsm_encoding {1718921892} onehot
+fsm_encoding {1621342134} sequential
 
-fsm_state_encoding {1718921892} SEND_CHECK {0000001}
+fsm_state_encoding {1621342134} COMPRESS_INITIAL {00}
 
-fsm_state_encoding {1718921892} SEND_CHECK_EVAL {0000010}
+fsm_state_encoding {1621342134} GET_BYTES {01}
 
-fsm_state_encoding {1718921892} SEND_WRITE_DISABLE {0000100}
+fsm_state_encoding {1621342134} WAIT_BYTES {10}
 
-fsm_state_encoding {1718921892} SEND_WRITE_ENABLE {0001000}
+fsm_registers {1621342134} {r_SM_COMPRESS[1]}  {r_SM_COMPRESS[0]} 
 
-fsm_state_encoding {1718921892} SEND_SET_FEATURE {0010000}
+fsm_encoding {1820022002} onehot
 
-fsm_state_encoding {1718921892} SEND_PROG_LOAD_EXEC {0100000}
+fsm_state_encoding {1820022002} SEND_CHECK {0000001}
 
-fsm_state_encoding {1718921892} RESET_MEM {1000000}
+fsm_state_encoding {1820022002} SEND_CHECK_EVAL {0000010}
 
-fsm_registers {1718921892} {r_SEND_sm[6]}  {r_SEND_sm[5]}  {r_SEND_sm[4]}  {r_SEND_sm[3]}  {r_SEND_sm[2]}  {r_SEND_sm[1]}  {r_SEND_sm[0]} 
+fsm_state_encoding {1820022002} SEND_WRITE_DISABLE {0000100}
 
-fsm_encoding {1718921893} onehot
+fsm_state_encoding {1820022002} SEND_WRITE_ENABLE {0001000}
 
-fsm_state_encoding {1718921893} RECEIVE_CHECK {00001}
+fsm_state_encoding {1820022002} SEND_SET_FEATURE {0010000}
 
-fsm_state_encoding {1718921893} RECEIVE_CHECK_EVAL {00010}
+fsm_state_encoding {1820022002} SEND_PROG_LOAD_EXEC {0100000}
 
-fsm_state_encoding {1718921893} RECEIVE_WRITE_DISABLE {00100}
+fsm_state_encoding {1820022002} RESET_MEM {1000000}
 
-fsm_state_encoding {1718921893} RECEIVE_PAGE_READ {01000}
+fsm_registers {1820022002} {r_SEND_sm[6]}  {r_SEND_sm[5]}  {r_SEND_sm[4]}  {r_SEND_sm[3]}  {r_SEND_sm[2]}  {r_SEND_sm[1]}  {r_SEND_sm[0]} 
 
-fsm_state_encoding {1718921893} RECEIVE_CACHE_READ {10000}
+fsm_encoding {1820022003} onehot
 
-fsm_registers {1718921893} {r_RECEIVE_sm[4]}  {r_RECEIVE_sm[3]}  {r_RECEIVE_sm[2]}  {r_RECEIVE_sm[1]}  {r_RECEIVE_sm[0]} 
+fsm_state_encoding {1820022003} RECEIVE_CHECK {00001}
 
-fsm_encoding {1718921891} onehot
+fsm_state_encoding {1820022003} RECEIVE_CHECK_EVAL {00010}
 
-fsm_state_encoding {1718921891} FIFO_IDLE {000001}
+fsm_state_encoding {1820022003} RECEIVE_WRITE_DISABLE {00100}
 
-fsm_state_encoding {1718921891} FIFO_UART_RECEIVE {000010}
+fsm_state_encoding {1820022003} RECEIVE_PAGE_READ {01000}
 
-fsm_state_encoding {1718921891} FIFO_UART_SEND {000100}
+fsm_state_encoding {1820022003} RECEIVE_CACHE_READ {10000}
 
-fsm_state_encoding {1718921891} FIFO_MEM_SEND {001000}
+fsm_registers {1820022003} {r_RECEIVE_sm[4]}  {r_RECEIVE_sm[3]}  {r_RECEIVE_sm[2]}  {r_RECEIVE_sm[1]}  {r_RECEIVE_sm[0]} 
 
-fsm_state_encoding {1718921891} FIFO_MEM_RECEIVE {010000}
+fsm_encoding {1820022001} onehot
 
-fsm_state_encoding {1718921891} FIFO_WAIT_MEM_PWRUP {100000}
+fsm_state_encoding {1820022001} FIFO_IDLE {0000001}
 
-fsm_registers {1718921891} {r_fifo_sm[5]}  {r_fifo_sm[4]}  {r_fifo_sm[3]}  {r_fifo_sm[2]}  {r_fifo_sm[1]}  {r_fifo_sm[0]} 
+fsm_state_encoding {1820022001} FIFO_UART_RECEIVE {0000010}
+
+fsm_state_encoding {1820022001} FIFO_UART_SEND {0000100}
+
+fsm_state_encoding {1820022001} FIFO_MEM_SEND {0001000}
+
+fsm_state_encoding {1820022001} FIFO_MEM_RECEIVE {0010000}
+
+fsm_state_encoding {1820022001} FIFO_WAIT_MEM_PWRUP {0100000}
+
+fsm_state_encoding {1820022001} FIFO_COMPRESS {1000000}
+
+fsm_registers {1820022001} {r_fifo_sm[6]}  {r_fifo_sm[5]}  {r_fifo_sm[4]}  {r_fifo_sm[3]}  {r_fifo_sm[2]}  {r_fifo_sm[1]}  {r_fifo_sm[0]} 

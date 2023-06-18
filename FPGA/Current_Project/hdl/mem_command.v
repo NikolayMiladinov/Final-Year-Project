@@ -35,18 +35,20 @@ module mem_command #(
     output o_UART_TX,
 
     // FIFO state
+    input           i_tr_size_DV,
     input  [2:0]    i_fifo_sm,          // Fifo states: UART send/receive, SPI(MEM) send/receive
     output          o_send_sm,          // Top lvl does not change state during a read from FIFO
     output          o_UART_RX_Ready,    // Signal to top level that there is UART data to be processed
     output [12:0]   o_fifo_count,       // Fifo count: from read perspective
     output [12:0]   o_transfer_size,    // Size of UART transfer (when all data is saved in FIFO, its count should be = to transfer size)
-    output          o_transfer_size_DV  // Data valid pulse that indicates when transfer_size has changed and is valid
+    output          o_transfer_size_DV, // Data valid pulse that indicates when transfer_size has changed and is valid
+    output          o_compress_done
 ); /* synthesis syn_noprune=1 */;
 
-    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_1_25MS_COUNT = 25000/CLK_DIV_PARAM; // 1.25ms in number of cycles (normal clk frequency is 20MHz)
-    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_5MS_COUNT = 10000/CLK_DIV_PARAM; // 0.5ms in number of cycles (normal clk frequency is 20MHz)
-    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_24MS_COUNT = 4800/CLK_DIV_PARAM; // 0.24ms in number of cycles (normal clk frequency is 20MHz)
-    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_08MS_COUNT = 1600/CLK_DIV_PARAM; // 0.08ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_1_25MS_COUNT = (CLK_DIV_BYPASS == 2) ? ((NORM_CLK_FREQ > PLL_FREQ) ? 25000/CLK_PLL_DIV : 25000*CLK_PLL_MULT) : 25000/CLK_DIV_PARAM; // 1.25ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_5MS_COUNT  = (CLK_DIV_BYPASS == 2) ? ((NORM_CLK_FREQ > PLL_FREQ) ? 10000/CLK_PLL_DIV : 10000*CLK_PLL_MULT) : 10000/CLK_DIV_PARAM; // 0.5ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_24MS_COUNT = (CLK_DIV_BYPASS == 2) ? ((NORM_CLK_FREQ > PLL_FREQ) ? 4800/CLK_PLL_DIV : 4800*CLK_PLL_MULT) : 4800/CLK_DIV_PARAM; // 0.24ms in number of cycles (normal clk frequency is 20MHz)
+    localparam [$clog2(MAX_WAIT_CYCLES)-1:0] TIMER_0_08MS_COUNT = (CLK_DIV_BYPASS == 2) ? ((NORM_CLK_FREQ > PLL_FREQ) ? 1600/CLK_PLL_DIV : 1600*CLK_PLL_MULT) : 1600/CLK_DIV_PARAM; // 0.08ms in number of cycles (normal clk frequency is 20MHz)
 
     // Master Specific Inputs
     logic [7:0]   r_Master_TX_Byte;     // Byte to be transmitted
@@ -69,7 +71,7 @@ module mem_command #(
     logic [12:0] w_fifo_count;          // Number of bytes in FIFO from read perspective
 
     logic [12:0] r_TRANSFER_SIZE;       // UART sends how much the transfer size will be and sets this variable
-    logic        r_transfer_size_DV;
+    logic        r_transfer_size_DV;    // after compression the transfer size changes
     logic [12:0] r_UART_count;          // Counts the number of bytes sent through UART
     logic [7:0]  r_UART_command;        // 1st byte in UART transaction is always the command
     // h21 = ! character
@@ -95,8 +97,79 @@ module mem_command #(
     logic       r_UART_RX_Ready_prv;    // Used for logic
     logic       r_UART_TX_Ready_prv;    // Used for logic
 
+    // Compression variables
+    logic [$clog2(MAX_BYTES_PER_CS+1)-1:0] r_comp_count; // Counts how many bytes are left for compression
+    logic [2:0] r_count_mod8;               // Counts to 8 for each byte in a block
+    logic signed [7:0] w_fifo_out_signed;   // signed version of FIFO output
+    logic signed [7:0] w_delta_byte;        // current byte - previous one <=> x_i - x_{i-1}
+    logic [7:0] w_zigzag_byte;              // zigzag encoded version of delta byte
+    logic signed [7:0] r_prev_data_byte;    // the previous byte (just a 1-cycle delayed version of FIFO output)
+    logic [7:0] r_block_arr [0:7];          // buffer for all zigzag encoded bytes in a block
+    // 7 and 8 bitwidth are both treated as 7 (0 to 8 has 9 values, but 3-bit reg has 7)
+    logic [2:0] w_pack_bit_width;           // = 7 - min(leading zeros in block)
+    logic [2:0] r_pack_bit_width;           // same as above but is registered at the correct time because the wire constantly changes
+    logic [2:0] r_bytes_to_pack;            // tracks how bytes are left in the packed block
+    logic [47:0]w_packed_bits;              // wires the packed bytes
+    logic       r_data_compr_true;          // goes high when all the data has been compressed
+
+    // Assign compression wires
+    assign w_fifo_out_signed = w_fifo_data_out[7:0]; // signed version of FIFO output
+    assign w_delta_byte     = w_fifo_out_signed - r_prev_data_byte;
+    assign w_zigzag_byte    = w_delta_byte[7] ? (((~w_delta_byte)+1'b1)<<1) - 1'b1 : w_delta_byte<<1;
+
+    // Checks from MSB to LSB for a 1 to decide how many bits are necessary to represent the bytes in the block
+    assign w_pack_bit_width = (r_block_arr[0][7] | r_block_arr[1][7] | r_block_arr[2][7] | r_block_arr[3][7] |
+                               r_block_arr[4][7] | r_block_arr[5][7] | r_block_arr[6][7] | r_block_arr[7][7] | 
+                               r_block_arr[0][6] | r_block_arr[1][6] | r_block_arr[2][6] | r_block_arr[3][6] |
+                               r_block_arr[4][6] | r_block_arr[5][6] | r_block_arr[6][6] | r_block_arr[7][6]) ? 'd7 : 
+                              (r_block_arr[0][5] | r_block_arr[1][5] | r_block_arr[2][5] | r_block_arr[3][5] |
+                               r_block_arr[4][5] | r_block_arr[5][5] | r_block_arr[6][5] | r_block_arr[7][5]) ? 'd6 : 
+                              (r_block_arr[0][4] | r_block_arr[1][4] | r_block_arr[2][4] | r_block_arr[3][4] |
+                               r_block_arr[4][4] | r_block_arr[5][4] | r_block_arr[6][4] | r_block_arr[7][4]) ? 'd5 : 
+                              (r_block_arr[0][3] | r_block_arr[1][3] | r_block_arr[2][3] | r_block_arr[3][3] |
+                               r_block_arr[4][3] | r_block_arr[5][3] | r_block_arr[6][3] | r_block_arr[7][3]) ? 'd4 : 
+                              (r_block_arr[0][2] | r_block_arr[1][2] | r_block_arr[2][2] | r_block_arr[3][2] |
+                               r_block_arr[4][2] | r_block_arr[5][2] | r_block_arr[6][2] | r_block_arr[7][2]) ? 'd3 : 
+                              (r_block_arr[0][1] | r_block_arr[1][1] | r_block_arr[2][1] | r_block_arr[3][1] |
+                               r_block_arr[4][1] | r_block_arr[5][1] | r_block_arr[6][1] | r_block_arr[7][1]) ? 'd2 : 
+                              (r_block_arr[0][0] | r_block_arr[1][0] | r_block_arr[2][0] | r_block_arr[3][0] |
+                               r_block_arr[4][0] | r_block_arr[5][0] | r_block_arr[6][0] | r_block_arr[7][0]) ? 'd1 : 'd0;
+
+    // The bit width for each byte is known from pack_bit_width
+    // Therefore, the bits can be packed correspondingly
+    // Since Verilog does not allow run-time calculation of indexing a register/wire,
+    // the packed bytes must be wired depending on the pack_bit_width
+    // 0 wdith does not pack any bytes and for width of 7, the bytes can just be taken from the block array to minimise logic
+    assign w_packed_bits    =   r_pack_bit_width=='d6 ? {r_block_arr[0][5:0],r_block_arr[1][5:0],r_block_arr[2][5:0],
+                                                         r_block_arr[3][5:0],r_block_arr[4][5:0],r_block_arr[5][5:0],
+                                                         r_block_arr[6][5:0],r_block_arr[7][5:0]} : 
+                           r_pack_bit_width=='d5 ? {8'b0,r_block_arr[0][4:0],r_block_arr[1][4:0],r_block_arr[2][4:0],
+                                                         r_block_arr[3][4:0],r_block_arr[4][4:0],r_block_arr[5][4:0],
+                                                         r_block_arr[6][4:0],r_block_arr[7][4:0]} : 
+                          r_pack_bit_width=='d4 ? {16'b0,r_block_arr[0][3:0],r_block_arr[1][3:0],r_block_arr[2][3:0],
+                                                         r_block_arr[3][3:0],r_block_arr[4][3:0],r_block_arr[5][3:0],
+                                                         r_block_arr[6][3:0],r_block_arr[7][3:0]} : 
+                          r_pack_bit_width=='d3 ? {24'b0,r_block_arr[0][2:0],r_block_arr[1][2:0],r_block_arr[2][2:0],
+                                                         r_block_arr[3][2:0],r_block_arr[4][2:0],r_block_arr[5][2:0],
+                                                         r_block_arr[6][2:0],r_block_arr[7][2:0]} : 
+                          r_pack_bit_width=='d2 ? {32'b0,r_block_arr[0][1:0],r_block_arr[1][1:0],r_block_arr[2][1:0],
+                                                         r_block_arr[3][1:0],r_block_arr[4][1:0],r_block_arr[5][1:0],
+                                                         r_block_arr[6][1:0],r_block_arr[7][1:0]} : 
+                          r_pack_bit_width=='d1 ? {40'b0,r_block_arr[0][0],r_block_arr[1][0],r_block_arr[2][0],
+                                                         r_block_arr[3][0],r_block_arr[4][0],r_block_arr[5][0],
+                                                         r_block_arr[6][0],r_block_arr[7][0]} : 48'b0;
+
+
+    
+    // State machine for compression
+    logic [1:0] r_SM_COMPRESS;
+    localparam  COMPRESS_INITIAL = 2'b0; // initial state of compression, necessary to reset some variables
+    localparam  GET_BYTES   = 2'b1; // here bytes are read from FIFO and written to FIFO at the same time
+    localparam  WAIT_BYTES  = 2'd2; // this stage waits for any bytes left from the previous stage because FIFO output has 2 cycle delay
+    localparam  PACK_BYTES  = 2'd3; // unused for now, but could be used for sequential checking of the width and packing
+
     // State machine for transmitting SPI command
-    logic       r_SM_COM;
+    logic       r_SM_MEM_COMMAND;
     localparam  IDLE        = 1'b0;
     localparam  BUSY        = 1'b1;
 
@@ -117,6 +190,7 @@ module mem_command #(
 
     // Assign outputs
     assign o_send_sm = r_SM_SEND;
+    assign o_compress_done = r_data_compr_true;
     assign o_fifo_count = w_fifo_count; // Top level needs to know the FIFO count and data transfer size
     assign o_transfer_size = r_TRANSFER_SIZE;
     assign o_transfer_size_DV = r_transfer_size_DV;
@@ -133,8 +207,8 @@ module mem_command #(
     // Hence, w_Master_TX_Ready goes low and on next cycle o_SPI_CS_n goes low
     // When SPI module is ready and chip select goes high, then the module is ready to transmit the next command
     assign o_CM_Ready = o_SPI_CS_n & w_Master_TX_Ready & ~i_CM_DV;
-
     logic [12:0] w_fifo_count_prev; // for testing
+    integer i;
 
     always @(posedge i_Clk or negedge i_Rst_L) begin
         // Reset data transfer registers and states
@@ -155,30 +229,194 @@ module mem_command #(
             r_UART_TX_Ready_prv <= 1'b0;
             w_fifo_count_prev   <= 'd1000; // Testing only
 
+            r_SM_COMPRESS       <= 'b0;
+            r_count_mod8        <= 'b0;
+            r_comp_count        <= 'b0;
+            r_prev_data_byte    <= 'b0;
+            r_bytes_to_pack     <= 'b0;
+            r_pack_bit_width    <= 'b0;
+            r_data_compr_true   <= 'b0;
+            for (i = 0; i<8; i=i+1) begin
+                r_block_arr[i]  <= 'b0;
+            end
+
         end else begin
             // default assignments
             r_fifo_re           <= 1'b0;
             r_fifo_we           <= 1'b0;
             r_UART_OEN          <= 1'b1;
             r_UART_WEN          <= 1'b1;
-            r_transfer_size_DV  <= 1'b0;
+            r_transfer_size_DV  <= 1'b0; 
+            // after every compression, update the transfer count
+            // important that this data valid signal is only 1 cycle 
+            // and is a couple cycles after the compression finishes because the FIFO count has a delay
+            if(i_tr_size_DV) begin
+                r_TRANSFER_SIZE     <= w_fifo_count;
+                r_transfer_size_DV  <= 1'b1;
+            end
             
             // Cannot receive data from both UART and SPI because there is only 1 FIFO, hence the need for these states
             case (i_fifo_sm)
-
                 FIFO_IDLE: begin
-                    // For testing purposes
+                    // For testing purposes, not synthesized when SIM_TEST = 0
                     if (SIM_TEST == 1) begin
                         if (w_fifo_count == 'b0 && w_fifo_count_prev != 'b0) begin
-                            r_fifo_data_in   <= 'b1; // Save RX byte received from SPI
+                            r_fifo_data_in   <= 'd254; 
                             r_fifo_we        <= 1'b1; // Write enable for FIFO
                             w_fifo_count_prev<= w_fifo_count;
-                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count < 'd20) begin
-                            r_fifo_data_in   <= w_fifo_count +'b1; // Save RX byte received from SPI
+                        // end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count < 'd30) begin
+                        //     r_fifo_data_in   <= r_fifo_data_in +'b1; 
+                        //     r_fifo_we        <= 1'b1; // Write enable for FIFO
+                        //     w_fifo_count_prev<= w_fifo_count;
+                        // end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count >= 'd30 && w_fifo_count < 'd60) begin
+                        //     r_fifo_data_in   <= r_fifo_data_in -'b1; 
+                        //     r_fifo_we        <= 1'b1; // Write enable for FIFO
+                        //     w_fifo_count_prev<= w_fifo_count;
+                        // end
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd0) begin
+                            r_fifo_data_in   <= 'd254; 
                             r_fifo_we        <= 1'b1; // Write enable for FIFO
                             w_fifo_count_prev<= w_fifo_count;
-                        end
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd1) begin
+                            r_fifo_data_in   <= 'd253; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd2) begin
+                            r_fifo_data_in   <= 'd252; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd3) begin
+                            r_fifo_data_in   <= 'd248; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd4) begin
+                            r_fifo_data_in   <= 'd244; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd5) begin
+                            r_fifo_data_in   <= 'd240; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd6) begin
+                            r_fifo_data_in   <= 'd238; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count == 'd7) begin
+                            r_fifo_data_in   <= 'd235; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end else if (w_fifo_count != w_fifo_count_prev && w_fifo_count < 'd24) begin
+                            r_fifo_data_in   <= r_fifo_data_in +'b1; 
+                            r_fifo_we        <= 1'b1; // Write enable for FIFO
+                            w_fifo_count_prev<= w_fifo_count;
+                        end 
                     end
+                end
+                
+
+                // Handle the compression
+                FIFO_COMPRESS: begin
+                    case (r_SM_COMPRESS)
+                        COMPRESS_INITIAL: begin
+                            if (~r_data_compr_true) begin // only start compression if it wasn't done yet
+                                // reset necessary variables and start compression
+                                r_SM_COMPRESS       <= GET_BYTES;
+                                r_count_mod8        <= 'b0;
+                                r_comp_count        <= w_fifo_count; // FIFO count indicates how many bytes need to be compressed
+                                r_prev_data_byte    <= 'b0; // important for first delta encoding
+                                r_bytes_to_pack     <= 'b0;
+                                r_pack_bit_width    <= 'b0;
+                            end
+                        end
+                        GET_BYTES: begin
+                            if (r_comp_count > 'b0) begin // If there are more bytes to compress, read from FIFO
+                                r_fifo_re       <= 1'b1;
+                                r_comp_count    <= r_comp_count - 1'b1;
+                                r_count_mod8    <= r_count_mod8 + 1'b1; // once it reaches 7, it stops to process the block
+                            end
+
+                            // Move to waiting for the bytes that are yet to come out of the FIFO
+                            // Also move to waiting when all the bytes have been read
+                            // Do not change state until all bytes the packed bytes have been saved in the FIFO
+                            if (((r_count_mod8 == 'd7 && r_fifo_re == 1'b1) || (r_comp_count <= 'b1)) && r_bytes_to_pack == r_pack_bit_width) begin
+                                r_SM_COMPRESS   <= WAIT_BYTES;
+                            end
+
+                            // Register what comes out of the FIFO
+                            if(r_fifo_re_delay[1] == 1'b1 && r_comp_count!='b0)begin
+                                r_block_arr[r_count_mod8 - 'd3] <= w_zigzag_byte; // r_count_mod8 is 2 cycles ahead and starts from 1
+                            end else if (r_fifo_re_delay[1] == 1'b1) begin // special case where count is 0 and previous packed bytes are still not saved
+                                // When count reaches 0, it might be on any byte in a block of 8
+                                // Then r_fifo_re becomes 0 (stop reading from FIFO)
+                                // In the next two cycles this will be reflected in r_fifo_re_delay[1:0]
+                                // Example: count reaches 0 and there are 5 bytes left that need to packed in a block of typically 8
+                                // on that cycle FIFO read is still 1 and the 3rd byte comes out of FIFO (r_block_arr[2]) => 5 - 3
+                                // on next cycle FIFO read becomes 1 and the 4th byte needs to come out ...
+                                r_block_arr[(r_count_mod8-'d1)-r_fifo_re_delay[0]-r_fifo_re] <= w_zigzag_byte;
+                            end
+
+                            // save the packed byte in FIFO
+                            // Since reading from the FIFO has 2 cycle delay, the first 2 or more bytes will already be packed 
+                            // special case when pack width is 7 because 8 bytes need to be packed
+                            if (r_fifo_we && r_pack_bit_width != 'b0 && ((r_bytes_to_pack < r_pack_bit_width) || (r_pack_bit_width=='d7 && r_bytes_to_pack <= r_pack_bit_width))) begin
+                                r_fifo_we       <= 1'b1;
+                                r_bytes_to_pack <= r_bytes_to_pack + 1'b1; // tracks which byte from the packed array (48-bit wire) should be saved
+                                if (r_pack_bit_width<'d7) begin
+                                    r_fifo_data_in  <= w_packed_bits[((r_pack_bit_width - r_bytes_to_pack - 1'b1)*8)+:8];
+                                end else begin
+                                    r_fifo_data_in  <= r_block_arr[r_bytes_to_pack];
+                                end
+                            end
+
+                            // When done compressing the last bytes, go to initial state and signal that compression is done
+                            if (r_comp_count == 'b0 && r_count_mod8 == 'd0 && r_bytes_to_pack == r_pack_bit_width) begin
+                                r_SM_COMPRESS       <= COMPRESS_INITIAL;
+                                r_data_compr_true   <= 1'b1;
+                            end
+                        end 
+                        
+                        WAIT_BYTES: begin
+                            // Register the delayed FIFO outputs
+                            // if(r_fifo_re_delay[1] == 1'b1 && r_count_mod8 == 'd0)begin
+                            //     r_block_arr[7-r_fifo_re_delay[0]-r_fifo_re] <= w_zigzag_byte;
+                            // end else if (r_fifo_re_delay[1] == 1'b1) begin // special case where last block is incomplete
+                            //     r_block_arr[(r_count_mod8-'d1)-r_fifo_re_delay[0]-r_fifo_re] <= w_zigzag_byte;
+                            // end
+                            if(r_fifo_re_delay[1] == 1'b1)begin
+                                r_block_arr[(r_count_mod8-'d1)-r_fifo_re_delay[0]-r_fifo_re] <= w_zigzag_byte;
+                            end
+
+                            // Once done registering the FIFO outputs in the block,
+                            // a wire calculates the pack_bit_width and it is saved in a register
+                            // since the the reading and writing to the FIFO is done simultaneously,
+                            // the register makes sure the width does not change
+                            if (~r_fifo_re_delay[1] && r_count_mod8 == 'd0) begin
+                                r_bytes_to_pack <= 'b0;
+                                r_pack_bit_width<= w_pack_bit_width;
+                                // Save the header (bit width in the FIFO)
+                                // Currently the block is 1-dimensional so there are 5 padded zeros
+                                // Having 2, 4, 5, 7 and 8 dimensions will save some space since less padding will be needed
+                                r_fifo_we       <= 1'b1;
+                                r_fifo_data_in  <= {5'b0, w_pack_bit_width};
+                                r_SM_COMPRESS  <= GET_BYTES;
+                            end
+
+                            // When the count is 0 and less than 8 bytes remain to be packed, fill the rest of the block with the last zigzag encoded value
+                            if(r_count_mod8!='d0 && ~r_fifo_re_delay[1]) begin
+                                r_block_arr[r_count_mod8] <= r_block_arr[r_count_mod8-1'b1];
+                                r_count_mod8 <= r_count_mod8 + 1'b1;
+                            end
+                        end
+
+                        // PACK_BYTES: begin
+                            
+                        // end
+                    endcase
+
+                    // This can be changed to where the FIFO output is saved
+                    // When the FIFO output does not change, 'previous' byte will be the same as the current one
+                    // However, for the current implementation, this does not affect anything
+                    r_prev_data_byte    <= w_fifo_data_out;
                 end
 
                 // Receiving data from UART
@@ -224,6 +462,7 @@ module mem_command #(
 
                 // Sending data through UART
                 FIFO_UART_SEND: begin
+                    r_UART_count <= 'b0;
                     case (r_SM_SEND)
                         SEND_IDLE: begin
                             // Send data when UART is ready until fifo is empty
@@ -241,7 +480,7 @@ module mem_command #(
                                 r_UART_Data_In  <= w_fifo_data_out; // Register the data coming out of FIFO
                                 r_UART_WEN      <= 1'b0;            // Signal to UART to read the data
                                 r_SM_SEND       <= SEND_IDLE;
-                            end else if (~w_UART_TX_Ready) begin
+                            end else if (~w_UART_TX_Ready || (~r_fifo_re_delay[1] && ~r_fifo_re_delay[0] && ~r_fifo_re)) begin // Read hasn't begun, so -> send_idle
                                 r_SM_SEND       <= SEND_IDLE;       // For safety if for some reason UART is not ready, go to idle and wait until it is ready
                             end
                         end
@@ -272,8 +511,9 @@ module mem_command #(
                         end
                         WRITE_DATA: begin
                             // Send data through SPI when fifo_out is valid (2 cycles after RE is HIGH)
-                            if(r_TX_Count < 'd3 || current_command.command != PROG_LOAD1) r_SM_SEND <= SEND_IDLE; // For safety, if by mistake in this state, go to idle and wait
-                            else if(r_fifo_re_delay[1]) begin
+                            if(r_TX_Count < 'd3 || current_command.command != PROG_LOAD1 || (~r_fifo_re_delay[1] && ~r_fifo_re_delay[0] && ~r_fifo_re)) begin
+                                r_SM_SEND <= SEND_IDLE; // For safety, if by mistake in this state, go to idle and wait
+                            end else if(r_fifo_re_delay[1]) begin
                                 current_command.prog_data   <= w_fifo_data_out; // Register the data coming out of FIFO
                                 r_SM_SEND                   <= SEND_IDLE;
                             end
@@ -367,20 +607,20 @@ module mem_command #(
         if(~i_Rst_L) begin
             r_Master_TX_DV   <= 1'b0;
             r_TX_Count       <= 'b0;
-            r_SM_COM         <= IDLE;
+            r_SM_MEM_COMMAND         <= IDLE;
             r_Master_TX_Byte <= 'b0;
         end else begin 
             // Default assignment
             r_Master_TX_DV  <= 1'b0;
 
             if(w_Master_TX_Ready) begin // When SPI_Master is ready and there are more bytes to be transmitted
-                case (r_SM_COM)
+                case (r_SM_MEM_COMMAND)
                     IDLE: begin
                         // Start SPI when there is a valid command (only pulsed when the ready signal is high)
                         if (r_TX_Count == 'b0 && i_CM_DV) begin // Use RX_Count to determine what goes into TX_Byte
                             r_Master_TX_DV   <= 1'b1;           // Single clock data valid pulse
                             r_Master_TX_Byte <= i_Command;      // Does not use current_command.command as it has 1 cycle delay
-                            r_SM_COM         <= BUSY;
+                            r_SM_MEM_COMMAND         <= BUSY;
                             r_TX_Count       <= 'b1;            // Count was 0, increment to 1
                         end
                     end
@@ -435,11 +675,11 @@ module mem_command #(
                             // When count reaches the number of bytes to be transmitted, reset the count and go to idle to wait for next command
                             if (r_TX_Count == (current_command.num_bytes - 'b1)) begin
                                 r_TX_Count  <= 'b0;
-                                r_SM_COM    <= IDLE;
+                                r_SM_MEM_COMMAND    <= IDLE;
                             end
                         end else begin
                             r_TX_Count  <= 'b0;
-                            r_SM_COM    <= IDLE;
+                            r_SM_MEM_COMMAND    <= IDLE;
                         end
                     end
                 endcase
@@ -460,6 +700,18 @@ module mem_command #(
         .RESET(i_Rst_L),        // FIFO reset
         .RDCNT(w_fifo_count)    // Number of bytes in FIFO, from read perspective
     );
+
+    // FIFO_emb fifo__(
+    //     .DATA(r_fifo_data_in),  // Data to be saved in the FIFO
+    //     .Q(w_fifo_data_out),    // Data coming out of FIFO
+    //     .WE(r_fifo_we),         // Write enable of FIFO (no delay)
+    //     .RE(r_fifo_re),         // Read enable of FIFO (essentially has 2 cycle delay)
+    //     .WCLOCK(i_Clk),            // FIFO clock
+    //     .RCLOCK(i_Clk),
+    //     .FULL(w_fifo_full),     // FIFO is full flag
+    //     .EMPTY(w_fifo_empty),   // FIFO is empty flag
+    //     .RESET(i_Rst_L)        // FIFO reset
+    // );
 
 
     // Instantiate SPI

@@ -4,3 +4,4 @@
 @W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":261:0:261:5|Register bit last_bit[2] (in view view:work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
 @W: MO160 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":261:0:261:5|Register bit last_bit[1] (in view view:work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) is always 0. To keep the instance, apply syn_preserve=1 on the instance.
 @W: MT420 |Found inferred clock top|CLKA with period 10.00ns. Please declare a user-defined clock on object "p:CLKA"
+@W: MT420 |Found inferred clock clk_div_2s|clk_out_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:genblk1\.clk_div_1M.clk_out"

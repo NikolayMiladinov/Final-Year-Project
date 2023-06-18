@@ -1,15 +1,21 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":189:2:189:7|Found counter in view:work.top(verilog) instance r_Pwrup_Timer[15:0] 
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":314:60:314:91|Found 13 by 13 bit less-than operator ('<') un1_w_fifo_count_14 (in view: work.top(verilog))
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":365:4:365:9|Found counter in view:work.mem_command_Z1(verilog) instance r_TX_Count[12:0] 
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":139:4:139:9|Found counter in view:work.mem_command_Z1(verilog) instance r_UART_count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":200:2:200:7|Found counter in view:work.top(verilog) instance r_Pwrup_Timer[14:0] 
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\top.v":341:60:341:91|Found 13 by 13 bit less-than operator ('<') un1_w_fifo_count_14 (in view: work.top(verilog))
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":605:4:605:9|Found counter in view:work.mem_command_Z1(verilog) instance r_TX_Count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_comp_count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_UART_count[12:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_count_mod8[2:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":213:4:213:9|Found counter in view:work.mem_command_Z1(verilog) instance r_bytes_to_pack[2:0] 
+@N: MF184 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":117:30:117:66|Found 8 by 8 bit subtractor, 'w_delta_byte_0_0[7:0]'
 @N: MF176 |Default generator successful 
-@N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":215:106:215:127|Found 12-bit incrementor, 'un1_r_TRANSFER_SIZE_1[13:1]'
 @N: MF176 |Default generator successful 
-@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":389:28:389:66|Found 13 by 13 bit less-than operator ('<') r_Master_TX_Byte62 (in view: work.mem_command_Z1(verilog))
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":103:2:103:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2(verilog) instance r_CS_Inactive_Count[14:0] 
-@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":170:2:170:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2(verilog) instance o_RX_Count[12:0] 
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":629:28:629:66|Found 13 by 13 bit less-than operator ('<') r_Master_TX_Byte62 (in view: work.mem_command_Z1(verilog))
+@N: MF238 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":453:106:453:127|Found 12-bit incrementor, 'un1_r_TRANSFER_SIZE_1[13:1]'
+@N: MF176 |Default generator successful 
+@N: MF179 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\mem_command.v":361:74:361:108|Found 3 by 3 bit less-than operator ('<') un1_r_bytes_to_pack (in view: work.mem_command_Z1(verilog))
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":103:2:103:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2(verilog) instance r_CS_Inactive_Count[18:0] 
+@N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master_with_single_cs.v":170:2:170:7|Found counter in view:work.SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2(verilog) instance o_RX_Count[12:0] 
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":88:2:88:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_SPI_Clk_Edges[4:0] 
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":197:2:197:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_RX_Bit_Count[2:0] 
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\hdl\spi_master.v":167:2:167:7|Found counter in view:work.spi_master_3s_2s(verilog) instance r_TX_Bit_Count[2:0] 
@@ -22,6 +28,9 @@
 @N: MO231 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":181:0:181:5|Found counter in view:work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog) instance receive_count[3:0] 
 @N: BN362 :"c:\users\nikol\documents\finalyearproject\final-year-project\fpga\current_project\component\work\uart_core\uart_core_0\rtl\vlog\core\rx_async.v":377:0:377:5|Removing sequential instance rx_shift[8] (in view: work.UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: FP130 |Promoting Net rst_n_c on CLKBUF  rst_n_pad 
-@N: FP130 |Promoting Net CLKA_c on CLKBUF  CLKA_pad 
+@N: FP130 |Promoting Net CLK1 on CLKINT  genblk1\.clk_div_1M.clk_out_inferred_clock 
+@N: FP130 |Promoting Net MEM_COMMAND_CONTROLLER.r_pack_bit_width[1] on CLKINT  I_530 
+@N: FP130 |Promoting Net MEM_COMMAND_CONTROLLER.r_pack_bit_width[0] on CLKINT  I_531 
+@N: FP130 |Promoting Net MEM_COMMAND_CONTROLLER.r_pack_bit_width[2] on CLKINT  I_532 
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

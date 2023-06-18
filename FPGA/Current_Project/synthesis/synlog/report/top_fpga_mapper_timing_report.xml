@@ -15,9 +15,15 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <data tcl_name="slack">Slack</data>
 </row>
 <row>
-<data>top|CLKA</data>
+<data>clk_div_2s|clk_out_inferred_clock</data>
 <data>100.0 MHz</data>
 <data>16.5 MHz</data>
-<data>-50.497</data>
+<data>-50.761</data>
+</row>
+<row>
+<data>top|CLKA</data>
+<data>100.0 MHz</data>
+<data>167.1 MHz</data>
+<data>4.016</data>
 </row>
 </report_table>

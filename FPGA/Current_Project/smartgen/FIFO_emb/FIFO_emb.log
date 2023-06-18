@@ -1,0 +1,71 @@
+ ** Message System Log
+ ** Database: 
+ ** Date:   Fri Jun 16 23:55:29 2023
+
+
+****************
+Macro Parameters
+****************
+
+Name                            : FIFO_emb
+Family                          : PA3LCLP
+Output Format                   : VERILOG
+Type                            : FIFO
+Write Enable                    : Active High
+Read Clock                      : Rising
+Write Clock                     : Rising
+Reset                           : Active Low
+Read Enable                     : Active High
+Write Depth                     : 4096
+Write Width                     : 8
+Read Depth                      : 4096
+Read Width                      : 8
+Almost Full                     : 2
+Almost Empty                    : 1
+Flags                           : None
+AFFlag Units                    : Write Words
+AEFlag Units                    : Write Words
+Read Pipe Mode1                 : Pipe
+Count Read After Empty          : No
+Count Write After Full          : No
+Portname DataIn                 : DATA
+Portname DataOut                : Q
+Portname AE Port                : AEVAL
+Portname AF Port                : AFVAL
+Portname Write En               : WE
+Portname Read En                : RE
+Portname WClock                 : WCLOCK
+Portname RClock                 : RCLOCK
+Portname AE Flag                : AEMPTY
+Portname AF Flag                : AFULL
+Portname Full Flag              : FULL
+Portname Empty Flag             : EMPTY
+Portname Reset                  : RESET
+
+
+Cascade Configuration:
+     Block configuration        : 4096x1
+     Number of blocks depth wise: 1
+     Number of blocks width wise: 8
+
+**************
+Compile Report
+**************
+
+
+Netlist Resource Report
+=======================
+
+    CORE                       Used:     12  Total:   6144   (0.20%)
+    IO (W/ clocks)             Used:      0  Total:     68   (0.00%)
+    GLOBAL (Chip+Quadrant)     Used:      0  Total:     18   (0.00%)
+    PLL                        Used:      0  Total:      1   (0.00%)
+    RAM/FIFO                   Used:      8  Total:      8   (100.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Wrote Verilog netlist to C:/Users/nikol/Documents/FinalYearProject/Final-Year-Project/FPGA/Current_Project/smartgen\FIFO_emb\FIFO_emb.v.
+
+ ** Log Ended:   Fri Jun 16 23:55:29 2023
+

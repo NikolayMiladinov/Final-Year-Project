@@ -1,3 +1,4 @@
-@E: CG285 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":223:10:223:13|Expecting statement
-@E: CS187 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":512:0:512:8|Expecting endmodule
+@E: CG358 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":714:4:714:4|Expecting '.' or '.*'
+@E: CS187 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":714:5:714:5|Expecting (
+@E: CS187 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":770:0:770:8|Expecting endmodule
 

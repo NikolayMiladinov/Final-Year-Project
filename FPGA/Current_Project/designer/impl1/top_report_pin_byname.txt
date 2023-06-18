@@ -1,5 +1,5 @@
 *****************************************************************
-Pin Report - Date: Fri May 26 17:17:24 2023 Pinchecksum: NOT-AVAILABLE
+Pin Report - Date: Sat Jun 17 08:44:31 2023 UNCOMPLETED LAYOUT
 Product: Designer
 Release: v11.9 SP6
 Version: 11.9.6.7
@@ -15,16 +15,16 @@ Flash*Freeze information
         Pin usage : Available as a regular pin
 -----------------------------------------------------------------
 
-Port         |Pin |Fixed |Function      |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Use I/O Reg |Hot Swappable |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |
--------------|----|------|--------------|---------|------------------|-----|--------------|-----------------|------------|--------------|----------------|---------------------------------------------|
-CLKA          15   Yes    GFA1/IO58RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
-FIFO_TRIG_DL  21   Yes    GEC0/IO53RSB3  LVCMOS33  2                  High  None           5                 No           No             ---              No
-FIFO_TRIG_WR  23   Yes    GEA0/IO51RSB3  LVCMOS33  2                  High  None           5                 No           No             ---              No
-MEM_VCC       2    Yes    GAA2/IO67RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
-rst_n         10   Yes    GFB1/IO60RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
-SPI_CLK       3    Yes    IO66RSB3       LVCMOS33  8                  High  None           5                 No           No             ---              No
-SPI_CS_n      4    Yes    GAB2/IO65RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
-SPI_MISO      5    Yes    IO64RSB3       LVCMOS33  ---                ---   None           ---               No           No             No               No
-SPI_MOSI      6    Yes    GAC2/IO63RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
-UART_RX       16   Yes    GFA2/IO56RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
-UART_TX       19   Yes    GFC2/IO55RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+Port          |Pin |Fixed |Function      |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Use I/O Reg |Hot Swappable |Schmitt Trigger |Hold previous I/O state in Flash*Freeze mode |
+--------------|----|------|--------------|---------|------------------|-----|--------------|-----------------|------------|--------------|----------------|---------------------------------------------|
+CLKA           15   Yes    GFA1/IO58RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
+FIFO_TRIG_CMP  8    Yes    IO61RSB3       LVCMOS33  8                  High  None           5                 No           No             ---              No
+FIFO_TRIG_DL   11   Yes    GFB0/IO59RSB3  LVCMOS33  2                  High  None           5                 No           No             ---              No
+MEM_VCC        2    Yes    GAA2/IO67RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+rst_n          10   Yes    GFB1/IO60RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
+SPI_CLK        3    Yes    IO66RSB3       LVCMOS33  8                  High  None           5                 No           No             ---              No
+SPI_CS_n       4    Yes    GAB2/IO65RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+SPI_MISO       5    Yes    IO64RSB3       LVCMOS33  ---                ---   None           ---               No           No             No               No
+SPI_MOSI       6    Yes    GAC2/IO63RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No
+UART_RX        16   Yes    GFA2/IO56RSB3  LVCMOS33  ---                ---   None           ---               No           No             No               No
+UART_TX        19   Yes    GFC2/IO55RSB3  LVCMOS33  8                  High  None           5                 No           No             ---              No

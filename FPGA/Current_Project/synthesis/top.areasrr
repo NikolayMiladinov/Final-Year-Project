@@ -8,102 +8,109 @@ Report for cell top.verilog
                                 AO1         2       1.0        2.0
                                AO1C         6       1.0        6.0
                               AOI1A         2       1.0        2.0
-                             CLKBUF         2       0.0        0.0
-                             DFN1C0        17       1.0       17.0
-                           DFN1E0C0        58       1.0       58.0
+                             CLKBUF         1       0.0        0.0
+                             DFN1C0         7       1.0        7.0
+                           DFN1E0C0        55       1.0       55.0
                            DFN1E0P0         2       1.0        2.0
-                           DFN1E1C0        17       1.0       17.0
+                           DFN1E1C0        35       1.0       35.0
                            DFN1E1P0         1       1.0        1.0
-                             DFN1P0         7       1.0        7.0
+                             DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
-                              INBUF         2       0.0        0.0
-                              NOR2A         4       1.0        4.0
+                              INBUF         3       0.0        0.0
+                              NOR2A         3       1.0        3.0
                                 OA1         2       1.0        2.0
                                OA1A         4       1.0        4.0
                                OR2A        10       1.0       10.0
                              OUTBUF         7       0.0        0.0
                                 VCC         1       0.0        0.0
                               XNOR2         8       1.0        8.0
-                     mem_command_Z1         1    2168.0     2168.0
+                         clk_div_2s         1       2.0        2.0
+                     mem_command_Z1         1    2864.0     2864.0
                             
-                         TOTAL            160               2314.0
+                         TOTAL            159               3010.0
 ----------------------------------------------------------------------
 Report for cell mem_command_Z1.netlist
      Instance path:  MEM_COMMAND_CONTROLLER
                                           Cell usage:
                                cell       count     area    count*area
-                               AND2        11       1.0       11.0
-                              AND2A         2       1.0        2.0
+                               AND2        27       1.0       27.0
+                              AND2A         4       1.0        4.0
                                AND3        15       1.0       15.0
-                                AO1        24       1.0       24.0
-                               AO13         4       1.0        4.0
-                               AO1A        10       1.0       10.0
-                               AO1B         4       1.0        4.0
-                               AO1C        10       1.0       10.0
-                               AO1D         1       1.0        1.0
-                               AOI1         3       1.0        3.0
-                              AOI1A         2       1.0        2.0
-                              AOI1B         7       1.0        7.0
-                               AOI5         1       1.0        1.0
-                                AX1         3       1.0        3.0
+                                AO1        86       1.0       86.0
+                               AO13        10       1.0       10.0
+                               AO16         1       1.0        1.0
+                               AO18         1       1.0        1.0
+                               AO1A        31       1.0       31.0
+                               AO1B         6       1.0        6.0
+                               AO1C        13       1.0       13.0
+                               AO1D        10       1.0       10.0
+                               AOI1         6       1.0        6.0
+                              AOI1A         4       1.0        4.0
+                              AOI1B         1       1.0        1.0
+                                AX1         4       1.0        4.0
                                AX1A         1       1.0        1.0
-                               AX1B         1       1.0        1.0
-                               AX1C         2       1.0        2.0
-                               AX1D         8       1.0        8.0
-                              AXOI3         1       1.0        1.0
-                             DFN1C0         9       1.0        9.0
-                           DFN1E0C0        29       1.0       29.0
+                               AX1B        12       1.0       12.0
+                               AX1C         6       1.0        6.0
+                               AX1D         4       1.0        4.0
+                              AXOI2         8       1.0        8.0
+                             CLKINT         3       0.0        0.0
+                             DFN1C0        22       1.0       22.0
+                           DFN1E0C0        85       1.0       85.0
                              DFN1E1         8       1.0        8.0
-                           DFN1E1C0        75       1.0       75.0
-                           DFN1E1P0         1       1.0        1.0
-                             DFN1P0         2       1.0        2.0
-                    FIFO_INPUT_SAVE         1     437.0      437.0
+                           DFN1E1C0       107       1.0      107.0
+                             DFN1P0         3       1.0        3.0
+                    FIFO_INPUT_SAVE         1     435.0      435.0
                                 GND         1       0.0        0.0
-                                INV         2       1.0        2.0
-                                MX2        14       1.0       14.0
-                               MX2A         5       1.0        5.0
-                               MX2C         6       1.0        6.0
-                               NOR2        30       1.0       30.0
-                              NOR2A        93       1.0       93.0
-                              NOR2B       109       1.0      109.0
-                               NOR3        13       1.0       13.0
-                              NOR3A        29       1.0       29.0
-                              NOR3B        31       1.0       31.0
-                              NOR3C        27       1.0       27.0
+                                INV         1       1.0        1.0
+                                MX2       273       1.0      273.0
+                               MX2A        22       1.0       22.0
+                               MX2B         5       1.0        5.0
+                               MX2C         3       1.0        3.0
+                               NOR2        47       1.0       47.0
+                              NOR2A       116       1.0      116.0
+                              NOR2B       175       1.0      175.0
+                               NOR3        11       1.0       11.0
+                              NOR3A        48       1.0       48.0
+                              NOR3B        54       1.0       54.0
+                              NOR3C        85       1.0       85.0
                                 OA1        17       1.0       17.0
-                               OA1A        16       1.0       16.0
+                               OA1A        27       1.0       27.0
                                OA1B         1       1.0        1.0
-                               OA1C         5       1.0        5.0
+                               OA1C         1       1.0        1.0
                                OAI1         2       1.0        2.0
-                                OR2        27       1.0       27.0
-                               OR2A        34       1.0       34.0
-                               OR2B        12       1.0       12.0
-                                OR3        32       1.0       32.0
-                               OR3A         3       1.0        3.0
-                               OR3B         6       1.0        6.0
-          SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2         1     462.0      462.0
-                          UART_CORE         1     433.0      433.0
+                                OR2        74       1.0       74.0
+                               OR2A        49       1.0       49.0
+                               OR2B         9       1.0        9.0
+                                OR3        71       1.0       71.0
+                               OR3A        16       1.0       16.0
+                               OR3B         3       1.0        3.0
+                               OR3C         1       1.0        1.0
+          SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2         1     515.0      515.0
+                          UART_CORE         1     211.0      211.0
                                 VCC         1       0.0        0.0
-                                XA1        16       1.0       16.0
-                               XA1A         7       1.0        7.0
-                               XA1C         2       1.0        2.0
-                               XAI1         1       1.0        1.0
-                              XNOR2        25       1.0       25.0
-                              XNOR3         1       1.0        1.0
-                                XO1        10       1.0       10.0
-                               XOR2        26       1.0       26.0
+                                XA1        15       1.0       15.0
+                               XA1A         2       1.0        2.0
+                               XA1B        10       1.0       10.0
+                               XA1C         4       1.0        4.0
+                              XAI1A         1       1.0        1.0
+                              XNOR2        33       1.0       33.0
+                              XNOR3         8       1.0        8.0
+                                XO1         2       1.0        2.0
+                               XO1A         1       1.0        1.0
+                               XOR2        40       1.0       40.0
+                               XOR3         1       1.0        1.0
                             
-                         TOTAL            841               2168.0
+                         TOTAL           1711               2864.0
 ----------------------------------------------------------------------
 Report for cell UART_CORE.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.UART_Master
                                           Cell usage:
                                cell       count     area    count*area
                                 GND         1       0.0        0.0
-          UART_CORE_UART_CORE_0_COREUART_0s_0s_0s_20s_0s_0s         1     433.0      433.0
+          UART_CORE_UART_CORE_0_COREUART_0s_0s_0s_20s_0s_0s         1     211.0      211.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL              3                433.0
+                         TOTAL              3                211.0
 ----------------------------------------------------------------------
 Report for cell UART_CORE_UART_CORE_0_COREUART_0s_0s_0s_20s_0s_0s.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.UART_Master.UART_CORE_0
@@ -114,27 +121,21 @@ Report for cell UART_CORE_UART_CORE_0_COREUART_0s_0s_0s_20s_0s_0s.netlist
                                 GND         1       0.0        0.0
                                OR2A         1       1.0        1.0
           UART_CORE_UART_CORE_0_Clock_gen_0s_0s         1      55.0       55.0
-          UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s         1     308.0      308.0
-          UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s         1      60.0       60.0
+          UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s         1      94.0       94.0
+          UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s         1      52.0       52.0
                                 VCC         1       0.0        0.0
                             
-                         TOTAL             15                433.0
+                         TOTAL             15                211.0
 ----------------------------------------------------------------------
 Report for cell UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.UART_Master.UART_CORE_0.make_RX
                                           Cell usage:
                                cell       count     area    count*area
-                               AND2         3       1.0        3.0
-                                AO1        17       1.0       17.0
-                               AO1A        12       1.0       12.0
-                               AO1B         1       1.0        1.0
-                               AO1D         4       1.0        4.0
-                               AOI1         6       1.0        6.0
-                              AOI1B         3       1.0        3.0
-                                AX1         5       1.0        5.0
-                               AX1A         4       1.0        4.0
-                               AX1E         1       1.0        1.0
-                               AXO1         1       1.0        1.0
+                               AND2         1       1.0        1.0
+                                AO1         2       1.0        2.0
+                               AOI1         3       1.0        3.0
+                              AOI1B         1       1.0        1.0
+                               AX1A         2       1.0        2.0
                               AXOI4         1       1.0        1.0
                              DFN1C0         4       1.0        4.0
                            DFN1E0C0         1       1.0        1.0
@@ -143,39 +144,32 @@ Report for cell UART_CORE_UART_CORE_0_Rx_async_0s_0s_0s_1s_2s_3s.netlist
                              DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
                                MAJ3         1       1.0        1.0
-                                MX2         3       1.0        3.0
-                               MX2A         1       1.0        1.0
-                               NOR2        14       1.0       14.0
-                              NOR2A        38       1.0       38.0
-                              NOR2B        25       1.0       25.0
-                               NOR3         6       1.0        6.0
-                              NOR3A        18       1.0       18.0
-                              NOR3B        25       1.0       25.0
-                              NOR3C         7       1.0        7.0
-                                OA1         4       1.0        4.0
-                               OA1A         5       1.0        5.0
+                               NOR2         5       1.0        5.0
+                              NOR2A        14       1.0       14.0
+                              NOR2B         4       1.0        4.0
+                               NOR3         3       1.0        3.0
+                              NOR3A         3       1.0        3.0
+                              NOR3B         5       1.0        5.0
+                              NOR3C         2       1.0        2.0
                                OA1B         1       1.0        1.0
-                               OA1C         3       1.0        3.0
-                                OR2        23       1.0       23.0
-                               OR2A        12       1.0       12.0
-                               OR2B         9       1.0        9.0
-                                OR3        16       1.0       16.0
+                                OR2         2       1.0        2.0
+                               OR2A         2       1.0        2.0
+                               OR2B         2       1.0        2.0
+                                OR3         3       1.0        3.0
                                OR3A         1       1.0        1.0
-                               OR3B         1       1.0        1.0
                                 VCC         1       0.0        0.0
                                XA1B         1       1.0        1.0
-                               XA1C         3       1.0        3.0
+                               XA1C         2       1.0        2.0
                                XOR2         1       1.0        1.0
                             
-                         TOTAL            310                308.0
+                         TOTAL             96                 94.0
 ----------------------------------------------------------------------
 Report for cell UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.UART_Master.UART_CORE_0.make_TX
                                           Cell usage:
                                cell       count     area    count*area
-                                AO1         2       1.0        2.0
-                               AO1A         1       1.0        1.0
                                AO1C         1       1.0        1.0
+                               AOI1         1       1.0        1.0
                               AXOI5         1       1.0        1.0
                              DFN1C0         4       1.0        4.0
                            DFN1E0P0         2       1.0        2.0
@@ -187,86 +181,86 @@ Report for cell UART_CORE_UART_CORE_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s.netlis
                                MX2B         1       1.0        1.0
                                MX2C         5       1.0        5.0
                                NOR2         1       1.0        1.0
-                              NOR2A         7       1.0        7.0
-                              NOR2B         3       1.0        3.0
-                              NOR3A         3       1.0        3.0
-                              NOR3B         3       1.0        3.0
-                                OR2         1       1.0        1.0
-                               OR2A         3       1.0        3.0
+                              NOR2A         4       1.0        4.0
+                              NOR2B         5       1.0        5.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         1       1.0        1.0
+                               OR2A         1       1.0        1.0
+                               OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
                                 XA1         3       1.0        3.0
                             
-                         TOTAL             62                 60.0
+                         TOTAL             54                 52.0
 ----------------------------------------------------------------------
 Report for cell UART_CORE_UART_CORE_0_Clock_gen_0s_0s.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.UART_Master.UART_CORE_0.make_CLOCK_GEN
                                           Cell usage:
                                cell       count     area    count*area
-                               AX1B        10       1.0       10.0
+                                AX1         1       1.0        1.0
+                               AX1B         9       1.0        9.0
                                AX1C         1       1.0        1.0
-                             DFN1C0        14       1.0       14.0
+                             DFN1C0        15       1.0       15.0
                            DFN1E1C0         4       1.0        4.0
-                             DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
-                                INV         1       1.0        1.0
-                               NOR2         1       1.0        1.0
-                              NOR2B         2       1.0        2.0
+                               NOR2         2       1.0        2.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B         3       1.0        3.0
                                NOR3         1       1.0        1.0
-                              NOR3A         1       1.0        1.0
-                              NOR3B         2       1.0        2.0
+                              NOR3A         2       1.0        2.0
                               NOR3C         1       1.0        1.0
                                 OR2         9       1.0        9.0
-                               OR3A         2       1.0        2.0
+                               OR2A         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XA1C         1       1.0        1.0
-                              XNOR2         1       1.0        1.0
-                               XOR2         3       1.0        3.0
+                               XO1A         1       1.0        1.0
+                               XOR2         4       1.0        4.0
                             
                          TOTAL             57                 55.0
 ----------------------------------------------------------------------
-Report for cell SPI_Master_With_Single_CS_3s_2s_5000s_25000s_0_1_2.netlist
+Report for cell SPI_Master_With_Single_CS_3s_2s_5000s_350000s_0_1_2.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.SPI_CS_Master
                                           Cell usage:
                                cell       count     area    count*area
-                               AND2        19       1.0       19.0
-                                AO1        18       1.0       18.0
-                               AO1A         7       1.0        7.0
+                               AND2        22       1.0       22.0
+                                AO1        21       1.0       21.0
+                               AO1A         5       1.0        5.0
+                               AO1B         2       1.0        2.0
                                AO1C         1       1.0        1.0
-                               AOI1         7       1.0        7.0
+                               AO1D         2       1.0        2.0
+                               AOI1         1       1.0        1.0
+                                AX1         9       1.0        9.0
+                               AX1B         1       1.0        1.0
                                AX1C         1       1.0        1.0
-                               AX1D         3       1.0        3.0
-                             DFN1C0         2       1.0        2.0
+                             DFN1C0        15       1.0       15.0
                              DFN1E1        13       1.0       13.0
-                           DFN1E1C0        14       1.0       14.0
+                           DFN1E1C0        18       1.0       18.0
                            DFN1E1P0         2       1.0        2.0
-                             DFN1P0        13       1.0       13.0
                                 GND         1       0.0        0.0
+                                MX2        30       1.0       30.0
                                MX2A         1       1.0        1.0
-                               MX2B        13       1.0       13.0
-                               MX2C         6       1.0        6.0
-                               NOR2         7       1.0        7.0
-                              NOR2A        13       1.0       13.0
-                              NOR2B        20       1.0       20.0
-                               NOR3         7       1.0        7.0
-                              NOR3A         3       1.0        3.0
-                              NOR3B         9       1.0        9.0
-                              NOR3C        11       1.0       11.0
+                               MX2B         4       1.0        4.0
+                               MX2C         1       1.0        1.0
+                               NOR2        23       1.0       23.0
+                              NOR2A        25       1.0       25.0
+                              NOR2B        24       1.0       24.0
+                               NOR3         6       1.0        6.0
+                              NOR3A        12       1.0       12.0
+                              NOR3B         1       1.0        1.0
+                              NOR3C         8       1.0        8.0
                                 OA1         1       1.0        1.0
-                               OA1C         2       1.0        2.0
-                               OAI1         1       1.0        1.0
-                                OR2        11       1.0       11.0
-                               OR2A         9       1.0        9.0
-                               OR2B         1       1.0        1.0
-                                OR3         8       1.0        8.0
-                               OR3B         1       1.0        1.0
+                               OA1A         3       1.0        3.0
+                                OR2        20       1.0       20.0
+                               OR2A         3       1.0        3.0
+                               OR2B         4       1.0        4.0
+                                OR3        14       1.0       14.0
+                               OR3A         2       1.0        2.0
                                 VCC         1       0.0        0.0
-                                XA1         2       1.0        2.0
+                               XA1A         6       1.0        6.0
                                XA1B        11       1.0       11.0
-                              XNOR2        15       1.0       15.0
-                               XOR2        28       1.0       28.0
-                   spi_master_3s_2s         1     182.0      182.0
+                              XNOR2         2       1.0        2.0
+                               XOR2        38       1.0       38.0
+                   spi_master_3s_2s         1     163.0      163.0
                             
-                         TOTAL            283                462.0
+                         TOTAL            355                515.0
 ----------------------------------------------------------------------
 Report for cell spi_master_3s_2s.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.SPI_CS_Master.SPI_Master_Inst
@@ -274,42 +268,41 @@ Report for cell spi_master_3s_2s.netlist
                                cell       count     area    count*area
                                AND2         1       1.0        1.0
                                 AO1         3       1.0        3.0
-                               AO1A         4       1.0        4.0
-                               AO1C         1       1.0        1.0
-                               AOI1         1       1.0        1.0
+                               AO1A         2       1.0        2.0
+                               AO1B         1       1.0        1.0
+                               AO1C         2       1.0        2.0
                                AX1B         1       1.0        1.0
-                              AXOI5         1       1.0        1.0
+                               AX1C         4       1.0        4.0
                              DFN1C0         7       1.0        7.0
                            DFN1E0C0         5       1.0        5.0
                            DFN1E1C0        17       1.0       17.0
                            DFN1E1P0         6       1.0        6.0
                              DFN1P0         2       1.0        2.0
                                 GND         1       0.0        0.0
-                                MX2         8       1.0        8.0
+                                MX2         7       1.0        7.0
                                MX2A         1       1.0        1.0
                                MX2B         1       1.0        1.0
-                               NOR2         1       1.0        1.0
-                              NOR2A        19       1.0       19.0
-                              NOR2B        15       1.0       15.0
-                               NOR3         9       1.0        9.0
-                              NOR3A        13       1.0       13.0
-                              NOR3B         9       1.0        9.0
-                              NOR3C         3       1.0        3.0
-                                OA1         3       1.0        3.0
-                               OA1A         2       1.0        2.0
+                               NOR2         6       1.0        6.0
+                              NOR2A        13       1.0       13.0
+                              NOR2B        24       1.0       24.0
+                               NOR3         6       1.0        6.0
+                              NOR3A         5       1.0        5.0
+                              NOR3B         5       1.0        5.0
+                              NOR3C         8       1.0        8.0
                                OA1C         1       1.0        1.0
-                                OR2        13       1.0       13.0
-                               OR2A         8       1.0        8.0
-                               OR2B         6       1.0        6.0
-                                OR3         9       1.0        9.0
-                               OR3A         2       1.0        2.0
+                                OR2         8       1.0        8.0
+                               OR2A         2       1.0        2.0
+                               OR2B         2       1.0        2.0
+                                OR3         2       1.0        2.0
+                               OR3C         1       1.0        1.0
                                 VCC         1       0.0        0.0
+                                XA1         8       1.0        8.0
                               XNOR2         1       1.0        1.0
                                 XO1         1       1.0        1.0
                                XO1A         4       1.0        4.0
-                               XOR2         4       1.0        4.0
+                               XOR2         6       1.0        6.0
                             
-                         TOTAL            184                182.0
+                         TOTAL            165                163.0
 ----------------------------------------------------------------------
 Report for cell FIFO_INPUT_SAVE.netlist
      Instance path:  MEM_COMMAND_CONTROLLER.fifo_
@@ -325,20 +318,31 @@ Report for cell FIFO_INPUT_SAVE.netlist
                              DFN1P0         1       1.0        1.0
                                 GND         1       0.0        0.0
                                 INV        18       1.0       18.0
-                                MX2        56       1.0       56.0
+                                MX2        57       1.0       57.0
                               NAND2         2       1.0        2.0
                               NAND3         2       1.0        2.0
                              NAND3A         6       1.0        6.0
                              NAND3B         6       1.0        6.0
                              NAND3C         2       1.0        2.0
-                              NOR2A         3       1.0        3.0
+                              NOR2A         2       1.0        2.0
                               NOR3B         1       1.0        1.0
                                 OR2        18       1.0       18.0
-                               OR2A         1       1.0        1.0
-                                OR3         7       1.0        7.0
+                                OR3         6       1.0        6.0
                              RAM4K9         8       0.0        0.0
                                 VCC         1       0.0        0.0
                               XNOR2        26       1.0       26.0
                                XOR2       107       1.0      107.0
                             
-                         TOTAL            447                437.0
+                         TOTAL            445                435.0
+----------------------------------------------------------------------
+Report for cell clk_div_2s.netlist
+     Instance path:  genblk1.clk_div_1M
+                                          Cell usage:
+                               cell       count     area    count*area
+                             CLKINT         1       0.0        0.0
+                             DFN1C0         1       1.0        1.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL              5                  2.0

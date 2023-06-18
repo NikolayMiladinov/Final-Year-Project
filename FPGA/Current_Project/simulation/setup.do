@@ -10,6 +10,7 @@ if {[file exists presynth/_info]} {
 vmap presynth presynth
 vmap igloo "C:/Microsemi/Libero_SoC_v11.9/Designer/lib/modelsim/precompiled/vlog/igloo"
 
+vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/smartgen/PLL_main/PLL_main.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/hdl/clk_div.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/smartgen/FIFO_INPUT_SAVE/FIFO_INPUT_SAVE.v"
 vlog "+incdir+${PROJECT_DIR}/hdl" -sv -work presynth "${PROJECT_DIR}/hdl/spi_master.v"
@@ -26,6 +27,7 @@ vlog "+incdir+${PROJECT_DIR}/hdl" "+incdir+${PROJECT_DIR}/stimulus" -sv -work pr
 
 vsim -L igloo -L presynth  -t 1ps presynth.tb_top
 
+set WildcardFilter [lsearch -not -all -inline $WildcardFilter Memory]
 log -r /*
 wave zoom out
 wave zoom out

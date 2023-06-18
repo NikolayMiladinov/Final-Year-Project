@@ -141,24 +141,19 @@ TIME="1678454932"
 SIZE="10850"
 ENDFILE
 VALUE "<project>\designer\impl1\top.adb,adb"
-STATE="utd"
-TIME="1685018281"
-SIZE="5249536"
+STATE="ood"
+TIME="1685702564"
+SIZE="6242816"
 ENDFILE
 VALUE "<project>\designer\impl1\top.ide_des,ide_des"
 STATE="utd"
-TIME="1685018281"
-SIZE="1045"
-ENDFILE
-VALUE "<project>\designer\impl1\top.pdb,pdb"
-STATE="utd"
-TIME="1685117857"
-SIZE="94486"
+TIME="1685702564"
+SIZE="1048"
 ENDFILE
 VALUE "<project>\designer\impl1\top_compile_log.rpt,log"
 STATE="utd"
-TIME="1685117060"
-SIZE="5732"
+TIME="1685702564"
+SIZE="16559"
 ENDFILE
 VALUE "<project>\designer\impl1\top_floorplan_log.rpt,log"
 STATE="utd"
@@ -175,21 +170,6 @@ STATE="utd"
 TIME="1683979177"
 SIZE="2482"
 ENDFILE
-VALUE "<project>\designer\impl1\top_placeroute_log.rpt,log"
-STATE="utd"
-TIME="1685117845"
-SIZE="2578"
-ENDFILE
-VALUE "<project>\designer\impl1\top_prgdata_log.rpt,log"
-STATE="utd"
-TIME="1685117857"
-SIZE="860"
-ENDFILE
-VALUE "<project>\designer\impl1\top_verifytiming_log.rpt,log"
-STATE="utd"
-TIME="1685117850"
-SIZE="1205"
-ENDFILE
 VALUE "<project>\designer\impl1\UART_CORE.ide_des,ide_des"
 STATE="utd"
 TIME="1678709224"
@@ -202,13 +182,13 @@ SIZE="456"
 ENDFILE
 VALUE "<project>\hdl\command_vars.v,hdl"
 STATE="utd"
-TIME="1685116529"
-SIZE="2933"
+TIME="1685776476"
+SIZE="3047"
 ENDFILE
 VALUE "<project>\hdl\mem_command.v,hdl"
 STATE="utd"
-TIME="1685116542"
-SIZE="29517"
+TIME="1685725015"
+SIZE="29963"
 ENDFILE
 VALUE "<project>\hdl\spi_master.v,hdl"
 STATE="utd"
@@ -222,18 +202,18 @@ SIZE="6133"
 ENDFILE
 VALUE "<project>\hdl\top.v,hdl"
 STATE="utd"
-TIME="1685117241"
-SIZE="28233"
+TIME="1685564596"
+SIZE="28441"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1684932865"
-SIZE="1971"
+TIME="1685483849"
+SIZE="2055"
 ENDFILE
 VALUE "<project>\simulation\setup.do,do"
 STATE="utd"
-TIME="1683977101"
-SIZE="2274"
+TIME="1685483907"
+SIZE="2358"
 ENDFILE
 VALUE "<project>\simulation\testbnch_presynth_simulation.log,log"
 STATE="utd"
@@ -271,6 +251,32 @@ SIZE="75056"
 PARENT="<project>\smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.cxf"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\smartgen\PLL_main\PLL_main.cxf,actgen_cxf"
+STATE="utd"
+TIME="1685564702"
+SIZE="1480"
+ENDFILE
+VALUE "<project>\smartgen\PLL_main\PLL_main.gen,gen"
+STATE="utd"
+TIME="1685564700"
+SIZE="596"
+PARENT="<project>\smartgen\PLL_main\PLL_main.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\PLL_main\PLL_main.log,log"
+STATE="utd"
+TIME="1685564701"
+SIZE="2717"
+PARENT="<project>\smartgen\PLL_main\PLL_main.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\smartgen\PLL_main\PLL_main.v,hdl"
+STATE="utd"
+TIME="1685564701"
+SIZE="2772"
+PARENT="<project>\smartgen\PLL_main\PLL_main.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\stimulus\tb_top.v,tb_hdl"
 STATE="utd"
 TIME="1685113200"
@@ -302,24 +308,24 @@ TIME="1678476857"
 SIZE="1839"
 ENDFILE
 VALUE "<project>\synthesis\top.edn,syn_edn"
-STATE="utd"
-TIME="1685114873"
-SIZE="1186492"
+STATE="ood"
+TIME="1685702554"
+SIZE="1306953"
 ENDFILE
 VALUE "<project>\synthesis\top.so,so"
 STATE="utd"
-TIME="1685018222"
+TIME="1685702554"
 SIZE="257"
 ENDFILE
 VALUE "<project>\synthesis\top_sdc.sdc,syn_sdc"
-STATE="utd"
-TIME="1685114873"
-SIZE="394"
+STATE="ood"
+TIME="1685702554"
+SIZE="310"
 ENDFILE
 VALUE "<project>\synthesis\top_syn.prj,prj"
 STATE="utd"
-TIME="1685018222"
-SIZE="3511"
+TIME="1685702554"
+SIZE="3643"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -338,27 +344,6 @@ ENDLIST
 Used_File_List
 ENDUsed_File_List
 ENDLIST
-ENDLIST
-ENDLIST
-LIST "top::work"
-FILE "<project>\hdl\top.v,hdl"
-LIST ProjectState5.1
-LIST Impl1
-LiberoState=Post_Layout
-ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
-ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
-LIST PinReports
-VALUE "<project>\designer\impl1\top_report_pin_byname.txt,log"
-VALUE "<project>\designer\impl1\top_report_pin_bynumber.txt,log"
 ENDLIST
 ENDLIST
 LIST "UART_CORE::work"
@@ -466,8 +451,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -475,7 +460,7 @@ NAME="ModelSim ME"
 FUNCTION="Simulation"
 TOOL="ModelSim"
 LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
-PARAM=" -l postsynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -512,20 +497,6 @@ Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
-LIST "top::work"
-LIST Impl1
-LiberoState=Post_Layout
-ideSYNTHESIS(<project>\synthesis\top.edn,syn_edn)=StateSuccess
-ideDESIGNER(<project>\designer\impl1\top.adb,adb)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 LIST "UART_CORE::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -551,11 +522,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Generate Programming Data:top_prgdata_log.rpt
-HDL;stimulus\tb_top.v;0
 StartPage;StartPage;0
-ACTIVEVIEW;Reports
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "clk_div::work","hdl\clk_div.v","FALSE","FALSE"
@@ -567,12 +535,15 @@ SUBBLOCK "FIFO_INPUT_SAVE::work","smartgen\FIFO_INPUT_SAVE\FIFO_INPUT_SAVE.v","T
 SUBBLOCK "SPI_Master_With_Single_CS::work","hdl\SPI_Master_With_Single_CS.v","FALSE","FALSE"
 SUBBLOCK "UART_CORE::work","component\work\UART_CORE\UART_CORE.v","TRUE","FALSE"
 ENDLIST
+LIST "PLL_main::work","smartgen\PLL_main\PLL_main.v","TRUE","FALSE"
+ENDLIST
 LIST "spi_master::work","hdl\spi_master.v","FALSE","FALSE"
 ENDLIST
 LIST "SPI_Master_With_Single_CS::work","hdl\SPI_Master_With_Single_CS.v","FALSE","FALSE"
 SUBBLOCK "spi_master::work","hdl\spi_master.v","FALSE","FALSE"
 ENDLIST
 LIST "top::work","hdl\top.v","FALSE","FALSE"
+SUBBLOCK "PLL_main::work","smartgen\PLL_main\PLL_main.v","TRUE","FALSE"
 SUBBLOCK "clk_div::work","hdl\clk_div.v","FALSE","FALSE"
 SUBBLOCK "mem_command::work","hdl\mem_command.v","FALSE","FALSE"
 ENDLIST

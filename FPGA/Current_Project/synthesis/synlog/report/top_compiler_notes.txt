@@ -40,9 +40,11 @@
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE.v":9:7:9:15|Synthesizing module UART_CORE in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":4:7:4:17|Synthesizing module mem_command in library work.
 @N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":4:7:4:9|Synthesizing module top in library work.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":189:2:189:7|Trying to extract state machine for register r_fifo_sm.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":189:2:189:7|Trying to extract state machine for register r_SEND_sm.
-@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":189:2:189:7|Trying to extract state machine for register r_RECEIVE_sm.
+@N: CG364 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\clk_div.v":1:7:1:13|Synthesizing module clk_div in library work.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":200:2:200:7|Trying to extract state machine for register r_fifo_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":200:2:200:7|Trying to extract state machine for register r_SEND_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\top.v":200:2:200:7|Trying to extract state machine for register r_RECEIVE_sm.
+@N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\hdl\mem_command.v":213:4:213:9|Trying to extract state machine for register r_SM_COMPRESS.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state.
 @N: CL201 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Trying to extract state machine for register xmit_state.
 @N: CL159 :"C:\Users\nikol\Documents\FinalYearProject\Final-Year-Project\FPGA\Current_Project\component\work\UART_CORE\UART_CORE_0\rtl\vlog\core\Tx_async.v":44:11:44:21|Input tx_dout_reg is unused.

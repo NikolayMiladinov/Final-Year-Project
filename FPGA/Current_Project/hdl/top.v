@@ -29,22 +29,22 @@ module top(
     // Other test pins
     // output FPGA_CLK,
     // output MEM_CM_READY,
-    output FIFO_TRIG_WR,
+    output FIFO_TRIG_CMP,
     // output FIFO_TRIG_RE,
     output FIFO_TRIG_DL
   ); /* synthesis syn_noprune=1 */
 
   // Parameters for memmory controller
-  parameter SPI_MODE = 3;           // Mode 3: CPOL = 1, CPHA = 1; clock is high during deselect
-  parameter CLKS_PER_HALF_BIT = 2;  // SPI_CLK_FREQ = CLK_FREQ/(CLKS_PER_HALF_BIT)
-  parameter MAX_BYTES_PER_CS = 5000;// Maximum number of bytes per transaction with memory chip
-  parameter MAX_WAIT_CYCLES = 25000;  // Maximum number of wait cycles after deasserting (active low) CS
-  parameter BAUD_VAL = (130/CLK_DIV_PARAM) - 1; // Baud rate = clk_freq / ((1 + BAUD_VAL)x16); This achieves a 9600 baud rate
-  parameter BAUD_VAL_FRACTION = 0;  // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
+  parameter SPI_MODE = 3;               // Mode 3: CPOL = 1, CPHA = 1; clock is high during deselect
+  parameter CLKS_PER_HALF_BIT = 2;      // SPI_CLK_FREQ = CLK_FREQ/(2*CLKS_PER_HALF_BIT)
+  parameter MAX_BYTES_PER_CS = 5000;    // Maximum number of bytes per transaction with memory chip
+  parameter MAX_WAIT_CYCLES = 350000;   // Maximum number of wait cycles after deasserting (active low) CS
+  parameter BAUD_VAL = (CLK_DIV_BYPASS==2) ? ((NORM_CLK_FREQ > PLL_FREQ) ? (130/CLK_PLL_DIV) - 1 : (130*CLK_PLL_MULT) - 1) : (130/CLK_DIV_PARAM) - 1; // Baud rate = clk_freq / ((1 + BAUD_VAL)x16); This achieves a 9600 baud rate
+  parameter BAUD_VAL_FRACTION = 0;      // Adds increment of 0.125 to BAUD_VAL (3 -> +0.375)
 
   // Page address that will be used to store data from UART to memory, no specific reason for this exact address
   // First couple pages are used for OTP, parameters page and Unique page
-  parameter PAGE_ADDRESS = 24'h000316;  // Page address
+  parameter PAGE_ADDRESS = 24'h000345;  // Page address
   parameter BLOCK_LOCK_ADDRESS = 8'hA0; // Address in GET/SET FEATURE command to access status of which blocks are locked (cannot write to these blocks)
   parameter CONF_ADDRESS = 8'hB0;       // Address in GET/SET FEATURE command to access status of the configuration (usually normal mode)
   parameter STATUS_ADDRESS = 8'hC0;     // Address in GET/SET FEATURE command to access status of the chip
@@ -52,6 +52,7 @@ module top(
 
   // Control signals
   logic CLK1;        // Internal clock after dividing the 20 MHz input clock (CLKA); division can be bypassed as well (look at command_vars file)
+  logic w_LOCK;
   logic r_Mem_Power; // VCC line and all other SPI lines are low when r_Mem_Power is low
 
   // SPI pins
@@ -87,6 +88,8 @@ module top(
   logic [12:0] r_TRANSFER_SIZE; // indicates the number of data bytes, changed by UART message, internal register
   logic [12:0] w_transfer_size; // indicates the number of data bytes, changed by UART message
   logic        w_transfer_size_DV; // Data valid pulse to save data on w_transfer_size
+  logic        w_compress_done;
+  logic        r_tr_size_DV;
 
   // State machine for top-level control
   // States are: UART send/receive, SPI(MEM) send/receive, Compress
@@ -95,7 +98,7 @@ module top(
   logic [2:0]  r_fifo_sm;
 
   logic        w_send_sm; // Two-state register in mem_command, used so that fifo state changes only when in idle state
-  logic [15:0] r_Pwrup_Timer; // Counts 2ms, in the case of the max 20MHz clock, needs to count to 40 000 (2^15 = 32k    => need 16 bits)
+  logic [18:0] r_Pwrup_Timer; // Counts 2ms, in the case of the max 20MHz clock, needs to count to 40 000 (2^15 = 32k    => need 16 bits)
 
   // State machine for writing/reading from memory chip
   // Used for doing the correct command sequence when reading/storing data in the memory chip
@@ -128,9 +131,9 @@ module top(
   // assign MEM_CM_READY = 1'b0; // extra pin for testing
   // assign TEST_RX      = UART_RX;
   // assign TEST_TX      = UART_TX;
-  assign FIFO_TRIG_WR = ~r_fifo_sm[0]&&r_fifo_sm[1]&&r_fifo_sm[2];  // Triggers high during memory power-up
+  assign FIFO_TRIG_CMP = r_fifo_sm[0]&&~r_fifo_sm[1]&&~r_fifo_sm[2];  // Triggers high during memory power-up
   // assign FIFO_TRIG_RE = ~r_fifo_sm[0]&~r_fifo_sm[1]&r_fifo_sm[2];     // Triggers high during a read to the memory
-  assign FIFO_TRIG_DL = r_fifo_sm[0]&&r_fifo_sm[1]&&(~r_fifo_sm[2])&&(r_Command_prev == BLOCK_ERASE); // Triggers high during a block erase command
+  assign FIFO_TRIG_DL = ~r_fifo_sm[0]&&r_fifo_sm[1]&&r_fifo_sm[2]; // Triggers high during a block erase command
 
 
   generate
@@ -141,13 +144,19 @@ module top(
         .clk_out(CLK1),
         .rst_n(rst_n)
       );
-    end else begin
+    end else if(CLK_DIV_BYPASS == 1) begin
       assign CLK1 = CLKA;
+    end else if(CLK_DIV_BYPASS == 2) begin
+      PLL_main PLL (
+        .POWERDOWN(1'b1),
+        .CLKA(CLKA),
+        .LOCK(w_LOCK),
+        .GLA(CLK1)
+    );
     end
   endgenerate
   
 
-  // Instantiate UUT
   mem_command #(.SPI_MODE(SPI_MODE),.CLKS_PER_HALF_BIT(CLKS_PER_HALF_BIT),
     .MAX_BYTES_PER_CS(MAX_BYTES_PER_CS),.MAX_WAIT_CYCLES(MAX_WAIT_CYCLES),
     .BAUD_VAL(BAUD_VAL),.BAUD_VAL_FRACTION(BAUD_VAL_FRACTION)) 
@@ -177,12 +186,14 @@ module top(
     .o_UART_TX(UART_TX),
 
     // FIFO state
+    .i_tr_size_DV(r_tr_size_DV),
     .i_fifo_sm(r_fifo_sm),
     .o_send_sm(w_send_sm),
     .o_UART_RX_Ready(w_UART_RX_Ready),
     .o_fifo_count(w_fifo_count),
     .o_transfer_size(w_transfer_size),
-    .o_transfer_size_DV(w_transfer_size_DV)
+    .o_transfer_size_DV(w_transfer_size_DV),
+    .o_compress_done(w_compress_done)
   );
 
 
@@ -201,12 +212,13 @@ module top(
       r_check_twice     <= 2'b0;
       r_TRANSFER_SIZE   <= 'd2048; // default transfer size, half a page, same in mem_command
       r_Pwrup_Timer     <= 'b0;
+      r_tr_size_DV      <= 1'b0;
     end else begin
       // Transfer size wire will change during a UART message before it is the final value
       if (w_transfer_size_DV) begin
         r_TRANSFER_SIZE <= w_transfer_size;
       end
-
+      r_tr_size_DV  <= 1'b0; // default
       // SPI/UART are enabled/disabled depending on state
       // Cannot receive data from both UART and SPI because there is only 1 FIFO, hence the need for these states
 
@@ -218,7 +230,7 @@ module top(
           r_Mem_Power       <= 1'b0;
 
           // Change state when push button 1 is pressed 
-          // if (SIM_TEST == 1 && ~pb_sw1) r_fifo_sm <= FIFO_WAIT_MEM_PWRUP; // for testing
+          // if (SIM_TEST == 1 && ~pb_sw1) r_fifo_sm <= FIFO_COMPRESS; // for testing
           // When UART data is available, start processing it
           if (w_UART_RX_Ready) r_fifo_sm <= FIFO_UART_RECEIVE;
         end 
@@ -232,7 +244,8 @@ module top(
           // CAREFULL: if FIFO was not emptied before this state, this logic does not work
           // Could be fixed by saving the beginning count when entering the state
           if (w_fifo_count >= r_TRANSFER_SIZE) begin
-            r_fifo_sm     <= FIFO_WAIT_MEM_PWRUP;
+            if(COMPRESS_EN==1) r_fifo_sm <= FIFO_COMPRESS;
+            else r_fifo_sm     <= FIFO_WAIT_MEM_PWRUP;
           end
         end 
 
@@ -248,6 +261,17 @@ module top(
           end
         end 
 
+        FIFO_COMPRESS: begin
+          r_Mem_Power       <= 1'b0;
+
+          // Go to next state when the FIFO has the correct amount of bytes stored
+          // CAREFULL: if FIFO was not emptied before this state, this logic does not work
+          // Could be fixed by saving the beginning count when entering the state
+          if (w_compress_done) begin
+            r_fifo_sm     <= FIFO_WAIT_MEM_PWRUP;
+          end
+        end
+
         // Wait 2ms after power up
         FIFO_WAIT_MEM_PWRUP: begin
           // Turn on memory chip if it was previously off
@@ -262,6 +286,9 @@ module top(
             if(r_Pwrup_Timer >= TIMER_2MS_COUNT) begin
               r_fifo_sm     <= FIFO_MEM_SEND;
               r_Pwrup_Timer <= 'b0;
+              // before writing to memory, update the transfer size
+              // ideally, this should be done elsewhere if the memory is not turned off after every write/read cycle
+              r_tr_size_DV  <= 1'b1; 
             end
           end
         end
